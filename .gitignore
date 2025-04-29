@@ -1,5 +1,4 @@
 .DS_Store
 *.pyc
 __pycache__/
-stis_remake/
-study_rust/
+study_web_server/
