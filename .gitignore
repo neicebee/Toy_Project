@@ -1,4 +1,5 @@
 .DS_Store
 *.pyc
 __pycache__/
-study_web_server/
+simple_web_server/target/
+study_web_server/target/
