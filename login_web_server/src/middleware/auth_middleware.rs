@@ -8,6 +8,10 @@ use std::rc::Rc;    // Rc(Reference Counting): 다음 서비스를 여러 Servic
 use futures_util::future::{ready, Ready};   // 비동기 Future 타입 - Service 구현에 사용
 use crate::auth::decode_jwt;
 
+use std::sync::Arc;
+use crate::Denylist;
+use actix_web::web::Data;
+
 // Middleware Factory 구조체(Transform 트레이트 구현)
 // 요청마다 새로운 AuthMiddlewareService 인스턴스 생성 역할
 pub struct AuthMiddleware;
@@ -62,13 +66,29 @@ where
         let svc = self.service.clone(); // 다음 서비스 참조 복제(async move 블록 내에서 사용하기 위함)
         Box::pin(async move {   // 비동기 블록(impl Future)을 힙에 할당 후 Pin으로 고정하여 LocalBoxFuture 타입으로 변환
             let (request, payload) = req.into_parts();  // req 객체 분리 후 소유권 이동(request: 요청 정보, payload: 요청 본문 스트림)
+            let temp = request.clone();
+            // App 데이터에서 Denylist 객체 가져오기
+            let denylist = match temp.app_data::<Data<Arc<Denylist>>>() {
+                Some(d) => d,
+                None => {
+                    // Denylist가 App data에 등록되지 않았다면 설정 오류
+                    let response = HttpResponse::InternalServerError().body("Server configuration Error...");
+                    return Ok(ServiceResponse::new(request, response));
+                }
+            };
             // Header에서 Authorization: Bearer <token> 추출
-            if let Some(auth_header) = request.headers().get("Authorization") {
+            if let Some(auth_header) = temp.headers().get("Authorization") {
                 if let Ok(auth_str) = auth_header.to_str() {
                     if let Some(token) = auth_str.strip_prefix("Bearer ") { // 접두사 제거
                         // JWT 토큰 디코딩 및 검증
                         match decode_jwt(token) {
                             Ok(username) => {   // 토큰 유효 시
+                                // Mutex 락 획득 및 HashSet에 username 존재 확인
+                                let denylist_guard = denylist.0.lock().unwrap();
+                                if denylist_guard.contains(&username) { // Denylist에 사용자 이름이 있을 경우
+                                    let response = HttpResponse::Unauthorized().body("Token is invalidated...");
+                                    return Ok(ServiceResponse::new(request, response));
+                                }
                                 // RequestExtensions에 username 저장
                                 // 핸들러 함수에서 req.extensions().getn()::<String>() 등으로 추출해 사용 가능
                                 request.extensions_mut().insert(username);
