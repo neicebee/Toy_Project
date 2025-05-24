@@ -1,8 +1,11 @@
-use actix_web::{web, HttpResponse, Responder};
+use actix_web::{web, HttpMessage, HttpRequest, HttpResponse, Responder};
 use serde::Deserialize;
 use sqlx::{Row, SqlitePool};
 use bcrypt::{hash, verify};
 use crate::auth::create_jwt;
+
+use std::sync::Arc;
+use crate::Denylist;
 
 #[derive(Deserialize)]
 pub struct RegisterInfo {
@@ -13,6 +16,39 @@ pub struct RegisterInfo {
 // register 핸들러
 // 공개 비동기 함수
 pub async fn register(pool: web::Data<SqlitePool>, info: web::Json<RegisterInfo>) -> impl Responder {   // DB 풀 객체를 담은 web::Data 익스트랙터, 요청 본문의 json 데이터 RegisterInfo 구조체로 역직렬화, Actix-web 응답 반환
+    // password validity process
+    let password = &info.password;
+    
+    // 길이 검사(8글자 이상)
+    if password.len()<8 {
+        return HttpResponse::BadRequest().body("Password must be at least 8 characters long...");
+    }
+    
+    // 소문자, 대문자, 특수문자 포함 여부 검사
+    let mut has_lower = false;
+    let mut has_upper = false;
+    let mut has_special = false; // 특수 문자는 영숫자가 아닌 문자로 간단하게 검사
+
+    for c in password.chars() {
+        if c.is_lowercase() {
+            has_lower = true;
+        } else if c.is_uppercase() {
+            has_upper = true;
+        } else if !c.is_alphanumeric() { // 영문자나 숫자가 아니면 특수 문자로 간주
+            has_special = true;
+        }
+
+        // 세 가지 조건을 모두 만족하면 더 이상 검사할 필요 없음
+        if has_lower && has_upper && has_special {
+            break;
+        }
+    }
+    
+    // 세 가지 조건 중 하나라도 만족하지 않으면 에러 반환
+    if !has_lower || !has_upper || !has_special {
+        return HttpResponse::BadRequest().body("Password must contain at least one lowercase letter, one uppercase letter, and one special character.");
+    }
+    
     // password hashing
     let hashed = match hash(&info.password, 10) {   // info 내의 password의 참조를 10라운드로 hashing
         Ok(h) => h, // hashing 성공 시 결과 저장
@@ -57,4 +93,62 @@ pub async fn login(pool: web::Data<SqlitePool>, info: web::Json<LoginInfo>) -> i
     } else {
         HttpResponse::Unauthorized().body("Invalid username or password...")    // 비밀번호 검증 실패 시 401 Unauthorized 응답 반환
     }
+}
+
+// logout 핸들러
+pub async fn logout(req: HttpRequest, denylist: web::Data<Arc<Denylist>>) -> impl Responder {
+    let temp_extensions = req.extensions();
+    // RequestExtensions에서 인증된 사용자 이름 얻기
+    let username = match temp_extensions.get::<String>() {
+        Some(username) => username,
+        None => {
+            // AuthMiddleware를 거치지 않았거나 설정 오류
+            return HttpResponse::InternalServerError().body("Authentication context missing...");
+        }
+    };
+    
+    // Authorization 헤더에서 현재 사용된 토큰 추출
+    // (Denylist에 토큰 문자열 자체를 넣거나 사용자 이름과 함께 관리하기 위해 필요)
+    // 사용자 이름 자체를 Denylist에 추가하여, 해당 사용자의 모든 토큰을 무효화하는 방식으로 구현합니다.
+    // 이는 해당 사용자가 다시 로그인하기 전까지는 어떤 유효한 토큰으로도 접근이 불가능하게 합니다.
+
+    // Denylist에 사용자 이름 추가
+    let mut denylist_guard = denylist.0.lock().unwrap(); // Mutex 락 획득
+    if denylist_guard.insert(username.to_string()) { // HashSet에 사용자 이름 삽입. 삽입 성공 시 true 반환.
+        HttpResponse::Ok().body("Logged out successfully...") // 삽입 성공 (새로 무효화)
+    } else {
+        HttpResponse::Ok().body("Already logged out or invalid token...") // 이미 무효화되어 있었음
+    }
+}
+
+// delete 핸들러
+pub async fn delete_user(pool: web::Data<SqlitePool>, denylist: web::Data<Arc<Denylist>>, req: HttpRequest) -> impl Responder {
+    let temp_extenstions = req.extensions();
+    // RequestExtension에서 인증된 사용자 이름 얻기
+    let username = match temp_extenstions.get::<String>() {
+        Some(username) => username,
+        None => {
+            // AuthMiddleware를 거치지 않았거나 설정 오류
+            return HttpResponse::InternalServerError().body("Authentication context missing...");
+        }
+    };
+    
+    // DB에서 사용자 삭제 쿼리 실행
+    match sqlx::query("delete from users where username=?").bind(username)
+        .execute(pool.get_ref()).await {
+            Ok(result) => {
+                // 삭제된 행 수 확인
+                if result.rows_affected()>0 { // 사용자가 존재했을 경우
+                    // 해당 사용자의 모든 토큰 무효화
+                    let mut denylist_guard = denylist.0.lock().unwrap();
+                    denylist_guard.insert(username.clone());
+                    HttpResponse::Ok().body("User deleted successfully.")
+                } else {    // 사용자가 이미 없었거나 잘못된 사용자 이름이었다면
+                    HttpResponse::NotFound().body("User not found in database...")
+                }
+            }    
+            Err(_) => {
+                HttpResponse::InternalServerError().body("Database error during deletion...")
+            }   
+        }
 }

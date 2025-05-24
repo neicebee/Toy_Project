@@ -4,7 +4,7 @@ mod todo;
 
 use actix_web::web;
 use crate::middleware::auth_middleware::AuthMiddleware; // crate 루트 기준 AuthMiddleware 구조체 import
-use self::{auth::{register, login}, todo::list_todos};  // 현재 모듈 내에서 항목 import
+use self::{auth::{register, login, logout, delete_user}, todo::list_todos};  // 현재 모듈 내에서 항목 import
 
 // main.rs에서 App::configure로 호출되어 라우트 설정 담당
 pub fn init(cfg: &mut web::ServiceConfig) { // web::ServiceConfig를 가변 참조로 받아 설정 변경
@@ -23,6 +23,11 @@ pub fn init(cfg: &mut web::ServiceConfig) { // web::ServiceConfig를 가변 참�
             // 스코프 내의 하위 서비스를 등록
                 // "/todos" 경로 설정(get 요청을 list_todos 함수가 처리)
             web::resource("/todos").route(web::get().to(list_todos))
+        ).service(
+            web::resource("/logout").route(web::post().to(logout))
+        ).service(
+            // 인증된 본인을 삭제하는 기능이므로 "/api/user" 경로에 delete 요청으로 처리 
+            web::resource("/user").route(web::delete().to(delete_user))
         )
     );
 }
