@@ -84,13 +84,13 @@ where
                         match decode_jwt(token) {
                             Ok(username) => {   // 토큰 유효 시
                                 // Mutex 락 획득 및 HashSet에 username 존재 확인
-                                let denylist_guard = denylist.0.lock().unwrap();
-                                if denylist_guard.contains(&username) { // Denylist에 사용자 이름이 있을 경우
+                                // Mutex lock은 if 블록 이탈 시 해제
+                                if denylist.0.lock().unwrap().contains(&username) { // Denylist에 사용자 이름이 있을 경우
                                     let response = HttpResponse::Unauthorized().body("Token is invalidated...");
                                     return Ok(ServiceResponse::new(request, response));
                                 }
                                 // RequestExtensions에 username 저장
-                                // 핸들러 함수에서 req.extensions().getn()::<String>() 등으로 추출해 사용 가능
+                                // 핸들러 함수에서 req.extensions().get::<String>() 등으로 추출해 사용 가능
                                 request.extensions_mut().insert(username);
                                 // 다음 서비스로 요청 전달
                                 let original_req = ServiceRequest::from_parts(request, payload);    // 분리했던 요소들을 재결합해서 객체 생성

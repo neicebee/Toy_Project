@@ -74,7 +74,7 @@ pub struct LoginInfo {
 
 // login 핸들러
 // 공개 비동기 함수
-pub async fn login(pool: web::Data<SqlitePool>, info: web::Json<LoginInfo>) -> impl Responder {
+pub async fn login(pool: web::Data<SqlitePool>, info: web::Json<LoginInfo>, denylist: web::Data<Arc<Denylist>>) -> impl Responder {
     // username으로 DB에서 사용자의 password_hash 조회
     let row = match sqlx::query("select password_hash from users where username=?").bind(&info.username)    // 쿼리 바인딩
         .fetch_one(pool.get_ref()).await {  // fetch_one(): 쿼리 결과 중 첫 번째 행만 획득
@@ -85,6 +85,7 @@ pub async fn login(pool: web::Data<SqlitePool>, info: web::Json<LoginInfo>) -> i
     // 입력 비밀번호와 DB 저장 해시값 비교(검증)
         // 해시는 단방향 암호화이기 때문에 동일한 메시지는 동일한 다이제스트를 가짐
     if verify(&info.password, (&row).get("password_hash")).unwrap_or(false) {   // verify() & unwrap_or(false): 입력 password의 참조와 DB 해시의 참조 비교 후 결과(bool) 획득
+        denylist.0.lock().unwrap().remove(&info.username.to_string());
         // 비밀번호 검증 성공 시 JWT 토큰 생성
         match create_jwt(&info.username) {  // username에 대한 JWT 생성
             Ok(token) => HttpResponse::Ok().json(serde_json::json!({"token": token})),  // 토큰 생성 성공 시 토큰을 포함한 200 OK 응답
@@ -106,15 +107,16 @@ pub async fn logout(req: HttpRequest, denylist: web::Data<Arc<Denylist>>) -> imp
             return HttpResponse::InternalServerError().body("Authentication context missing...");
         }
     };
+    println!("{}", username);
     
     // Authorization 헤더에서 현재 사용된 토큰 추출
     // (Denylist에 토큰 문자열 자체를 넣거나 사용자 이름과 함께 관리하기 위해 필요)
     // 사용자 이름 자체를 Denylist에 추가하여, 해당 사용자의 모든 토큰을 무효화하는 방식으로 구현합니다.
     // 이는 해당 사용자가 다시 로그인하기 전까지는 어떤 유효한 토큰으로도 접근이 불가능하게 합니다.
 
-    // Denylist에 사용자 이름 추가
-    let mut denylist_guard = denylist.0.lock().unwrap(); // Mutex 락 획득
-    if denylist_guard.insert(username.to_string()) { // HashSet에 사용자 이름 삽입. 삽입 성공 시 true 반환.
+    // Mutex Lock 획득 후 Denylist에 사용자 이름 추가
+    // if 문 블록 이탈 시 Mutex Lock 해제
+    if denylist.0.lock().unwrap().insert(username.to_string()) { // HashSet에 사용자 이름 삽입. 삽입 성공 시 true 반환.
         HttpResponse::Ok().body("Logged out successfully...") // 삽입 성공 (새로 무효화)
     } else {
         HttpResponse::Ok().body("Already logged out or invalid token...") // 이미 무효화되어 있었음
@@ -133,15 +135,17 @@ pub async fn delete_user(pool: web::Data<SqlitePool>, denylist: web::Data<Arc<De
         }
     };
     
+    println!("{}", username);
+    
     // DB에서 사용자 삭제 쿼리 실행
     match sqlx::query("delete from users where username=?").bind(username)
         .execute(pool.get_ref()).await {
             Ok(result) => {
                 // 삭제된 행 수 확인
                 if result.rows_affected()>0 { // 사용자가 존재했을 경우
+                    println!("ok!");
                     // 해당 사용자의 모든 토큰 무효화
-                    let mut denylist_guard = denylist.0.lock().unwrap();
-                    denylist_guard.insert(username.clone());
+                    denylist.0.lock().unwrap().insert(username.clone());
                     HttpResponse::Ok().body("User deleted successfully.")
                 } else {    // 사용자가 이미 없었거나 잘못된 사용자 이름이었다면
                     HttpResponse::NotFound().body("User not found in database...")

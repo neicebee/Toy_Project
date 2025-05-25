@@ -16,6 +16,7 @@ static MIGRATOR: Migrator = sqlx::migrate!("./migrations");
 
 // Denylist 타입 정의
 // Mutex로 인해 여러 스레드에서 안전하게 접근 가능, Arc로 인해 객체를 여러 곳에서 공유 가능
+#[derive(Debug)]
 pub struct Denylist(Mutex<HashSet<String>>);
 
 #[actix_web::main]
