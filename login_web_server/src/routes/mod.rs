@@ -16,18 +16,14 @@ pub fn init(cfg: &mut web::ServiceConfig) { // web::ServiceConfig를 가변 참�
         // "/api/login" 경로 설정(post 요청을 login 함수가 처리)
         web::resource("/api/login").route(web::post().to(login))
     ).service(
-        // "/api" 경로를 기준으로 하는 scope(묶음) 설정
-        // "/api" 스코프 정의(스코프 내의 모든 라우트 경로는 "/api"로 시작
-        // 해당 스코프 내의 모든 서비스에 AuthMiddleware 적용
-        web::scope("/api").wrap(AuthMiddleware).service(
-            // 스코프 내의 하위 서비스를 등록
-                // "/todos" 경로 설정(get 요청을 list_todos 함수가 처리)
-            web::resource("/todos").route(web::get().to(list_todos))
-        ).service(
-            web::resource("/logout").route(web::post().to(logout))
-        ).service(
-            // 인증된 본인을 삭제하는 기능이므로 "/api/user" 경로에 delete 요청으로 처리 
-            web::resource("/user").route(web::delete().to(delete_user))
-        )
+        web::resource("/api/todos").route(web::get().to(list_todos))
+        .wrap(AuthMiddleware)
+    ).service(
+        web::resource("/api/logout").route(web::post().to(logout))
+        .wrap(AuthMiddleware)
+    ).service(
+        // 인증된 본인을 삭제하는 기능이므로 "/api/user" 경로에 delete 요청으로 처리 
+        web::resource("/user").route(web::delete().to(delete_user))
+        .wrap(AuthMiddleware)
     );
 }
