@@ -13,3 +13,5 @@ sqlx = { version = "0.6", features = ["sqlite", "runtime-tokio-native-tls", "mac
 bcrypt = "0.12"
 jsonwebtoken = "8"
 futures-util = "0.3"
+dotenv = "0.15"
+actix-cors = "0.6"
