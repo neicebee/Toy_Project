@@ -4,3 +4,6 @@ __pycache__/
 simple_web_server/target/
 study_web_server/target/
 login_web_server/target/
+frontend/target/
+frontend/dist/
+login_web_server/.env

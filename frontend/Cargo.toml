@@ -1,0 +1,21 @@
+[package]
+name = "frontend"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Leptos 프레임워크 추가 (Client-Side Rendering 기능 활성화)
+leptos = { version = "0.6", features = ["csr"] }
+leptos_router = { version = "0.6", features = ["csr"] }
+
+# Wasm 바인딩을 위한 크레이트
+wasm-bindgen = "0.2.92"
+# 패닉 발생 시 콘솔에 에러 메시지를 더 잘 보여주기 위해 (디버깅용)
+console_error_panic_hook = "0.1.7"
+
+# HTTP 클라이언트 (백엔드 API 호출용)
+reqwest = { version = "0.11", features = ["json"] }
+
+# JSON 직렬화/역직렬화
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
