@@ -7,3 +7,4 @@ login_web_server/target/
 frontend/target/
 frontend/dist/
 login_web_server/.env
+example/

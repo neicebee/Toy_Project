@@ -1,6 +1,7 @@
 mod auth;   // src/auth.rs 사용
 mod routes; // src/routes 모듈 import
 mod middleware; // src/middleware 모듈 import
+mod generator;  // src/generator 모듈 import
 
 use actix_web::{web, App, HttpServer};
 use actix_cors::Cors;

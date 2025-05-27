@@ -1,8 +1,9 @@
 use actix_web::{web, HttpMessage, HttpRequest, HttpResponse, Responder};
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use sqlx::{Row, SqlitePool};
 use bcrypt::{hash, verify};
 use crate::auth::create_jwt;
+use crate::generator::generate_password as generate_random_password_string;    // crate 루트 기준 generate_password import
 
 use std::sync::Arc;
 use crate::Denylist;
@@ -66,6 +67,12 @@ pub async fn register(pool: web::Data<SqlitePool>, info: web::Json<RegisterInfo>
     }
 }
 
+#[derive(Serialize)]
+struct LoginSuccessResponse {
+    token: String,
+    username: String,
+}
+
 #[derive(Deserialize)]
 pub struct LoginInfo {
     username: String,
@@ -88,10 +95,21 @@ pub async fn login(pool: web::Data<SqlitePool>, info: web::Json<LoginInfo>, deny
         denylist.0.lock().unwrap().remove(&info.username.to_string());
         // 비밀번호 검증 성공 시 JWT 토큰 생성
         match create_jwt(&info.username) {  // username에 대한 JWT 생성
-            Ok(token) => HttpResponse::Ok().json(serde_json::json!({"token": token})),  // 토큰 생성 성공 시 토큰을 포함한 200 OK 응답
-            Err(_) => HttpResponse::InternalServerError().body("Error creating token..."),  // 토큰 생성 실패 시 500 에러 응답 반환
+            Ok(token) => {
+                println!("User {} logged in successfully!", &info.username);
+                let response_data = LoginSuccessResponse {
+                    token: token,
+                    username: info.username.clone(),
+                };
+                HttpResponse::Ok().json(response_data)  // 토큰 생성 성공 시 토큰을 포함한 json 객체와 200 OK 응답
+            }
+            Err(_) => {
+                eprintln!("Error creating JWT for user {}...", &info.username);
+                HttpResponse::InternalServerError().body("Error creating token...")  // 토큰 생성 실패 시 500 에러 응답 반환
+            }
         }
     } else {
+        eprintln!("Login failed invalid password for user: {}", &info.username);
         HttpResponse::Unauthorized().body("Invalid username or password...")    // 비밀번호 검증 실패 시 401 Unauthorized 응답 반환
     }
 }
@@ -155,4 +173,10 @@ pub async fn delete_user(pool: web::Data<SqlitePool>, denylist: web::Data<Arc<De
                 HttpResponse::InternalServerError().body("Database error during deletion...")
             }   
         }
+}
+
+// generate_password 핸들러
+pub async fn generate_password() -> impl Responder {
+    let password = generate_random_password_string();
+    HttpResponse::Ok().json(serde_json::json!({"password": password}))
 }
