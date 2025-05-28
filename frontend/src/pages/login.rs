@@ -2,7 +2,7 @@ use leptos::*;
 use leptos_router::*; // 라우팅 이동을 위해 훅 사용
 use reqwest; // 백엔드 API 호출을 위한 reqwest 임포트
 use serde::{Serialize, Deserialize}; // 요청/응답 JSON 처리를 위한 serde 임포트
-use web_sys::{Event, MouseEvent, window}; // input 이벤트 타입, button 클릭 이벤트 타입, 창 임포트
+use web_sys::{console::log, window, Event, MouseEvent}; // input 이벤트 타입, button 클릭 이벤트 타입, 창 임포트
 use log::info;
 
 use crate::app::{AUTH_STATE, JWT_TOKEN_KEY, USERNAME_KEY};
@@ -25,9 +25,8 @@ struct LoginResponse {
 #[component]
 pub fn Login() -> impl IntoView {
     // 컴포넌트 시작 부분에서 인증 상태 확인
-    let auth_state = use_context::<RwSignal<Option<String>>>()
-        .expect("Auth state context not found");
-    if auth_state.get().is_some() { // 인증 상태가 Some (로그인됨) 이면
+    info!("{:?}", AUTH_STATE.get().is_some());
+    if AUTH_STATE.get().is_some() { // 인증 상태가 Some (로그인됨) 이면
         info!("Login Guard (Internal): User authenticated, redirecting from login page."); // 로그
         // 인증된 상태이므로 /todos 페이지로 리다이렉트
         return view! { <Redirect path="/todos"/> }.into(); // Redirect 컴포넌트 반환
@@ -89,6 +88,7 @@ pub fn Login() -> impl IntoView {
                                             // 전역 인증 상태 업데이트 (받은 사용자 이름 사용)
                                             AUTH_STATE.set(Some(data.username.clone())); // 받은 사용자 이름(String)으로 Signal 업데이트
                                             info!("Auth state updated: logged in as {}", data.username);
+                                            info!("{:?}", AUTH_STATE.get().is_some());
                                         } else {
                                             info!("Failed to save username to local storage.");
                                             // 사용자 이름 저장 실패 시에도 일단 토큰이 있으니 로그인 상태로 간주할지는 정책 나름.

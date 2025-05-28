@@ -2,16 +2,50 @@ use actix_web::{web, HttpMessage, HttpRequest, HttpResponse, Responder};
 use serde::{Deserialize, Serialize};
 use sqlx::{Row, SqlitePool};
 use bcrypt::{hash, verify};
-use crate::auth::create_jwt;
+use crate::auth::{create_jwt, decode_jwt};
 use crate::generator::generate_password as generate_random_password_string;    // crate 루트 기준 generate_password import
 
 use std::sync::Arc;
 use crate::Denylist;
 
 #[derive(Deserialize)]
+pub struct VerifyTokenRequest {
+    token: String,
+}
+
+#[derive(Serialize)]
+pub struct VerifyTokenResponse {
+    valid: bool,
+    username: Option<String>,
+}
+
+#[derive(Deserialize)]
 pub struct RegisterInfo {
     username: String,
     password: String,
+}
+
+// JWT 토큰 문자열을 받아서 유효성 검증 후 결과를 응답하는 핸들러
+// 이 엔드포인트는 인증 없이 토큰 검증만 수행하므로 AuthMiddleware 보호 밖에 라우팅될 것임.
+pub async fn verify_token(info: web::Json<VerifyTokenRequest>) -> impl Responder { // 요청 본문으로 VerifyTokenRequest 받음
+    let token = &info.token; // 검증할 토큰 문자열 참조
+
+    // decode_jwt는 유효한 토큰이면 Ok(username), 유효하지 않으면 Err 를 반환.
+    match decode_jwt(token) {
+        Ok(username) => { // 토큰 유효성 검증 성공 시 (서명, 만료 시간 등 모두 통과)
+            println!("Token verification successful for user: {}", username);
+            // 유효한 토큰이므로 valid: true 와 사용자 이름 반환
+            HttpResponse::Ok().json(VerifyTokenResponse { valid: true, username: Some(username) })
+        }
+        Err(e) => { // 토큰 유효성 검증 실패 시 (만료, 잘못된 서명, 형식 오류 등)
+            eprintln!("Token verification failed: {:?}", e); // 에러 로그 남김
+            // 유효하지 않은 토큰이므로 valid: false 와 사용자 이름 없음 반환
+            HttpResponse::Ok().json(VerifyTokenResponse { valid: false, username: None })
+            // Note: 보안상 401 Unauthorized 로 응답할 수도 있으나,
+            // 여기서는 토큰 자체의 유효성만 묻는 요청이므로 200 OK 에 valid: false 로 응답하는 것도 일반적.
+            // 프론트엔드는 valid: false 를 보고 Unauthorized 로 판단.
+        }
+    }
 }
 
 // register 핸들러

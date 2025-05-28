@@ -395,7 +395,6 @@ dependencies = [
 name = "frontend"
 version = "0.1.0"
 dependencies = [
- "base64 0.21.7",
  "console_error_panic_hook",
  "console_log",
  "js-sys",
