@@ -5,7 +5,7 @@ mod generator;  // src/generator 모듈 import
 
 use actix_web::{web, App, HttpServer};
 use actix_cors::Cors;
-use anyhow::Result;
+use anyhow::{self, Result};
 use sqlx::{migrate::Migrator, SqlitePool};
 use dotenv::dotenv;
 use std::env;
@@ -13,6 +13,9 @@ use std::env;
 // Denylist 상태 관리를 위한 모듈
 use std::sync::{Arc, Mutex};
 use std::collections::HashSet;  // 무효화 토큰 및 사용자 이름 저장
+
+// bcrypt 자가시험을 위한 모듈
+use bcrypt::{hash_with_salt, Version::TwoB};
 
 // sqlx 마이그레이터 정의
 // 컴파일 타임에 ./migrations 폴더를 읽음
@@ -26,6 +29,7 @@ pub struct Denylist(Mutex<HashSet<String>>);
 #[actix_web::main]
 async fn main() -> Result<()> {
     dotenv().ok();  // .env 파일 읽고 환경 변수로 로드
+    bcrypt_self_test().map_err(|e| e)?; // bcrypt 자가시험 실행 후 에러 시 서버 즉시 중단
     println!("Starting server...");
     // DB url 정의
     let db_url = env::var("DATABASE_URL").expect("DATABASE_URL not set in .env or environment...");
@@ -60,4 +64,28 @@ async fn main() -> Result<()> {
     }).bind("127.0.0.1:8080")?.run().await?;
     
     Ok(())
+}
+
+fn bcrypt_self_test() -> Result<()> {
+    println!("Running bcrypt self-test...");
+    let test_pw = env::var("BCRYPT_TEST_PASSWORD").expect("BCRYPT_TEST_PASSWORD not set in .env");
+    let test_fixed_salt = env::var("BCRYPT_TEST_FIXED_SALT")
+        .expect("BCRYPT_TEST_FIXED_SALT not set in .env");
+    let expected_hash = env::var("BCRYPT_EXPECTED_HASH").expect("BCRYPT_EXPECTED_HASH not set in .env");
+    let test_fixed_salt = test_fixed_salt.as_bytes();
+    match hash_with_salt(&test_pw, 10, test_fixed_salt) {
+        Ok(result) => {
+            if result.format_for_version(TwoB)==expected_hash {
+                println!("bcrypt self-test done!");
+                Ok(())
+            } else {
+                let error_msg = "bcrypt self-test failed... Aborting server start...";
+                return Err(anyhow::anyhow!("{}", error_msg))
+            }
+        }
+        Err(_) => {
+            let error_msg = "bcrypt self-test failed during hashing... Aborting server start...";
+            return Err(anyhow::anyhow!("{}", error_msg))
+        }
+    }
 }
