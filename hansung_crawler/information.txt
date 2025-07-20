@@ -1,0 +1,22 @@
+공지사항(전체)
+- https://www.hansung.ac.kr/hansung/8385/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGaGFuc3VuZyUyRjE0MyUyRmFydGNsTGlzdC5kbyUzRmJic0NsU2VxJTNEJTI2YmJzT3BlbldyZFNlcSUzRCUyNmlzVmlld01pbmUlM0RmYWxzZSUyNnNyY2hDb2x1bW4lM0RzaiUyNnNyY2hXcmQlM0QlMjY%3D
+
+공지사항 테이블
+- table class="board-table horizon1"
+- caption
+
+공지사항 중 상단 공지사항
+- tr class="notice "
+- td class="td-num" => 일반공지
+- a href="/bbs/hansung/143/269662/artclView.do" onclick="jf_viewArtcl('hansung', '143', '269662')"
+
+일반 공지사항
+- tr class
+- td class="td-num" => 4784
+
+공지사항 요소
+- td class="td-subject"
+- td class="td-write"
+- td class="td-date"
+- td class="td-access"
+- td class="td-file"
