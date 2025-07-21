@@ -20,3 +20,41 @@
 - td class="td-date"
 - td class="td-access"
 - td class="td-file"
+
+
+[<td class="td-num">4755</td>, <td class="td-subject">
+<a href="/bbs/hansung/143/269594/artclView.do" onclick="jf_viewArtcl('hansung', '143', '269594')">
+<strong>
+                                                                                                [상상빌리지] 2025년도 2학기 동계방중 상상빌리지(행복기숙사) 모
+
+                                                                                                        ...
+
+
+                                                                                        </strong>
+</a>
+</td>, <td class="td-write">
+                                    
+                                        
+                                        
+                                        
+                                        
+                                            
+                                                
+                                                    학생장학팀
+                                                
+                                                
+                                                
+                                            
+                                        
+                                    
+                                </td>, <td class="td-date">2025.07.14</td>, <td class="td-access">
+                                    
+                                        
+                                        
+                                        
+                                        
+                                            339
+                                        
+                                    
+                                </td>, <td class="td-file">
+</td>]
