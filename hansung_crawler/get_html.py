@@ -16,10 +16,13 @@ class get_html:
     def get_req(self) -> Union[str, int]:
         if not self.url:
             return None
-        with requests.Session() as s:
-            req = s.get(self.url, headers=self.hdr)
-            output = req.status_code if not req.status_code == 200 else req.text
-        return output
+        try:
+            with requests.Session() as s:
+                req = s.get(self.url, headers=self.hdr, timeout=10)
+                return req.status_code if not req.status_code == 200 else req.text
+        except requests.exceptions.RequestException as e:
+            print(f"네트워크 요청 중 예외 발생: {e}")
+            return -1
     
     def get_content(self) -> Union[bytes, int]:
         if not self.url:
