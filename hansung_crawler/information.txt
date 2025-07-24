@@ -21,40 +21,570 @@
 - td class="td-access"
 - td class="td-file"
 
+7/21
+--- 추출 내용 ---
+테이블 헤더: ['번호', '제목', '작성자', '작성일', '조회수', '첨부파일']
+num: 일반공지
+subject: 2025학년도 2학기 트랙변경 신청 안내 (7.21~7.25)
+write: 학사지원팀
+date: 2025.07.15
+access: 702
+file: 2
+num: 전체게시판공지
+subject: 「전체」종합정보시스템 이관에 따른 시스템 중단 일정 안내(7/19 토~ 7/ ...
+write: 정보화팀
+date: 2025.07.14
+access: 525
+file: 0
+num: 일반공지
+subject: 2025년 '천원의 아침밥' 사업 일시 중단 안내
+write: 학생장학팀
+date: 2025.06.12
+access: 849
+file: 0
+num: 일반공지
+subject: 2025 한성대학교 디자인&스토리 공모전
+write: 글로컬상생홍보팀
+date: 2025.06.02
+access: 1766
+file: 2
+num: 일반공지
+subject: 2024학년도 후기(2025.8월) 졸업사정대상자 졸업사정 절차 및 ...
+write: 학사지원팀
+date: 2025.05.08
+access: 3219
+file: 0
+num: 일반공지
+subject: 2025학년도 국가근로장학금 지급일자 안내
+write: 학생장학팀
+date: 2025.04.10
+access: 2605
+file: 0
+num: 전체게시판공지
+subject: 「전체」2025학년도 학생단체 외부행사 시 지침 안내
+write: 학생장학팀
+date: 2025.03.31
+access: 1263
+file: 4
+num: 전체게시판공지
+subject: 「전체」2025학년도 한성도전장학금(비교과장학금) 신설 안내
+write: 학생성공센터
+date: 2025.03.20
+access: 4160
+file: 1
+num: 일반공지
+subject: 2025학년도 국가근로장학금 학업시간표 및 업무스케줄 입력 유의사항 ...
+write: 학생장학팀
+date: 2025.03.11
+access: 1463
+file: 0
+num: 일반공지
+subject: 2025학년도 1학기 국가근로장학금 사전교육자료 첨부
+write: 학생장학팀
+date: 2025.02.27
+access: 1412
+file: 1
+num: 일반공지
+subject: [근로중지 자진신고]해외출국 등 개인사유 발생 시 자진신고 안내
+write: 학생장학팀
+date: 2024.03.14
+access: 2314
+file: 0
+num: 일반공지
+subject: [학생성공센터] HSP 리뉴얼 사이트 오픈에 따른 참가신청 방법 변 ...
+write: 학생성공센터
+date: 2023.08.18
+access: 8910
+file: 0
+num: 일반공지
+subject: [양식] 학술문화예술장학금 신청안내
+write: 학생장학팀
+date: 2023.07.24
+access: 4762
+file: 1
+num: 일반공지
+subject: [양식] 국가근로장학금 출근부 미입력 사유서 양식 안내
+write: 학생장학팀
+date: 2023.03.02
+access: 7397
+file: 1
+num: 일반공지
+subject: -★비교과프로그램은 스마트자기관리시스템 [프로그램 홍보]에서 확인해주 ...
+write: 학생성공센터
+date: 2022.08.29
+access: 15924
+file: 0
+num: 일반공지
+subject: [양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생
+write: 학생장학팀
+date: 2022.03.14
+access: 6603
+file: 2
+num: 4782
+subject: [채용] 국제교류지원팀 계약직원 채용 공고
+write: 국제교류지원팀
+date: 2025.07.21
+access: 27
+file: 1
+num: 4781
+subject: 2025학년도 2학기 창업휴학 신청 안내
+write: 창업지원센터
+date: 2025.07.21
+access: 82
+file: 2
+num: 4780
+subject: 2025학년도 2학기 창업대체학점 신청 안내
+write: 창업지원센터
+date: 2025.07.21
+access: 58
+file: 3
+num: 4779
+subject: [인문과학연구원] 이주의 인문학 사업단 전임연구인력 채용 공고
+write: 인문과학연구원
+date: 2025.07.21
+access: 45
+file: 4
+num: 4778
+subject: [성북구청] 2025년 성북 기후 리빙랩 참가자 모집
+write: ESG센터
+date: 2025.07.21
+access: 105
+file: 0
+num: 4777
+subject: [대한민국교육봉사단] 청소년 정서진로 멘토링 [씨드스쿨] 대학생 봉사 ...
+write: ESG센터
+date: 2025.07.18
+access: 157
+file: 0
+num: 4776
+subject: [상암동주민센터] 제5회 상암동 통통통 물통통 마을축제 자원봉사자 모 ...
+write: ESG센터
+date: 2025.07.18
+access: 208
+file: 1
+num: 4775
+subject: [굿네이버스] 좋은이웃가게 발굴단 모집 안내
+write: ESG센터
+date: 2025.07.18
+access: 134
+file: 0
+num: 4774
+subject: [기획조정처] 한성대학교 대학발전계획 고도화를 위한 대학 이해관계자 ...
+write: 전략평가관리팀
+date: 2025.07.18
+access: 241
+file: 0
+num: 4773
+subject: 2025년 2학기 푸른등대 기부장학금 신규장학생 선발
+write: 학생장학팀
+date: 2025.07.18
+access: 362
+file: 0
+num: 4772
+subject: [추천]한국사학진흥재단 행정직 채용(~07/30)
+write: 지역청년고용팀
+date: 2025.07.17
+access: 167
+file: 3
+num: 4771
+subject: ★[고노부X미래내일일경험]한국주택금융공사 인턴형(~7/21)
+write: 지역청년고용팀
+date: 2025.07.17
+access: 262
+file: 2
+num: 4770
+subject: ★[고노부X미래내일일경험]한국도로교통공단 인턴형(~7/21)
+write: 지역청년고용팀
+date: 2025.07.17
+access: 204
+file: 2
+num: 4769
+subject: 케이키친한상 임시 휴업 안내
+write: 연구지원팀
+date: 2025.07.17
+access: 338
+file: 0
+num: 4768
+subject: 25년도 2학기 군 이러닝 수강안내(대학 학점취득 원격강좌 수강안내)
+write: 학사지원팀
+date: 2025.07.17
+access: 195
+file: 0
+num: 4767
+subject: 2025학년도 2학기 한성대학교 비전임교원 및 강사 공개채용 안내
+write: 교수지원팀
+date: 2025.07.17
+access: 6702
+file: 2
+num: 4766
+subject: [7.16.기준]강소 및 교내 추천채용 기업 리스트
+write: 지역청년고용팀
+date: 2025.07.16
+access: 378
+file: 0
+num: 4765
+subject: [해양환경공단] 2025년 '해양환경 지식나눔' 온 ...
+write: ESG센터
+date: 2025.07.16
+access: 150
+file: 2
+num: 4764
+subject: [채용]정보화팀 통합기자재실 조교 모집 공고
+write: 정보화팀
+date: 2025.07.16
+access: 229
+file: 1
+num: 4763
+subject: [한국국제협력단(KOICA) X 한성대학교 ESG센터] KOICA 프 ...
+write: ESG센터
+date: 2025.07.15
+access: 346
+file: 4
+num: 4762
+subject: [공지] 미래관, 상상관 유무선인터넷 및 전화서비스 일시중단 (07/ ...
+write: 정보화팀
+date: 2025.07.15
+access: 150
+file: 0
+num: 4761
+subject: [월드프렌즈코리아] KOICA-NGO 봉사단 귀국단원 프로그램 진로박 ...
+write: ESG센터
+date: 2025.07.15
+access: 175
+file: 0
+num: 4760
+subject: [진로취업지원팀] 코멘토(온라인 멘토링 플랫폼) 이용 안내
+write: 진로취업지원팀
+date: 2025.07.15
+access: 175
+file: 1
+num: 4759
+subject: <2025학년도 2학기 현장실습생 모집 안내(9월 실습시작)&g ...
+write: 현장실습지원센터
+date: 2025.07.15
+access: 1188
+file: 3
+num: 4758
+subject: 2025학년도 2학기 트랙변경 신청 안내 (7.21~7.25)
+write: 학사지원팀
+date: 2025.07.15
+access: 702
+file: 2
+num: 4757
+subject: 2025 국립극장 엔톡 청년기자단 모집
+write: 학생장학팀
+date: 2025.07.14
+access: 196
+file: 0
+num: 4756
+subject: [채용] 부동산대학원 행정조교 모집
+write: 사회과학부
+date: 2025.07.14
+access: 192
+file: 1
+num: 4755
+subject: (한국장애인개발원) 2025년도 쌍용곰두리장학생 모집 관련 홍보
+write: 학생장학팀
+date: 2025.07.14
+access: 210
+file: 3
+num: 4754
+subject: 2025 5·18희망장학생 모집공고 홍보
+write: 학생장학팀
+date: 2025.07.14
+access: 267
+file: 0
+num: 4753
+subject: 종합정보시스템 이관에 따른 시스템 중단 일정 안내(7/19 토~ 7/ ...
+write: 정보화팀
+date: 2025.07.14
+access: 525
+file: 0
 
-[<td class="td-num">4755</td>, <td class="td-subject">
-<a href="/bbs/hansung/143/269594/artclView.do" onclick="jf_viewArtcl('hansung', '143', '269594')">
-<strong>
-                                                                                                [상상빌리지] 2025년도 2학기 동계방중 상상빌리지(행복기숙사) 모
+---------------------------------------
 
-                                                                                                        ...
-
-
-                                                                                        </strong>
-</a>
-</td>, <td class="td-write">
-                                    
-                                        
-                                        
-                                        
-                                        
-                                            
-                                                
-                                                    학생장학팀
-                                                
-                                                
-                                                
-                                            
-                                        
-                                    
-                                </td>, <td class="td-date">2025.07.14</td>, <td class="td-access">
-                                    
-                                        
-                                        
-                                        
-                                        
-                                            339
-                                        
-                                    
-                                </td>, <td class="td-file">
-</td>]
+7/24
+--- 추출 내용 ---
+테이블 헤더: ['번호', '제목', '작성자', '작성일', '조회수', '첨부파일']
+num: 일반공지
+subject: 2024학년도 후기(2025.8) 졸업사정 결과 조회 및 이상유무 입 ...
+write: 학사지원팀
+date: 2025.07.24
+access: 120
+file: 0
+num: 일반공지
+subject: 2025학년도 2학기 한성대학교 비전임교원 및 강사 공개채용 안내
+write: 교수지원팀
+date: 2025.07.17
+access: 8682
+file: 2
+num: 일반공지
+subject: 2025학년도 2학기 트랙변경 신청 안내 (7.21~7.25)
+write: 학사지원팀
+date: 2025.07.15
+access: 952
+file: 2
+num: 일반공지
+subject: 2025년 '천원의 아침밥' 사업 일시 중단 안내
+write: 학생장학팀
+date: 2025.06.12
+access: 876
+file: 0
+num: 일반공지
+subject: 2025 한성대학교 디자인&스토리 공모전
+write: 글로컬상생홍보팀
+date: 2025.06.02
+access: 1810
+file: 2
+num: 일반공지
+subject: 2024학년도 후기(2025.8월) 졸업사정대상자 졸업사정 절차 및 ...
+write: 학사지원팀
+date: 2025.05.08
+access: 3314
+file: 0
+num: 일반공지
+subject: 2025학년도 국가근로장학금 지급일자 안내
+write: 학생장학팀
+date: 2025.04.10
+access: 2680
+file: 0
+num: 전체게시판공지
+subject: 「전체」2025학년도 학생단체 외부행사 시 지침 안내
+write: 학생장학팀
+date: 2025.03.31
+access: 1291
+file: 4
+num: 전체게시판공지
+subject: 「전체」2025학년도 한성도전장학금(비교과장학금) 신설 안내
+write: 학생성공센터
+date: 2025.03.20
+access: 4210
+file: 1
+num: 일반공지
+subject: 2025학년도 국가근로장학금 학업시간표 및 업무스케줄 입력 유의사항 ...
+write: 학생장학팀
+date: 2025.03.11
+access: 1492
+file: 0
+num: 일반공지
+subject: 2025학년도 1학기 국가근로장학금 사전교육자료 첨부
+write: 학생장학팀
+date: 2025.02.27
+access: 1427
+file: 1
+num: 일반공지
+subject: [근로중지 자진신고]해외출국 등 개인사유 발생 시 자진신고 안내
+write: 학생장학팀
+date: 2024.03.14
+access: 2319
+file: 0
+num: 일반공지
+subject: [학생성공센터] HSP 리뉴얼 사이트 오픈에 따른 참가신청 방법 변 ...
+write: 학생성공센터
+date: 2023.08.18
+access: 8939
+file: 0
+num: 일반공지
+subject: [양식] 학술문화예술장학금 신청안내
+write: 학생장학팀
+date: 2023.07.24
+access: 4781
+file: 1
+num: 일반공지
+subject: [양식] 국가근로장학금 출근부 미입력 사유서 양식 안내
+write: 학생장학팀
+date: 2023.03.02
+access: 7474
+file: 1
+num: 일반공지
+subject: -★비교과프로그램은 스마트자기관리시스템 [프로그램 홍보]에서 확인해주 ...
+write: 학생성공센터
+date: 2022.08.29
+access: 15965
+file: 0
+num: 일반공지
+subject: [양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생
+write: 학생장학팀
+date: 2022.03.14
+access: 6616
+file: 2
+num: 4786
+subject: [추천채용][신라스테이(신라HM)] 5기 정규채용 연계 과정 교육생 ...
+write: 지역청년고용팀
+date: 2025.07.24
+access: 9
+file: 1
+num: 4785
+subject: 2024학년도 후기(2025.8) 졸업사정 결과 조회 및 이상유무 입 ...
+write: 학사지원팀
+date: 2025.07.24
+access: 120
+file: 0
+num: 4784
+subject: [서울신용보증재단]'현대백화점 미아점X성북동길' 팝 ...
+write: 캠퍼스타운창업센터
+date: 2025.07.23
+access: 232
+file: 0
+num: 4783
+subject: [공지]상상관 12층 공사 안내
+write: 자산관리팀
+date: 2025.07.23
+access: 251
+file: 0
+num: 4782
+subject: [문화체육관광부] 2025년 제19기 대한민국 바로알림단(Friend ...
+write: ESG센터
+date: 2025.07.23
+access: 130
+file: 1
+num: 4781
+subject: [7.23 기준] 강소 및 교내 추천채용 리스트
+write: 지역청년고용팀
+date: 2025.07.23
+access: 192
+file: 0
+num: 4780
+subject: 2025학년도 하계 라이프 디자인 스쿨 우수 과제물 발표 안내
+write: 진로취업지원팀
+date: 2025.07.23
+access: 124
+file: 0
+num: 4779
+subject: 2025학년도 2학기 휴·복학 신청 안내 (8.1.~8.29.)
+write: 학사지원팀
+date: 2025.07.23
+access: 151
+file: 0
+num: 4778
+subject: [추천채용]쿠팡CLS_ 채용 담당(Recruiter)00명 모집(1차 ...
+write: 지역청년고용팀
+date: 2025.07.22
+access: 134
+file: 1
+num: 4777
+subject: [추천채용] 삼성전자협력사- 재무회계 정규(남성) (~07/28 11 ...
+write: 지역청년고용팀
+date: 2025.07.22
+access: 195
+file: 1
+num: 4776
+subject: [SW중심] 프로그래머스 2025 하계방중 코딩특강 수요조사
+write: SW중심대학사업단
+date: 2025.07.22
+access: 267
+file: 0
+num: 4775
+subject: 헤이영 캠퍼스 만족도 조사 (~ 7.29.화)
+write: 정보화팀
+date: 2025.07.22
+access: 96
+file: 0
+num: 4774
+subject: [채용] 국제교류지원팀 계약직원 채용 공고
+write: 국제교류지원팀
+date: 2025.07.21
+access: 204
+file: 1
+num: 4773
+subject: 2025학년도 2학기 창업휴학 신청 안내
+write: 창업지원센터
+date: 2025.07.21
+access: 142
+file: 2
+num: 4772
+subject: 2025학년도 2학기 창업대체학점 신청 안내
+write: 창업지원센터
+date: 2025.07.21
+access: 119
+file: 3
+num: 4771
+subject: [인문과학연구원] 이주의 인문학 사업단 전임연구인력 채용 공고
+write: 인문과학연구원
+date: 2025.07.21
+access: 97
+file: 4
+num: 4770
+subject: [성북구청] 2025년 성북 기후 리빙랩 참가자 모집
+write: ESG센터
+date: 2025.07.21
+access: 150
+file: 0
+num: 4769
+subject: [대한민국교육봉사단] 청소년 정서진로 멘토링 [씨드스쿨] 대학생 봉사 ...
+write: ESG센터
+date: 2025.07.18
+access: 184
+file: 0
+num: 4768
+subject: [상암동주민센터] 제5회 상암동 통통통 물통통 마을축제 자원봉사자 모 ...
+write: ESG센터
+date: 2025.07.18
+access: 245
+file: 1
+num: 4767
+subject: [굿네이버스] 좋은이웃가게 발굴단 모집 안내
+write: ESG센터
+date: 2025.07.18
+access: 161
+file: 0
+num: 4766
+subject: [기획조정처] 한성대학교 대학발전계획 고도화를 위한 대학 이해관계자 ...
+write: 전략평가관리팀
+date: 2025.07.18
+access: 265
+file: 0
+num: 4765
+subject: 2025년 2학기 푸른등대 기부장학금 신규장학생 선발
+write: 학생장학팀
+date: 2025.07.18
+access: 452
+file: 0
+num: 4764
+subject: [추천]한국사학진흥재단 행정직 채용(~07/30)
+write: 지역청년고용팀
+date: 2025.07.17
+access: 201
+file: 3
+num: 4763
+subject: ★[고노부X미래내일일경험]한국주택금융공사 인턴형(~7/21)
+write: 지역청년고용팀
+date: 2025.07.17
+access: 324
+file: 2
+num: 4762
+subject: ★[고노부X미래내일일경험]한국도로교통공단 인턴형(~7/21)
+write: 지역청년고용팀
+date: 2025.07.17
+access: 235
+file: 2
+num: 4761
+subject: 케이키친한상 임시 휴업 안내
+write: 연구지원팀
+date: 2025.07.17
+access: 394
+file: 0
+num: 4760
+subject: 25년도 2학기 군 이러닝 수강안내(대학 학점취득 원격강좌 수강안내)
+write: 학사지원팀
+date: 2025.07.17
+access: 266
+file: 0
+num: 4759
+subject: 2025학년도 2학기 한성대학교 비전임교원 및 강사 공개채용 안내
+write: 교수지원팀
+date: 2025.07.17
+access: 8682
+file: 2
+num: 4758
+subject: [7.16.기준]강소 및 교내 추천채용 기업 리스트
+write: 지역청년고용팀
+date: 2025.07.16
+access: 437
+file: 0
+num: 4757
+subject: [해양환경공단] 2025년 '해양환경 지식나눔' 온 ...
+write: ESG센터
+date: 2025.07.16
+access: 162
+file: 2
