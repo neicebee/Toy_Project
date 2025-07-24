@@ -23,6 +23,17 @@ class get_html:
         except requests.exceptions.RequestException as e:
             print(f"네트워크 요청 중 예외 발생: {e}")
             return -1
+        
+    def post_req(self, post_data) -> Union[str, int]:
+        if not self.url:
+            return None
+        try:
+            with requests.Session() as s:
+                req = s.post(self.url, headers=self.hdr, data=post_data, timeout=10)
+                return req.status_code if not req.status_code == 200 else req.text
+        except requests.exceptions.RequestException as e:
+            print(f"네트워크 요청 중 예외 발생: {e}")
+            return -1
     
     def get_content(self) -> Union[bytes, int]:
         if not self.url:

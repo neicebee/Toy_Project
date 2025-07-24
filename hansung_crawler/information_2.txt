@@ -1,0 +1,20 @@
+https://www.hansung.ac.kr/bbs/hansung/143/artclList.do
+
+- 메인 홈페이지 1 페이지 POST 데이터
+layout: 5Op5N6HXicqz2jqh4sxgz7ECT9MbeWxhVFwsIyGN%2F0c%3D
+bbsClSeq
+bbsOpenWrdSeq
+isViewMine: false
+srchColumn: sj
+srchWrd
+
+- 메인 홈페이지 n 페이지 POST 데이터
+layout: 5Op5N6HXicqz2jqh4sxgz7ECT9MbeWxhVFwsIyGN%2F0c%3D
+page: 2(n)
+srchColumn: sj
+srchWrd
+bbsClSeq
+bbsOpenWrdSeq
+rgsBgndeStr
+rgsEnddeStr
+isViewMine: false
