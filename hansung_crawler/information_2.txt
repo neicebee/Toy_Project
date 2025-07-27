@@ -1,20 +1,4 @@
-https://www.hansung.ac.kr/bbs/hansung/143/artclList.do
-
-- 메인 홈페이지 1 페이지 POST 데이터
-layout: 5Op5N6HXicqz2jqh4sxgz7ECT9MbeWxhVFwsIyGN%2F0c%3D
-bbsClSeq
-bbsOpenWrdSeq
-isViewMine: false
-srchColumn: sj
-srchWrd
-
-- 메인 홈페이지 n 페이지 POST 데이터
-layout: 5Op5N6HXicqz2jqh4sxgz7ECT9MbeWxhVFwsIyGN%2F0c%3D
-page: 2(n)
-srchColumn: sj
-srchWrd
-bbsClSeq
-bbsOpenWrdSeq
-rgsBgndeStr
-rgsEnddeStr
-isViewMine: false
+[{'subject': '2024학년도 후기(2025.8) 졸업사정 결과 조회 및 이상유무 입 ...', 'write': '학사지원팀', 'date': '2025.07.24', 'access': 445, 'file': 0}, {'subject': "2025년 '천원의 아침밥' 사업 일시 중단 안내", 'write': '학생장학팀', 'date': '2025.06.12', 'access': 907, 'file': 0}, {'subject': '2025 한성대학교 디자인&스토리 공모전', 'write': '글로컬상생홍보팀', 'date': '2025.06.02', 'access': 1857, 'file': 2}, {'subject': '2024학년도 후기(2025.8월) 졸업사정대상자 졸업사정 절차 및 ...', 'write': '학사지원팀', 'date': '2025.05.08', 'access': 3378, 'file': 0}, {'subject': '2025학년도 국가근로장학금 지급일자 안내', 'write': '학생장학팀', 'date': '2025.04.10', 'access': 2733, 'file': 0}, {'subject': '2025학년도 국가근로장학금 학업시간표 및 업무스케줄 입력 유의사항 ...', 'write': '학생장학팀', 'date': '2025.03.11', 'access': 1510, 'file': 0}, {'subject': '2025학년도 1학기 국가근로장학금 사전교육자료 첨부', 'write': '학생장학팀', 'date': '2025.02.27', 'access': 1442, 'file': 1}, {'subject': '[근로중지 자진신고]해외출국 등 개인사유 발생 시 자진신고 안내', 'write': '학생장학팀', 'date': '2024.03.14', 'access': 2329, 'file': 0}, {'subject': '[학생성공센터] HSP 리뉴얼 사이트 오픈에 따른 참가신청 방법 변 ...', 'write': '학생성공센터', 'date': '2023.08.18', 'access': 8983, 'file': 0}, {'subject': '[양식] 학술문화예술장학금 신청안내', 'write': '학생장학팀', 'date': '2023.07.24', 'access': 4797, 'file': 1}, {'subject': '[양식] 국가근로장학금 출근부 미입력 사유서 양식 안내', 'write': '학생장학팀', 'date': '2023.03.02', 'access': 7521, 'file': 1}, {'subject': '-★비교과프로그램은 스마트자기관리시스템 [프로그램 홍보]에서 확인해주 ...', 'write': '학생성공센터', 'date': '2022.08.29', 'access': 16020, 'file': 0}, {'subject': '[양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생', 'write': '학생장학팀', 'date': '2022.03.14', 'access': 6630, 'file': 2}]
+[{'subject': '2024학년도 후기(2025.8) 졸업사정 결과 조회 및 이상유무 입 ...', 'write': '학사지원팀', 'date': '2025.07.24', 'access': 445, 'file': 0}, {'subject': "2025년 '천원의 아침밥' 사업 일시 중단 안내", 'write': '학생장학팀', 'date': '2025.06.12', 'access': 907, 'file': 0}, {'subject': '2025 한성대학교 디자인&스토리 공모전', 'write': '글로컬상생홍보팀', 'date': '2025.06.02', 'access': 1857, 'file': 2}, {'subject': '2024학년도 후기(2025.8월) 졸업사정대상자 졸업사정 절차 및 ...', 'write': '학사지원팀', 'date': '2025.05.08', 'access': 3378, 'file': 0}, {'subject': '2025학년도 국가근로장학금 지급일자 안내', 'write': '학생장학팀', 'date': '2025.04.10', 'access': 2733, 'file': 0}, {'subject': '2025학년도 국가근로장학금 학업시간표 및 업무스케줄 입력 유의사항 ...', 'write': '학생장학팀', 'date': '2025.03.11', 'access': 1510, 'file': 0}, {'subject': '2025학년도 1학기 국가근로장학금 사전교육자료 첨부', 'write': '학생장학팀', 'date': '2025.02.27', 'access': 1442, 'file': 1}, {'subject': '[근로중지 자진신고]해외출국 등 개인사유 발생 시 자진신고 안내', 'write': '학생장학팀', 'date': '2024.03.14', 'access': 2329, 'file': 0}, {'subject': '[학생성공센터] HSP 리뉴얼 사이트 오픈에 따른 참가신청 방법 변 ...', 'write': '학생성공센터', 'date': '2023.08.18', 'access': 8983, 'file': 0}, {'subject': '[양식] 학술문화예술장학금 신청안내', 'write': '학생장학팀', 'date': '2023.07.24', 'access': 4797, 'file': 1}, {'subject': '[양식] 국가근로장학금 출근부 미입력 사유서 양식 안내', 'write': '학생장학팀', 'date': '2023.03.02', 'access': 7521, 'file': 1}, {'subject': '-★비교과프로그램은 스마트자기관리시스템 [프로그램 홍보]에서 확인해주 ...', 'write': '학생성공센터', 'date': '2022.08.29', 'access': 16020, 'file': 0}, {'subject': '[양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생', 'write': '학생장학팀', 'date': '2022.03.14', 'access': 6630, 'file': 2}]
+[{'subject': '「전체」2025학년도 학생단체 외부행사 시 지침 안내', 'write': '학생장학팀', 'date': '2025.03.31', 'access': 1313, 'file': 4}, {'subject': '「전체」2025학년도 한성도전장학금(비교과장학금) 신설 안내', 'write': '학생성공센터', 'date': '2025.03.20', 'access': 4275, 'file': 1}]
+[{'subject': '「전체」2025학년도 학생단체 외부행사 시 지침 안내', 'write': '학생장학팀', 'date': '2025.03.31', 'access': 1313, 'file': 4}, {'subject': '「전체」2025학년도 한성도전장학금(비교과장학금) 신설 안내', 'write': '학생성공센터', 'date': '2025.03.20', 'access': 4275, 'file': 1}]

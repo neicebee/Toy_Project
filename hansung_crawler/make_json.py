@@ -21,8 +21,6 @@ def parse_table_data(n_table):
                 key = TAG[i]
                 value = element
                 if key == 'num':
-                    if current_record: # 이전 레코드가 있으면 저장
-                        parsed_records.append(current_record)
                     current_record = {} # 새 레코드 시작
                     current_record[key] = value
                 elif current_record: # 현재 레코드에 데이터 추가
