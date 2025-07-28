@@ -1,7 +1,7 @@
 from get_html import get_html
-from make_json import parse_table_data
+from utils import parse_table_data, make_categorized_data
 from bs4 import BeautifulSoup
-import re, os, json
+import os, json
 
 callback_url = 'https://www.hansung.ac.kr/bbs/hansung/143/artclList.do'
 home_notices_layout = '5Op5N6HXicqz2jqh4sxgz7ECT9MbeWxhVFwsIyGN%2F0c%3D'
@@ -11,7 +11,7 @@ home_notices_layout = '5Op5N6HXicqz2jqh4sxgz7ECT9MbeWxhVFwsIyGN%2F0c%3D'
 Crawler = get_html(callback_url)
 
 # num 타입별 분류 후 저장할 최종 딕셔너리
-categorized_data = {
+final_categorized_data = {
     'categories': {},  # num이 문자열
     'notices_by_id': {} # num이 숫자
 }
@@ -41,8 +41,8 @@ if os.path.exists(output_file_name):
     }
     current_page1_raw_html = Crawler.post_req(temp_page1_data_post_payload)
     if not isinstance(current_page1_raw_html, str):
-            print("1페이지 크롤링 실패. 전체 크롤링 진행...")
-            SHOULD_RUN_FULL_CRAWL = True
+        print("1페이지 크롤링 실패. 전체 크롤링 진행...")
+        SHOULD_RUN_FULL_CRAWL = True
     else:
         soup_page1 = BeautifulSoup(current_page1_raw_html, 'html.parser')
         n_table_page1 = soup_page1.select_one('table.board-table.horizon1')
@@ -51,28 +51,18 @@ if os.path.exists(output_file_name):
             SHOULD_RUN_FULL_CRAWL = True
         else:
             # parse_table_data를 통해 레코드 리스트를 얻고, 이를 categorize_data 형식으로 변환
-            parsed_records_page1 = parse_table_data(n_table_page1)
-            for record in parsed_records_page1:
-                if 'num' in record:
-                    num_value = record['num']
-                    try:
-                        num_as_int = int(num_value)
-                        item_content = record.copy()
-                        del item_content['num']
-                        categorized_data['notices_by_id'][num_value] = item_content # 원본 num_value를 키로 사용
-                    except ValueError:
-                        if num_value not in categorized_data['categories']:
-                            categorized_data['categories'][num_value] = []
-                        item_content = record.copy()
-                        del item_content['num']
-                        categorized_data['categories'][num_value].append(item_content)
+            temp_categorized_data = {
+                'categories': {},  # num이 문자열
+                'notices_by_id': {} # num이 숫자
+            }
+            make_categorized_data(parse_table_data(n_table_page1), categorized_data=temp_categorized_data)
             is_same_content = True
             # 일반공지 및 전체게시판공지 비교
             major_categories_to_compare = ['일반공지', '전체게시판공지']
             num_records_to_compare_per_category = 5
             for category_name in major_categories_to_compare:
                 existing_list = existing_data.get('categories', {}).get(category_name, [])
-                current_list = categorized_data.get('categories', {}).get(category_name, [])
+                current_list = temp_categorized_data.get('categories', {}).get(category_name, [])
                 # 두 리스트의 시작 부분만 비교
                 if existing_list[:num_records_to_compare_per_category]!=current_list[:num_records_to_compare_per_category]:
                     print(f"'{category_name}' 카테고리 새로운 내용 감지...")
@@ -80,7 +70,7 @@ if os.path.exists(output_file_name):
                     break
             if is_same_content:
                 existing_notices_by_id = existing_data.get('notices_by_id', {})
-                current_notices_by_id = categorized_data.get('notices_by_id', {})
+                current_notices_by_id = temp_categorized_data.get('notices_by_id', {})
                 # 기존 파일과 현재 크롤링한 1페이지 notices_by_id가 비어있지 않은지 확인
                 if not existing_notices_by_id:
                     print("전체 크롤링 진행...")
@@ -125,33 +115,14 @@ if os.path.exists(output_file_name):
             data = Crawler.post_req(home_notices_data)
             soup = BeautifulSoup(data, 'html.parser') if isinstance(data, str) else print(data)
             n_table = soup.select_one('table.board-table.horizon1')
-            parsed_records = parse_table_data(n_table)
-            categorized_data.clear()
-            categorized_data = {
-                'categories': {},  # num이 문자열
-                'notices_by_id': {} # num이 숫자
-            }
-            for record in parsed_records:
-                if 'num' in record:
-                    num_value = record['num']
-                    try:
-                        num_as_int = int(num_value)
-                        item_content = record.copy()
-                        del item_content['num']
-                        categorized_data['notices_by_id'][num_value] = item_content # 원본 num_value를 키로 사용
-                    except ValueError:
-                        if num_value not in categorized_data['categories']:
-                            categorized_data['categories'][num_value] = []
-                        item_content = record.copy()
-                        del item_content['num']
-                        categorized_data['categories'][num_value].append(item_content)
+            make_categorized_data(parse_table_data(n_table), categorized_data=final_categorized_data)
             print(f"{page} 페이지 파싱 완료...")
-            try:
-                with open(output_file_name, 'w', encoding='utf-8') as f:
-                    json.dump(categorized_data, f, ensure_ascii=False, indent=4)
-                print(f"모든 데이터가 '{output_file_name}' 파일에 성공적으로 저장되었습니다.")
-            except IOError as e:
-                print(f"파일 저장 중 오류 발생: {e}")
+        try:
+            with open(output_file_name, 'w', encoding='utf-8') as f:
+                json.dump(final_categorized_data, f, ensure_ascii=False, indent=4)
+            print(f"모든 데이터가 '{output_file_name}' 파일에 성공적으로 저장되었습니다.")
+        except IOError as e:
+            print(f"파일 저장 중 오류 발생: {e}")
     else:
         print("기존 파일과 내용이 같아 크롤링 및 파일 저장 로직을 실행하지 않았습니다.")
 else:
@@ -167,26 +138,11 @@ else:
         data = Crawler.post_req(home_notices_data)
         soup = BeautifulSoup(data, 'html.parser') if isinstance(data, str) else print(data)
         n_table = soup.select_one('table.board-table.horizon1')
-        parsed_records = parse_table_data(n_table)
-
-        for record in parsed_records:
-            if 'num' in record:
-                num_value = record['num']
-                try:
-                    num_as_int = int(num_value)
-                    item_content = record.copy()
-                    del item_content['num']
-                    categorized_data['notices_by_id'][num_value] = item_content # 원본 num_value를 키로 사용
-                except ValueError:
-                    if num_value not in categorized_data['categories']:
-                        categorized_data['categories'][num_value] = []
-                    item_content = record.copy()
-                    del item_content['num']
-                    categorized_data['categories'][num_value].append(item_content)
+        make_categorized_data(parse_table_data(n_table), categorized_data=final_categorized_data)
         print(f"{page} 페이지 파싱 완료...")
     try:
         with open(output_file_name, 'w', encoding='utf-8') as f:
-            json.dump(categorized_data, f, ensure_ascii=False, indent=4)
+            json.dump(final_categorized_data, f, ensure_ascii=False, indent=4)
         print(f"모든 데이터가 '{output_file_name}' 파일에 성공적으로 저장되었습니다.")
     except IOError as e:
         print(f"파일 저장 중 오류 발생: {e}")
