@@ -1,0 +1,669 @@
+{
+    "categories": {
+        "전체게시판공지": [
+            {
+                "subject": "「전체」트랙 내 전공필수교과목 졸업처리 안내",
+                "write": "컴퓨터공학부",
+                "date": "2025.07.08",
+                "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269538/artclView.do",
+                "file": 0
+            },
+            {
+                "subject": "「전체」[25.01.16 내용변경됨] 2025년1학기 컴퓨터공학부 교육과정 변경 예고.",
+                "write": "컴퓨터공학부",
+                "date": "2025.01.16",
+                "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265588/artclView.do",
+                "file": 1
+            },
+            {
+                "subject": "「전체」26년2월 졸업자까지 기존과 마찬가지로 전공선택 1개를 트랙필수로 대체 인정 가능.",
+                "write": "컴퓨터공학부",
+                "date": "2025.01.16",
+                "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265982/artclView.do",
+                "file": 0
+            },
+            {
+                "subject": "「전체」코딩테스트 학습 서비스, 코드트리 이용 공지사항",
+                "write": "컴퓨터공학부",
+                "date": "2024.10.02",
+                "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264081/artclView.do",
+                "file": 0
+            }
+        ],
+        "게시물이(가) 없습니다.": [
+            {}
+        ]
+    },
+    "notices_by_id": {
+        "90": {
+            "subject": "2025 여름 제주 런케이션 프로그램 with 제주대",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.29",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269825/artclView.do",
+            "file": 0
+        },
+        "89": {
+            "subject": "▶이스트소프트 인턴연계형 ◀ 교육생 모집 (전액지원) [금번 기수 마지막 기회! ]",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.25",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269778/artclView.do",
+            "file": 0
+        },
+        "88": {
+            "subject": "<SW중심대학사업단>프로그래머스와 함께하는 코딩테스트 특강(전액무료)",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.22",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269730/artclView.do",
+            "file": 0
+        },
+        "87": {
+            "subject": "컴퓨터그래픽스 응용 PNG 연구실 (지도교수: 김진모) 학부연구원 모집",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.18",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269683/artclView.do",
+            "file": 0
+        },
+        "86": {
+            "subject": "<정보> PQC Migration Challenge: 양자내성암호 전환 기술 공 ...",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.17",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269657/artclView.do",
+            "file": 3
+        },
+        "85": {
+            "subject": "디지털콘텐츠가상현실 트랙 진로로드맵 개발 프로젝트 참여 학생 모집 (HSP(High Suc ...",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.15",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269619/artclView.do",
+            "file": 0
+        },
+        "84": {
+            "subject": "<AML Lab. (지도교수: 한기준) 학부연구생 모집>",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.10",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269582/artclView.do",
+            "file": 0
+        },
+        "83": {
+            "subject": "2025 컴공캡스톤 수상팀 판넬 전시(공학관 301호)",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.09",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269558/artclView.do",
+            "file": 0
+        },
+        "82": {
+            "subject": "트랙 내 전공필수교과목 졸업처리 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.07.08",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269538/artclView.do",
+            "file": 0
+        },
+        "81": {
+            "subject": "아시아재단-마이크로소프트 Skill2Work 프로그램",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.26",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269383/artclView.do",
+            "file": 0
+        },
+        "80": {
+            "subject": "빅데이터 분석과정, 클라우드 관련 직무에 관심있는 학생들! <국민내일배움 k-디지털 ...",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.26",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269382/artclView.do",
+            "file": 0
+        },
+        "79": {
+            "subject": "[벤처기업협회/글로벌리서치] 2025년 ICT산업기능요원 실태조사_대학교",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.24",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269336/artclView.do",
+            "file": 0
+        },
+        "78": {
+            "subject": "[SW중심대학사업단] AI/SW창업 프로젝트팀 활동지원 프로그램 운영 공지",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.23",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269326/artclView.do",
+            "file": 3
+        },
+        "77": {
+            "subject": "2025학년도 AI 활용 학습역량 강화 프로그램 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.23",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269325/artclView.do",
+            "file": 4
+        },
+        "76": {
+            "subject": "현직자에게 배우는 산업 및 직무이야기",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.23",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269317/artclView.do",
+            "file": 0
+        },
+        "75": {
+            "subject": "2025학년도 컴퓨터공학부 수상팀 및 책자 공지",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.19",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269263/artclView.do",
+            "file": 2
+        },
+        "74": {
+            "subject": "SK에서 방중 취업연계 교육과정 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.18",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269233/artclView.do",
+            "file": 0
+        },
+        "73": {
+            "subject": "현대 로템 K-방산 스마트 AI 모델 개발과정",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.18",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269226/artclView.do",
+            "file": 0
+        },
+        "72": {
+            "subject": "IT공과대학재학생 대상 (현재 7학기 이상자) 교내 비교과 멘토링 신청 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.17",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269186/artclView.do",
+            "file": 0
+        },
+        "71": {
+            "subject": "컴퓨터공학부 행정조교 모집",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.16",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269177/artclView.do",
+            "file": 1
+        },
+        "70": {
+            "subject": "[그렙] 여름방학 알고리즘 캠프 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.13",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269145/artclView.do",
+            "file": 1
+        },
+        "69": {
+            "subject": "<홍보>2025-하계 전공(트랙)연계 진로·취업멘토링 프로그램 학생 참여 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.11",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269110/artclView.do",
+            "file": 0
+        },
+        "68": {
+            "subject": "2025-하계 전공(트랙)연계 진로·취업멘토링 프로그램 학생 모집",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.11",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269109/artclView.do",
+            "file": 0
+        },
+        "67": {
+            "subject": "(재학생) 2025-8월 졸업대상자 졸업요건 제출 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.04",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268964/artclView.do",
+            "file": 2
+        },
+        "66": {
+            "subject": "기업에서 실습하고 SW개발자로 취업까지, 2026년 일학습병행 사전 수요조사",
+            "write": "컴퓨터공학부",
+            "date": "2025.06.02",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268934/artclView.do",
+            "file": 0
+        },
+        "65": {
+            "subject": "[두산로보틱스] “AI・로봇 엔지니어 양성과정(초급)” - 5기 모집",
+            "write": "컴퓨터공학부",
+            "date": "2025.05.30",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268916/artclView.do",
+            "file": 0
+        },
+        "64": {
+            "subject": "[SW중심] 2025 SW중심대학 디지털 경진대회 참가팀 모집",
+            "write": "컴퓨터공학부",
+            "date": "2025.05.26",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268821/artclView.do",
+            "file": 0
+        },
+        "63": {
+            "subject": "[교수대상]산림청 _ \"대형산불 대응 지능형 솔루션 기술개발 사업\"",
+            "write": "컴퓨터공학부",
+            "date": "2025.05.23",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268776/artclView.do",
+            "file": 0
+        },
+        "62": {
+            "subject": "2025학년도 캡스톤디자인 전시회 참관 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.05.19",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268687/artclView.do",
+            "file": 1
+        },
+        "61": {
+            "subject": "컴퓨터공학부 문의사항 및 졸업관련 답변",
+            "write": "컴퓨터공학부",
+            "date": "2025.05.15",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268638/artclView.do",
+            "file": 0
+        },
+        "60": {
+            "subject": "컴퓨터공학부 전과 관련 공지",
+            "write": "컴퓨터공학부",
+            "date": "2025.05.13",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268580/artclView.do",
+            "file": 0
+        },
+        "59": {
+            "subject": "컴퓨터공학부 전공트랙 진로 설명회 단기 근로 모집 안내 (5.22 목/8시간내에서 신청가능 ...",
+            "write": "컴퓨터공학부",
+            "date": "2025.05.13",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268569/artclView.do",
+            "file": 0
+        },
+        "58": {
+            "subject": "금융연수원 Fufure Banker 아카데미 참가 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.05.09",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268523/artclView.do",
+            "file": 1
+        },
+        "57": {
+            "subject": "AWS와 Codetree가 공동 주최하는 전국 대학생 프로그래밍 경진대회 'ACP ...",
+            "write": "컴퓨터공학부",
+            "date": "2025.04.25",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268311/artclView.do",
+            "file": 1
+        },
+        "56": {
+            "subject": "[해외 현장실습] TOSUN Technology 현장실습생 선발 안내 (~4/30)",
+            "write": "컴퓨터공학부",
+            "date": "2025.04.25",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268307/artclView.do",
+            "file": 2
+        },
+        "55": {
+            "subject": "★2025-1학기 컴퓨터공학부 캡스톤디자인 전시회 취합 공지",
+            "write": "컴퓨터공학부",
+            "date": "2025.04.21",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268169/artclView.do",
+            "file": 0
+        },
+        "54": {
+            "subject": "삼성 청년SW·AI아카데미(SSAFY) 14기 모집 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.04.16",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/268055/artclView.do",
+            "file": 3
+        },
+        "53": {
+            "subject": "외부 교육과정 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.04.03",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/267774/artclView.do",
+            "file": 0
+        },
+        "52": {
+            "subject": "코딩라운지 튜터링 이용 안내(공학관A동 103호 2시~6시)",
+            "write": "컴퓨터공학부",
+            "date": "2025.03.24",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/267562/artclView.do",
+            "file": 0
+        },
+        "51": {
+            "subject": "25-1학기 캡스톤디자인 팀 신청 공지사항",
+            "write": "컴퓨터공학부",
+            "date": "2025.03.14",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/267378/artclView.do",
+            "file": 0
+        },
+        "50": {
+            "subject": "<전공기초: 컴퓨터프로그래밍 및 웹프로그래밍기초 중간&기말시험 일정 및 시험장소 안내 ...",
+            "write": "컴퓨터공학부",
+            "date": "2025.03.12",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/267331/artclView.do",
+            "file": 0
+        },
+        "49": {
+            "subject": "코딩 라운지 튜터 모집(모집완료)",
+            "write": "컴퓨터공학부",
+            "date": "2025.03.10",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/267269/artclView.do",
+            "file": 1
+        },
+        "48": {
+            "subject": "전공 튜터링 튜터 모집 (모집완료)",
+            "write": "컴퓨터공학부",
+            "date": "2025.03.07",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/267169/artclView.do",
+            "file": 1
+        },
+        "47": {
+            "subject": "<제목 : 캡스톤 디자인 수강자 이클래스 승인신청 안내>",
+            "write": "컴퓨터공학부",
+            "date": "2025.02.27",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266985/artclView.do",
+            "file": 0
+        },
+        "46": {
+            "subject": "서면신청 현재 입력중입니다.(제발 기다려주세요)",
+            "write": "컴퓨터공학부",
+            "date": "2025.02.27",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266975/artclView.do",
+            "file": 0
+        },
+        "45": {
+            "subject": "(마감) 2025-1학기 교과 교육 TA조교 모집 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.02.20",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266826/artclView.do",
+            "file": 0
+        },
+        "44": {
+            "subject": "[C&C School 가상현실 애니메이션 캡스톤디자인 교과목 수강신청 안내]",
+            "write": "컴퓨터공학부",
+            "date": "2025.02.19",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266787/artclView.do",
+            "file": 0
+        },
+        "43": {
+            "subject": "<중요공지>캡스톤 디자인 수강하는 학생들 공지(2월14일 11시 수강신청바람)",
+            "write": "컴퓨터공학부",
+            "date": "2025.02.12",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266553/artclView.do",
+            "file": 0
+        },
+        "42": {
+            "subject": "(링크열림신청바람)<2025-1학기 서면신청 안내(2차) > 졸업예정자 및 초과 ...",
+            "write": "컴퓨터공학부",
+            "date": "2025.02.06",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266387/artclView.do",
+            "file": 2
+        },
+        "41": {
+            "subject": "[마감] 컴퓨터공학부 트랙설명회 단기 근로 모집 안내 (2.17, 2.19, 2.20 / ...",
+            "write": "컴퓨터공학부",
+            "date": "2025.02.03",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266284/artclView.do",
+            "file": 0
+        },
+        "40": {
+            "subject": "연구원 모집 (박승현 교수님 연구실, MCS Lab.)",
+            "write": "컴퓨터공학부",
+            "date": "2025.01.31",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266243/artclView.do",
+            "file": 0
+        },
+        "39": {
+            "subject": "캡스톤 수강자 대상 안내사항",
+            "write": "컴퓨터공학부",
+            "date": "2025.01.22",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/266111/artclView.do",
+            "file": 0
+        },
+        "38": {
+            "subject": "26년2월 졸업자까지 기존과 마찬가지로 전공선택 1개를 트랙필수로 대체 인정 가능.",
+            "write": "컴퓨터공학부",
+            "date": "2025.01.16",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265982/artclView.do",
+            "file": 0
+        },
+        "37": {
+            "subject": "[25.01.16 내용변경됨] 2025년1학기 컴퓨터공학부 교육과정 변경 예고.",
+            "write": "컴퓨터공학부",
+            "date": "2025.01.16",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265588/artclView.do",
+            "file": 1
+        },
+        "36": {
+            "subject": "[파트타임/인턴] 네모다임엑스, 웹/앱 서비스 개발",
+            "write": "컴퓨터공학부",
+            "date": "2025.01.10",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265886/artclView.do",
+            "file": 0
+        },
+        "35": {
+            "subject": "심규현교수님의 컴공학생 공개 포폴리스트 안내",
+            "write": "컴퓨터공학부",
+            "date": "2025.01.06",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265792/artclView.do",
+            "file": 0
+        },
+        "34": {
+            "subject": "졸업 요건에 캡스톤디자인 수강 필수는 변동 없습니다.",
+            "write": "컴퓨터공학부",
+            "date": "2024.12.27",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265656/artclView.do",
+            "file": 0
+        },
+        "33": {
+            "subject": "[대학일자리플러스센터] 동계방학 IT직무 부트캠프 모집",
+            "write": "컴퓨터공학부",
+            "date": "2024.12.26",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265639/artclView.do",
+            "file": 0
+        },
+        "32": {
+            "subject": "2025-1 캡스톤디자인 과목 관련 공지",
+            "write": "컴퓨터공학부",
+            "date": "2024.12.24",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265628/artclView.do",
+            "file": 0
+        },
+        "31": {
+            "subject": "블록체인 관련 스타트업 아르바이트",
+            "write": "컴퓨터공학부",
+            "date": "2024.12.17",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265511/artclView.do",
+            "file": 0
+        },
+        "30": {
+            "subject": "[LG AI 연구원에서 주관하는 교육 프로그램] LG Aimers 6기 모집 안내",
+            "write": "컴퓨터공학부",
+            "date": "2024.12.13",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265443/artclView.do",
+            "file": 0
+        },
+        "29": {
+            "subject": "(재학생) 2025-2월 졸업대상자 졸업요건 제출 안내",
+            "write": "컴퓨터공학부",
+            "date": "2024.12.02",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265182/artclView.do",
+            "file": 2
+        },
+        "28": {
+            "subject": "심규현 교수님의 겨울방학 10주 추천 활동",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.28",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265123/artclView.do",
+            "file": 0
+        },
+        "27": {
+            "subject": "[SW중심대학사업단] 한성SW중심대학 페스티벌 (대학원 설명회, 오픈랩)",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.27",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265102/artclView.do",
+            "file": 0
+        },
+        "26": {
+            "subject": "★2024 동계 프로그래밍 캠프 모집 안내★",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.27",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265112/artclView.do",
+            "file": 0
+        },
+        "25": {
+            "subject": "컴퓨터공학부 학생회와 학과 동아리 BUG가 개최한 프로그래밍 대회 결과",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.21",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/265004/artclView.do",
+            "file": 0
+        },
+        "24": {
+            "subject": "[한성SW중심대학 페스티벌] 코딩대회 및 행사 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.15",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264892/artclView.do",
+            "file": 0
+        },
+        "23": {
+            "subject": "[서울시&KIST] 서울퀀텀캠퍼스 양자기술 산업전문과정(5일과정) 교육생 모집 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.12",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264839/artclView.do",
+            "file": 2
+        },
+        "22": {
+            "subject": "2025년 KLA Customer Support Engineer 동계 인턴 채용",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.12",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264835/artclView.do",
+            "file": 0
+        },
+        "21": {
+            "subject": "[대회] 학과동아리'bug'와 함께하는 컴퓨터공학부 프로그래밍대회 안내",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.07",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264770/artclView.do",
+            "file": 0
+        },
+        "20": {
+            "subject": "[채용공고] 코스닥상장사 ㈜윈스 정규직 채용",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.06",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264741/artclView.do",
+            "file": 0
+        },
+        "19": {
+            "subject": "일학습병행 설명회 및 3차모집 안내",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.06",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264734/artclView.do",
+            "file": 0
+        },
+        "18": {
+            "subject": "[2024 진로취업 페스티벌] 졸업생 초청 직무 특강 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.05",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264705/artclView.do",
+            "file": 0
+        },
+        "17": {
+            "subject": "공대생을 위한 LBT 지식나눔 프로젝트 (비교과 포인트 50P) 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2024.11.04",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264672/artclView.do",
+            "file": 0
+        },
+        "16": {
+            "subject": "대학(원)생 빅데이터 분석 경진대회 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.22",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264427/artclView.do",
+            "file": 4
+        },
+        "15": {
+            "subject": "2025학년도 대학원 전기정시 신입생 및 편입생(재입학생) 모집",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.21",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264415/artclView.do",
+            "file": 0
+        },
+        "14": {
+            "subject": "공공데이터 활용 경진대회 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.17",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264339/artclView.do",
+            "file": 1
+        },
+        "13": {
+            "subject": "[온라인 과정]이스트소프트 채용연계 과정",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.17",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264340/artclView.do",
+            "file": 1
+        },
+        "12": {
+            "subject": "선택 트랙 간 상호(제1트랙⇄제2트랙) 전공과목 변경신청 시행 안내",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.16",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264323/artclView.do",
+            "file": 0
+        },
+        "11": {
+            "subject": "컴퓨터공학부 전공 졸업학점 안내(졸업예정자 필독)",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.16",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264322/artclView.do",
+            "file": 0
+        },
+        "10": {
+            "subject": "[삼성] 청년 SW 아카데미 13기 모집 안내",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.16",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264313/artclView.do",
+            "file": 1
+        },
+        "9": {
+            "subject": "[공모전] (10/22수정) 2024년 SW중심대학 생성형 AI 활용 경험 공모전 개최 안 ...",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.15",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264277/artclView.do",
+            "file": 1
+        },
+        "8": {
+            "subject": "[공모전]신한과 함께하는 AI 챌린지, AI IDEATHON (~10/31)",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.07",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264119/artclView.do",
+            "file": 0
+        },
+        "7": {
+            "subject": "기초역량증진 금융수학 프로그램 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.02",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264083/artclView.do",
+            "file": 0
+        },
+        "6": {
+            "subject": "2024학년 2학기 step up 프로그램 홍보",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.02",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264082/artclView.do",
+            "file": 0
+        },
+        "5": {
+            "subject": "[웹젠]24년 하반기 웹젠 채용연계형 인턴모집",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.02",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264094/artclView.do",
+            "file": 0
+        },
+        "4": {
+            "subject": "코딩테스트 학습 서비스, 코드트리 이용 공지사항",
+            "write": "컴퓨터공학부",
+            "date": "2024.10.02",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264081/artclView.do",
+            "file": 0
+        },
+        "3": {
+            "subject": "컴퓨터공학부 신규 홈페이지 오픈",
+            "write": "허준영",
+            "date": "2024.10.01",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264079/artclView.do",
+            "file": 0
+        },
+        "2": {
+            "subject": "2024 LG유플러스 테크 컨퍼런스 (9/23, 월)",
+            "write": "컴퓨터공학부",
+            "date": "2024.09.20",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264084/artclView.do",
+            "file": 0
+        },
+        "1": {
+            "subject": "[삼성웰스토리] 신입사원 채용설명회 안내",
+            "write": "컴퓨터공학부",
+            "date": "2024.09.06",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264085/artclView.do",
+            "file": 0
+        }
+    }
+}
