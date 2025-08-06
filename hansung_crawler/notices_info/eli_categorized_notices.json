@@ -1,0 +1,92 @@
+{
+    "categories": {
+        "일반공지": [
+            {
+                "subject": "졸업요건",
+                "write": "크리에이티브인문학부",
+                "date": "2022.03.11",
+                "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/245349/artclView.do",
+                "file": 0
+            },
+            {
+                "subject": "장학금 안내",
+                "write": "크리에이티브인문학부",
+                "date": "2022.03.07",
+                "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/245246/artclView.do",
+                "file": 2
+            }
+        ]
+    },
+    "notices_by_id": {
+        "10": {
+            "subject": "2025-1 서면신청 및 교차수강신청 안내",
+            "write": "김민성",
+            "date": "2025.02.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/266632/artclView.do",
+            "file": 3
+        },
+        "9": {
+            "subject": "2025학년도 1학기 TA조교 모집",
+            "write": "김민성",
+            "date": "2025.02.11",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/266514/artclView.do",
+            "file": 1
+        },
+        "8": {
+            "subject": "HS진로탐색특강",
+            "write": "크리에이티브인문학부",
+            "date": "2024.10.30",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/264614/artclView.do",
+            "file": 0
+        },
+        "7": {
+            "subject": "[K-move스쿨] 전액국비지원 2024년 외국계, 미국 무역, 물류 및 사무경영 실무자 ...",
+            "write": "김민성",
+            "date": "2024.09.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/263829/artclView.do",
+            "file": 0
+        },
+        "6": {
+            "subject": "2024학년도 2학기 TA조교 모집",
+            "write": "김민성",
+            "date": "2024.08.12",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/262911/artclView.do",
+            "file": 1
+        },
+        "5": {
+            "subject": "2024-2 서면신청 및 교차수강신청 안내",
+            "write": "김민성",
+            "date": "2024.02.14",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/259091/artclView.do",
+            "file": 2
+        },
+        "4": {
+            "subject": "장기현장실습 안내",
+            "write": "크리에이티브인문학부",
+            "date": "2023.05.24",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/254873/artclView.do",
+            "file": 1
+        },
+        "3": {
+            "subject": "한국인터넷교육방송",
+            "write": "우재훈",
+            "date": "2022.11.23",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/250645/artclView.do",
+            "file": 1
+        },
+        "2": {
+            "subject": "2022학년 영어영문학부 미네르바 학술제 참가 그룹프로젝트 공모",
+            "write": "크리에이티브인문학부",
+            "date": "2022.10.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/249570/artclView.do",
+            "file": 0
+        },
+        "1": {
+            "subject": "2022-2 서면신청 및 교차수강신청 안내",
+            "write": "우재훈",
+            "date": "2022.08.10",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/67/248026/artclView.do",
+            "file": 2
+        }
+    }
+}

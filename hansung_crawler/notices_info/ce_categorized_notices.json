@@ -29,12 +29,23 @@
                 "link": "https://www.hansung.ac.kr/bbs/CSE/1248/264081/artclView.do",
                 "file": 0
             }
-        ],
-        "게시물이(가) 없습니다.": [
-            {}
         ]
     },
     "notices_by_id": {
+        "92": {
+            "subject": "<정보> ACK 2025 한국정보처리학회 논문경진대회",
+            "write": "컴퓨터공학부",
+            "date": "2025.08.06",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269971/artclView.do",
+            "file": 0
+        },
+        "91": {
+            "subject": "2025-2학기 수강신청 서면 신청 1차 안내(예고)",
+            "write": "컴퓨터공학부",
+            "date": "2025.08.04",
+            "link": "https://www.hansung.ac.kr/bbs/CSE/1248/269926/artclView.do",
+            "file": 2
+        },
         "90": {
             "subject": "2025 여름 제주 런케이션 프로그램 with 제주대",
             "write": "컴퓨터공학부",

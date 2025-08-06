@@ -24,7 +24,10 @@ def parse_table_data(n_table):
                         extracted_href = a_tag.get('href')
                         break
             for i, element in enumerate(elements):
-                key = TAG[i]
+                try:
+                    key = TAG[i]
+                except:
+                    key = TAG[i-1]
                 value = element
                 if key=='num':
                     current_record = {} # 새 레코드 시작
