@@ -1,0 +1,715 @@
+{
+    "categories": {
+        "일반공지": [
+            {
+                "subject": "2025학년도 4학년 대상 졸업요건 합불 현황(2025.7.10.수정)",
+                "write": "이호영",
+                "date": "2025.07.04",
+                "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/269505/artclView.do",
+                "file": 0
+            }
+        ]
+    },
+    "notices_by_id": {
+        "155": {
+            "subject": "「제18회 기록사랑 공모전」안내",
+            "write": "이호영",
+            "date": "2025.08.06",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/269969/artclView.do",
+            "file": 1
+        },
+        "154": {
+            "subject": "한국문화관광연구원 아카이브 이용 경험 설문조사 협조 요청",
+            "write": "이호영",
+            "date": "2025.08.05",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/269961/artclView.do",
+            "file": 0
+        },
+        "153": {
+            "subject": "2025학년도 4학년 대상 졸업요건 합불 현황(2025.7.10.수정)",
+            "write": "이호영",
+            "date": "2025.07.04",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/269505/artclView.do",
+            "file": 0
+        },
+        "152": {
+            "subject": "2025학년도 2차 졸업시험 결과 공지",
+            "write": "이호영",
+            "date": "2025.07.01",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/269452/artclView.do",
+            "file": 0
+        },
+        "151": {
+            "subject": "특강(AGI 시대와 인간의 미래: 챗GPT 이후의 삶, 일자리 그리고 교육) 안내",
+            "write": "이호영",
+            "date": "2025.06.19",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/269257/artclView.do",
+            "file": 0
+        },
+        "150": {
+            "subject": "2025학년도 2차 졸업시험 안내 (일정, 범위, 응시대상자)",
+            "write": "이호영",
+            "date": "2025.06.02",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268942/artclView.do",
+            "file": 1
+        },
+        "149": {
+            "subject": "국립중앙도서관 개관 80주년 기념 도서관 영상콘텐츠 공모전 안내",
+            "write": "이호영",
+            "date": "2025.06.02",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268931/artclView.do",
+            "file": 1
+        },
+        "148": {
+            "subject": "2025학년도 1차 졸업시험 결과 공지",
+            "write": "김지훈",
+            "date": "2025.05.30",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268911/artclView.do",
+            "file": 0
+        },
+        "147": {
+            "subject": "성북어린이청소년도서관 개관식 서포터즈 모집",
+            "write": "이호영",
+            "date": "2025.05.29",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268884/artclView.do",
+            "file": 0
+        },
+        "146": {
+            "subject": "제35회 한성어문학회 전국학술대회 홍보",
+            "write": "이호영",
+            "date": "2025.05.15",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268622/artclView.do",
+            "file": 1
+        },
+        "145": {
+            "subject": "2025학년도 1차 졸업시험 과목별 신청자 안내",
+            "write": "이호영",
+            "date": "2025.05.09",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268529/artclView.do",
+            "file": 1
+        },
+        "144": {
+            "subject": "2025학년도 1차 졸업시험 교재 및 시험 범위 안내 (5.16. 수정)",
+            "write": "이호영",
+            "date": "2025.05.09",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268526/artclView.do",
+            "file": 0
+        },
+        "143": {
+            "subject": "김근태기념도서관 마을기록활동가 양성과정 참여자 모집",
+            "write": "이호영",
+            "date": "2025.05.09",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268516/artclView.do",
+            "file": 1
+        },
+        "142": {
+            "subject": "2025-1 진로특강 및 HS트랙진로탐색 안내",
+            "write": "이호영",
+            "date": "2025.05.02",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268436/artclView.do",
+            "file": 0
+        },
+        "141": {
+            "subject": "2025 지설 문헌정보장학상 신청자 모집(~5/12)",
+            "write": "이호영",
+            "date": "2025.05.02",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268422/artclView.do",
+            "file": 2
+        },
+        "140": {
+            "subject": "2025학년도 문헌정보전공 졸업시험 신청 안내",
+            "write": "이호영",
+            "date": "2025.04.25",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268267/artclView.do",
+            "file": 2
+        },
+        "139": {
+            "subject": "2025학년도 지식정보문화트랙 실습 수요조사",
+            "write": "이호영",
+            "date": "2025.04.23",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268242/artclView.do",
+            "file": 0
+        },
+        "138": {
+            "subject": "강남도서관 북셀럽 대학생 서포터즈 6기 모집",
+            "write": "이호영",
+            "date": "2025.04.18",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268137/artclView.do",
+            "file": 3
+        },
+        "137": {
+            "subject": "제3회 구리시 책의 날 행사 자원봉사자 모집",
+            "write": "이호영",
+            "date": "2025.04.18",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/268116/artclView.do",
+            "file": 0
+        },
+        "136": {
+            "subject": "2026학년도 학석사연계과정생 모집 공고",
+            "write": "이호영",
+            "date": "2025.04.10",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267950/artclView.do",
+            "file": 3
+        },
+        "135": {
+            "subject": "25-1 문헌정보전공 소모임원 모집 안내",
+            "write": "이호영",
+            "date": "2025.04.07",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267825/artclView.do",
+            "file": 0
+        },
+        "134": {
+            "subject": "서울기록원 예비 기록 전문가의 날 안내",
+            "write": "이호영",
+            "date": "2025.03.27",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267646/artclView.do",
+            "file": 0
+        },
+        "133": {
+            "subject": "[★중요] 문헌정보전공 졸업요건 개정 안내",
+            "write": "이호영",
+            "date": "2025.03.24",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267563/artclView.do",
+            "file": 0
+        },
+        "132": {
+            "subject": "2025 금천구 청년 행정인턴(금천구립도서관 운영지원) 채용 안내",
+            "write": "이호영",
+            "date": "2025.03.21",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267523/artclView.do",
+            "file": 2
+        },
+        "131": {
+            "subject": "2025 도서관 서포터즈 '도소리' 6기 모집",
+            "write": "이호영",
+            "date": "2025.03.14",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267375/artclView.do",
+            "file": 2
+        },
+        "130": {
+            "subject": "[성북문화원] 성북구 주민 기록단 모집",
+            "write": "이호영",
+            "date": "2025.03.11",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267313/artclView.do",
+            "file": 0
+        },
+        "129": {
+            "subject": "2025-1 교수장학금 신청",
+            "write": "이호영",
+            "date": "2025.03.10",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267254/artclView.do",
+            "file": 1
+        },
+        "128": {
+            "subject": "[강동구립해공도서관] 2025년 서포터즈 모집 안내",
+            "write": "이호영",
+            "date": "2025.03.07",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/267212/artclView.do",
+            "file": 1
+        },
+        "127": {
+            "subject": "25-1 수강신청 잔여인원 안내 (3.7. 12:00 수정)",
+            "write": "이호영",
+            "date": "2025.02.28",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/266997/artclView.do",
+            "file": 0
+        },
+        "126": {
+            "subject": "[한국도서관협회] 계약직 직원 채용 추천",
+            "write": "이호영",
+            "date": "2025.02.19",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/266766/artclView.do",
+            "file": 0
+        },
+        "125": {
+            "subject": "[도봉도서관] 2025년 대학생 서포터즈 도도드림즈 모집 안내",
+            "write": "이호영",
+            "date": "2025.02.18",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/266737/artclView.do",
+            "file": 1
+        },
+        "124": {
+            "subject": "2025-1 서면신청 안내",
+            "write": "이호영",
+            "date": "2025.02.11",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/266492/artclView.do",
+            "file": 3
+        },
+        "123": {
+            "subject": "2025 도서관기획단 『동틀』 참가자 모집",
+            "write": "이호영",
+            "date": "2025.02.04",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/266325/artclView.do",
+            "file": 1
+        },
+        "122": {
+            "subject": "2025년도 국립중앙도서관 대학생 도서관 실무수습 수요조사 안내",
+            "write": "이호영",
+            "date": "2025.01.21",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/266065/artclView.do",
+            "file": 0
+        },
+        "121": {
+            "subject": "[2025 미래도서관 정책 아이디어 해커톤 대회]",
+            "write": "이호영",
+            "date": "2025.01.15",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/265932/artclView.do",
+            "file": 2
+        },
+        "120": {
+            "subject": "[법원도서관] 기간제 근로자 채용",
+            "write": "이호영",
+            "date": "2025.01.09",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/265859/artclView.do",
+            "file": 2
+        },
+        "119": {
+            "subject": "2024학년도 3차 졸업시험 결과 공지",
+            "write": "김지훈",
+            "date": "2024.12.31",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/265705/artclView.do",
+            "file": 0
+        },
+        "118": {
+            "subject": "2024학년도 3차 졸업시험 과목별 신청자 안내",
+            "write": "조정은",
+            "date": "2024.12.17",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/265516/artclView.do",
+            "file": 1
+        },
+        "117": {
+            "subject": "[아리랑어린이도서관] 주말아르바이트(사서보조) 모집 안내",
+            "write": "조정은",
+            "date": "2024.12.04",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/265250/artclView.do",
+            "file": 0
+        },
+        "116": {
+            "subject": "2024학년도 3차 졸업시험 교재 및 시험 범위 안내",
+            "write": "조정은",
+            "date": "2024.12.03",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/265232/artclView.do",
+            "file": 0
+        },
+        "115": {
+            "subject": "2024학년도 문헌정보전공 3차 졸업시험 안내",
+            "write": "조정은",
+            "date": "2024.11.27",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/265104/artclView.do",
+            "file": 2
+        },
+        "114": {
+            "subject": "2024-2학기 지식정보문화&디지털인문정보학 트랙 진로탐색 특강 안내",
+            "write": "조정은",
+            "date": "2024.11.05",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/264703/artclView.do",
+            "file": 0
+        },
+        "113": {
+            "subject": "[방배숲환경도서관] 2024 예비 도서관인 면접 특강 안내",
+            "write": "김지훈",
+            "date": "2024.10.18",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/264372/artclView.do",
+            "file": 0
+        },
+        "112": {
+            "subject": "[국가기록원] 나라기록관 기록 탐방 프로그램 운영 안내",
+            "write": "김지훈",
+            "date": "2024.09.23",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/263922/artclView.do",
+            "file": 1
+        },
+        "111": {
+            "subject": "2024-2 교수장학금 신청",
+            "write": "조정은",
+            "date": "2024.09.19",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/263850/artclView.do",
+            "file": 1
+        },
+        "110": {
+            "subject": "[한국도서관협회] 제61회 전국도서관대회·전시회 자원봉사자 모집 공고",
+            "write": "조정은",
+            "date": "2024.09.10",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/263736/artclView.do",
+            "file": 3
+        },
+        "109": {
+            "subject": "2024-2 서면신청 안내",
+            "write": "조정은",
+            "date": "2024.08.20",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/263095/artclView.do",
+            "file": 3
+        },
+        "108": {
+            "subject": "2024학년도 2차 졸업시험 결과 공지",
+            "write": "조정은",
+            "date": "2024.07.09",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/262276/artclView.do",
+            "file": 0
+        },
+        "107": {
+            "subject": "[국립중앙도서관] 제18회 도서관 혁신 아이디어 및 우수 현장사례 공모",
+            "write": "조정은",
+            "date": "2024.07.02",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/262140/artclView.do",
+            "file": 1
+        },
+        "106": {
+            "subject": "2024학년도 2차 졸업시험 과목별 신청자 안내",
+            "write": "조정은",
+            "date": "2024.06.24",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261994/artclView.do",
+            "file": 1
+        },
+        "105": {
+            "subject": "2024학년도 2차 졸업시험 교재 및 시험 범위 안내",
+            "write": "조정은",
+            "date": "2024.06.17",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261815/artclView.do",
+            "file": 0
+        },
+        "104": {
+            "subject": "2024학년도 문헌정보전공 2차 졸업시험 안내",
+            "write": "조정은",
+            "date": "2024.06.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261746/artclView.do",
+            "file": 2
+        },
+        "103": {
+            "subject": "'창신동을 바라보는 7개의 시선' 전시 안내",
+            "write": "조정은",
+            "date": "2024.06.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261721/artclView.do",
+            "file": 1
+        },
+        "102": {
+            "subject": "2024학년도 1차 졸업시험 결과 공지",
+            "write": "조정은",
+            "date": "2024.06.12",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261683/artclView.do",
+            "file": 0
+        },
+        "101": {
+            "subject": "2024-1 문헌정보전공 학부 학술제 공문 안내",
+            "write": "조정은",
+            "date": "2024.05.27",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261263/artclView.do",
+            "file": 0
+        },
+        "100": {
+            "subject": "[국가기록원] 대학(원)생 실습 과정 안내",
+            "write": "조정은",
+            "date": "2024.05.17",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261130/artclView.do",
+            "file": 1
+        },
+        "99": {
+            "subject": "2024학년도 1차 졸업시험 과목별 신청자 안내",
+            "write": "조정은",
+            "date": "2024.05.17",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261115/artclView.do",
+            "file": 1
+        },
+        "98": {
+            "subject": "[법원도서관] 2024학년도 법원도서관 실무실습 안내",
+            "write": "조정은",
+            "date": "2024.05.16",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/261056/artclView.do",
+            "file": 0
+        },
+        "97": {
+            "subject": "2024학년도 1차 졸업시험 교재 및 시험 범위 안내",
+            "write": "조정은",
+            "date": "2024.05.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260971/artclView.do",
+            "file": 0
+        },
+        "96": {
+            "subject": "[구로구립 항동푸른도서관] 개관연장사서 채용 공고",
+            "write": "조정은",
+            "date": "2024.05.03",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260780/artclView.do",
+            "file": 2
+        },
+        "95": {
+            "subject": "[서울특별시교육청 도서관] 2024년 서포터즈 도소리 5기 모집",
+            "write": "조정은",
+            "date": "2024.04.26",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260663/artclView.do",
+            "file": 0
+        },
+        "94": {
+            "subject": "2024학년도 문헌정보전공 1차 졸업시험 안내",
+            "write": "조정은",
+            "date": "2024.04.26",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260661/artclView.do",
+            "file": 2
+        },
+        "93": {
+            "subject": "2024 졸업시험 대체 비교과포인트 제출 공지",
+            "write": "조정은",
+            "date": "2024.04.22",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260548/artclView.do",
+            "file": 0
+        },
+        "92": {
+            "subject": "[의정부시 도서관] 2024년도 대학생 실습 관련 수요조사 안내",
+            "write": "조정은",
+            "date": "2024.04.22",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260530/artclView.do",
+            "file": 1
+        },
+        "91": {
+            "subject": "제61회(2024) 전국도서관대회·전시회 주제(슬로건) 공모전 안내",
+            "write": "조정은",
+            "date": "2024.04.12",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260290/artclView.do",
+            "file": 1
+        },
+        "90": {
+            "subject": "[금성출판사] 아카이브 채용 공고",
+            "write": "조정은",
+            "date": "2024.04.08",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260195/artclView.do",
+            "file": 1
+        },
+        "89": {
+            "subject": "[국회도서관] 제7기 국회도서관 대학생 SNS 서포터즈 모집 안내",
+            "write": "조정은",
+            "date": "2024.04.04",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260137/artclView.do",
+            "file": 2
+        },
+        "88": {
+            "subject": "[서울고등법원] 기간제근로자 채용 안내",
+            "write": "조정은",
+            "date": "2024.04.04",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/260134/artclView.do",
+            "file": 1
+        },
+        "87": {
+            "subject": "[김근태기념도서관] 아키비스트 양성프로그램 참여자 모집",
+            "write": "조정은",
+            "date": "2024.03.22",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259881/artclView.do",
+            "file": 0
+        },
+        "86": {
+            "subject": "성북구 주민기록단 모집(신청마감 22일)",
+            "write": "조정은",
+            "date": "2024.03.21",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259862/artclView.do",
+            "file": 1
+        },
+        "85": {
+            "subject": "[한국기록전문가협회] 기록 교육 프로그램 <2024 기록 배움터> 모집",
+            "write": "조정은",
+            "date": "2024.03.20",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259808/artclView.do",
+            "file": 2
+        },
+        "84": {
+            "subject": "[방배숲환경도서관] <예비 도서관인> 모집 안내",
+            "write": "조정은",
+            "date": "2024.03.19",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259801/artclView.do",
+            "file": 1
+        },
+        "83": {
+            "subject": "2025학년도 학석사연계과정생 모집 공고",
+            "write": "조정은",
+            "date": "2024.03.15",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259743/artclView.do",
+            "file": 1
+        },
+        "82": {
+            "subject": "[국립중앙도서관] 청년 디지털 봉사단 '잇(IT)다' 4기 모집",
+            "write": "조정은",
+            "date": "2024.03.15",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259741/artclView.do",
+            "file": 1
+        },
+        "81": {
+            "subject": "2024-1 교수장학금 신청",
+            "write": "조정은",
+            "date": "2024.03.15",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259738/artclView.do",
+            "file": 1
+        },
+        "80": {
+            "subject": "2024-1 서면신청 안내",
+            "write": "조정은",
+            "date": "2024.02.23",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259262/artclView.do",
+            "file": 3
+        },
+        "79": {
+            "subject": "[서울물재생시설공단 기록관] 국가근로장학생 모집",
+            "write": "조정은",
+            "date": "2024.02.14",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259115/artclView.do",
+            "file": 0
+        },
+        "78": {
+            "subject": "2024년 김근태기념도서관 단시간근로자 채용공고",
+            "write": "조정은",
+            "date": "2024.02.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259075/artclView.do",
+            "file": 1
+        },
+        "77": {
+            "subject": "2024년 김근태기념도서관 정직원(기록 또는 학예, 7급) 채용 공고",
+            "write": "조정은",
+            "date": "2024.02.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259071/artclView.do",
+            "file": 1
+        },
+        "76": {
+            "subject": "[영등포구립도서관] 2024대학생 서포터즈 : 책영지기 4기 모집 안내",
+            "write": "김현진",
+            "date": "2024.02.07",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/259021/artclView.do",
+            "file": 2
+        },
+        "75": {
+            "subject": "[제3의 시간 도서관] 2024 제3의 시간 도서관 인턴 모집",
+            "write": "조정은",
+            "date": "2024.02.01",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258918/artclView.do",
+            "file": 0
+        },
+        "74": {
+            "subject": "2024년 국가기록원 제18기 온라인 서포터즈(나라기록넷띠) 모집",
+            "write": "조정은",
+            "date": "2024.01.29",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258840/artclView.do",
+            "file": 0
+        },
+        "73": {
+            "subject": "2024년도 국립중앙도서관 대학생 도서관 실무수습 수요조사 안내",
+            "write": "조정은",
+            "date": "2024.01.24",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258783/artclView.do",
+            "file": 0
+        },
+        "72": {
+            "subject": "보건복지부 국립정신건강센터 의학도서관 기간제 사서 모집 공고(1월 25일 17시 마감)",
+            "write": "조정은",
+            "date": "2024.01.22",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258750/artclView.do",
+            "file": 2
+        },
+        "71": {
+            "subject": "2024학년도 강서구립 강서영어도서관 서포터즈 모집",
+            "write": "조정은",
+            "date": "2024.01.11",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258597/artclView.do",
+            "file": 2
+        },
+        "70": {
+            "subject": "2023학년도 학술소모임 지원 프로그램 성과공유대회 [문화 빅데이터 소모임] 수상 축하글",
+            "write": "크리에이티브인문학부",
+            "date": "2024.01.04",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258511/artclView.do",
+            "file": 0
+        },
+        "69": {
+            "subject": "2023 문헌정보전공 3차 졸업시험 결과",
+            "write": "이선민",
+            "date": "2023.12.28",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258354/artclView.do",
+            "file": 0
+        },
+        "68": {
+            "subject": "[법원도서관]기간제 근로자 모집",
+            "write": "이선민",
+            "date": "2023.12.20",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258263/artclView.do",
+            "file": 0
+        },
+        "67": {
+            "subject": "[느티나무도서관] 2024 '예비사서 인턴십 7기' 모집",
+            "write": "이선민",
+            "date": "2023.12.15",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258210/artclView.do",
+            "file": 3
+        },
+        "66": {
+            "subject": "졸업시험 과목별 명단 확인",
+            "write": "이선민",
+            "date": "2023.12.11",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258138/artclView.do",
+            "file": 0
+        },
+        "65": {
+            "subject": "2023-2 3차 졸업시험 범위 안내",
+            "write": "이선민",
+            "date": "2023.12.01",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/258011/artclView.do",
+            "file": 0
+        },
+        "64": {
+            "subject": "2023년 사단법인 한국기록전문가협회 대시민 프로그램 안내",
+            "write": "이선민",
+            "date": "2023.11.24",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/257913/artclView.do",
+            "file": 0
+        },
+        "63": {
+            "subject": "2023 문헌정보전공 3차 졸업시험 공지",
+            "write": "이선민",
+            "date": "2023.11.16",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/257785/artclView.do",
+            "file": 2
+        },
+        "62": {
+            "subject": "2024 도서관의 날·도서관주간 공식주제 공모전",
+            "write": "이선민",
+            "date": "2023.11.09",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/257692/artclView.do",
+            "file": 3
+        },
+        "61": {
+            "subject": "문헌정보전공 장학금 수혜자 공지",
+            "write": "이선민",
+            "date": "2023.10.24",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/257508/artclView.do",
+            "file": 0
+        },
+        "60": {
+            "subject": "2023 서울기록페어 참여신청",
+            "write": "이선민",
+            "date": "2023.10.11",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/257287/artclView.do",
+            "file": 2
+        },
+        "59": {
+            "subject": "2023-2 문헌정보전공 학부답사 신청자 모집 (~10/15)",
+            "write": "이선민",
+            "date": "2023.10.04",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/257197/artclView.do",
+            "file": 1
+        },
+        "58": {
+            "subject": "유네스코 국제기록유산센터 [ICDH 온라인 서포터즈 모집]",
+            "write": "이선민",
+            "date": "2023.09.18",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/256848/artclView.do",
+            "file": 3
+        },
+        "57": {
+            "subject": "제60회(2023년) 전국도서관대회 자원봉사자 모집 안내",
+            "write": "이선민",
+            "date": "2023.09.07",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/256699/artclView.do",
+            "file": 2
+        },
+        "56": {
+            "subject": "2023-2 문헌정보전공 교수장학금",
+            "write": "이선민",
+            "date": "2023.09.05",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/59/256655/artclView.do",
+            "file": 1
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "categories": {
+        "일반공지": [
+            {
+                "subject": "장학금 안내",
+                "write": "크리에이티브인문학부",
+                "date": "2024.03.05",
+                "link": "https://www.hansung.ac.kr/bbs/HmnArt/1088/259501/artclView.do",
+                "file": 2
+            },
+            {
+                "subject": "졸업 요건",
+                "write": "크리에이티브인문학부",
+                "date": "2024.03.05",
+                "link": "https://www.hansung.ac.kr/bbs/HmnArt/1088/259503/artclView.do",
+                "file": 0
+            }
+        ]
+    },
+    "notices_by_id": {
+        "5": {
+            "subject": "2025-1 서면신청 및 교차수강신청 안내",
+            "write": "김민성",
+            "date": "2025.02.27",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/1088/266971/artclView.do",
+            "file": 0
+        },
+        "4": {
+            "subject": "HS진로탐색특강",
+            "write": "크리에이티브인문학부",
+            "date": "2024.10.30",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/1088/264612/artclView.do",
+            "file": 0
+        },
+        "3": {
+            "subject": "[K-move스쿨] 전액국비지원 2024년 외국계, 미국 무역, 물류 및 사무경영 실무자 ...",
+            "write": "크리에이티브인문학부",
+            "date": "2024.09.13",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/1088/263831/artclView.do",
+            "file": 0
+        },
+        "2": {
+            "subject": "졸업 요건",
+            "write": "크리에이티브인문학부",
+            "date": "2024.03.05",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/1088/259503/artclView.do",
+            "file": 0
+        },
+        "1": {
+            "subject": "장학금 안내",
+            "write": "크리에이티브인문학부",
+            "date": "2024.03.05",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/1088/259501/artclView.do",
+            "file": 2
+        }
+    }
+}
