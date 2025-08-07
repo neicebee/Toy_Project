@@ -11,6 +11,13 @@
         ]
     },
     "notices_by_id": {
+        "161": {
+            "subject": "2025학년도 8월(2024학년도 후기) 졸업자 사서자격증 발급을 위한 서류 제출 요청",
+            "write": "이호영",
+            "date": "2025.08.07",
+            "link": "https://www.hansung.ac.kr/bbs/HmnArt/60/270004/artclView.do",
+            "file": 1
+        },
         "160": {
             "subject": "「제18회 기록사랑 공모전」안내",
             "write": "이호영",
@@ -703,13 +710,6 @@
             "date": "2023.09.05",
             "link": "https://www.hansung.ac.kr/bbs/HmnArt/60/256654/artclView.do",
             "file": 1
-        },
-        "61": {
-            "subject": "2023-2 잔여수강인원 공지(8.29 11:00)",
-            "write": "이선민",
-            "date": "2023.08.29",
-            "link": "https://www.hansung.ac.kr/bbs/HmnArt/60/256477/artclView.do",
-            "file": 0
         }
     }
 }

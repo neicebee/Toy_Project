@@ -1,0 +1,705 @@
+{
+    "categories": {},
+    "notices_by_id": {
+        "105": {
+            "subject": "제24회 전국 지능형 창작 로봇 경연대회 (CIRO 2025) 안내",
+            "write": "기계전자공학부",
+            "date": "2025.07.10",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/269578/artclView.do",
+            "file": 0
+        },
+        "104": {
+            "subject": "2025년도 기계설계/기계자동화 캡스톤디자인 전시회 시상식",
+            "write": "기계전자공학부",
+            "date": "2025.06.10",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/269091/artclView.do",
+            "file": 1
+        },
+        "103": {
+            "subject": "[대학일자리플러스센터]2025 제 1차 삼성전자 협력사 온라인 Job Fair 및 채용 설 ...",
+            "write": "기계전자공학부",
+            "date": "2025.05.19",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/268667/artclView.do",
+            "file": 0
+        },
+        "102": {
+            "subject": "2025 기계설계/기계자동화 캡스톤디자인 작품 전시 공지",
+            "write": "기계전자공학부",
+            "date": "2025.05.15",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/268631/artclView.do",
+            "file": 4
+        },
+        "101": {
+            "subject": "캡스톤디자인 실험실습비 지원금(학과지원금) 사용 안내",
+            "write": "기계전자공학부",
+            "date": "2025.04.10",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267925/artclView.do",
+            "file": 2
+        },
+        "100": {
+            "subject": "★ 2025년도 기계디자인시스템/AI로봇융합트랙 학과 워크샵 안내 ★",
+            "write": "기계전자공학부",
+            "date": "2025.04.02",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267761/artclView.do",
+            "file": 1
+        },
+        "99": {
+            "subject": "2025년도 캡스톤 주차별 보고서",
+            "write": "기계전자공학부",
+            "date": "2025.03.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267658/artclView.do",
+            "file": 1
+        },
+        "98": {
+            "subject": "캡스톤 디자인 설명회 관련 자료 안내",
+            "write": "기계전자공학부",
+            "date": "2025.03.24",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267549/artclView.do",
+            "file": 0
+        },
+        "97": {
+            "subject": "2025년도 캡스톤 디자인 관련 안내",
+            "write": "기계전자공학부",
+            "date": "2025.03.21",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267535/artclView.do",
+            "file": 1
+        },
+        "96": {
+            "subject": "2025년도 원격프로그램 리모트뷰 사용방법 및 원격제어 ID&PW",
+            "write": "기계전자공학부",
+            "date": "2025.03.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267508/artclView.do",
+            "file": 2
+        },
+        "95": {
+            "subject": "2026학년도 학석사연계과정 모집 공고",
+            "write": "기계전자공학부",
+            "date": "2025.03.19",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267470/artclView.do",
+            "file": 2
+        },
+        "94": {
+            "subject": "2024년도 캡스톤 디자인 포스터 모음",
+            "write": "기계전자공학부",
+            "date": "2025.03.07",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267245/artclView.do",
+            "file": 1
+        },
+        "93": {
+            "subject": "서면신청일자 연장 안내",
+            "write": "기계전자공학부",
+            "date": "2025.03.04",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267064/artclView.do",
+            "file": 1
+        },
+        "92": {
+            "subject": "2025년 절대평가로 변경된 과목: [컴퓨터기반 계측 및 제어], [창의적 기계설계], [ ...",
+            "write": "기계설계트랙",
+            "date": "2025.03.02",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/267026/artclView.do",
+            "file": 0
+        },
+        "91": {
+            "subject": "2025-1학기 서면신청 방법 안내",
+            "write": "기계전자공학부",
+            "date": "2025.02.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/266831/artclView.do",
+            "file": 1
+        },
+        "90": {
+            "subject": "기계자동화트랙 TA조교(근로) 선발",
+            "write": "기계전자공학부",
+            "date": "2025.02.13",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/266607/artclView.do",
+            "file": 0
+        },
+        "89": {
+            "subject": "대학산업보건협회 본부 보건안전컨설팅국 경력직 채용 공고",
+            "write": "기계전자공학부",
+            "date": "2024.12.24",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/265619/artclView.do",
+            "file": 0
+        },
+        "88": {
+            "subject": "한성대학교 기계시스템공학과 항공우주 및 자율시스템 연구실(AASL) 학부연구생 모집 공고",
+            "write": "기계전자공학부",
+            "date": "2024.12.23",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/265593/artclView.do",
+            "file": 1
+        },
+        "87": {
+            "subject": "한성대학교 기계시스템공학과 항공우주 및 자율시스템 연구실(AASL) 석사과정 연구원 추가 ...",
+            "write": "기계전자공학부",
+            "date": "2024.12.16",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/265476/artclView.do",
+            "file": 0
+        },
+        "86": {
+            "subject": "한성대학교 기계설계/기계자동화 트랙 조교 채용 공고",
+            "write": "기계전자공학부",
+            "date": "2024.11.22",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/265024/artclView.do",
+            "file": 1
+        },
+        "85": {
+            "subject": "2024 한국전자전(KES) 2024 제6회 미래형자동차 인재페스티벌 안내",
+            "write": "기계전자공학부",
+            "date": "2024.10.21",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/264421/artclView.do",
+            "file": 0
+        },
+        "84": {
+            "subject": "원격프로그램 리모트뷰 사용방법 및 원격제어 ID&PW",
+            "write": "기계전자공학부",
+            "date": "2024.10.02",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/264103/artclView.do",
+            "file": 2
+        },
+        "83": {
+            "subject": "제 20회 한성공학경진대회 기계설계/기계자동화트랙 수상",
+            "write": "기계전자공학부",
+            "date": "2024.10.02",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/264086/artclView.do",
+            "file": 0
+        },
+        "82": {
+            "subject": "한성대학교 기계시스템공학과 항공우주 및 자율시스템 연구실(AASL) 석사과정 연구원 모집",
+            "write": "기계전자공학부",
+            "date": "2024.08.14",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/263003/artclView.do",
+            "file": 1
+        },
+        "81": {
+            "subject": "2024-2 서면신청 공지",
+            "write": "기계전자공학부",
+            "date": "2024.08.12",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/262936/artclView.do",
+            "file": 1
+        },
+        "80": {
+            "subject": "2024-2 수강신청 공지 (재료역학2)",
+            "write": "기계전자공학부",
+            "date": "2024.07.26",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/262569/artclView.do",
+            "file": 0
+        },
+        "79": {
+            "subject": "기계설계/기계자동화 캡스톤디자인 지원금(학과지원금) 안내",
+            "write": "기계전자공학부",
+            "date": "2024.05.28",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/261301/artclView.do",
+            "file": 2
+        },
+        "78": {
+            "subject": "2024 기계설계/기계자동화 캡스톤디자인 작품 전시 공지",
+            "write": "기계전자공학부",
+            "date": "2024.05.23",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/261194/artclView.do",
+            "file": 4
+        },
+        "77": {
+            "subject": "한성대학교 기계설계/기계자동화 트랙 조교 채용 공고",
+            "write": "기계전자공학부",
+            "date": "2024.05.03",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/260793/artclView.do",
+            "file": 1
+        },
+        "76": {
+            "subject": "플랜트교육모집공고",
+            "write": "기계전자공학부",
+            "date": "2024.04.22",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/260543/artclView.do",
+            "file": 1
+        },
+        "75": {
+            "subject": "★ 2024년도 기계설계/기계자동화트랙 학과 산업체견학 안내 ★",
+            "write": "기계전자공학부",
+            "date": "2024.03.22",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/259880/artclView.do",
+            "file": 1
+        },
+        "74": {
+            "subject": "기계설계/기계자동화 캡스톤디자인 주차별 활동 보고서",
+            "write": "기계전자공학부",
+            "date": "2024.03.11",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/259622/artclView.do",
+            "file": 1
+        },
+        "73": {
+            "subject": "2024-1 전공튜터링 모집 안내",
+            "write": "기계전자공학부",
+            "date": "2024.03.05",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/259514/artclView.do",
+            "file": 2
+        },
+        "72": {
+            "subject": "윈스 신입직원 모집 안내",
+            "write": "기계전자공학부",
+            "date": "2024.02.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/259330/artclView.do",
+            "file": 0
+        },
+        "71": {
+            "subject": "TA교육조교 채용공고 (2024년도 1학기)",
+            "write": "기계전자공학부",
+            "date": "2024.02.16",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/259152/artclView.do",
+            "file": 1
+        },
+        "70": {
+            "subject": "2024-1 서면신청 공지",
+            "write": "기계전자공학부",
+            "date": "2024.02.13",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/259076/artclView.do",
+            "file": 1
+        },
+        "69": {
+            "subject": "매틀랩을 이용한 기계 시스템 모델링 세미나 안내",
+            "write": "기계전자공학부",
+            "date": "2024.01.15",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/258636/artclView.do",
+            "file": 0
+        },
+        "68": {
+            "subject": "2024학년도 1학기 기계설계 및 기계자동화 트랙 캡스톤디자인 팀 현황",
+            "write": "기계전자공학부",
+            "date": "2024.01.02",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/258435/artclView.do",
+            "file": 0
+        },
+        "67": {
+            "subject": "24-1학기 기계설계/기계자동화 캡스톤디자인 팀구성 공지",
+            "write": "기계전자공학부",
+            "date": "2024.01.02",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/258434/artclView.do",
+            "file": 1
+        },
+        "66": {
+            "subject": "기계설계/기계자동화트랙 재학생, 한국산학기술학회 2023년 캡스톤디자인 경진대회 아이디어상 ...",
+            "write": "기계전자공학부",
+            "date": "2023.12.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/258265/artclView.do",
+            "file": 0
+        },
+        "65": {
+            "subject": "기계설계/기계자동화트랙 3D Makers 팀, 제13회 전국학생설계경진대회 동상 수상",
+            "write": "기계전자공학부",
+            "date": "2023.12.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/258261/artclView.do",
+            "file": 0
+        },
+        "64": {
+            "subject": "제12회 한국항공우주학회 학부생 논문경진대회 안내",
+            "write": "기계전자공학부",
+            "date": "2023.12.14",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/258199/artclView.do",
+            "file": 3
+        },
+        "63": {
+            "subject": "기계인공지능연구회 2024년 대학생 대상 인공지능 강습회 안내",
+            "write": "기계전자공학부",
+            "date": "2023.12.06",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/258083/artclView.do",
+            "file": 2
+        },
+        "62": {
+            "subject": "[채용] 기계시스템공학과 행정조교 모집",
+            "write": "기계전자공학부",
+            "date": "2023.12.01",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/258005/artclView.do",
+            "file": 1
+        },
+        "61": {
+            "subject": "2023학년도 전기(2024년 2월) 학사학위취득유예 신청 안내",
+            "write": "기계전자공학부",
+            "date": "2023.11.24",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/257909/artclView.do",
+            "file": 0
+        },
+        "60": {
+            "subject": "강상욱 교수님 한국소음진동공학회 학술상 수상",
+            "write": "기계전자공학부",
+            "date": "2023.10.30",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/257569/artclView.do",
+            "file": 0
+        },
+        "59": {
+            "subject": "제 19회 한성공학경진대회 기계설계/기계자동화트랙 수상",
+            "write": "기계전자공학부",
+            "date": "2023.09.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/257167/artclView.do",
+            "file": 0
+        },
+        "58": {
+            "subject": "주식회사 아산 부분별 추천채용공고",
+            "write": "기계전자공학부",
+            "date": "2023.09.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/256856/artclView.do",
+            "file": 0
+        },
+        "57": {
+            "subject": "2023-2 전공튜터링 모집 안내",
+            "write": "기계전자공학부",
+            "date": "2023.09.08",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/256725/artclView.do",
+            "file": 2
+        },
+        "56": {
+            "subject": "원격프로그램 리모트뷰 사용방법",
+            "write": "기계전자공학부",
+            "date": "2023.08.30",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/256521/artclView.do",
+            "file": 2
+        },
+        "55": {
+            "subject": "TA교육조교 채용공고(2023년도 2학기)",
+            "write": "기계전자공학부",
+            "date": "2023.08.14",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/256144/artclView.do",
+            "file": 1
+        },
+        "54": {
+            "subject": "2023-2 서면신청 공지",
+            "write": "기계전자공학부",
+            "date": "2023.08.11",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/256091/artclView.do",
+            "file": 1
+        },
+        "53": {
+            "subject": "제8회 C&C Festival(창의융합성과 경진대회) 수상",
+            "write": "기계전자공학부",
+            "date": "2023.08.11",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/256090/artclView.do",
+            "file": 0
+        },
+        "52": {
+            "subject": "실습비지원금(학과) 환급 신청서 제출안내(기한연장~6/23)",
+            "write": "기계전자공학부",
+            "date": "2023.06.09",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/255130/artclView.do",
+            "file": 0
+        },
+        "51": {
+            "subject": "제19회 공학경진대회 참가팀 모집",
+            "write": "기계전자공학부",
+            "date": "2023.06.01",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/254992/artclView.do",
+            "file": 0
+        },
+        "50": {
+            "subject": "동희그룹 추천채용 안내",
+            "write": "기계전자공학부",
+            "date": "2023.05.26",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/254907/artclView.do",
+            "file": 0
+        },
+        "49": {
+            "subject": "2023 기계설계/기계자동화 캡스톤디자인 작품 전시 공지",
+            "write": "기계전자공학부",
+            "date": "2023.04.28",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/254389/artclView.do",
+            "file": 4
+        },
+        "48": {
+            "subject": "제 8회 C&C 페스티벌 개최 안내",
+            "write": "기계전자공학부",
+            "date": "2023.04.13",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/254123/artclView.do",
+            "file": 1
+        },
+        "47": {
+            "subject": "메센아이피시 2023년 신입사원 추천채용 안내",
+            "write": "기계전자공학부",
+            "date": "2023.04.13",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/254113/artclView.do",
+            "file": 1
+        },
+        "46": {
+            "subject": "한국호쿠쇼 2023년 신입사원 추천채용 안내",
+            "write": "기계전자공학부",
+            "date": "2023.04.11",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/254062/artclView.do",
+            "file": 2
+        },
+        "45": {
+            "subject": "키앤스코리아 추천채용 안내",
+            "write": "기계전자공학부",
+            "date": "2023.04.11",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/254058/artclView.do",
+            "file": 2
+        },
+        "44": {
+            "subject": "2023-1 캡스톤디자인 기본운영지원금 설명회 안내",
+            "write": "기계전자공학부",
+            "date": "2023.03.16",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/253504/artclView.do",
+            "file": 0
+        },
+        "43": {
+            "subject": "기계설계/기계자동화 캡스톤디자인 지원금(학과지원금, 캡스톤디자인기본운영지원금) 안내",
+            "write": "기계전자공학부",
+            "date": "2023.03.09",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/253334/artclView.do",
+            "file": 4
+        },
+        "42": {
+            "subject": "★ 2023년도 기계설계/기계자동화트랙 학과 산업체견학 안내 ★",
+            "write": "기계전자공학부",
+            "date": "2023.03.07",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/253254/artclView.do",
+            "file": 1
+        },
+        "41": {
+            "subject": "2023-1 전공튜터링 모집 안내",
+            "write": "기계전자공학부",
+            "date": "2023.03.07",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/253237/artclView.do",
+            "file": 2
+        },
+        "40": {
+            "subject": "기계설계/기계자동화 캡스톤디자인 주차별 활동 보고서",
+            "write": "기계전자공학부",
+            "date": "2023.03.07",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/253230/artclView.do",
+            "file": 1
+        },
+        "39": {
+            "subject": "2023-1 기계설계/기계자동화 캡스톤디자인 공지사항(서면신청 관련 내용 추가)",
+            "write": "기계시스템공학과",
+            "date": "2023.02.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/253072/artclView.do",
+            "file": 0
+        },
+        "38": {
+            "subject": "2023-1 기계공학기초 고학년(재수강생 및 편입생 포함) 수강신청 공지",
+            "write": "기계시스템공학과",
+            "date": "2023.02.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/253056/artclView.do",
+            "file": 0
+        },
+        "37": {
+            "subject": "인터배터리 2023 개최 안내",
+            "write": "기계시스템공학과",
+            "date": "2023.02.23",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252991/artclView.do",
+            "file": 0
+        },
+        "36": {
+            "subject": "2023년 이공계 전문기술연수 - 자동차 분야 예비 취업자 모집 안내",
+            "write": "기계시스템공학과",
+            "date": "2023.02.23",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252989/artclView.do",
+            "file": 3
+        },
+        "35": {
+            "subject": "2023-1 유한요소해석 추가분반 인원파악",
+            "write": "기계시스템공학과",
+            "date": "2023.02.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252906/artclView.do",
+            "file": 0
+        },
+        "34": {
+            "subject": "2023-1 창의적기계설계 고학년 수강신청 공지",
+            "write": "기계시스템공학과",
+            "date": "2023.02.15",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252810/artclView.do",
+            "file": 0
+        },
+        "33": {
+            "subject": "2023-1 서면신청 공지",
+            "write": "기계시스템공학과",
+            "date": "2023.02.14",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252793/artclView.do",
+            "file": 1
+        },
+        "32": {
+            "subject": "TA교육조교 채용공고(2023년도 1학기)",
+            "write": "기계시스템공학과",
+            "date": "2023.02.14",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252769/artclView.do",
+            "file": 1
+        },
+        "31": {
+            "subject": "(주)다산지앤지 채용공고",
+            "write": "기계시스템공학과",
+            "date": "2023.02.10",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252701/artclView.do",
+            "file": 0
+        },
+        "30": {
+            "subject": "2023년도 기계설계 및 기계자동화 트랙 캡스톤디자인 팀 현황",
+            "write": "기계전자공학부",
+            "date": "2023.02.02",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252550/artclView.do",
+            "file": 0
+        },
+        "29": {
+            "subject": "[교외] 2023 대학생 자작전기자동차 경진대회 안내",
+            "write": "기계시스템공학과",
+            "date": "2023.01.31",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/252487/artclView.do",
+            "file": 0
+        },
+        "28": {
+            "subject": "23-1학기 기계설계/기계자동화트랙 캡스톤디자인 팀구성 공지",
+            "write": "기계시스템공학과",
+            "date": "2022.12.26",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/251939/artclView.do",
+            "file": 1
+        },
+        "27": {
+            "subject": "[학사학위취득유예 신청자 대상] 공학인증포기 안내",
+            "write": "기계시스템공학과",
+            "date": "2022.12.14",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/251783/artclView.do",
+            "file": 1
+        },
+        "26": {
+            "subject": "2023년 2월 공학인증 졸업관련 공지",
+            "write": "기계시스템공학과",
+            "date": "2022.12.14",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/251776/artclView.do",
+            "file": 6
+        },
+        "25": {
+            "subject": "2022학년도 전기(2023.2) 학사학위취득 유예 신청접수 안내",
+            "write": "기계시스템공학과",
+            "date": "2022.11.24",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/250670/artclView.do",
+            "file": 0
+        },
+        "24": {
+            "subject": "2022 제2회 HELLO MAKER AWARDS 수상",
+            "write": "기계시스템공학과",
+            "date": "2022.11.16",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/250508/artclView.do",
+            "file": 0
+        },
+        "23": {
+            "subject": "[채용] 기계시스템공학과 행정조교 모집",
+            "write": "기계시스템공학과",
+            "date": "2022.11.07",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/250326/artclView.do",
+            "file": 1
+        },
+        "22": {
+            "subject": "네오랩컨버전스 2023년 대졸신입사원 공개채용",
+            "write": "기계시스템공학과",
+            "date": "2022.11.01",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249938/artclView.do",
+            "file": 0
+        },
+        "21": {
+            "subject": "2022 삼성전자 협력회사 채용박람회 개최 안내 [11.2(수)-15(화)]",
+            "write": "기계시스템공학과",
+            "date": "2022.10.26",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249851/artclView.do",
+            "file": 0
+        },
+        "20": {
+            "subject": "[재공지] 2022-2학기 정기상담 안내",
+            "write": "기계시스템공학과",
+            "date": "2022.10.25",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249840/artclView.do",
+            "file": 0
+        },
+        "19": {
+            "subject": "2022-2 선택 트랙 간 상호(제1트랙⇄제2트랙) 전공과목 변경신청 시행 안내",
+            "write": "기계시스템공학과",
+            "date": "2022.10.24",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249811/artclView.do",
+            "file": 0
+        },
+        "18": {
+            "subject": "제6회 C&C Festival(창의융합성과 경진대회) 수상",
+            "write": "기계시스템공학과",
+            "date": "2022.10.07",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249456/artclView.do",
+            "file": 0
+        },
+        "17": {
+            "subject": "2022 한국산업대전(DTon) 전시회 참관 안내",
+            "write": "기계시스템공학과",
+            "date": "2022.10.06",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249432/artclView.do",
+            "file": 0
+        },
+        "16": {
+            "subject": "[한국산업기술평가관리원] 소부장넷 통계활용대회",
+            "write": "기계시스템공학과",
+            "date": "2022.10.04",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249377/artclView.do",
+            "file": 0
+        },
+        "15": {
+            "subject": "제18회 한성공학경진대회 기계설계/자동화트랙, 기계시스템공학과 수상",
+            "write": "기계시스템공학과",
+            "date": "2022.09.29",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249324/artclView.do",
+            "file": 0
+        },
+        "14": {
+            "subject": "★ 2022년도 기계설계/기계자동화트랙 학과 산업체견학 안내 ★",
+            "write": "기계시스템공학과",
+            "date": "2022.09.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249247/artclView.do",
+            "file": 1
+        },
+        "13": {
+            "subject": "대보그룹 2022 대졸 신입사원 공개채용",
+            "write": "기계시스템공학과",
+            "date": "2022.09.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249226/artclView.do",
+            "file": 0
+        },
+        "12": {
+            "subject": "22-2 조기졸업 신청 안내",
+            "write": "기계시스템공학과",
+            "date": "2022.09.23",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249166/artclView.do",
+            "file": 0
+        },
+        "11": {
+            "subject": "※2022-2학기 정기상담 공지※",
+            "write": "기계시스템공학과",
+            "date": "2022.09.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249090/artclView.do",
+            "file": 0
+        },
+        "10": {
+            "subject": "2022 엔지니어링 경진대회 장려상 수상 (1871036 김민재, 1871362 손주호)",
+            "write": "기계시스템공학과",
+            "date": "2022.09.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249085/artclView.do",
+            "file": 0
+        },
+        "9": {
+            "subject": "[취업추천](주)원준 신입 구인",
+            "write": "기계시스템공학과",
+            "date": "2022.09.19",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/249040/artclView.do",
+            "file": 1
+        },
+        "8": {
+            "subject": "한국미쓰비시전기오토메이션(주) 신입 채용",
+            "write": "기계시스템공학과",
+            "date": "2022.09.13",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/248899/artclView.do",
+            "file": 0
+        },
+        "7": {
+            "subject": "2022-2 전공튜터링 모집",
+            "write": "기계시스템공학과",
+            "date": "2022.09.08",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/248843/artclView.do",
+            "file": 2
+        },
+        "6": {
+            "subject": "(주)위너스오토메이션 2023 공개채용",
+            "write": "기계시스템공학과",
+            "date": "2022.09.01",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/105/248654/artclView.do",
+            "file": 1
+        }
+    }
+}
