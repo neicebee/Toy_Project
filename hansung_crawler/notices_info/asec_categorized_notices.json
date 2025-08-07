@@ -1,0 +1,141 @@
+{
+    "categories": {
+        "일반공지": [
+            {
+                "subject": "[홍보] 융합보안학과 이강신 교수님 진로상담 안내",
+                "write": "융합보안학과",
+                "date": "2025.05.16",
+                "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/268643/artclView.do",
+                "file": 1
+            },
+            {
+                "subject": "[필독] 학과 사무실 문의시 전화 매뉴얼 안내문",
+                "write": "융합보안학과",
+                "date": "2024.02.22",
+                "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/259241/artclView.do",
+                "file": 0
+            }
+        ]
+    },
+    "notices_by_id": {
+        "17": {
+            "subject": "[홍보] 2025학년도 2학기 국민대학교 학점교류 안내",
+            "write": "융합보안학과",
+            "date": "2025.08.04",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269944/artclView.do",
+            "file": 3
+        },
+        "16": {
+            "subject": "[성과] 2025년도 한국디지털포렌식학회 하계학술대회 한국저작권보호원장상 수상",
+            "write": "융합보안학과",
+            "date": "2025.07.31",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269872/artclView.do",
+            "file": 0
+        },
+        "15": {
+            "subject": "[홍보] 2025 정보보호 정책제안 공모전 안내",
+            "write": "융합보안학과",
+            "date": "2025.07.29",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269805/artclView.do",
+            "file": 1
+        },
+        "14": {
+            "subject": "[홍보] 프로그래머스 방중 코딩특강 수요조사 안내 (~7/27)",
+            "write": "융합보안학과",
+            "date": "2025.07.22",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269722/artclView.do",
+            "file": 0
+        },
+        "13": {
+            "subject": "[성과] 2025년 부채널 정보분석 경진대회 – 한성대학교 융합보안학과/정보컴퓨터공학과/I ...",
+            "write": "융합보안학과",
+            "date": "2025.07.04",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269507/artclView.do",
+            "file": 0
+        },
+        "12": {
+            "subject": "[성과] 2025년도 한국정보보호학회 하계학술대회(CISC-S'25) 학회우수논문 ...",
+            "write": "융합보안학과",
+            "date": "2025.06.25",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269356/artclView.do",
+            "file": 0
+        },
+        "11": {
+            "subject": "[홍보] AI/SW창업 프로젝트팀 활동지원 프로그램",
+            "write": "융합보안학과",
+            "date": "2025.06.24",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269334/artclView.do",
+            "file": 1
+        },
+        "10": {
+            "subject": "[성과] 2025년도 BoB (차세대 보안리더 양성 프로그램) 14기 융합보안학과 학부생 ...",
+            "write": "융합보안학과",
+            "date": "2025.06.19",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269251/artclView.do",
+            "file": 0
+        },
+        "9": {
+            "subject": "[성과] 2025년도 글로벌 정보보호 고급 인력 양성과제 (싱가포르 난양기술대학교) 정보컴 ...",
+            "write": "융합보안학과",
+            "date": "2025.06.16",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269167/artclView.do",
+            "file": 0
+        },
+        "8": {
+            "subject": "[성과] 2025년도 대학 암호동아리 지원 사업 융합보안학과 암호동아리 Super|Tang ...",
+            "write": "융합보안학과",
+            "date": "2025.06.13",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269140/artclView.do",
+            "file": 0
+        },
+        "7": {
+            "subject": "[성과] 2025년 국가암호기술 전문인력 양성과정(제11기) 융합보안학과 대학원생 선정",
+            "write": "융합보안학과",
+            "date": "2025.06.13",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/269139/artclView.do",
+            "file": 0
+        },
+        "6": {
+            "subject": "[홍보] 2025 SW중심대학 디지털 경진대회 참가팀 모집",
+            "write": "융합보안학과",
+            "date": "2025.05.26",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/268817/artclView.do",
+            "file": 0
+        },
+        "5": {
+            "subject": "‘대형산불 대응 지능형 솔루션 기술개발’사업 2025년도 신규과제 선정계획 공고",
+            "write": "창의융합대학 교학팀",
+            "date": "2025.05.22",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/268750/artclView.do",
+            "file": 0
+        },
+        "4": {
+            "subject": "[홍보] 한국정보보호산업협회 한국정보보호교육원 'AI보안 기술개발 교육과정&apo ...",
+            "write": "융합보안학과",
+            "date": "2025.05.20",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/268698/artclView.do",
+            "file": 0
+        },
+        "3": {
+            "subject": "[홍보] 융합보안학과 이강신 교수님 진로상담 안내",
+            "write": "융합보안학과",
+            "date": "2025.05.16",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/268643/artclView.do",
+            "file": 1
+        },
+        "2": {
+            "subject": "[홍보] 정보보호 신설 자격증 홍보 및 수험자 가이드북 신청 안내",
+            "write": "융합보안학과",
+            "date": "2025.03.18",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/267447/artclView.do",
+            "file": 0
+        },
+        "1": {
+            "subject": "[필독] 학과 사무실 문의시 전화 매뉴얼 안내문",
+            "write": "융합보안학과",
+            "date": "2024.02.22",
+            "link": "https://www.hansung.ac.kr/bbs/CreCon/1076/259241/artclView.do",
+            "file": 0
+        }
+    }
+}

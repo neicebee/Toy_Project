@@ -1,0 +1,376 @@
+{
+    "categories": {},
+    "notices_by_id": {
+        "53": {
+            "subject": "[중요/필독] 2025-2 서면신청 접수 안내",
+            "write": "IT융합공학부",
+            "date": "2025.08.07",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/270000/artclView.do",
+            "file": 4
+        },
+        "52": {
+            "subject": "[행사 홍보] 2025 하반기 이공계 5대 산업 취업특강 전국 무료투어 안내",
+            "write": "IT융합공학부",
+            "date": "2025.07.17",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/269660/artclView.do",
+            "file": 0
+        },
+        "51": {
+            "subject": "[중요/필독] 2025년 8월 졸업 예정자 대상 학부졸업요건 제출 안내 (재학생, 수료생, 학사학위취득 유예 신청학생)",
+            "write": "IT융합공학부",
+            "date": "2025.06.16",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/269165/artclView.do",
+            "file": 0
+        },
+        "50": {
+            "subject": "[홍보] 2025 캡스톤디자인 작품발표회",
+            "write": "IT융합공학부",
+            "date": "2025.05.23",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/268782/artclView.do",
+            "file": 0
+        },
+        "49": {
+            "subject": "[중요/필독] 2025 IT융합공학부 캡스톤디자인 전시회 제출 파일 안내(250516 수정)",
+            "write": "IT융합공학부",
+            "date": "2025.05.09",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/268538/artclView.do",
+            "file": 5
+        },
+        "48": {
+            "subject": "삼성청년 SW·AI아카데미(Samsung SW·AI Academy Frot Youth, SSAFY) 모집",
+            "write": "IT융합공학부",
+            "date": "2025.04.16",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/268058/artclView.do",
+            "file": 3
+        },
+        "47": {
+            "subject": "[홍보] 청년취업사관학교 새싹(SeSAC) <AI활용 보안 엔지니어 양성과정> 교육생 모집",
+            "write": "IT융합공학부",
+            "date": "2025.04.03",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/267792/artclView.do",
+            "file": 2
+        },
+        "46": {
+            "subject": "[중요/필독] 2025-1 서면신청 접수 안내",
+            "write": "IT융합공학부",
+            "date": "2025.02.11",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/266506/artclView.do",
+            "file": 4
+        },
+        "45": {
+            "subject": "[중요/필독] 정보시스템공학과, IT응용시스템공학과, IT융합공학부(4트랙) 졸업요건",
+            "write": "IT융합공학부",
+            "date": "2024.12.24",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/265614/artclView.do",
+            "file": 1
+        },
+        "44": {
+            "subject": "[중요/필독] 2025년 2월 졸업 예정자 대상 학부졸업요건 제출 안내 (재학생, 수료생, 학사학위취득 유예 신청학생)",
+            "write": "IT융합공학부",
+            "date": "2024.12.04",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/265262/artclView.do",
+            "file": 0
+        },
+        "43": {
+            "subject": "[두산로보틱스] “AI·로봇 엔지니어 양성과정(초급) - 3기 모집",
+            "write": "IT융합공학부",
+            "date": "2024.12.02",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/265186/artclView.do",
+            "file": 0
+        },
+        "42": {
+            "subject": "[홍보] 2024 졸업생 초청 직무특강 안내",
+            "write": "IT융합공학부",
+            "date": "2024.11.05",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/264701/artclView.do",
+            "file": 1
+        },
+        "41": {
+            "subject": "「삼성 청년 SW 아카데미」13기 교육생 모집홍보",
+            "write": "IT융합공학부",
+            "date": "2024.10.16",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/264318/artclView.do",
+            "file": 3
+        },
+        "40": {
+            "subject": "[행사 홍보] 2024학년도 융합보안학과 코딩캠프",
+            "write": "IT융합공학부",
+            "date": "2024.09.03",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/263558/artclView.do",
+            "file": 0
+        },
+        "39": {
+            "subject": "[채용공고] (국보연) 과학기술분야 정부출연연구기관 2024년도 제3차 공동채용 (기술직[연구분야])",
+            "write": "IT융합공학부",
+            "date": "2024.08.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/263329/artclView.do",
+            "file": 2
+        },
+        "38": {
+            "subject": "[중요/필독] 2024-2 서면신청 접수 안내 (8/26, 9/2)",
+            "write": "IT융합공학부",
+            "date": "2024.08.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/263105/artclView.do",
+            "file": 4
+        },
+        "37": {
+            "subject": "양자내성암호 공모전 2라운드 콜로키움 홍보",
+            "write": "IT융합공학부",
+            "date": "2024.08.12",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/262909/artclView.do",
+            "file": 1
+        },
+        "36": {
+            "subject": "<2024 제2회 KISIA 정보보호 개발자 해커톤> 홍보",
+            "write": "IT융합공학부",
+            "date": "2024.08.01",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/262703/artclView.do",
+            "file": 1
+        },
+        "35": {
+            "subject": "[중요/필독] 2024년 8월 졸업 예정자 대상 학부졸업요건 제출 안내 (재학생, 수료생, 학사학위취득 유예 신청학생)",
+            "write": "IT융합공학부",
+            "date": "2024.06.17",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/261776/artclView.do",
+            "file": 0
+        },
+        "34": {
+            "subject": "[IPP 사업단] (코스닥상장사) 윈스 IPP현장실습생 모집",
+            "write": "IT융합공학부",
+            "date": "2024.06.04",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/261463/artclView.do",
+            "file": 2
+        },
+        "33": {
+            "subject": "[채용공고] (주)아이디크레페 영업/마케팅, 경영지원, CS 정규직원 추천채용",
+            "write": "IT융합공학부",
+            "date": "2024.05.16",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/261064/artclView.do",
+            "file": 1
+        },
+        "32": {
+            "subject": "창의과학 경진대회 모집 홍보",
+            "write": "IT융합공학부",
+            "date": "2024.05.10",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/260911/artclView.do",
+            "file": 2
+        },
+        "31": {
+            "subject": "[진로탐색학점제] 2024 진로탐색학점제 상상더학기 프로그램 모집 안내",
+            "write": "IT융합공학부",
+            "date": "2024.04.25",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/260638/artclView.do",
+            "file": 2
+        },
+        "30": {
+            "subject": "「삼성 청년 SW 아카데미」12기 교육생 모집홍보",
+            "write": "IT융합공학부",
+            "date": "2024.04.22",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/260552/artclView.do",
+            "file": 2
+        },
+        "29": {
+            "subject": "[채용공고] 동우공영 추천채용",
+            "write": "IT융합공학부",
+            "date": "2024.04.19",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/260490/artclView.do",
+            "file": 3
+        },
+        "28": {
+            "subject": "[채용공고] 썬더소프트코리아 추천채용",
+            "write": "IT융합공학부",
+            "date": "2024.03.29",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/260015/artclView.do",
+            "file": 1
+        },
+        "27": {
+            "subject": "[채용공고] (주)신흥 신입사원 추천 채용",
+            "write": "IT융합공학부",
+            "date": "2024.03.21",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/259865/artclView.do",
+            "file": 1
+        },
+        "26": {
+            "subject": "[KISIA] 시큐리티아카데미 3기 추가모집 홍보 요청 관련입니다.",
+            "write": "IT융합공학부",
+            "date": "2024.03.05",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/259482/artclView.do",
+            "file": 9
+        },
+        "25": {
+            "subject": "[채용공고] 코스닥 상장기업 윈스 신입직원 모집 공고",
+            "write": "IT융합공학부",
+            "date": "2024.02.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/259333/artclView.do",
+            "file": 1
+        },
+        "24": {
+            "subject": "[중요/필독] IT융합공학부(4트랙) 캡스톤디자인 과목 면제 조건 안내",
+            "write": "IT융합공학부",
+            "date": "2024.02.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/259311/artclView.do",
+            "file": 0
+        },
+        "23": {
+            "subject": "[한국산업인력공단] ICSGLOBAL 국비지원미국취업연수과정 사전모집 예비자 지원 안내",
+            "write": "IT융합공학부",
+            "date": "2024.02.14",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/259100/artclView.do",
+            "file": 1
+        },
+        "22": {
+            "subject": "[중요/필독] 2024-1 서면신청 접수 안내 (3/4 - 3/5)",
+            "write": "IT융합공학부",
+            "date": "2024.02.13",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/259073/artclView.do",
+            "file": 4
+        },
+        "21": {
+            "subject": "[중요/필독] 2024년 2월 졸업 예정자 대상 학부졸업요건 제출 안내 (재학생, 수료생, 학사학위취득 유예 신청학생)",
+            "write": "IT융합공학부",
+            "date": "2023.12.12",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/258156/artclView.do",
+            "file": 0
+        },
+        "20": {
+            "subject": "[채용공고] 키엔스코리아 신입사원 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.10.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/257452/artclView.do",
+            "file": 0
+        },
+        "19": {
+            "subject": "[채용공고] 케이제이씨 디스플레이 코퍼레이션 추천채용 공고",
+            "write": "IT융합공학부",
+            "date": "2023.10.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/257450/artclView.do",
+            "file": 0
+        },
+        "18": {
+            "subject": "[채용공고] 평화이즈 대졸신입사원 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.10.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/257447/artclView.do",
+            "file": 0
+        },
+        "17": {
+            "subject": "[채용공고] 뉴욕상하이컨설팅그룹 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.10.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/257445/artclView.do",
+            "file": 0
+        },
+        "16": {
+            "subject": "[채용공고] 에이알티플러스 LabVIEW 프로그래머",
+            "write": "IT융합공학부",
+            "date": "2023.09.19",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/256941/artclView.do",
+            "file": 1
+        },
+        "15": {
+            "subject": "[채용공고] 동희구룹 9월 부분별 추천채용공고",
+            "write": "IT융합공학부",
+            "date": "2023.09.06",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/256687/artclView.do",
+            "file": 0
+        },
+        "14": {
+            "subject": "[채용공고] 오뚜기물류서비스 관리직 신입사원",
+            "write": "IT융합공학부",
+            "date": "2023.08.25",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/256424/artclView.do",
+            "file": 0
+        },
+        "13": {
+            "subject": "[채용공고] 마시모두띠 부분별 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.08.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/256241/artclView.do",
+            "file": 0
+        },
+        "12": {
+            "subject": "[중요/필독] 2023-2 서면신청 접수 안내 (8/31~9/1)",
+            "write": "IT융합공학부",
+            "date": "2023.08.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/256261/artclView.do",
+            "file": 4
+        },
+        "11": {
+            "subject": "[채용공고] 아이크래프트 신입/경력 공고",
+            "write": "IT융합공학부",
+            "date": "2023.08.07",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/256013/artclView.do",
+            "file": 1
+        },
+        "10": {
+            "subject": "[채용공고] 바름 디지털마케터",
+            "write": "IT융합공학부",
+            "date": "2023.08.03",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255971/artclView.do",
+            "file": 0
+        },
+        "9": {
+            "subject": "[채용공고] (주)신흥 신입사원",
+            "write": "IT융합공학부",
+            "date": "2023.08.03",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255970/artclView.do",
+            "file": 0
+        },
+        "8": {
+            "subject": "C기반 스마트 IoT개발자 양성과정",
+            "write": "IT융합공학부",
+            "date": "2023.07.27",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255837/artclView.do",
+            "file": 0
+        },
+        "7": {
+            "subject": "[추천채용]오뚜기물류서비스 대졸 관리직 신입사원",
+            "write": "IT융합공학부",
+            "date": "2023.07.20",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255706/artclView.do",
+            "file": 0
+        },
+        "6": {
+            "subject": "[채용공고] 틱톡 직무별 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.07.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255663/artclView.do",
+            "file": 4
+        },
+        "5": {
+            "subject": "[채용공고] 동우공영 본사 사무직(관리직) 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.07.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255662/artclView.do",
+            "file": 2
+        },
+        "4": {
+            "subject": "[채용공고] 고운세상 코스메틱 신입사원 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.07.18",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255661/artclView.do",
+            "file": 0
+        },
+        "3": {
+            "subject": "[채용공고] 동희그룹 7월 경력 및 신입사원 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.07.12",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255589/artclView.do",
+            "file": 0
+        },
+        "2": {
+            "subject": "[채용공고] 미디어로그 S/W개발 신입 인턴 추천채용",
+            "write": "IT융합공학부",
+            "date": "2023.07.12",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255590/artclView.do",
+            "file": 0
+        },
+        "1": {
+            "subject": "[중요/필독] 2023년 8월 졸업 예정자 대상 학부졸업요건 제출 안내 (재학생, 수료생, 학사학위취득 유예 신청학생)",
+            "write": "IT융합공학부",
+            "date": "2023.06.19",
+            "link": "https://www.hansung.ac.kr/bbs/Engineering/108/255283/artclView.do",
+            "file": 0
+        }
+    }
+}
