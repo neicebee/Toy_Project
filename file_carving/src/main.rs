@@ -53,7 +53,7 @@ fn bmp_file_carving(source_byte: &[u8], output_log_file_path: &str, cluster_size
 
 fn main() {
     const BMP_CLUSTER_SIZE: usize = 4096;
-    let bmp_carving_file_path = "carving_file/dd_bmp_carving.001";
+    let bmp_carving_file_path = "carving_file/dd_bmp_carving_1.001";
     let output_log_file_path = "result/carved_bmp_log.txt";
     
     // 바이너리 값 읽어오기
