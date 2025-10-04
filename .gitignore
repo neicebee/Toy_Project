@@ -9,3 +9,4 @@ frontend/dist/
 login_web_server/.env
 example/
 file_carving/target/
+file_carving/result/
