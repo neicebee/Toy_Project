@@ -10,3 +10,4 @@ login_web_server/.env
 example/
 file_carving/target/
 file_carving/result/
+file_carving/carving_file/
