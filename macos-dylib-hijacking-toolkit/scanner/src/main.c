@@ -56,7 +56,6 @@ int main(int argc, char **argv) {
 
     printf("════════════════════════════════════════════════════════════════════\n");
     printf("                   macOS Dylib Injection Scanner                    \n");
-    printf("                  (Spectre Vulnerability Detection)                 \n");
     printf("════════════════════════════════════════════════════════════════════\n");
     printf("[*] 프로세스 스캔 시작...\n\n");
 
