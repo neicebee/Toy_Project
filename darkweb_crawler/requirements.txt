@@ -1,0 +1,35 @@
+# 다크웹 도메인 모니터링 도구 - 의존성
+# Python 3.8+
+
+# HTTP 요청 및 웹 스크래핑
+requests==2.31.0
+beautifulsoup4==4.12.2
+
+# Tor SOCKS5 프록시
+PySocks==1.7.1
+stem==1.8.2
+
+# 데이터 처리
+pandas==2.0.3
+numpy==1.24.3
+
+# 데이터베이스
+sqlalchemy==2.0.19
+
+# 스케줄링 (일일 자동 실행)
+schedule==1.2.0
+
+# 로깅 및 모니터링
+python-json-logger==2.0.7
+
+# API & 웹
+urllib3==2.0.4
+flask==3.0.0
+
+# 유틸리티
+python-dotenv==1.0.0
+
+# 개발/테스트 (선택사항)
+pytest==7.4.0
+black==23.7.0
+flake8==6.1.0

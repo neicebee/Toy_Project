@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkweb Crawler - 도메인 분석</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        input[type="text"]::placeholder {
+            color: #999;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-analyze {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-analyze:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-analyze:active {
+            transform: translateY(0);
+        }
+        
+        .btn-analyze:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-clear {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .btn-clear:hover {
+            background: #e0e0e0;
+        }
+        
+        .info-box {
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .status-message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            display: none;
+        }
+        
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        .history {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .history h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .history-list {
+            list-style: none;
+        }
+        
+        .history-item {
+            padding: 10px 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .history-item:hover {
+            background: #f0f0f0;
+        }
+        
+        .history-item-domain {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        
+        .history-item-time {
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Darkweb Crawler</h1>
+            <p>.onion 도메인 자동 분석 및 신뢰도 평가</p>
+        </div>
+        
+        <div class="info-box">
+            <strong>ℹ️ 정보:</strong> .onion 도메인을 입력하면 접근성, 색인, 콘텐츠 분석 및 카테고리 분류를 수행합니다.
+        </div>
+        
+        <form id="analyzeForm">
+            <div class="form-group">
+                <label for="domain">도메인</label>
+                <input 
+                    type="text" 
+                    id="domain" 
+                    name="domain" 
+                    placeholder="예: example.onion"
+                    autocomplete="off"
+                >
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="btn-analyze" id="analyzeBtn">
+                    🚀 분석 시작
+                </button>
+                <button type="reset" class="btn-clear" id="clearBtn">
+                    🗑️ 초기화
+                </button>
+            </div>
+        </form>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>분석 중입니다... (1-3분 소요)</p>
+        </div>
+        
+        <div class="status-message" id="statusMessage"></div>
+        
+        <div class="history" id="historyContainer" style="display: none;">
+            <h3>📋 최근 분석</h3>
+            <ul class="history-list" id="historyList"></ul>
+        </div>
+    </div>
+    
+    <script>
+        // 분석 기록 로드
+        function loadHistory() {
+            const history = JSON.parse(localStorage.getItem('analyzeHistory') || '[]');
+            const historyList = document.getElementById('historyList');
+            const historyContainer = document.getElementById('historyContainer');
+            
+            if (history.length === 0) {
+                historyContainer.style.display = 'none';
+                return;
+            }
+            
+            historyContainer.style.display = 'block';
+            historyList.innerHTML = '';
+            
+            history.slice(0, 5).forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'history-item';
+                li.innerHTML = `
+                    <div class="history-item-domain">${item.domain}</div>
+                    <div class="history-item-time">${new Date(item.timestamp).toLocaleString('ko-KR')}</div>
+                `;
+                li.onclick = () => {
+                    document.getElementById('domain').value = item.domain;
+                    submitAnalysis();
+                };
+                historyList.appendChild(li);
+            });
+        }
+        
+        // 분석 제출
+        function submitAnalysis() {
+            const domain = document.getElementById('domain').value.trim();
+            
+            if (!domain) {
+                showStatus('도메인을 입력해주세요', 'error');
+                return;
+            }
+            
+            if (!domain.endsWith('.onion')) {
+                showStatus('.onion 도메인만 지원합니다', 'error');
+                return;
+            }
+            
+            analyzeStep2(domain);
+        }
+        
+        // 2단계: 서버에 분석 요청
+        function analyzeStep2(domain) {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('statusMessage').style.display = 'none';
+            document.getElementById('analyzeBtn').disabled = true;
+            
+            fetch('/api/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ domain })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('analyzeBtn').disabled = false;
+                
+                if (data.status === 'success') {
+                    // 분석 기록 저장
+                    saveToHistory(domain);
+                    
+                    // 결과 페이지로 이동
+                    window.location.href = `/results?domain=${encodeURIComponent(domain)}`;
+                } else {
+                    showStatus(data.message, 'error');
+                }
+            })
+            .catch(error => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('analyzeBtn').disabled = false;
+                console.error('Error:', error);
+                showStatus('분석 중 오류가 발생했습니다', 'error');
+            });
+        }
+        
+        // 상태 메시지 표시
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('statusMessage');
+            statusDiv.textContent = message;
+            statusDiv.className = `status-message ${type}`;
+        }
+        
+        // 분석 기록 저장
+        function saveToHistory(domain) {
+            const history = JSON.parse(localStorage.getItem('analyzeHistory') || '[]');
+            
+            // 중복 제거
+            const newHistory = history.filter(item => item.domain !== domain);
+            
+            // 새 항목 추가
+            newHistory.unshift({
+                domain,
+                timestamp: new Date().toISOString()
+            });
+            
+            // 최대 20개 유지
+            localStorage.setItem('analyzeHistory', JSON.stringify(newHistory.slice(0, 20)));
+            
+            loadHistory();
+        }
+        
+        // 폼 제출
+        document.getElementById('analyzeForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            submitAnalysis();
+        });
+        
+        // 페이지 로드 시
+        document.addEventListener('DOMContentLoaded', loadHistory);
+    </script>
+</body>
+</html>

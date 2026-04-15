@@ -1,0 +1,16 @@
+# 원격 검증 서버 (Ubuntu) 의존성
+# Flask 기반 검증 서버
+
+Flask==2.3.2
+Flask-CORS==4.0.0
+Werkzeug==2.3.6
+
+# HTTP 요청
+requests==2.31.0
+PySocks==1.7.1
+
+# 로깅
+python-json-logger==2.0.7
+
+# 웹
+urllib3==2.0.4

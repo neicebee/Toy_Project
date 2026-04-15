@@ -1,0 +1,281 @@
+{
+  "target_forums": [
+    {
+      "name": "Dread",
+      "known_domains": [
+        "mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion",
+        "dreadytofvwu4oa6.onion",
+        "dr34du7uh34tawj7.onion"
+      ],
+      "category": "darknet_forum",
+      "type": "discussion",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "Dream",
+      "known_domains": [
+        "dreammarketplace.onion",
+        "dreammkt73wsiyx2.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "Empire Market",
+      "known_domains": [
+        "empiremktxgjwhym.onion",
+        "empiremen7hkyxd3.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "Hydra",
+      "known_domains": [
+        "hydraruzxpnew4af.onion",
+        "hydra2345derscj5.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "ToRReZ Market",
+      "known_domains": [
+        "torrezmarket7gryf.onion",
+        "torrezmarketc7s.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "Dark0de Reborn",
+      "known_domains": [
+        "dark0deqxwb6ryq6.onion",
+        "dark0de5t6t7rxlr.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "Genesis Market",
+      "known_domains": [
+        "genesismarket4vyz.onion",
+        "genesismkt234jdw.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "Cocorico",
+      "known_domains": [
+        "cocoricod7cdojri.onion",
+        "cocoricomkt345yg.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "medium"
+    },
+    {
+      "name": "White House Market",
+      "known_domains": [
+        "whitehousenxgldd.onion",
+        "whitehouse2345mn.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "Bohemia Market",
+      "known_domains": [
+        "bohemiamkt5ghgbz.onion",
+        "bohemiam234567yh.onion"
+      ],
+      "category": "marketplace",
+      "type": "trading",
+      "monitoring_priority": "medium"
+    },
+    {
+      "name": "XSS.is",
+      "known_domains": [
+        "xsshq4w3f35dv7q7.onion",
+        "xss7m2xybnbmn4cb.onion",
+        "xssmkxfghj234567.onion"
+      ],
+      "category": "discussion_forum",
+      "type": "discussion",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "Nulled",
+      "known_domains": [
+        "nulledmxfg4xychq.onion",
+        "nulled73y7xnfhdg.onion",
+        "nulledikdsajf234.onion"
+      ],
+      "category": "discussion_forum",
+      "type": "discussion",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "CryptBB",
+      "known_domains": [
+        "cryptbbs7cvk2fpjz.onion",
+        "cryptbbrz42qvayw.onion",
+        "cryptbbscxh234jk.onion"
+      ],
+      "category": "discussion_forum",
+      "type": "discussion",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "2F Forum",
+      "known_domains": [
+        "2f4qyt234567xyzw.onion",
+        "2fforum234567abc.onion"
+      ],
+      "category": "discussion_forum",
+      "type": "discussion",
+      "monitoring_priority": "medium"
+    },
+    {
+      "name": "Envoys Forum",
+      "known_domains": [
+        "envoysforum234jk.onion",
+        "envoys234567mnop.onion"
+      ],
+      "category": "discussion_forum",
+      "type": "discussion",
+      "monitoring_priority": "medium"
+    },
+    {
+      "name": "ProtonMail",
+      "known_domains": [
+        "protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion"
+      ],
+      "category": "communication",
+      "type": "email",
+      "monitoring_priority": "low"
+    },
+    {
+      "name": "DuckDuckGo",
+      "known_domains": [
+        "3g2upl4pq6kufc4m.onion"
+      ],
+      "category": "utility",
+      "type": "search",
+      "monitoring_priority": "low"
+    },
+    {
+      "name": "Facebook",
+      "known_domains": [
+        "facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion"
+      ],
+      "category": "social_network",
+      "type": "social",
+      "monitoring_priority": "low"
+    },
+    {
+      "name": "The Chans",
+      "known_domains": [
+        "7chew4hj234567xm.onion",
+        "chans234567abcd.onion"
+      ],
+      "category": "imageboard",
+      "type": "discussion",
+      "monitoring_priority": "medium"
+    },
+    {
+      "name": "Archive.org Onion",
+      "known_domains": [
+        "archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion"
+      ],
+      "category": "archive",
+      "type": "archive",
+      "monitoring_priority": "low"
+    }
+  ],
+  "category_mapping": {
+    "darknet_forum": {
+      "name": "다크넷 포럼",
+      "description": "다크넷 사용자들이 소통하는 주요 포럼",
+      "is_forum": true,
+      "sociability": "high"
+    },
+    "marketplace": {
+      "name": "마켓플레이스",
+      "description": "물품 거래 및 판매 활동",
+      "is_forum": false,
+      "sociability": "medium"
+    },
+    "discussion_forum": {
+      "name": "토론 포럼",
+      "description": "사용자들이 정보 공유 및 토론하는 포럼",
+      "is_forum": true,
+      "sociability": "high"
+    },
+    "imageboard": {
+      "name": "이미지보드",
+      "description": "익명 이미지 공유 및 토론 보드",
+      "is_forum": true,
+      "sociability": "high"
+    },
+    "social_network": {
+      "name": "소셜 네트워크",
+      "description": "사용자 간 네트워킹 및 소통",
+      "is_forum": false,
+      "sociability": "high"
+    },
+    "communication": {
+      "name": "커뮤니케이션",
+      "description": "이메일, 메시징 등 통신 서비스",
+      "is_forum": false,
+      "sociability": "medium"
+    },
+    "archive": {
+      "name": "아카이브",
+      "description": "정보 보관 및 검색 서비스",
+      "is_forum": false,
+      "sociability": "low"
+    },
+    "utility": {
+      "name": "유틸리티",
+      "description": "검색, 도구 등 기타 서비스",
+      "is_forum": false,
+      "sociability": "low"
+    }
+  },
+  "forum_keywords": {
+    "discussion_indicators": [
+      "forum", "thread", "post", "discussion", "topic", "reply",
+      "comment", "community", "member", "user", "profile",
+      "board", "section", "subforum", "sticky", "pinned"
+    ],
+    "marketplace_indicators": [
+      "market", "shop", "cart", "checkout", "product", "listing",
+      "vendor", "seller", "buyer", "transaction", "payment",
+      "order", "deal", "offer", "price", "bidding"
+    ],
+    "archive_indicators": [
+      "archive", "library", "document", "repository", "collection",
+      "download", "file", "database", "record"
+    ]
+  },
+  "osint_sources": [
+    "https://www.reddit.com/r/deepweb/",
+    "https://www.reddit.com/r/TOR/",
+    "https://github.com/alecmuffett/real-world-onion-sites",
+    "https://www.reddit.com/r/DreadAlert/",
+    "https://dark.fail",
+    "https://tor.taxi/",
+    "https://daunt.link/",
+    "https://thehiddenwiki.com/",
+    "https://www.zerohedge.com/"
+  ]
+}

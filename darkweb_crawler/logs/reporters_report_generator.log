@@ -1,0 +1,4 @@
+2026-04-04 23:38:48,019 - reporters.report_generator - INFO - JSON 리포트 생성: /Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/reports/report_f08b12fc-bd12-4fbd-acc6-af034060c6f1_2026-04-04_233848.json
+2026-04-04 23:38:48,024 - reporters.report_generator - INFO - CSV 리포트 생성: /Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/reports/report_f08b12fc-bd12-4fbd-acc6-af034060c6f1_2026-04-04_233848.csv
+2026-04-04 23:38:48,213 - reporters.report_generator - INFO - ✅ 차트 생성 완료 (3개)
+2026-04-04 23:38:48,214 - reporters.report_generator - INFO - ✅ HTML 리포트 생성: /Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/reports/report_f08b12fc-bd12-4fbd-acc6-af034060c6f1_2026-04-04_233848.html

@@ -1,0 +1,77 @@
+2026-04-04 22:23:27,481 - scrapers.osint_collector - INFO - 포럼 설정 로드: 20개 포럼
+2026-04-04 22:23:27,484 - scrapers.osint_collector - INFO - 포럼 설정 로드: 20개 포럼
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - ============================================================
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 전체 OSINT 도메인 수집 시작 (10개 소스)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - ============================================================
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (Dread)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: dreadytofvwu4oa6.onion (Dread)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: dr34du7uh34tawj7.onion (Dread)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: dreammarketplace.onion (Dream)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: dreammkt73wsiyx2.onion (Dream)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: empiremktxgjwhym.onion (Empire Market)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: empiremen7hkyxd3.onion (Empire Market)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: hydraruzxpnew4af.onion (Hydra)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: hydra2345derscj5.onion (Hydra)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: torrezmarket7gryf.onion (ToRReZ Market)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: torrezmarketc7s.onion (ToRReZ Market)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: dark0deqxwb6ryq6.onion (Dark0de Reborn)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: dark0de5t6t7rxlr.onion (Dark0de Reborn)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: genesismarket4vyz.onion (Genesis Market)
+2026-04-04 22:23:27,487 - scrapers.osint_collector - INFO - 알려진 도메인 추가: genesismkt234jdw.onion (Genesis Market)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: cocoricod7cdojri.onion (Cocorico)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: cocoricomkt345yg.onion (Cocorico)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: whitehousenxgldd.onion (White House Market)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: whitehouse2345mn.onion (White House Market)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: bohemiamkt5ghgbz.onion (Bohemia Market)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: bohemiam234567yh.onion (Bohemia Market)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: xsshq4w3f35dv7q7.onion (XSS.is)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: xss7m2xybnbmn4cb.onion (XSS.is)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: xssmkxfghj234567.onion (XSS.is)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: nulledmxfg4xychq.onion (Nulled)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: nulled73y7xnfhdg.onion (Nulled)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: nulledikdsajf234.onion (Nulled)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: cryptbbs7cvk2fpjz.onion (CryptBB)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: cryptbbrz42qvayw.onion (CryptBB)
+2026-04-04 22:23:27,488 - scrapers.osint_collector - INFO - 알려진 도메인 추가: cryptbbscxh234jk.onion (CryptBB)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: 2f4qyt234567xyzw.onion (2F Forum)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: 2fforum234567abc.onion (2F Forum)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: envoysforum234jk.onion (Envoys Forum)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: envoys234567mnop.onion (Envoys Forum)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion (ProtonMail)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: 3g2upl4pq6kufc4m.onion (DuckDuckGo)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion (Facebook)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: 7chew4hj234567xm.onion (The Chans)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: chans234567abcd.onion (The Chans)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - 알려진 도메인 추가: archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion (Archive.org Onion)
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - ✓ 알려진 도메인: 40개
+2026-04-04 22:23:27,489 - scrapers.osint_collector - INFO - Reddit deepweb 서브레딧 스캔 중...
+2026-04-04 22:23:28,308 - scrapers.osint_collector - INFO - Reddit에서 0개 도메인 추출
+2026-04-04 22:23:28,310 - scrapers.osint_collector - INFO - ✓ Reddit r/deepweb: 0개
+2026-04-04 22:23:28,310 - scrapers.osint_collector - INFO - Reddit r/TOR 서브레딧 스캔 중...
+2026-04-04 22:23:28,973 - scrapers.osint_collector - INFO - r/TOR에서 1개 도메인 추출
+2026-04-04 22:23:28,975 - scrapers.osint_collector - INFO - ✓ Reddit r/TOR: 1개
+2026-04-04 22:23:28,975 - scrapers.osint_collector - INFO - GitHub (alecmuffett/real-world-onion-sites) 수집 중...
+2026-04-04 22:23:29,287 - scrapers.osint_collector - INFO - Alec Muffett GitHub에서 85개 도메인 추출
+2026-04-04 22:23:29,289 - scrapers.osint_collector - INFO - ✓ GitHub alecmuffett: 85개
+2026-04-04 22:23:29,289 - scrapers.osint_collector - INFO - Reddit r/DreadAlert 스캔 중...
+2026-04-04 22:23:29,622 - scrapers.osint_collector - INFO - r/DreadAlert에서 1개 도메인 추출
+2026-04-04 22:23:29,624 - scrapers.osint_collector - INFO - ✓ Reddit r/DreadAlert: 1개
+2026-04-04 22:23:29,624 - scrapers.osint_collector - INFO - dark.fail 스캔 중...
+2026-04-04 22:23:30,335 - scrapers.osint_collector - INFO - dark.fail에서 31개 도메인 추출
+2026-04-04 22:23:30,339 - scrapers.osint_collector - INFO - ✓ dark.fail: 31개
+2026-04-04 22:23:30,339 - scrapers.osint_collector - INFO - tor.taxi 스캔 중...
+2026-04-04 22:23:31,496 - scrapers.osint_collector - INFO - tor.taxi에서 54개 도메인 추출
+2026-04-04 22:23:31,499 - scrapers.osint_collector - INFO - ✓ tor.taxi: 54개
+2026-04-04 22:23:31,499 - scrapers.osint_collector - INFO - daunt.link 스캔 중...
+2026-04-04 22:23:33,737 - scrapers.osint_collector - INFO - daunt.link에서 213개 도메인 추출
+2026-04-04 22:23:33,739 - scrapers.osint_collector - INFO - ✓ daunt.link: 213개
+2026-04-04 22:23:33,739 - scrapers.osint_collector - INFO - The Hidden Wiki 스캔 중...
+2026-04-04 22:23:36,361 - scrapers.osint_collector - INFO - The Hidden Wiki에서 75개 도메인 추출
+2026-04-04 22:23:36,363 - scrapers.osint_collector - INFO - ✓ The Hidden Wiki: 75개
+2026-04-04 22:23:36,363 - scrapers.osint_collector - INFO - ZeroHedge darkweb 기사 스캔 중...
+2026-04-04 22:23:37,289 - scrapers.osint_collector - INFO - ZeroHedge에서 0개 도메인 추출
+2026-04-04 22:23:37,290 - scrapers.osint_collector - INFO - ✓ ZeroHedge: 0개
+2026-04-04 22:23:37,291 - scrapers.osint_collector - INFO - ============================================================
+2026-04-04 22:23:37,291 - scrapers.osint_collector - INFO - 총 416개 도메인 수집 완료
+2026-04-04 22:23:37,291 - scrapers.osint_collector - INFO - 소스별 분포: 알려진(40) + Reddit(2) + GitHub(85) + 기타(373)
+2026-04-04 22:23:37,291 - scrapers.osint_collector - INFO - ============================================================

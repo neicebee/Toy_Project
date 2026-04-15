@@ -1,0 +1,2068 @@
+2026-04-04 22:23:27,482 - __main__ - WARNING - 🗑️ 데이터베이스 초기화: /Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/database/darkweb_monitor.db 삭제됨
+2026-04-04 22:23:27,484 - __main__ - INFO - ✅ 새로운 데이터베이스 생성 완료
+2026-04-04 22:23:27,484 - __main__ - INFO - 모니터링 도구 초기화 완료 (스캔 ID: f08b12fc-bd12-4fbd-acc6-af034060c6f1)
+2026-04-04 22:23:27,484 - __main__ - INFO - ============================================================
+2026-04-04 22:23:27,484 - __main__ - INFO - 통합 스캔 시작: 2026-04-04T22:23:27.484150
+2026-04-04 22:23:27,484 - __main__ - INFO - ============================================================
+2026-04-04 22:23:27,484 - __main__ - INFO - 
+[1단계] OSINT 도메인 수집 및 valid_domains 통합...
+2026-04-04 22:23:37,292 - __main__ - INFO - ✅ 도메인 수집 완료: 416개 (OSINT: 416개, 재검증: 0개)
+2026-04-04 22:23:37,292 - __main__ - INFO - 
+[2단계] 도메인 DB 저장...
+2026-04-04 22:23:37,513 - __main__ - INFO - ✅ 416개 도메인 저장 완료
+2026-04-04 22:23:37,513 - __main__ - INFO - 
+[헬스 체크] 원격 검증 서버 확인...
+2026-04-04 22:23:37,518 - __main__ - INFO - ✅ 원격 검증 서버 정상
+2026-04-04 22:23:37,518 - __main__ - INFO - 
+[3단계] 원격 검증 서버에서 도메인 검증...
+2026-04-04 22:23:37,518 - __main__ - INFO - 대상 서버: http://192.168.64.7:5000
+2026-04-04 23:24:11,557 - __main__ - INFO - ✅ 416개 도메인 검증 완료
+2026-04-04 23:24:11,559 - __main__ - INFO - 
+[4단계] 검증 결과를 로컬 DB에 저장...
+2026-04-04 23:24:11,573 - __main__ - INFO - ✅ 도메인 업데이트됨: dreadytofvwu4oa6.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,577 - __main__ - INFO - ✅ 도메인 업데이트됨: dr34du7uh34tawj7.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,584 - __main__ - INFO - ✅ 도메인 업데이트됨: dreammkt73wsiyx2.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,589 - __main__ - INFO - ✅ 도메인 업데이트됨: empiremen7hkyxd3.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,594 - __main__ - INFO - ✅ 도메인 업데이트됨: hydra2345derscj5.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,600 - __main__ - INFO - ✅ 도메인 업데이트됨: dark0deqxwb6ryq6.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,615 - __main__ - INFO - ✅ 도메인 업데이트됨: xsshq4w3f35dv7q7.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,619 - __main__ - INFO - ✅ 도메인 업데이트됨: xssmkxfghj234567.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,623 - __main__ - INFO - ✅ 도메인 업데이트됨: nulledikdsajf234.onion → mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-04 23:24:11,634 - __main__ - INFO - ✅ 도메인 업데이트됨: 3g2upl4pq6kufc4m.onion → ndazmibf64stqyhxmdy7hooopa2o7dc5rkj7p5u63y4ddba3ahmpppid.onion
+2026-04-04 23:24:11,648 - __main__ - INFO - ✅ 도메인 업데이트됨: p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion → darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion
+2026-04-04 23:24:11,650 - __main__ - INFO - ✅ 도메인 업데이트됨: 2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion → darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion
+2026-04-04 23:24:11,657 - __main__ - INFO - ✅ 도메인 업데이트됨: dwnewsgngmhlplxy6o2twtfgjnrnjxbegbwqx6wnotdhkzt562tszfid.onion → flj3cmtt6x4kj4zlc4wznsu7hti43sxazswvhex3ogeeb3pb23bihpyd.onion
+2026-04-04 23:24:11,659 - __main__ - INFO - ✅ 도메인 업데이트됨: a4zum5ydurvljrohxqp2rjjal5kro4ge2q2qizuonf2jubkhcr627gad.onion → sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion
+2026-04-04 23:24:11,668 - __main__ - INFO - ✅ 도메인 업데이트됨: nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion → megalibg7xrh7npeyqhuxa2igtapbhv5xg4z7qjo5asvvhv4tts66hyd.onion
+2026-04-04 23:24:11,671 - __main__ - INFO - ✅ 도메인 업데이트됨: keybase5wmilwokqirssclfnsqrjdsi7jdir5wy7y7iu3tanwmtp6oid.onion → darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion
+2026-04-04 23:24:11,673 - __main__ - INFO - ✅ 도메인 업데이트됨: twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion → megalibg7xrh7npeyqhuxa2igtapbhv5xg4z7qjo5asvvhv4tts66hyd.onion
+2026-04-04 23:24:11,687 - __main__ - INFO - ✅ 도메인 업데이트됨: nqu6crmtnzs2hs5abo2uqni53yqsnnwqnerdxuzyz5yxairxlzjzt6yd.onion → juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion
+2026-04-04 23:24:11,693 - __main__ - INFO - ✅ 도메인 업데이트됨: m6rqq6kocsyugo2laitup5nn32bwm3lh677chuodjfmggczoafzwfcad.onion → zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion
+2026-04-04 23:24:11,701 - __main__ - INFO - ✅ 도메인 업데이트됨: 27m3p2uv7igmj6kvd4ql3cct5h3sdwrsajovkkndeufumzyfhlfev4qd.onion → hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad.onion
+2026-04-04 23:24:11,748 - __main__ - INFO - ✅ 도메인 업데이트됨: dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion → lab4llqv7w3a6ir63ny72zpnoena3gbquytng65zfnjzaavzuudc4eid.onion
+2026-04-04 23:24:11,752 - __main__ - INFO - ✅ 도메인 업데이트됨: drughub666py6fgnml5kmxa7fva5noppkf6wkai4fwwvzwt4rz645aqd.onion → darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion
+2026-04-04 23:24:11,759 - __main__ - INFO - ✅ 도메인 업데이트됨: ddosxlvzzow7scc7egy75gpke54hgbg2frahxzaw6qq5osnzm7wistid.onion → darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion
+2026-04-04 23:24:11,763 - __main__ - INFO - ✅ 도메인 업데이트됨: recon222tttn4ob7ujdhbn3s4gjre7netvzybuvbq2bcqwltkiqinhad.onion → darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion
+2026-04-04 23:24:11,765 - __main__ - INFO - ✅ 도메인 업데이트됨: lpiyu33yusoalp5kh3f4hak2so2sjjvjw5ykyvu2dulzosgvuffq6sad.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:11,767 - __main__ - INFO - ✅ 도메인 업데이트됨: monero3tssjogwg5rj37hiawndkwge5eio5wtgwvt32fvzu5drpmzlqd.onion → darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion
+2026-04-04 23:24:11,770 - __main__ - INFO - ✅ 도메인 업데이트됨: pornhubvybmsymdol4iibwgwtkpwmeyd6luq2gxajgjzfjvotyt5zhyd.onion → darkfa45x2shrvof3j5inbxjkpprcsohplfj42rifsykyucai6upaxid.onion
+2026-04-04 23:24:11,789 - __main__ - INFO - ✅ 도메인 업데이트됨: darkmmro6j5xekpe7jje74maidkkkkw265nngjqxrv4ik7v3aiwdbtad.onion → tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion
+2026-04-04 23:24:11,793 - __main__ - INFO - ✅ 도메인 업데이트됨: pitchprash4aqilfr7sbmuwve3pnkpylqwxjbj2q5o4szcfeea6d27yd.onion → darklcdkooakzfpfef2bpo2yzjgeh3csdxgv6usiw223s7ay2ghdgnad.onion
+2026-04-04 23:24:11,795 - __main__ - INFO - ✅ 도메인 업데이트됨: darkmmk3owyft4zzg3j3t25ri4z5bw7klapq6q3l762kxra72sli4mid.onion → tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion
+2026-04-04 23:24:11,798 - __main__ - INFO - ✅ 도메인 업데이트됨: pitchzzzoot5i4cpsblu2d5poifsyixo5r4litxkukstre5lrbjakxid.onion → dailydwusclfsu7fzwydc5emidexnesmdlzqmz2dxnx5x4thl42vj4qd.onion
+2026-04-04 23:24:11,801 - __main__ - INFO - ✅ 도메인 업데이트됨: tortimeswqlzti2aqbjoieisne4ubyuoeiiugel2layyudcfrwln76qd.onion → tortaxiprd6ybez7n7fnwwmcdo3efib5hv6z7ks463ya72bv7ovz7qqd.onion
+2026-04-04 23:24:11,811 - __main__ - INFO - ✅ 도메인 업데이트됨: xssforumv3isucukbxhdhwz67hoa5e2voakcfkuieq4ch257vsburuid.onion → hiddenhn6rh56qsoxft4vjus5jp5zycrw55n63skh7kqentg3rx6rpqd.onion
+2026-04-04 23:24:11,814 - __main__ - INFO - ✅ 도메인 업데이트됨: dumpliwoard5qsrrsroni7bdiishealhky4snigbzfmzcquwo3kml4id.onion → tomjertu6nwjxx4so4pvrjdqo2uqyb7wan66iufay32lzjjs3yfdm3qd.onion
+2026-04-04 23:24:11,828 - __main__ - INFO - ✅ 도메인 업데이트됨: darkmat3kdxestusl437urshpsravq7oqb7t3m36u2l62vnmmldzdmid.onion → darklcdkooakzfpfef2bpo2yzjgeh3csdxgv6usiw223s7ay2ghdgnad.onion
+2026-04-04 23:24:11,830 - __main__ - INFO - ✅ 도메인 업데이트됨: g66ol3eb5ujdckzqqfmjsbpdjufmjd5nsgdipvxmsh7rckzlhywlzlqd.onion → darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion
+2026-04-04 23:24:11,834 - __main__ - INFO - ✅ 도메인 업데이트됨: digdig2nugjpszzmqe5ep2bk7lqfpdlyrkojsx2j6kzalnrqtwedr3id.onion → dailydwusclfsu7fzwydc5emidexnesmdlzqmz2dxnx5x4thl42vj4qd.onion
+2026-04-04 23:24:11,838 - __main__ - INFO - ✅ 도메인 업데이트됨: nzdnmfcf2z5pd3vwfyfy3jhwoubv6qnumdglspqhurqnuvr52khatdad.onion → szucmy6cwcnwr6smt2x2oxjt6nuzibvn24xnwkyoknfb7pca5fj4eyqd.onion
+2026-04-04 23:24:11,859 - __main__ - INFO - ✅ 도메인 업데이트됨: tjtmpqpfng6upzv34cpw5cglycwzdpnae3xau56wprp2wp5sw32benyd.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:11,863 - __main__ - INFO - ✅ 도메인 업데이트됨: q46wfsee26kj6oead5hg643oi363lgqiz3m45b2dwrizefryu2zdfrqd.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:11,870 - __main__ - INFO - ✅ 도메인 업데이트됨: superwtavnevo53im3jjqimhgj4nj5xopf765cidji6e4dkpsveb5wyd.onion → y7tqkd4jfeytglp3frsnebs6lcapl3zwohtq6cl76kju6htngvzrntyd.onion
+2026-04-04 23:24:11,887 - __main__ - INFO - ✅ 도메인 업데이트됨: darkmmaugjlnyv7i367vwddz4jkvy2sdlaeutb2uilgs5g3no54mb4qd.onion → tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion
+2026-04-04 23:24:11,913 - __main__ - INFO - ✅ 도메인 업데이트됨: torzon4kv5swfazrziqvel2imhxcckc4otcvopiv5lnxzpqu4v4m5iyd.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:11,922 - __main__ - INFO - ✅ 도메인 업데이트됨: 7hlducio2a57if4vk5yt7g63cbs42dffztcmkyjjrb7bmdy5iuuyi7qd.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:11,937 - __main__ - INFO - ✅ 도메인 업데이트됨: zqnepw2dvsjtdjypbwurugtp3g46am55ugbx2wc2o4dsvuayamhtavqd.onion → 3q6ytxkudm5zeaje3xg7sg6ogzqy6bugchpshwgvj6ckao4m3u2dsgyd.onion
+2026-04-04 23:24:11,950 - __main__ - INFO - ✅ 도메인 업데이트됨: ujgkk42xmmip6h567srdlleefgb7hemc424cwzylrvxzgvsyoou6atid.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:11,965 - __main__ - INFO - ✅ 도메인 업데이트됨: 245mkrsljsgp3fdxp2hjw3pifplluznozd2lcqiojkc3n7zxdbc455id.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:11,969 - __main__ - INFO - ✅ 도메인 업데이트됨: darkmmnjhxn5sf3j2rz3hy36kdotf3apgfh4g6iez6cb2q2feazlsuad.onion → tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion
+2026-04-04 23:24:11,975 - __main__ - INFO - ✅ 도메인 업데이트됨: ppuffp3oytdydd2cpwnztrrikxo7l3fh4ode5taoa2huokleetx346ad.onion → juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion
+2026-04-04 23:24:11,978 - __main__ - INFO - ✅ 도메인 업데이트됨: goldtx2kn64bru6ozftz2kgdm6mulzjbokdh3dlmefgfbmiu7usbfnid.onion → juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion
+2026-04-04 23:24:11,992 - __main__ - INFO - ✅ 도메인 업데이트됨: sglgj2fytneccvyn6n4u3pacj4zhdhscfoptnhxxes3uvljmontru2yd.onion → darklcdkooakzfpfef2bpo2yzjgeh3csdxgv6usiw223s7ay2ghdgnad.onion
+2026-04-04 23:24:11,995 - __main__ - INFO - ✅ 도메인 업데이트됨: fnc26zcinywhldpv5za5ocafznw4jsumy2zcuhiri6sqwmnpy2bzmuad.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:12,008 - __main__ - INFO - ✅ 도메인 업데이트됨: darkmmka22ckaagrnkgyx6kba2brra3ulhz3grfo4fz425nr7owcncad.onion → tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion
+2026-04-04 23:24:12,075 - __main__ - INFO - ✅ 도메인 업데이트됨: c5p4khnw66o6mrjpzxoszn5jqlqeynw75s5jf6whzts2g74dd4bvqxid.onion → 3q6ytxkudm5zeaje3xg7sg6ogzqy6bugchpshwgvj6ckao4m3u2dsgyd.onion
+2026-04-04 23:24:12,085 - __main__ - INFO - ✅ 도메인 업데이트됨: 5fcewlhdjn2gs4op4on6k2nea6nqmtn65wdohyodfahcvcumciv3soad.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:12,094 - __main__ - INFO - ✅ 도메인 업데이트됨: wk6dwjxq5yfjnt2i7zz7vcrppb6hzrmxlq6sxxwhisco2e44wpkcvdad.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:12,097 - __main__ - INFO - ✅ 도메인 업데이트됨: addyrskyo2fdmiawv26taertu65ozizsusb6bup3mjn5v2kwogbsdyid.onion → y7tqkd4jfeytglp3frsnebs6lcapl3zwohtq6cl76kju6htngvzrntyd.onion
+2026-04-04 23:24:12,101 - __main__ - INFO - ✅ 도메인 업데이트됨: 6v4gemuzsix2p5q3feuz4bwvrbi75ycw665diwcltymkfhwmnxhkz6id.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:12,104 - __main__ - INFO - ✅ 도메인 업데이트됨: gyrwc2fhteu3jvpf5hywojfumxjjxplm2vkgcy4tziwpqaaz2wtirzqd.onion → zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion
+2026-04-04 23:24:12,109 - __main__ - INFO - ✅ 도메인 업데이트됨: pdtnkswh4ewn6cn5mq3ghyx276w5echzjnjoftvxsfbfnpdbapamaaqd.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:12,124 - __main__ - INFO - ✅ 도메인 업데이트됨: 3c7caoyxqz3hd4pepb5owa6ac7qyrcceeu2wg73n3jrcpar664nyd3qd.onion → darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion
+2026-04-04 23:24:12,127 - __main__ - INFO - ✅ 도메인 업데이트됨: rushrushxdfjtczgaux2tyw62nqcucwkrfboobxdg435ydvfsvag3lqd.onion → juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion
+2026-04-04 23:24:12,132 - __main__ - INFO - ✅ 도메인 업데이트됨: rfxzftj455ujrbzyqfw7dsaephyppkn6k3prbn7tlhcew43almqi2fid.onion → 3q6ytxkudm5zeaje3xg7sg6ogzqy6bugchpshwgvj6ckao4m3u2dsgyd.onion
+2026-04-04 23:24:12,137 - __main__ - INFO - ✅ 도메인 업데이트됨: spywaredrcdg5krvjnukp3vbdwiqcv3zwbrcg6qh27kiwecm4qyfphid.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,140 - __main__ - INFO - ✅ 도메인 업데이트됨: dngtk6iydmpokbyyk3irqznceft3hze6q6rasrqlz46v7pq4klxnl4yd.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,143 - __main__ - INFO - ✅ 도메인 업데이트됨: darkzzx4avcsuofgfez5zq75cqc4mprjvfqywo45dfcaxrwqg6qrlfid.onion → hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad.onion
+2026-04-04 23:24:12,145 - __main__ - INFO - ✅ 도메인 업데이트됨: cct5wy6mzgmft24xzw6zeaf55aaqmo6324gjlsghdhbiw5gdaaf4pkad.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,149 - __main__ - INFO - ✅ 도메인 업데이트됨: secmail63sex4dfw6h2nsrbmfz2z6alwxe4e3adtkpd4pcvkhht4jdad.onion → abyssou4y5ang24dn4cfkrwd3fsiczx7xg7n7mzlcthrpktfcar6j2qd.onion
+2026-04-04 23:24:12,151 - __main__ - INFO - ✅ 도메인 업데이트됨: ovai7wvp4yj6jl3wbzihypbq657vpape7lggrlah4pl34utwjrpetwid.onion → uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion
+2026-04-04 23:24:12,154 - __main__ - INFO - ✅ 도메인 업데이트됨: usmost4cbpesx552s2s4ti3c4nk2xgiu763vhcs3b4uc4ppp3zwnscyd.onion → uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion
+2026-04-04 23:24:12,163 - __main__ - INFO - ✅ 도메인 업데이트됨: rfyb5tlhiqtiavwhikdlvb3fumxgqwtg2naanxtiqibidqlox5vispqd.onion → uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion
+2026-04-04 23:24:12,167 - __main__ - INFO - ✅ 도메인 업데이트됨: prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwqd.onion → uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion
+2026-04-04 23:24:12,172 - __main__ - INFO - ✅ 도메인 업데이트됨: archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,177 - __main__ - INFO - ✅ 도메인 업데이트됨: s4k4ceiapwwgcm3mkb6e4diqecpo7kvdnfr5gg7sph7jjppqkvwwqtyd.onion → gshgttai7df4giyizjsf3n4cpjda3gg7iipm5vl3q7i3ttgp6pvyjqqd.onion
+2026-04-04 23:24:12,180 - __main__ - INFO - ✅ 도메인 업데이트됨: 4usoivrpy52lmc4mgn2h34cmfiltslesthr56yttv2pxudd3dapqciyd.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,195 - __main__ - INFO - ✅ 도메인 업데이트됨: killnod2s77o3axkktdu52aqmmy4acisz2gicbhjm4xbvxa2zfftteyd.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,202 - __main__ - INFO - ✅ 도메인 업데이트됨: ctemplarpizuduxk3fkwrieizstx33kg5chlvrh37nz73pv5smsvl6ad.onion → zmsbsmsto4i45uodwngy6x3yew5foxqu3bgowy7l7vndfspooolp5cqd.onion
+2026-04-04 23:24:12,205 - __main__ - INFO - ✅ 도메인 업데이트됨: potatoynwcg34xyodol6p6hvi5e4xelxdeowsl5t2daxywepub32y7yd.onion → uquroyobsaquslaunwkz6bmc3wutpzvwe7mv62xeq64645a57bugnsyd.onion
+2026-04-04 23:24:12,207 - __main__ - INFO - ✅ 도메인 업데이트됨: 55niksbd22qqaedkw36qw4cpofmbxdtbwonxam7ov2ga62zqbhgty3yd.onion → 3wrli3wgvopj37az6ifusjad47wpqwtx3uk7uou5t2qpz2sgv4fcqhqd.onion
+2026-04-04 23:24:12,211 - __main__ - INFO - ✅ 도메인 업데이트됨: lqcjo7esbfog5t4r4gyy7jurpzf6cavpfmc4vkal4k2g4ie66ao5mryd.onion → uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion
+2026-04-04 23:24:12,213 - __main__ - INFO - ✅ 도메인 업데이트됨: nanochanqzaytwlydykbg5nxkgyjxk3zsrctxuoxdmbx5jbh2ydyprid.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,215 - __main__ - INFO - ✅ 도메인 업데이트됨: picochanwvqfa2xsrfzlul4x4aqtog2eljll5qnj5iagpbhx2vmfqnid.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,218 - __main__ - INFO - ✅ 도메인 업데이트됨: digdeep4orxw6psc33yxa2dgmuycj74zi6334xhxjlgppw6odvkzkiad.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,228 - __main__ - INFO - ✅ 도메인 업데이트됨: wnrgozz3bmm33em4aln3lrbewf3ikxj7fwglqgla2tpdji4znjp7viqd.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,231 - __main__ - INFO - ✅ 도메인 업데이트됨: y22arit74fqnnc2pbieq3wqqvkfub6gnlegx3cl6thclos4f7ya7rvad.onion → uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion
+2026-04-04 23:24:12,236 - __main__ - INFO - ✅ 도메인 업데이트됨: cgjzkysxa4ru5rhrtr6rafckhexbisbtxwg2fg743cjumioysmirhdad.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,238 - __main__ - INFO - ✅ 도메인 업데이트됨: lainwir3s4y5r7mqm3kurzpljyf77vty2hrrfkps6wm4nnnqzest4lqd.onion → jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion
+2026-04-04 23:24:12,241 - __main__ - INFO - ✅ 도메인 업데이트됨: eludemailxhnqzfmxehy3bk5guyhlxbunfyhkcksv4gvx6d3wcf6smad.onion → zmsbsmsto4i45uodwngy6x3yew5foxqu3bgowy7l7vndfspooolp5cqd.onion
+2026-04-04 23:24:12,243 - __main__ - INFO - ✅ 검증 결과 저장 완료
+2026-04-04 23:24:12,243 - __main__ - INFO - 
+[4-1단계] 유효한 도메인 추출, 저장 및 무효 도메인 처리...
+2026-04-04 23:24:12,244 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,245 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,246 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,246 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,247 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,248 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,249 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,249 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,250 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion (status_code=200)
+2026-04-04 23:24:12,251 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: ndazmibf64stqyhxmdy7hooopa2o7dc5rkj7p5u63y4ddba3ahmpppid.onion (status_code=200)
+2026-04-04 23:24:12,254 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion (status_code=200)
+2026-04-04 23:24:12,255 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion (status_code=200)
+2026-04-04 23:24:12,258 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: flj3cmtt6x4kj4zlc4wznsu7hti43sxazswvhex3ogeeb3pb23bihpyd.onion (status_code=200)
+2026-04-04 23:24:12,258 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion (status_code=200)
+2026-04-04 23:24:12,260 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: megalibg7xrh7npeyqhuxa2igtapbhv5xg4z7qjo5asvvhv4tts66hyd.onion (status_code=200)
+2026-04-04 23:24:12,261 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion (status_code=200)
+2026-04-04 23:24:12,262 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: megalibg7xrh7npeyqhuxa2igtapbhv5xg4z7qjo5asvvhv4tts66hyd.onion (status_code=200)
+2026-04-04 23:24:12,268 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion (status_code=200)
+2026-04-04 23:24:12,270 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion (status_code=200)
+2026-04-04 23:24:12,272 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad.onion (status_code=200)
+2026-04-04 23:24:12,280 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: lab4llqv7w3a6ir63ny72zpnoena3gbquytng65zfnjzaavzuudc4eid.onion (status_code=200)
+2026-04-04 23:24:12,282 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion (status_code=200)
+2026-04-04 23:24:12,284 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion (status_code=200)
+2026-04-04 23:24:12,285 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion (status_code=200)
+2026-04-04 23:24:12,286 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,287 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion (status_code=200)
+2026-04-04 23:24:12,288 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfa45x2shrvof3j5inbxjkpprcsohplfj42rifsykyucai6upaxid.onion (status_code=200)
+2026-04-04 23:24:12,295 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion (status_code=200)
+2026-04-04 23:24:12,297 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darklcdkooakzfpfef2bpo2yzjgeh3csdxgv6usiw223s7ay2ghdgnad.onion (status_code=200)
+2026-04-04 23:24:12,297 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion (status_code=200)
+2026-04-04 23:24:12,298 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: dailydwusclfsu7fzwydc5emidexnesmdlzqmz2dxnx5x4thl42vj4qd.onion (status_code=200)
+2026-04-04 23:24:12,298 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: tortaxiprd6ybez7n7fnwwmcdo3efib5hv6z7ks463ya72bv7ovz7qqd.onion (status_code=200)
+2026-04-04 23:24:12,300 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: hiddenhn6rh56qsoxft4vjus5jp5zycrw55n63skh7kqentg3rx6rpqd.onion (status_code=200)
+2026-04-04 23:24:12,302 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: tomjertu6nwjxx4so4pvrjdqo2uqyb7wan66iufay32lzjjs3yfdm3qd.onion (status_code=200)
+2026-04-04 23:24:12,305 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darklcdkooakzfpfef2bpo2yzjgeh3csdxgv6usiw223s7ay2ghdgnad.onion (status_code=200)
+2026-04-04 23:24:12,305 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion (status_code=200)
+2026-04-04 23:24:12,306 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: dailydwusclfsu7fzwydc5emidexnesmdlzqmz2dxnx5x4thl42vj4qd.onion (status_code=200)
+2026-04-04 23:24:12,308 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: szucmy6cwcnwr6smt2x2oxjt6nuzibvn24xnwkyoknfb7pca5fj4eyqd.onion (status_code=200)
+2026-04-04 23:24:12,313 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,314 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,314 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: y7tqkd4jfeytglp3frsnebs6lcapl3zwohtq6cl76kju6htngvzrntyd.onion (status_code=200)
+2026-04-04 23:24:12,315 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion (status_code=200)
+2026-04-04 23:24:12,317 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,318 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,319 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: 3q6ytxkudm5zeaje3xg7sg6ogzqy6bugchpshwgvj6ckao4m3u2dsgyd.onion (status_code=200)
+2026-04-04 23:24:12,320 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,322 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,322 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion (status_code=200)
+2026-04-04 23:24:12,323 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion (status_code=200)
+2026-04-04 23:24:12,324 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion (status_code=200)
+2026-04-04 23:24:12,326 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darklcdkooakzfpfef2bpo2yzjgeh3csdxgv6usiw223s7ay2ghdgnad.onion (status_code=200)
+2026-04-04 23:24:12,326 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,328 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion (status_code=200)
+2026-04-04 23:24:12,332 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: 3q6ytxkudm5zeaje3xg7sg6ogzqy6bugchpshwgvj6ckao4m3u2dsgyd.onion (status_code=200)
+2026-04-04 23:24:12,333 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,335 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,336 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: y7tqkd4jfeytglp3frsnebs6lcapl3zwohtq6cl76kju6htngvzrntyd.onion (status_code=200)
+2026-04-04 23:24:12,336 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,337 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion (status_code=200)
+2026-04-04 23:24:12,338 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,338 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion (status_code=200)
+2026-04-04 23:24:12,339 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion (status_code=200)
+2026-04-04 23:24:12,340 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: 3q6ytxkudm5zeaje3xg7sg6ogzqy6bugchpshwgvj6ckao4m3u2dsgyd.onion (status_code=200)
+2026-04-04 23:24:12,342 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,342 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,343 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad.onion (status_code=200)
+2026-04-04 23:24:12,344 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,345 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: abyssou4y5ang24dn4cfkrwd3fsiczx7xg7n7mzlcthrpktfcar6j2qd.onion (status_code=200)
+2026-04-04 23:24:12,345 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion (status_code=200)
+2026-04-04 23:24:12,346 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion (status_code=200)
+2026-04-04 23:24:12,349 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion (status_code=200)
+2026-04-04 23:24:12,350 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion (status_code=200)
+2026-04-04 23:24:12,352 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,353 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: gshgttai7df4giyizjsf3n4cpjda3gg7iipm5vl3q7i3ttgp6pvyjqqd.onion (status_code=200)
+2026-04-04 23:24:12,354 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,359 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,361 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: zmsbsmsto4i45uodwngy6x3yew5foxqu3bgowy7l7vndfspooolp5cqd.onion (status_code=200)
+2026-04-04 23:24:12,362 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: uquroyobsaquslaunwkz6bmc3wutpzvwe7mv62xeq64645a57bugnsyd.onion (status_code=200)
+2026-04-04 23:24:12,362 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: 3wrli3wgvopj37az6ifusjad47wpqwtx3uk7uou5t2qpz2sgv4fcqhqd.onion (status_code=200)
+2026-04-04 23:24:12,364 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion (status_code=200)
+2026-04-04 23:24:12,364 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,365 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,366 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,367 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,368 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion (status_code=200)
+2026-04-04 23:24:12,370 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,371 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion (status_code=200)
+2026-04-04 23:24:12,372 - __main__ - INFO - ✅ 업데이트된 도메인이 유효함으로 등록됨: zmsbsmsto4i45uodwngy6x3yew5foxqu3bgowy7l7vndfspooolp5cqd.onion (status_code=200)
+2026-04-04 23:24:12,372 - __main__ - INFO - ✅ 207개의 유효한 도메인 추가/업데이트됨
+2026-04-04 23:24:12,372 - __main__ - INFO - 
+[4-2단계] 이전 유효 도메인 중 무효화된 도메인 처리...
+2026-04-04 23:24:12,372 - __main__ - INFO - ✅ 무효화된 도메인 없음
+2026-04-04 23:24:12,372 - __main__ - INFO - 
+[4-3단계] 유효한 도메인 포럼 분류...
+2026-04-04 23:24:12,372 - __main__ - INFO - 분류 대상: 143개 도메인
+2026-04-04 23:38:47,884 - __main__ - INFO -   ✅ rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion: 토론 포럼 (신뢰도: 1%)
+2026-04-04 23:38:47,887 - __main__ - INFO -   ✅ szucmy6cwcnwr6smt2x2oxjt6nuzibvn24xnwkyoknfb7pca5fj4eyqd.onion: 아카이브 (신뢰도: 11%)
+2026-04-04 23:38:47,889 - __main__ - INFO -   ✅ lkiw4tmbudbr43hbyhm636sarn73vuow77czzohdbqdpjuq3vdzvenyd.onion: 토론 포럼 (신뢰도: 45%)
+2026-04-04 23:38:47,891 - __main__ - INFO -   ✅ megalibg7xrh7npeyqhuxa2igtapbhv5xg4z7qjo5asvvhv4tts66hyd.onion: 마켓플레이스 (신뢰도: 100%)
+2026-04-04 23:38:47,893 - __main__ - INFO -   ✅ jvgypgbnfyvfopg5msp6nwr2sl2fd6xmnguq35n7rfkw3yungjn2i4yd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,895 - __main__ - INFO -   ✅ kq4okz5kf4xosbsnvdr45uukjhbm4oameb6k6agjjsydycvflcewl4qd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,897 - __main__ - INFO -   ✅ jqibjqqagao3peozxfs53tr6aecoyvctumfsc2xqniu4xgcrksal2iqd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,899 - __main__ - INFO -   ✅ 3q6ytxkudm5zeaje3xg7sg6ogzqy6bugchpshwgvj6ckao4m3u2dsgyd.onion: 마켓플레이스 (신뢰도: 100%)
+2026-04-04 23:38:47,900 - __main__ - INFO -   ✅ gd5x24pjoan2pddc2fs6jlmnqbawq562d2qyk6ym4peu5ihzy6gd4jad.onion: 마켓플레이스 (신뢰도: 14%)
+2026-04-04 23:38:47,902 - __main__ - INFO -   ✅ xmxmrjoqo63c5notr2ds2t3pdpsg4ysqqe6e6uu2pycecmjs4ekzpmyd.onion: 토론 포럼 (신뢰도: 4%)
+2026-04-04 23:38:47,904 - __main__ - INFO -   ✅ lab4llqv7w3a6ir63ny72zpnoena3gbquytng65zfnjzaavzuudc4eid.onion: 마켓플레이스 (신뢰도: 100%)
+2026-04-04 23:38:47,905 - __main__ - INFO -   ✅ rxmyl3izgquew65nicavsk6loyyblztng6puq42firpvbe32sefvnbad.onion: 마켓플레이스 (신뢰도: 26%)
+2026-04-04 23:38:47,907 - __main__ - INFO -   ✅ 33xu4yhum2eiisxm6fntaslayop76fvaqgt3ak5dakdm3t7cub25cead.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,908 - __main__ - INFO -   ✅ reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion: 토론 포럼 (신뢰도: 100%)
+2026-04-04 23:38:47,910 - __main__ - INFO -   ✅ lldan5gahapx5k7iafb3s4ikijc4ni7gx5iywdflkba5y2ezyg6sjgyd.onion: 아카이브 (신뢰도: 21%)
+2026-04-04 23:38:47,911 - __main__ - INFO -   ✅ jxsb4ovmavjy3r64bak4ha63xwggf3nzf3vikvs23r2avm5rhzmaqtqd.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,913 - __main__ - INFO -   ✅ ttq5m3lsdhjysspvof6m72lbygclzyeelvn3wgjj7m3fr4djvbgepwyd.onion: 토론 포럼 (신뢰도: 21%)
+2026-04-04 23:38:47,914 - __main__ - INFO -   ✅ ogdwaroarq4p6rnfn2hl4crvldyruyc2g24435qtxmd3twhevg7dsqid.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,915 - __main__ - INFO -   ✅ k6m3fagp4w4wspmdt23fldnwrmknse74gmxosswvaxf3ciasficpenad.onion: 마켓플레이스 (신뢰도: 14%)
+2026-04-04 23:38:47,917 - __main__ - INFO -   ✅ tortaxi2dev6xjwbaydqzla77rrnth7yn2oqzjfmiuwn5h6vsk2a4syd.onion: 아카이브 (신뢰도: 7%)
+2026-04-04 23:38:47,918 - __main__ - INFO -   ✅ y7tqkd4jfeytglp3frsnebs6lcapl3zwohtq6cl76kju6htngvzrntyd.onion: 마켓플레이스 (신뢰도: 52%)
+2026-04-04 23:38:47,919 - __main__ - INFO -   ✅ lxwu7pwyszfevhglxfgaukjqjdk2belosfvsl2ekzx3vrboacvewc7qd.onion: 토론 포럼 (신뢰도: 2%)
+2026-04-04 23:38:47,920 - __main__ - INFO -   ✅ uquroyobsaquslaunwkz6bmc3wutpzvwe7mv62xeq64645a57bugnsyd.onion: 토론 포럼 (신뢰도: 100%)
+2026-04-04 23:38:47,922 - __main__ - INFO -   ✅ xxtbwyb5z5bdvy2f6l2yquu5qilgkjeewno4qfknvb3lkg3nmoklitid.onion: 토론 포럼 (신뢰도: 1%)
+2026-04-04 23:38:47,923 - __main__ - INFO -   ✅ o54hon2e2vj6c7m3aqqu6uyece65by3vgoxxhlqlsvkmacw6a7m7kiad.onion: 토론 포럼 (신뢰도: 19%)
+2026-04-04 23:38:47,924 - __main__ - INFO -   ✅ gppg43zz5d2yfuom3yfmxnnokn3zj4mekt55onlng3zs653ty4fio6qd.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,925 - __main__ - INFO -   ✅ lgh3eosuqrrtvwx3s4nurujcqrm53ba5vqsbim5k5ntdpo33qkl7buyd.onion: 마켓플레이스 (신뢰도: 4%)
+2026-04-04 23:38:47,926 - __main__ - INFO -   ✅ okayd5ljzdv4gzrtiqlhtzjbflymfny2bxc2eacej3tamu2nyka7bxad.onion: 마켓플레이스 (신뢰도: 48%)
+2026-04-04 23:38:47,927 - __main__ - INFO -   ✅ zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd.onion: 토론 포럼 (신뢰도: 1%)
+2026-04-04 23:38:47,929 - __main__ - INFO -   ✅ sga5n7zx6qjty7uwvkxpwstyoh73shst6mx3okouv53uks7ks47msayd.onion: 마켓플레이스 (신뢰도: 19%)
+2026-04-04 23:38:47,930 - __main__ - INFO -   ✅ livk2fpdv4xjnjrbxfz2tw3ptogqacn2dwfzxbxr3srinryxrcewemid.onion: 토론 포럼 (신뢰도: 12%)
+2026-04-04 23:38:47,931 - __main__ - INFO -   ✅ monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion: 토론 포럼 (신뢰도: 51%)
+2026-04-04 23:38:47,932 - __main__ - INFO -   ✅ dailydwusclfsu7fzwydc5emidexnesmdlzqmz2dxnx5x4thl42vj4qd.onion: 마켓플레이스 (신뢰도: 92%)
+2026-04-04 23:38:47,933 - __main__ - INFO -   ✅ blkchairbknpn73cfjhevhla7rkp4ed5gg2knctvv7it4lioy22defid.onion: 마켓플레이스 (신뢰도: 88%)
+2026-04-04 23:38:47,934 - __main__ - INFO -   ✅ 3wrli3wgvopj37az6ifusjad47wpqwtx3uk7uou5t2qpz2sgv4fcqhqd.onion: 토론 포럼 (신뢰도: 13%)
+2026-04-04 23:38:47,935 - __main__ - INFO -   ✅ gshgttai7df4giyizjsf3n4cpjda3gg7iipm5vl3q7i3ttgp6pvyjqqd.onion: 마켓플레이스 (신뢰도: 45%)
+2026-04-04 23:38:47,936 - __main__ - INFO -   ✅ s57divisqlcjtsyutxjz2ww77vlbwpxgodtijcsrgsuts4js5hnxkhqd.onion: 마켓플레이스 (신뢰도: 19%)
+2026-04-04 23:38:47,937 - __main__ - INFO -   ✅ hiddenhn6rh56qsoxft4vjus5jp5zycrw55n63skh7kqentg3rx6rpqd.onion: 토론 포럼 (신뢰도: 59%)
+2026-04-04 23:38:47,938 - __main__ - INFO -   ✅ zkaan2xfbuxia2wpf7ofnkbz6r5zdbbvxbunvp5g2iebopbfc4iqmbad.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,939 - __main__ - INFO -   ✅ odahix2ysdtqp4lgak4h2rsnd35dmkdx3ndzjbdhk3jiviqkljfjmnqd.onion: 마켓플레이스 (신뢰도: 11%)
+2026-04-04 23:38:47,940 - __main__ - INFO -   ✅ ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion: 마켓플레이스 (신뢰도: 100%)
+2026-04-04 23:38:47,940 - __main__ - INFO -   ✅ bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion: 마켓플레이스 (신뢰도: 100%)
+2026-04-04 23:38:47,941 - __main__ - INFO -   ✅ sibrealr32niwsfksyycn6dyci3wnssnq5xhg3g7kpkddyrzfh2fd4qd.onion: 아카이브 (신뢰도: 24%)
+2026-04-04 23:38:47,942 - __main__ - INFO -   ✅ zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,943 - __main__ - INFO -   ✅ blackops3zlgfuq4dg4yrtxoe57u3sxfa34kqzbooqbovutleqhf3zqd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,944 - __main__ - INFO -   ✅ michaelahgu3sqef5yz3u242nok2uczduq5oxqfkwq646tvjhdnl35id.onion: 토론 포럼 (신뢰도: 16%)
+2026-04-04 23:38:47,945 - __main__ - INFO -   ✅ kl4gp72mdxp3uelicjjslqnpomqfr5cbdd3wzo5klo3rjlqjtzhaymqd.onion: 마켓플레이스 (신뢰도: 16%)
+2026-04-04 23:38:47,945 - __main__ - INFO -   ✅ darkfapi6h2dj3otkif3pammvj3b3rn5ddhd5tsd54l7ad3aqcnnh5ad.onion: 토론 포럼 (신뢰도: 6%)
+2026-04-04 23:38:47,946 - __main__ - INFO -   ✅ wk3mtlvp2ej64nuytqm3mjrm6gpulix623abum6ewp64444oreysz7qd.onion: 마켓플레이스 (신뢰도: 45%)
+2026-04-04 23:38:47,947 - __main__ - INFO -   ✅ udhauo3m3fh7v6yfiuornjzxn3fh6vlp4ooo3wogvghcnv5xik6mnayd.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,948 - __main__ - INFO -   ✅ vww6ybal4bd7szmgncyruucpgfkqahzddi37ktceo3ah7ngmcopnpyyd.onion: 토론 포럼 (신뢰도: 8%)
+2026-04-04 23:38:47,949 - __main__ - INFO -   ✅ ncidetfs7banpz2d7vpndev5somwoki5vwdpfty2k7javniujekit6ad.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,950 - __main__ - INFO -   ✅ duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion: 아카이브 (신뢰도: 62%)
+2026-04-04 23:38:47,951 - __main__ - INFO -   ✅ danielas3rtn54uwmofdo3x2bsdifr47huasnmbgqzfrec5ubupvtpid.onion: 마켓플레이스 (신뢰도: 3%)
+2026-04-04 23:38:47,951 - __main__ - INFO -   ✅ xp44cagis447k3lpb4wwhcqukix6cgqokbuys24vmxmbzmaq2gjvc2yd.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,952 - __main__ - INFO -   ✅ jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion: 아카이브 (신뢰도: 5%)
+2026-04-04 23:38:47,953 - __main__ - INFO -   ✅ tortaxiprd6ybez7n7fnwwmcdo3efib5hv6z7ks463ya72bv7ovz7qqd.onion: 마켓플레이스 (신뢰도: 10%)
+2026-04-04 23:38:47,954 - __main__ - INFO -   ✅ meynethaffeecapsvfphrcnfrx44w2nskgls2juwitibvqctk2plvhqd.onion: 토론 포럼 (신뢰도: 1%)
+2026-04-04 23:38:47,954 - __main__ - INFO -   ✅ g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqqd.onion: 토론 포럼 (신뢰도: 36%)
+2026-04-04 23:38:47,955 - __main__ - INFO -   ✅ wmj5kiic7b6kjplpbvwadnht2nh2qnkbnqtcv3dyvpqtz7ssbssftxid.onion: 아카이브 (신뢰도: 1%)
+2026-04-04 23:38:47,956 - __main__ - INFO -   ✅ eisrgs2wyyzaxemtaof3n2kqqxuxdx3y7r5vwfi7rukn3z7owxweznid.onion: 토론 포럼 (신뢰도: 2%)
+2026-04-04 23:38:47,957 - __main__ - INFO -   ✅ qubesosfasa4zl44o4tws22di6kepyzfeqv3tg4e3ztknltfxqrymdad.onion: 토론 포럼 (신뢰도: 13%)
+2026-04-04 23:38:47,958 - __main__ - INFO -   ✅ 6n5nbusxgyw46juqo3nt5v4zuivdbc7mzm74wlhg7arggetaui4yp4id.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,958 - __main__ - INFO -   ✅ dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion: 토론 포럼 (신뢰도: 100%)
+2026-04-04 23:38:47,959 - __main__ - INFO -   ✅ x4ijfwy76n6jl7rs4qyhe6qi5rv6xyuos3kaczgjpjcajigjzk3k7wqd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,960 - __main__ - INFO -   ✅ exploitivzcm5dawzhe6c32bbylyggbjvh5dyvsvb5lkuz5ptmunkmqd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,961 - __main__ - INFO -   ✅ fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad.onion: 토론 포럼 (신뢰도: 1%)
+2026-04-04 23:38:47,961 - __main__ - INFO -   ✅ germania7zs27fu3gi76wlr5rd64cc2yjexyzvrbm4jufk7pibrpizad.onion: 토론 포럼 (신뢰도: 2%)
+2026-04-04 23:38:47,962 - __main__ - INFO -   ✅ ej3kv4ebuugcmuwxctx5ic7zxh73rnxt42soi3tdneu2c2em55thufqd.onion: 토론 포럼 (신뢰도: 5%)
+2026-04-04 23:38:47,963 - __main__ - INFO -   ✅ xw226dvxac7jzcpsf4xb64r4epr6o5hgn46dxlqk7gnjptakik6xnzqd.onion: 토론 포럼 (신뢰도: 2%)
+2026-04-04 23:38:47,963 - __main__ - INFO -   ✅ mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion: 다크넷 포럼 (신뢰도: 100%)
+2026-04-04 23:38:47,964 - __main__ - INFO -   ✅ stormwayszuh4juycoy4kwoww5gvcu2c4tdtpkup667pdwe4qenzwayd.onion: 토론 포럼 (신뢰도: 34%)
+2026-04-04 23:38:47,965 - __main__ - INFO -   ✅ darklcdkooakzfpfef2bpo2yzjgeh3csdxgv6usiw223s7ay2ghdgnad.onion: 마켓플레이스 (신뢰도: 45%)
+2026-04-04 23:38:47,965 - __main__ - INFO -   ✅ zmsbsmsto4i45uodwngy6x3yew5foxqu3bgowy7l7vndfspooolp5cqd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,966 - __main__ - INFO -   ✅ xjfbpuj56rdazx4iolylxplbvyft2onuerjeimlcqwaihp3s6r4xebqd.onion: 토론 포럼 (신뢰도: 12%)
+2026-04-04 23:38:47,967 - __main__ - INFO -   ✅ darkfa45x2shrvof3j5inbxjkpprcsohplfj42rifsykyucai6upaxid.onion: 토론 포럼 (신뢰도: 9%)
+2026-04-04 23:38:47,968 - __main__ - INFO -   ✅ kogbxf4ysay2qzozmg7ar45ijqmj2vxrwqa4upzqq2i7sqj7wv7wcdqd.onion: 토론 포럼 (신뢰도: 5%)
+2026-04-04 23:38:47,968 - __main__ - INFO -   ✅ darkzqtmbdeauwq5mzcmgeeuhet42fhfjj4p5wbak3ofx2yqgecoeqyd.onion: 토론 포럼 (신뢰도: 33%)
+2026-04-04 23:38:47,969 - __main__ - INFO -   ✅ 7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd.onion: 토론 포럼 (신뢰도: 1%)
+2026-04-04 23:38:47,970 - __main__ - INFO -   ✅ gardeni2xtbqdpn3mndvod5rzewor2rlo2g5iuyniqwd7vbyt7cwcrqd.onion: 토론 포럼 (신뢰도: 6%)
+2026-04-04 23:38:47,970 - __main__ - INFO -   ✅ pissmaiamldg5ciulncthgzudvh5d55dismyqf6qdkx372n2b5osefid.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,971 - __main__ - INFO -   ✅ nv3x2jozywh63fkohn5mwp2d73vasusjixn3im3ueof52fmbjsigw6ad.onion: 아카이브 (신뢰도: 5%)
+2026-04-04 23:38:47,971 - __main__ - INFO -   ✅ xf2gry25d3tyxkiu2xlvczd3q7jl6yyhtpodevjugnxia2u665asozad.onion: 마켓플레이스 (신뢰도: 18%)
+2026-04-04 23:38:47,972 - __main__ - INFO -   ✅ nordicmvfyz7uiellfbbtuytiuk2ew7sfwulsxjr2eanux7vi6w2rhad.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,973 - __main__ - INFO -   ✅ 537ztcntpbmspja4mkpxldpsoc46mqlssnsaklqnfw3gnlpj5glcjgid.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,973 - __main__ - INFO -   ✅ cryptbbtg65gibadeeo2awe3j7s6evg7eklserehqr4w4e2bis5tebid.onion: 토론 포럼 (신뢰도: 10%)
+2026-04-04 23:38:47,974 - __main__ - INFO -   ✅ xykxv6fmblogxgmzjm5wt6akdhm4wewiarjzcngev4tupgjlyugmc7qd.onion: 마켓플레이스 (신뢰도: 9%)
+2026-04-04 23:38:47,975 - __main__ - INFO -   ✅ ymvhtqya23wqpez63gyc3ke4svju3mqsby2awnhd3bk2e65izt7baqad.onion: 마켓플레이스 (신뢰도: 37%)
+2026-04-04 23:38:47,975 - __main__ - INFO -   ✅ uwbgdziyojur7ng25d24ggezbdtbf6myjcls2x6eu7vm6hldsxoonwqd.onion: 아카이브 (신뢰도: 3%)
+2026-04-04 23:38:47,976 - __main__ - INFO -   ✅ darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion: 토론 포럼 (신뢰도: 6%)
+2026-04-04 23:38:47,977 - __main__ - INFO -   ✅ vhlehwexxmbnvecbmsk4ormttdvhlhbnyabai4cithvizzaduf3gmayd.onion: 마켓플레이스 (신뢰도: 97%)
+2026-04-04 23:38:47,977 - __main__ - INFO -   ✅ vfnmxpa6fo4jdpyq3yneqhglluweax2uclvxkytfpmpkp5rsl75ir5qd.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,978 - __main__ - INFO -   ✅ blackops4zfjqugajzrwokor34sv4sm5sf6pnegaevhgd7k7yt3rkbid.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,979 - __main__ - INFO -   ✅ 4gmrlefxkq4mtan6a2lqwfwa7un4brjlatka75nwdczemqqwn3wznnad.onion: 마켓플레이스 (신뢰도: 4%)
+2026-04-04 23:38:47,979 - __main__ - INFO -   ✅ protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion: 커뮤니케이션 (신뢰도: 100%)
+2026-04-04 23:38:47,980 - __main__ - INFO -   ✅ dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion: 토론 포럼 (신뢰도: 1%)
+2026-04-04 23:38:47,981 - __main__ - INFO -   ✅ 5gdvpfoh6kb2iqbizb37lzk2ddzrwa47m6rpdueg2m656fovmbhoptqd.onion: 아카이브 (신뢰도: 6%)
+2026-04-04 23:38:47,981 - __main__ - INFO -   ✅ archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion: 아카이브 (신뢰도: 100%)
+2026-04-04 23:38:47,982 - __main__ - INFO -   ✅ nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion: 토론 포럼 (신뢰도: 16%)
+2026-04-04 23:38:47,983 - __main__ - INFO -   ✅ n6qisfgjauj365pxccpr5vizmtb5iavqaug7m7e4ewkxuygk5iim6yyd.onion: 마켓플레이스 (신뢰도: 20%)
+2026-04-04 23:38:47,983 - __main__ - INFO -   ✅ qazkxav4zzmt5xwfw6my362jdwhzrcafz7qpd5kugfgx7z7il5lyb6ad.onion: 마켓플레이스 (신뢰도: 11%)
+2026-04-04 23:38:47,984 - __main__ - INFO -   ✅ volkancfgpi4c7ghph6id2t7vcntenuly66qjt6oedwtjmyj4tkk5oqd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,985 - __main__ - INFO -   ✅ ydbpz5knb6ji3bdtahhm3wo7sed6lsy5vqnwfpnhpez4bquvoexbz7qd.onion: 토론 포럼 (신뢰도: 5%)
+2026-04-04 23:38:47,986 - __main__ - INFO -   ✅ jatasaqcoe7lqdpcyxo7vl3e5tdvl5jgmtadfat77i25qdj6z6a4ulad.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,986 - __main__ - INFO -   ✅ endchancxfbnrfgauuxlztwlckytq7rgeo5v6pc2zd4nyqo3khfam4ad.onion: 토론 포럼 (신뢰도: 8%)
+2026-04-04 23:38:47,987 - __main__ - INFO -   ✅ tcecdnp2fhyxlcrjoyc2eimdjosr65hweut6y7r2u6b5y75yuvbkvfyd.onion: 토론 포럼 (신뢰도: 1%)
+2026-04-04 23:38:47,988 - __main__ - INFO -   ✅ facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion: 소셜 네트워크 (신뢰도: 100%)
+2026-04-04 23:38:47,988 - __main__ - INFO -   ✅ p2qzxkca42e3wccvqgby7jrcbzlf6g7pnkvybnau4szl5ykdydzmvbid.onion: 마켓플레이스 (신뢰도: 3%)
+2026-04-04 23:38:47,989 - __main__ - INFO -   ✅ blackops66p7edjocooiipudvefdhupk27pi4y72iwnbbjvccky646yd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,989 - __main__ - INFO -   ✅ suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion: 토론 포럼 (신뢰도: 100%)
+2026-04-04 23:38:47,990 - __main__ - INFO -   ✅ ndazmibf64stqyhxmdy7hooopa2o7dc5rkj7p5u63y4ddba3ahmpppid.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,991 - __main__ - INFO -   ✅ flj3cmtt6x4kj4zlc4wznsu7hti43sxazswvhex3ogeeb3pb23bihpyd.onion: 아카이브 (신뢰도: 15%)
+2026-04-04 23:38:47,992 - __main__ - INFO -   ✅ libraryfyuybp7oyidyya3ah5xvwgyx6weauoini7zyz555litmmumad.onion: 아카이브 (신뢰도: 38%)
+2026-04-04 23:38:47,992 - __main__ - INFO -   ✅ t43fsf65omvf7grt46wlt2eo5jbj3hafyvbdb7jtr2biyre5v24pebad.onion: 마켓플레이스 (신뢰도: 19%)
+2026-04-04 23:38:47,993 - __main__ - INFO -   ✅ nickf43ab43xxf3yqgzy5uedsjij6h473rmbyzq6inohcnr3lohlu3yd.onion: 토론 포럼 (신뢰도: 10%)
+2026-04-04 23:38:47,993 - __main__ - INFO -   ✅ xdkriz6cn2avvcr2vks5lvvtmfojz2ohjzj4fhyuka55mvljeso2ztqd.onion: 아카이브 (신뢰도: 79%)
+2026-04-04 23:38:47,994 - __main__ - INFO -   ✅ xao2lxsmia2edq2n5zxg6uahx6xox2t7bfjw6b5vdzsxi7ezmqob6qid.onion: 아카이브 (신뢰도: 19%)
+2026-04-04 23:38:47,995 - __main__ - INFO -   ✅ tp7mtouwvggdlm73vimqkuq7727a4ebrv4vf4cnk6lfg4fatxa6p2ryd.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:47,995 - __main__ - INFO -   ✅ imprezareshna326gqgmbdzwmnad2wnjmeowh45bs2buxarh5qummjad.onion: 아카이브 (신뢰도: 5%)
+2026-04-04 23:38:47,996 - __main__ - INFO -   ✅ torbox36ijlcevujx7mjb4oiusvwgvmue7jfn2cvutwa6kl6to3uyqad.onion: 아카이브 (신뢰도: 1%)
+2026-04-04 23:38:47,997 - __main__ - INFO -   ✅ guzjgkpodzshso2nohspxijzk5jgoaxzqioa7vzy6qdmwpz3hq4mwfid.onion: 마켓플레이스 (신뢰도: 68%)
+2026-04-04 23:38:47,997 - __main__ - INFO -   ✅ blackops527cggb6ybayggx3bjt24xz32rotdugs6ikejxdiik6dyiid.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:47,998 - __main__ - INFO -   ✅ cebulka7uxchnbpvmqapg5pfos4ngaxglsktzvha7a5rigndghvadeyd.onion: 토론 포럼 (신뢰도: 2%)
+2026-04-04 23:38:47,999 - __main__ - INFO -   ✅ eternalcbrzpicytj4zyguygpmkjlkddxob7tptlr25cdipe5svyqoqd.onion: 아카이브 (신뢰도: 14%)
+2026-04-04 23:38:47,999 - __main__ - INFO -   ✅ abyssou4y5ang24dn4cfkrwd3fsiczx7xg7n7mzlcthrpktfcar6j2qd.onion: 토론 포럼 (신뢰도: 30%)
+2026-04-04 23:38:48,000 - __main__ - INFO -   ✅ 7mejofwihleuugda5kfnr7tupvfbaqntjqnfxc4hwmozlcmj2cey3hqd.onion: 마켓플레이스 (신뢰도: 21%)
+2026-04-04 23:38:48,000 - __main__ - INFO -   ✅ hzwjmjimhr7bdmfv2doll4upibt5ojjmpo3pbp5ctwcg37n3hyk7qzid.onion: 토론 포럼 (신뢰도: 13%)
+2026-04-04 23:38:48,001 - __main__ - INFO -   ✅ severr375roaznysslbu4joiu2snztzwucsm46gghi34xglhh5w4cmyd.onion: 아카이브 (신뢰도: 24%)
+2026-04-04 23:38:48,002 - __main__ - INFO -   ✅ featherdvtpi7ckdbkb2yxjfwx3oyvr3xjz3oo4rszylfzjdg6pbm3id.onion: 아카이브 (신뢰도: 5%)
+2026-04-04 23:38:48,002 - __main__ - INFO -   ✅ biblemeowimkh3utujmhm6oh2oeb3ubjw2lpgeq3lahrfr2l6ev6zgyd.onion: 토론 포럼 (신뢰도: 59%)
+2026-04-04 23:38:48,003 - __main__ - INFO -   ✅ sdolvtfhatvsysc6l34d65ymdwxcujausv7k5jk4cy5ttzhjoi6fzvyd.onion: 토론 포럼 (신뢰도: 20%)
+2026-04-04 23:38:48,004 - __main__ - INFO -   ✅ dlegal66uj5u2dvcbrev7vv6fjtwnd4moqu7j6jnd42rmbypv3coigyd.onion: 마켓플레이스 (신뢰도: 2%)
+2026-04-04 23:38:48,004 - __main__ - INFO -   ✅ njallalafimoej5i4eg7vlnqjvmb6zhdh27qxcatdn647jtwwwui3nad.onion: 토론 포럼 (신뢰도: 50%)
+2026-04-04 23:38:48,005 - __main__ - INFO -   ✅ bellcatmbguthn3age23lrbseln2lryzv3mt7whis7ktjw4qrestbzad.onion: 토론 포럼 (신뢰도: 87%)
+2026-04-04 23:38:48,006 - __main__ - INFO -   ✅ hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad.onion: 토론 포럼 (신뢰도: 12%)
+2026-04-04 23:38:48,006 - __main__ - INFO -   ✅ juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:48,007 - __main__ - INFO -   ✅ 2ln3x7ru6psileh7il7jot2ufhol4o7nd54z663xonnnmmku4dgkx3ad.onion: 마켓플레이스 (신뢰도: 22%)
+2026-04-04 23:38:48,008 - __main__ - INFO -   ✅ q6vdlj2ukulrqk37piqgxucpcwtxzdjhvjzqrfbevuhrzimsgjltmpqd.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:48,008 - __main__ - INFO -   ✅ piratebayo3klnzokct3wt5yyxb2vpebbuyjl7m623iaxmqhsd52coid.onion: 토론 포럼 (신뢰도: 12%)
+2026-04-04 23:38:48,009 - __main__ - INFO -   ✅ gardenjsprbg5fchsmofxdjsti76dd7use3v4q4z2suqfgeytjylliid.onion: 토론 포럼 (신뢰도: 6%)
+2026-04-04 23:38:48,010 - __main__ - INFO -   ✅ fg25fqpu2dnxp24xs3jlcley4hp2inshpzek44q3czkhq3zffoqk26id.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:48,010 - __main__ - INFO -   ✅ tomjertu6nwjxx4so4pvrjdqo2uqyb7wan66iufay32lzjjs3yfdm3qd.onion: unknown (신뢰도: 0%)
+2026-04-04 23:38:48,011 - __main__ - INFO -   ✅ enxx3byspwsdo446jujc52ucy2pf5urdbhqw3kbsfhlfjwmbpj5smdad.onion: 토론 포럼 (신뢰도: 7%)
+2026-04-04 23:38:48,011 - __main__ - INFO - ✅ 포럼 분류 완료: 143개 도메인 (포럼: 67개)
+2026-04-04 23:38:48,011 - __main__ - INFO - 
+[5단계] 최종 리포트 생성...
+2026-04-04 23:38:48,214 - __main__ - INFO - ✅ JSON 리포트: /Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/reports/report_f08b12fc-bd12-4fbd-acc6-af034060c6f1_2026-04-04_233848.json
+2026-04-04 23:38:48,214 - __main__ - INFO - ✅ CSV 리포트: /Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/reports/report_f08b12fc-bd12-4fbd-acc6-af034060c6f1_2026-04-04_233848.csv
+2026-04-04 23:38:48,214 - __main__ - INFO - ✅ HTML 대시보드: /Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/reports/report_f08b12fc-bd12-4fbd-acc6-af034060c6f1_2026-04-04_233848.html
+2026-04-04 23:38:48,214 - __main__ - INFO - 
+============================================================
+2026-04-04 23:38:48,214 - __main__ - INFO - 스캔 완료: 2026-04-04T23:38:48.214401
+2026-04-04 23:38:48,214 - __main__ - INFO - ============================================================
+2026-04-04 23:38:48,214 - __main__ - INFO - 
+📊 스캔 요약:
+2026-04-04 23:38:48,214 - __main__ - INFO -   - 수집된 도메인: 416개
+2026-04-04 23:38:48,214 - __main__ - INFO -   - 검증된 도메인: 416개
+2026-04-04 23:38:48,214 - __main__ - INFO -   - 접근 가능: 166개 (39.9%)
+2026-04-04 23:38:48,214 - __main__ - INFO -   - 색인됨: 222개 (53.4%)
+2026-04-04 23:38:48,214 - __main__ - INFO -   - 은닉됨: 194개 (46.6%)
+2026-04-04 23:38:48,215 - __main__ - INFO - 
+📌 유효한 도메인 DB 통계:
+2026-04-04 23:38:48,215 - __main__ - INFO -   - 현재 유효 도메인: 143개
+2026-04-04 23:38:48,215 - __main__ - INFO - 리소스 정리 완료
+2026-04-08 13:41:33,058 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 13:41:33,058 - __main__ - INFO - 
+============================================================
+2026-04-08 13:41:33,058 - __main__ - INFO - 🔍 도메인 분석 시작: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 13:41:33,059 - __main__ - INFO - ============================================================
+
+2026-04-08 13:41:33,059 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 13:41:43,510 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 13:41:43,511 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 13:41:43,519 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 13:41:43,519 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 13:41:43,533 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 13:41:43,533 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 13:41:43,533 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 13:41:43,533 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 13:41:43,714 - __main__ - ERROR - ❌ 분석 중 오류: type NoneType doesn't define __round__ method
+Traceback (most recent call last):
+  File "/Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/agent.py", line 113, in analyze_domain
+    report_path = self.report_generator.generate_report(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/reporters/agent_report_generator.py", line 65, in generate_report
+    html_content = self._generate_html(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler/reporters/agent_report_generator.py", line 343, in _generate_html
+    html += '<div class="info-box"><div class="info-box-title">응답 시간</div><div class="info-box-content">' + str(round(accessibility.get('response_time', 0), 2)) + '초</div></div>'
+                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: type NoneType doesn't define __round__ method
+2026-04-08 13:41:43,715 - __main__ - ERROR - ❌ 분석 실패: type NoneType doesn't define __round__ method
+2026-04-08 13:42:09,217 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 13:42:09,217 - __main__ - INFO - 
+============================================================
+2026-04-08 13:42:09,217 - __main__ - INFO - 🔍 도메인 분석 시작: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 13:42:09,217 - __main__ - INFO - ============================================================
+
+2026-04-08 13:42:09,217 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 13:42:12,356 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 13:42:12,356 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 13:42:12,358 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 13:42:12,358 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 13:42:12,363 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 13:42:12,363 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 13:42:12,363 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 13:42:12,363 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 13:42:12,478 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 13:42:12,478 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_134212.html
+
+2026-04-08 13:42:12,478 - __main__ - INFO - ============================================================
+2026-04-08 13:42:12,479 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 13:42:12,479 - __main__ - INFO - ============================================================
+2026-04-08 13:42:12,479 - __main__ - INFO - 
+도메인: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 13:42:12,479 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 13:42:12,479 - __main__ - INFO - 
+점수 분석:
+2026-04-08 13:42:12,479 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 13:42:12,479 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 13:42:12,479 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 13:42:12,479 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 13:42:12,479 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 13:42:12,479 - __main__ - INFO -   • 주요: Blog
+2026-04-08 13:42:12,479 - __main__ - INFO -   • 부가: News
+2026-04-08 13:42:12,479 - __main__ - INFO -   • 신뢰도: 22.2%
+2026-04-08 13:42:12,479 - __main__ - INFO - 
+============================================================
+
+2026-04-08 13:42:12,479 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 13:42:12,479 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 13:42:12,479 - __main__ - INFO -    analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_134212.html
+2026-04-08 14:04:12,179 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:04:12,181 - __main__ - INFO - 
+============================================================
+2026-04-08 14:04:12,181 - __main__ - INFO - 🔍 도메인 분석 시작: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:04:12,181 - __main__ - INFO - ============================================================
+
+2026-04-08 14:04:12,181 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:04:19,169 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:04:19,169 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:04:19,178 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:04:19,179 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:04:19,192 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:04:19,193 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:04:19,193 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:04:19,193 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:04:19,337 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:04:19,337 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_140419.html
+
+2026-04-08 14:04:19,337 - __main__ - INFO - ============================================================
+2026-04-08 14:04:19,337 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:04:19,337 - __main__ - INFO - ============================================================
+2026-04-08 14:04:19,337 - __main__ - INFO - 
+도메인: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:04:19,337 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 14:04:19,337 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:04:19,337 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:04:19,337 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 14:04:19,337 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 14:04:19,337 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 14:04:19,337 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:04:19,337 - __main__ - INFO -   • 주요: Blog
+2026-04-08 14:04:19,337 - __main__ - INFO -   • 부가: News
+2026-04-08 14:04:19,337 - __main__ - INFO -   • 신뢰도: 22.2%
+2026-04-08 14:04:19,337 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:04:19,337 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:04:19,337 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:04:19,337 - __main__ - INFO -    analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_140419.html
+2026-04-08 14:08:10,549 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:08:10,550 - __main__ - INFO - 
+============================================================
+2026-04-08 14:08:10,550 - __main__ - INFO - 🔍 도메인 분석 시작: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:08:10,550 - __main__ - INFO - ============================================================
+
+2026-04-08 14:08:10,550 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:08:16,323 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:08:16,324 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:08:16,332 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:08:16,332 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:08:16,345 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:08:16,345 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:08:16,345 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:08:16,345 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:08:16,492 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:08:16,492 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_140816.html
+
+2026-04-08 14:08:16,492 - __main__ - INFO - ============================================================
+2026-04-08 14:08:16,492 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:08:16,492 - __main__ - INFO - ============================================================
+2026-04-08 14:08:16,492 - __main__ - INFO - 
+도메인: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:08:16,493 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 14:08:16,493 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:08:16,493 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:08:16,493 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 14:08:16,493 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 14:08:16,493 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:08:16,493 - __main__ - INFO -   • Ahmia: ✅ (결과: 1건)
+2026-04-08 14:08:16,493 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:08:16,493 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 14:08:16,493 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:08:16,493 - __main__ - INFO -   • 주요: Blog
+2026-04-08 14:08:16,493 - __main__ - INFO -   • 부가: News
+2026-04-08 14:08:16,493 - __main__ - INFO -   • 신뢰도: 22.2%
+2026-04-08 14:08:16,493 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:08:16,493 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:08:16,493 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:08:16,493 - __main__ - INFO -    analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_140816.html
+2026-04-08 14:13:39,511 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:13:39,511 - __main__ - INFO - 
+============================================================
+2026-04-08 14:13:39,511 - __main__ - INFO - 🔍 도메인 분석 시작: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:13:39,512 - __main__ - INFO - ============================================================
+
+2026-04-08 14:13:39,512 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:13:47,286 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:13:47,304 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:13:47,319 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:13:47,319 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:13:47,336 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:13:47,336 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:13:47,336 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:13:47,336 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:13:47,474 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:13:47,474 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_141347.html
+
+2026-04-08 14:13:47,474 - __main__ - INFO - ============================================================
+2026-04-08 14:13:47,474 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:13:47,474 - __main__ - INFO - ============================================================
+2026-04-08 14:13:47,474 - __main__ - INFO - 
+도메인: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:13:47,474 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 14:13:47,474 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:13:47,474 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:13:47,474 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 14:13:47,474 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 14:13:47,474 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:13:47,474 - __main__ - INFO -   • Ahmia: ✅ (결과: 1건)
+2026-04-08 14:13:47,474 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:13:47,474 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 14:13:47,474 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:13:47,474 - __main__ - INFO -   • 주요: Blog
+2026-04-08 14:13:47,474 - __main__ - INFO -   • 부가: News
+2026-04-08 14:13:47,474 - __main__ - INFO -   • 신뢰도: 22.2%
+2026-04-08 14:13:47,474 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:13:47,474 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:13:47,474 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:13:47,474 - __main__ - INFO -    analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_141347.html
+2026-04-08 14:13:52,787 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:13:52,787 - __main__ - INFO - 
+============================================================
+2026-04-08 14:13:52,787 - __main__ - INFO - 🔍 도메인 분석 시작: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:13:52,787 - __main__ - INFO - ============================================================
+
+2026-04-08 14:13:52,787 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:13:56,810 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:13:56,810 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:13:56,818 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:13:56,818 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:13:56,831 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:13:56,831 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:13:56,831 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:13:56,831 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:13:56,971 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:13:56,971 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_141356.html
+
+2026-04-08 14:13:56,971 - __main__ - INFO - ============================================================
+2026-04-08 14:13:56,971 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:13:56,971 - __main__ - INFO - ============================================================
+2026-04-08 14:13:56,971 - __main__ - INFO - 
+도메인: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:13:56,971 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 14:13:56,971 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:13:56,971 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:13:56,971 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 14:13:56,971 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 14:13:56,971 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:13:56,971 - __main__ - INFO -   • Ahmia: ✅ (결과: 1건)
+2026-04-08 14:13:56,971 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:13:56,971 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 14:13:56,971 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:13:56,971 - __main__ - INFO -   • 주요: Blog
+2026-04-08 14:13:56,971 - __main__ - INFO -   • 부가: News
+2026-04-08 14:13:56,971 - __main__ - INFO -   • 신뢰도: 22.2%
+2026-04-08 14:13:56,971 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:13:56,971 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:13:56,971 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:13:56,971 - __main__ - INFO -    analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_141356.html
+2026-04-08 14:16:04,606 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:16:04,606 - __main__ - INFO - 
+============================================================
+2026-04-08 14:16:04,606 - __main__ - INFO - 🔍 도메인 분석 시작: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:16:04,606 - __main__ - INFO - ============================================================
+
+2026-04-08 14:16:04,606 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:16:13,272 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:16:13,273 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:16:13,281 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:16:13,281 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:16:13,294 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:16:13,294 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:16:13,294 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:16:13,294 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:16:13,432 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:16:13,432 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_141613.html
+
+2026-04-08 14:16:13,432 - __main__ - INFO - ============================================================
+2026-04-08 14:16:13,432 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:16:13,432 - __main__ - INFO - ============================================================
+2026-04-08 14:16:13,432 - __main__ - INFO - 
+도메인: mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid.onion
+2026-04-08 14:16:13,432 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 14:16:13,432 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:16:13,432 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:16:13,432 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 14:16:13,432 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 14:16:13,432 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:16:13,432 - __main__ - INFO -   • Ahmia: ✅ (결과: 1건)
+2026-04-08 14:16:13,432 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:16:13,432 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 14:16:13,432 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:16:13,432 - __main__ - INFO -   • 주요: Blog
+2026-04-08 14:16:13,432 - __main__ - INFO -   • 부가: News
+2026-04-08 14:16:13,433 - __main__ - INFO -   • 신뢰도: 22.2%
+2026-04-08 14:16:13,433 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:16:13,433 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:16:13,433 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:16:13,433 - __main__ - INFO -    analysis_reports/analysis_report_mdgdxj5d7wlgq3m6e4fvca5sgnbvejsyjh3sqh3p3tfngcnrhpuy3aid_onion_20260408_141613.html
+2026-04-08 14:20:59,898 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:20:59,900 - __main__ - INFO - 
+============================================================
+2026-04-08 14:20:59,900 - __main__ - INFO - 🔍 도메인 분석 시작: protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion
+2026-04-08 14:20:59,900 - __main__ - INFO - ============================================================
+
+2026-04-08 14:20:59,901 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:21:11,734 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:21:11,734 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:21:11,768 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:21:11,768 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:21:11,813 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:21:11,813 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:21:11,813 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:21:11,813 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:21:11,999 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:21:11,999 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd_onion_20260408_142111.html
+
+2026-04-08 14:21:11,999 - __main__ - INFO - ============================================================
+2026-04-08 14:21:11,999 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:21:11,999 - __main__ - INFO - ============================================================
+2026-04-08 14:21:11,999 - __main__ - INFO - 
+도메인: protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion
+2026-04-08 14:21:11,999 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 14:21:11,999 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:21:11,999 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:21:11,999 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 14:21:11,999 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 14:21:11,999 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:21:11,999 - __main__ - INFO -   • Ahmia: ✅ (결과: 87건)
+2026-04-08 14:21:11,999 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:21:12,000 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 14:21:12,000 - __main__ - WARNING -   • 주요 유형: forum_indicators
+2026-04-08 14:21:12,000 - __main__ - WARNING -   • 신뢰도: 30.1%
+2026-04-08 14:21:12,000 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:21:12,000 - __main__ - INFO -   • 주요: Product Promotion
+2026-04-08 14:21:12,000 - __main__ - INFO -   • 부가: Social Network
+2026-04-08 14:21:12,000 - __main__ - INFO -   • 신뢰도: 82.0%
+2026-04-08 14:21:12,000 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:21:12,000 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:21:12,000 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:21:12,000 - __main__ - INFO -    analysis_reports/analysis_report_protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd_onion_20260408_142111.html
+2026-04-08 14:22:44,881 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:22:44,881 - __main__ - INFO - 
+============================================================
+2026-04-08 14:22:44,881 - __main__ - INFO - 🔍 도메인 분석 시작: hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad.onion
+2026-04-08 14:22:44,881 - __main__ - INFO - ============================================================
+
+2026-04-08 14:22:44,881 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:22:57,799 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:22:57,800 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:22:57,821 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:22:57,821 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:22:57,852 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:22:57,852 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:22:57,852 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:22:57,852 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:22:58,111 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:22:58,111 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad_onion_20260408_142257.html
+
+2026-04-08 14:22:58,111 - __main__ - INFO - ============================================================
+2026-04-08 14:22:58,111 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:22:58,111 - __main__ - INFO - ============================================================
+2026-04-08 14:22:58,111 - __main__ - INFO - 
+도메인: hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad.onion
+2026-04-08 14:22:58,111 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 14:22:58,111 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:22:58,111 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:22:58,111 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 14:22:58,111 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 14:22:58,111 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:22:58,111 - __main__ - INFO -   • Ahmia: ✅ (결과: 1건)
+2026-04-08 14:22:58,111 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:22:58,111 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 14:22:58,111 - __main__ - WARNING -   • 주요 유형: dark_market
+2026-04-08 14:22:58,111 - __main__ - WARNING -   • 신뢰도: 30.1%
+2026-04-08 14:22:58,111 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:22:58,111 - __main__ - INFO -   • 주요: Marketplace
+2026-04-08 14:22:58,111 - __main__ - INFO -   • 부가: Product Promotion
+2026-04-08 14:22:58,111 - __main__ - INFO -   • 신뢰도: 49.7%
+2026-04-08 14:22:58,111 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:22:58,112 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:22:58,112 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:22:58,112 - __main__ - INFO -    analysis_reports/analysis_report_hidlisnonhc6ogbdlx3f4jpln43hyzvn6tbzvfqgv727v3kar3so3dad_onion_20260408_142257.html
+2026-04-08 14:24:11,215 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:24:11,215 - __main__ - INFO - 
+============================================================
+2026-04-08 14:24:11,215 - __main__ - INFO - 🔍 도메인 분석 시작: lab4llqv7w3a6ir63ny72zpnoena3gbquytng65zfnjzaavzuudc4eid.onion
+2026-04-08 14:24:11,215 - __main__ - INFO - ============================================================
+
+2026-04-08 14:24:11,215 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:24:38,812 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:24:38,812 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:24:38,828 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:24:38,828 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:24:38,861 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:24:38,861 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:24:38,861 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:24:38,861 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:24:39,041 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:24:39,041 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_lab4llqv7w3a6ir63ny72zpnoena3gbquytng65zfnjzaavzuudc4eid_onion_20260408_142438.html
+
+2026-04-08 14:24:39,041 - __main__ - INFO - ============================================================
+2026-04-08 14:24:39,041 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:24:39,041 - __main__ - INFO - ============================================================
+2026-04-08 14:24:39,041 - __main__ - INFO - 
+도메인: lab4llqv7w3a6ir63ny72zpnoena3gbquytng65zfnjzaavzuudc4eid.onion
+2026-04-08 14:24:39,041 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 14:24:39,041 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:24:39,041 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:24:39,041 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 14:24:39,041 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 14:24:39,041 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:24:39,041 - __main__ - INFO -   • Ahmia: ✅ (결과: 2건)
+2026-04-08 14:24:39,041 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:24:39,041 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 14:24:39,041 - __main__ - WARNING -   • 주요 유형: dark_market
+2026-04-08 14:24:39,041 - __main__ - WARNING -   • 신뢰도: 30.5%
+2026-04-08 14:24:39,041 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:24:39,041 - __main__ - INFO -   • 주요: Marketplace
+2026-04-08 14:24:39,041 - __main__ - INFO -   • 부가: Communication
+2026-04-08 14:24:39,041 - __main__ - INFO -   • 신뢰도: 100.0%
+2026-04-08 14:24:39,041 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:24:39,041 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:24:39,041 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:24:39,041 - __main__ - INFO -    analysis_reports/analysis_report_lab4llqv7w3a6ir63ny72zpnoena3gbquytng65zfnjzaavzuudc4eid_onion_20260408_142438.html
+2026-04-08 14:27:00,693 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:27:00,693 - __main__ - INFO - 
+============================================================
+2026-04-08 14:27:00,694 - __main__ - INFO - 🔍 도메인 분석 시작: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 14:27:00,695 - __main__ - INFO - ============================================================
+
+2026-04-08 14:27:00,695 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:27:08,106 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:27:08,107 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:27:08,113 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:27:08,113 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:27:08,122 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:27:08,123 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:27:08,123 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:27:08,123 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:27:08,272 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:27:08,272 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid_onion_20260408_142708.html
+
+2026-04-08 14:27:08,272 - __main__ - INFO - ============================================================
+2026-04-08 14:27:08,272 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:27:08,272 - __main__ - INFO - ============================================================
+2026-04-08 14:27:08,272 - __main__ - INFO - 
+도메인: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 14:27:08,272 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 14:27:08,272 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:27:08,272 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:27:08,272 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 14:27:08,272 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 14:27:08,272 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:27:08,272 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-08 14:27:08,272 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:27:08,272 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 14:27:08,272 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:27:08,272 - __main__ - INFO -   • 주요: Personal Blog
+2026-04-08 14:27:08,272 - __main__ - INFO -   • 신뢰도: 4.7%
+2026-04-08 14:27:08,272 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:27:08,272 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:27:08,272 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:27:08,272 - __main__ - INFO -    analysis_reports/analysis_report_dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid_onion_20260408_142708.html
+2026-04-08 14:50:56,698 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:50:56,700 - __main__ - INFO - 
+============================================================
+2026-04-08 14:50:56,700 - __main__ - INFO - 🔍 도메인 분석 시작: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 14:50:56,700 - __main__ - INFO - ============================================================
+
+2026-04-08 14:50:56,700 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:50:57,707 - __main__ - ERROR - ❌ 서버 연결 실패 (http://192.168.64.7:5000에 연결할 수 없음)
+2026-04-08 14:50:57,707 - __main__ - ERROR - ❌ 분석 실패: 서버 분석 실패
+2026-04-08 14:51:18,411 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:51:18,412 - __main__ - INFO - 
+============================================================
+2026-04-08 14:51:18,412 - __main__ - INFO - 🔍 도메인 분석 시작: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 14:51:18,412 - __main__ - INFO - ============================================================
+
+2026-04-08 14:51:18,412 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 14:51:27,427 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 14:51:27,427 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 14:51:27,434 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 14:51:27,434 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 14:51:27,443 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 14:51:27,444 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 14:51:27,444 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 14:51:27,444 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 14:51:27,589 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 14:51:27,589 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid_onion_20260408_145127.html
+
+2026-04-08 14:51:27,589 - __main__ - INFO - ============================================================
+2026-04-08 14:51:27,589 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 14:51:27,589 - __main__ - INFO - ============================================================
+2026-04-08 14:51:27,589 - __main__ - INFO - 
+도메인: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 14:51:27,589 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 14:51:27,589 - __main__ - INFO - 
+점수 분석:
+2026-04-08 14:51:27,589 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 14:51:27,590 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 14:51:27,590 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 14:51:27,590 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 14:51:27,590 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-08 14:51:27,590 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 14:51:27,590 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 14:51:27,590 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 14:51:27,590 - __main__ - INFO -   • 주요: Personal Blog
+2026-04-08 14:51:27,590 - __main__ - INFO -   • 신뢰도: 4.7%
+2026-04-08 14:51:27,590 - __main__ - INFO - 
+============================================================
+
+2026-04-08 14:51:27,590 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 14:51:27,590 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 14:51:27,590 - __main__ - INFO -    analysis_reports/analysis_report_dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid_onion_20260408_145127.html
+2026-04-08 14:59:59,065 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 14:59:59,066 - __main__ - INFO - 
+============================================================
+2026-04-08 14:59:59,066 - __main__ - INFO - 🔍 도메인 분석 시작: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 14:59:59,066 - __main__ - INFO - ============================================================
+
+2026-04-08 14:59:59,066 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:00:07,047 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:00:07,048 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:00:07,054 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:00:07,054 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:00:07,064 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:00:07,064 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:00:07,064 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:00:07,064 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:00:07,213 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:00:07,213 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid_onion_20260408_150007.html
+
+2026-04-08 15:00:07,213 - __main__ - INFO - ============================================================
+2026-04-08 15:00:07,213 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:00:07,213 - __main__ - INFO - ============================================================
+2026-04-08 15:00:07,213 - __main__ - INFO - 
+도메인: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 15:00:07,213 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:00:07,213 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:00:07,213 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:00:07,213 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 15:00:07,213 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 15:00:07,213 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:00:07,213 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-08 15:00:07,213 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:00:07,213 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:00:07,213 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:00:07,213 - __main__ - INFO -   • 주요: Authentication Required
+2026-04-08 15:00:07,213 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:00:07,213 - __main__ - INFO -   • 신뢰도: 12.2%
+2026-04-08 15:00:07,213 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:00:07,213 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:00:07,213 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:00:07,213 - __main__ - INFO -    analysis_reports/analysis_report_dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid_onion_20260408_150007.html
+2026-04-08 15:04:33,598 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:04:33,598 - __main__ - INFO - 
+============================================================
+2026-04-08 15:04:33,598 - __main__ - INFO - 🔍 도메인 분석 시작: fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad.onion
+2026-04-08 15:04:33,598 - __main__ - INFO - ============================================================
+
+2026-04-08 15:04:33,598 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:04:40,660 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:04:40,661 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:04:40,669 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:04:40,670 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:04:40,683 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:04:40,684 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:04:40,684 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:04:40,684 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:04:40,827 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:04:40,827 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad_onion_20260408_150440.html
+
+2026-04-08 15:04:40,827 - __main__ - INFO - ============================================================
+2026-04-08 15:04:40,827 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:04:40,827 - __main__ - INFO - ============================================================
+2026-04-08 15:04:40,828 - __main__ - INFO - 
+도메인: fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad.onion
+2026-04-08 15:04:40,828 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 15:04:40,828 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:04:40,828 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:04:40,828 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:04:40,828 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 15:04:40,828 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:04:40,828 - __main__ - INFO -   • Ahmia: ✅ (결과: 3건)
+2026-04-08 15:04:40,828 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:04:40,828 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:04:40,828 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:04:40,828 - __main__ - INFO -   • 주요: Authentication Required
+2026-04-08 15:04:40,828 - __main__ - INFO -   • 부가: Communication
+2026-04-08 15:04:40,828 - __main__ - INFO -   • 신뢰도: 53.3%
+2026-04-08 15:04:40,828 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:04:40,828 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:04:40,828 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:04:40,828 - __main__ - INFO -    analysis_reports/analysis_report_fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad_onion_20260408_150440.html
+2026-04-08 15:12:01,323 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:12:01,323 - __main__ - INFO - 
+============================================================
+2026-04-08 15:12:01,323 - __main__ - INFO - 🔍 도메인 분석 시작: fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad.onion
+2026-04-08 15:12:01,323 - __main__ - INFO - ============================================================
+
+2026-04-08 15:12:01,323 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:13:08,555 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:13:08,555 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:13:08,556 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:13:08,556 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:13:08,556 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:13:08,556 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:13:08,556 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:13:08,556 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:13:08,663 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:13:08,663 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad_onion_20260408_151308.html
+
+2026-04-08 15:13:08,663 - __main__ - INFO - ============================================================
+2026-04-08 15:13:08,663 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:13:08,663 - __main__ - INFO - ============================================================
+2026-04-08 15:13:08,663 - __main__ - INFO - 
+도메인: fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad.onion
+2026-04-08 15:13:08,663 - __main__ - INFO - 신뢰도: 30/100 (낮음 (위험) ❌)
+2026-04-08 15:13:08,663 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:13:08,663 - __main__ - INFO -   • 접근성:       0/40점
+2026-04-08 15:13:08,663 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:13:08,663 - __main__ - INFO -   • 콘텐츠:       0/30점
+2026-04-08 15:13:08,663 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:13:08,664 - __main__ - INFO -   • Ahmia: ✅ (결과: 3건)
+2026-04-08 15:13:08,664 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:13:08,664 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:13:08,664 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:13:08,664 - __main__ - INFO -   • 주요: Unknown
+2026-04-08 15:13:08,664 - __main__ - INFO -   • 신뢰도: 0.0%
+2026-04-08 15:13:08,664 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:13:08,664 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:13:08,664 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:13:08,664 - __main__ - INFO -    analysis_reports/analysis_report_fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad_onion_20260408_151308.html
+2026-04-08 15:14:04,350 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:14:04,351 - __main__ - INFO - 
+============================================================
+2026-04-08 15:14:04,351 - __main__ - INFO - 🔍 도메인 분석 시작: fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad.onion
+2026-04-08 15:14:04,351 - __main__ - INFO - ============================================================
+
+2026-04-08 15:14:04,351 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:15:08,236 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:15:08,237 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:15:08,237 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:15:08,237 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:15:08,237 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:15:08,237 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:15:08,238 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:15:08,238 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:15:08,342 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:15:08,342 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad_onion_20260408_151508.html
+
+2026-04-08 15:15:08,342 - __main__ - INFO - ============================================================
+2026-04-08 15:15:08,342 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:15:08,342 - __main__ - INFO - ============================================================
+2026-04-08 15:15:08,342 - __main__ - INFO - 
+도메인: fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad.onion
+2026-04-08 15:15:08,342 - __main__ - INFO - 신뢰도: 30/100 (낮음 (위험) ❌)
+2026-04-08 15:15:08,342 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:15:08,342 - __main__ - INFO -   • 접근성:       0/40점
+2026-04-08 15:15:08,343 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:15:08,343 - __main__ - INFO -   • 콘텐츠:       0/30점
+2026-04-08 15:15:08,343 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:15:08,343 - __main__ - INFO -   • Ahmia: ✅ (결과: 3건)
+2026-04-08 15:15:08,343 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:15:08,343 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:15:08,343 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:15:08,343 - __main__ - INFO -   • 주요: Unknown
+2026-04-08 15:15:08,343 - __main__ - INFO -   • 신뢰도: 0.0%
+2026-04-08 15:15:08,343 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:15:08,343 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:15:08,343 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:15:08,343 - __main__ - INFO -    analysis_reports/analysis_report_fozdean5ayswi6jtseg2fgyysqt3dskoosmoc6gnqia4dxwxiuvg3oad_onion_20260408_151508.html
+2026-04-08 15:15:45,368 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:15:45,368 - __main__ - INFO - 
+============================================================
+2026-04-08 15:15:45,368 - __main__ - INFO - 🔍 도메인 분석 시작: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 15:15:45,368 - __main__ - INFO - ============================================================
+
+2026-04-08 15:15:45,368 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:15:52,427 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:15:52,427 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:15:52,433 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:15:52,434 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:15:52,442 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:15:52,442 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:15:52,442 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:15:52,442 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:15:52,570 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:15:52,570 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid_onion_20260408_151552.html
+
+2026-04-08 15:15:52,570 - __main__ - INFO - ============================================================
+2026-04-08 15:15:52,570 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:15:52,570 - __main__ - INFO - ============================================================
+2026-04-08 15:15:52,570 - __main__ - INFO - 
+도메인: dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid.onion
+2026-04-08 15:15:52,570 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:15:52,570 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:15:52,570 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:15:52,570 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 15:15:52,570 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 15:15:52,570 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:15:52,570 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-08 15:15:52,570 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:15:52,570 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:15:52,570 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:15:52,570 - __main__ - INFO -   • 주요: Authentication Required
+2026-04-08 15:15:52,570 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:15:52,570 - __main__ - INFO -   • 신뢰도: 12.2%
+2026-04-08 15:15:52,570 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:15:52,570 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:15:52,570 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:15:52,570 - __main__ - INFO -    analysis_reports/analysis_report_dkforestseeaaq2dqz2uflmlsybvnq2irzn4ygyvu53oazyorednviid_onion_20260408_151552.html
+2026-04-08 15:16:54,155 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:16:54,155 - __main__ - INFO - 
+============================================================
+2026-04-08 15:16:54,155 - __main__ - INFO - 🔍 도메인 분석 시작: tcecdnp2fhyxlcrjoyc2eimdjosr65hweut6y7r2u6b5y75yuvbkvfyd.onion
+2026-04-08 15:16:54,155 - __main__ - INFO - ============================================================
+
+2026-04-08 15:16:54,155 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:17:01,649 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:17:01,649 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:17:01,657 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:17:01,657 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:17:01,674 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:17:01,674 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:17:01,674 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:17:01,674 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:17:01,810 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:17:01,810 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_tcecdnp2fhyxlcrjoyc2eimdjosr65hweut6y7r2u6b5y75yuvbkvfyd_onion_20260408_151701.html
+
+2026-04-08 15:17:01,810 - __main__ - INFO - ============================================================
+2026-04-08 15:17:01,810 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:17:01,810 - __main__ - INFO - ============================================================
+2026-04-08 15:17:01,810 - __main__ - INFO - 
+도메인: tcecdnp2fhyxlcrjoyc2eimdjosr65hweut6y7r2u6b5y75yuvbkvfyd.onion
+2026-04-08 15:17:01,810 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 15:17:01,810 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:17:01,810 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:17:01,810 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:17:01,810 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 15:17:01,810 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:17:01,810 - __main__ - INFO -   • Ahmia: ✅ (결과: 3건)
+2026-04-08 15:17:01,810 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:17:01,810 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:17:01,810 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:17:01,810 - __main__ - INFO -   • 주요: Documentation
+2026-04-08 15:17:01,810 - __main__ - INFO -   • 부가: Marketplace
+2026-04-08 15:17:01,810 - __main__ - INFO -   • 신뢰도: 8.0%
+2026-04-08 15:17:01,810 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:17:01,810 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:17:01,810 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:17:01,810 - __main__ - INFO -    analysis_reports/analysis_report_tcecdnp2fhyxlcrjoyc2eimdjosr65hweut6y7r2u6b5y75yuvbkvfyd_onion_20260408_151701.html
+2026-04-08 15:18:17,152 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:18:17,152 - __main__ - INFO - 
+============================================================
+2026-04-08 15:18:17,152 - __main__ - INFO - 🔍 도메인 분석 시작: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:18:17,152 - __main__ - INFO - ============================================================
+
+2026-04-08 15:18:17,152 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:18:24,567 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:18:24,567 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:18:24,580 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:18:24,580 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:18:24,602 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:18:24,602 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:18:24,603 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:18:24,603 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:18:24,766 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:18:24,766 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_151824.html
+
+2026-04-08 15:18:24,766 - __main__ - INFO - ============================================================
+2026-04-08 15:18:24,766 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:18:24,766 - __main__ - INFO - ============================================================
+2026-04-08 15:18:24,766 - __main__ - INFO - 
+도메인: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:18:24,766 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:18:24,766 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:18:24,766 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:18:24,766 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:18:24,766 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 15:18:24,766 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:18:24,766 - __main__ - INFO -   • Ahmia: ✅ (결과: 5건)
+2026-04-08 15:18:24,766 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:18:24,766 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 15:18:24,766 - __main__ - WARNING -   • 주요 유형: illegal_content
+2026-04-08 15:18:24,766 - __main__ - WARNING -   • 신뢰도: 15.0%
+2026-04-08 15:18:24,766 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:18:24,766 - __main__ - INFO -   • 주요: Communication
+2026-04-08 15:18:24,766 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:18:24,766 - __main__ - INFO -   • 신뢰도: 78.0%
+2026-04-08 15:18:24,766 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:18:24,766 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:18:24,766 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:18:24,766 - __main__ - INFO -    analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_151824.html
+2026-04-08 15:22:25,282 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:22:25,282 - __main__ - INFO - 
+============================================================
+2026-04-08 15:22:25,282 - __main__ - INFO - 🔍 도메인 분석 시작: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:22:25,282 - __main__ - INFO - ============================================================
+
+2026-04-08 15:22:25,282 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:22:31,143 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:22:31,144 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:22:31,156 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:22:31,156 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:22:31,180 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:22:31,180 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:22:31,180 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:22:31,180 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:22:31,348 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:22:31,348 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_152231.html
+
+2026-04-08 15:22:31,348 - __main__ - INFO - ============================================================
+2026-04-08 15:22:31,348 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:22:31,348 - __main__ - INFO - ============================================================
+2026-04-08 15:22:31,348 - __main__ - INFO - 
+도메인: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:22:31,348 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:22:31,348 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:22:31,349 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:22:31,349 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:22:31,349 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 15:22:31,349 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:22:31,349 - __main__ - INFO -   • Ahmia: ✅ (결과: 5건)
+2026-04-08 15:22:31,349 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:22:31,349 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 15:22:31,349 - __main__ - WARNING -   • 주요 유형: illegal_content
+2026-04-08 15:22:31,349 - __main__ - WARNING -   • 신뢰도: 15.0%
+2026-04-08 15:22:31,349 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:22:31,349 - __main__ - INFO -   • 주요: Communication
+2026-04-08 15:22:31,349 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:22:31,349 - __main__ - INFO -   • 신뢰도: 78.0%
+2026-04-08 15:22:31,349 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:22:31,349 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:22:31,349 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:22:31,349 - __main__ - INFO -    analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_152231.html
+2026-04-08 15:27:22,028 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:27:22,028 - __main__ - INFO - 
+============================================================
+2026-04-08 15:27:22,028 - __main__ - INFO - 🔍 도메인 분석 시작: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:27:22,028 - __main__ - INFO - ============================================================
+
+2026-04-08 15:27:22,028 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:27:27,475 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:27:27,475 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:27:27,488 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:27:27,488 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:27:27,513 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:27:27,513 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:27:27,513 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:27:27,513 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:27:27,685 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:27:27,685 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_152727.html
+
+2026-04-08 15:27:27,685 - __main__ - INFO - ============================================================
+2026-04-08 15:27:27,685 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:27:27,685 - __main__ - INFO - ============================================================
+2026-04-08 15:27:27,685 - __main__ - INFO - 
+도메인: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:27:27,685 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:27:27,685 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:27:27,685 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:27:27,685 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:27:27,685 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 15:27:27,685 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:27:27,685 - __main__ - INFO -   • Ahmia: ✅ (결과: 5건)
+2026-04-08 15:27:27,685 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:27:27,685 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 15:27:27,685 - __main__ - WARNING -   • 주요 유형: illegal_content
+2026-04-08 15:27:27,685 - __main__ - WARNING -   • 신뢰도: 15.0%
+2026-04-08 15:27:27,685 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:27:27,685 - __main__ - INFO -   • 주요: Communication
+2026-04-08 15:27:27,685 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:27:27,685 - __main__ - INFO -   • 신뢰도: 78.0%
+2026-04-08 15:27:27,685 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:27:27,685 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:27:27,685 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:27:27,685 - __main__ - INFO -    analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_152727.html
+2026-04-08 15:40:46,949 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:40:46,952 - __main__ - INFO - 
+============================================================
+2026-04-08 15:40:46,952 - __main__ - INFO - 🔍 도메인 분석 시작: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:40:46,952 - __main__ - INFO - ============================================================
+
+2026-04-08 15:40:46,952 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:40:54,224 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:40:54,224 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:40:54,235 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:40:54,235 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:40:54,249 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:40:54,249 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:40:54,249 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:40:54,250 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:40:54,483 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:40:54,483 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_154054.html
+
+2026-04-08 15:40:54,483 - __main__ - INFO - ============================================================
+2026-04-08 15:40:54,483 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:40:54,483 - __main__ - INFO - ============================================================
+2026-04-08 15:40:54,484 - __main__ - INFO - 
+도메인: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:40:54,484 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:40:54,484 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:40:54,484 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:40:54,484 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:40:54,484 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 15:40:54,484 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:40:54,484 - __main__ - INFO -   • Ahmia: ✅ (결과: 5건)
+2026-04-08 15:40:54,484 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:40:54,484 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 15:40:54,484 - __main__ - WARNING -   • 주요 유형: illegal_content
+2026-04-08 15:40:54,484 - __main__ - WARNING -   • 신뢰도: 15.0%
+2026-04-08 15:40:54,484 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:40:54,484 - __main__ - INFO -   • 주요: Communication
+2026-04-08 15:40:54,484 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:40:54,484 - __main__ - INFO -   • 신뢰도: 78.0%
+2026-04-08 15:40:54,484 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:40:54,484 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:40:54,484 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:40:54,484 - __main__ - INFO -    analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_154054.html
+2026-04-08 15:41:19,868 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:41:19,868 - __main__ - INFO - 
+============================================================
+2026-04-08 15:41:19,868 - __main__ - INFO - 🔍 도메인 분석 시작: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:41:19,868 - __main__ - INFO - ============================================================
+
+2026-04-08 15:41:19,868 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:41:26,059 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:41:26,060 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:41:26,073 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:41:26,074 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:41:26,097 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:41:26,097 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:41:26,097 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:41:26,097 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:41:26,270 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:41:26,270 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_154126.html
+
+2026-04-08 15:41:26,270 - __main__ - INFO - ============================================================
+2026-04-08 15:41:26,270 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:41:26,270 - __main__ - INFO - ============================================================
+2026-04-08 15:41:26,270 - __main__ - INFO - 
+도메인: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:41:26,270 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:41:26,270 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:41:26,270 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:41:26,270 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:41:26,270 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 15:41:26,270 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:41:26,270 - __main__ - INFO -   • Ahmia: ✅ (결과: 5건)
+2026-04-08 15:41:26,270 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:41:26,270 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 15:41:26,270 - __main__ - WARNING -   • 주요 유형: illegal_content
+2026-04-08 15:41:26,270 - __main__ - WARNING -   • 신뢰도: 15.0%
+2026-04-08 15:41:26,270 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:41:26,270 - __main__ - INFO -   • 주요: Communication
+2026-04-08 15:41:26,270 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:41:26,270 - __main__ - INFO -   • 신뢰도: 78.0%
+2026-04-08 15:41:26,270 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:41:26,270 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:41:26,270 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:41:26,270 - __main__ - INFO -    analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_154126.html
+2026-04-08 15:47:02,776 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:47:02,777 - __main__ - INFO - 
+============================================================
+2026-04-08 15:47:02,777 - __main__ - INFO - 🔍 도메인 분석 시작: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:47:02,777 - __main__ - INFO - ============================================================
+
+2026-04-08 15:47:02,777 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:47:08,044 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:47:08,044 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:47:08,056 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:47:08,056 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:47:08,079 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:47:08,079 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:47:08,079 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:47:08,079 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:47:08,251 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:47:08,251 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_154708.html
+
+2026-04-08 15:47:08,251 - __main__ - INFO - ============================================================
+2026-04-08 15:47:08,251 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:47:08,251 - __main__ - INFO - ============================================================
+2026-04-08 15:47:08,251 - __main__ - INFO - 
+도메인: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:47:08,251 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:47:08,251 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:47:08,251 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:47:08,251 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:47:08,251 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 15:47:08,251 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:47:08,251 - __main__ - INFO -   • Ahmia: ✅ (결과: 5건)
+2026-04-08 15:47:08,251 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:47:08,251 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 15:47:08,251 - __main__ - WARNING -   • 주요 유형: illegal_content
+2026-04-08 15:47:08,251 - __main__ - WARNING -   • 신뢰도: 15.0%
+2026-04-08 15:47:08,251 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:47:08,251 - __main__ - INFO -   • 주요: Communication
+2026-04-08 15:47:08,251 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:47:08,251 - __main__ - INFO -   • 신뢰도: 78.0%
+2026-04-08 15:47:08,251 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:47:08,251 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:47:08,251 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:47:08,251 - __main__ - INFO -    analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_154708.html
+2026-04-08 15:51:39,775 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:51:39,778 - __main__ - INFO - 
+============================================================
+2026-04-08 15:51:39,778 - __main__ - INFO - 🔍 도메인 분석 시작: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:51:39,778 - __main__ - INFO - ============================================================
+
+2026-04-08 15:51:39,778 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:51:47,347 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:51:47,348 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:51:47,356 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:51:47,356 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:51:47,374 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:51:47,375 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:51:47,375 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:51:47,375 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:51:47,553 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:51:47,553 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_155147.html
+
+2026-04-08 15:51:47,553 - __main__ - INFO - ============================================================
+2026-04-08 15:51:47,553 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:51:47,553 - __main__ - INFO - ============================================================
+2026-04-08 15:51:47,553 - __main__ - INFO - 
+도메인: rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad.onion
+2026-04-08 15:51:47,553 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:51:47,553 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:51:47,553 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:51:47,553 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:51:47,553 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 15:51:47,553 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:51:47,553 - __main__ - INFO -   • Ahmia: ✅ (결과: 5건)
+2026-04-08 15:51:47,553 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:51:47,553 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 15:51:47,553 - __main__ - WARNING -   • 주요 유형: illegal_content
+2026-04-08 15:51:47,553 - __main__ - WARNING -   • 신뢰도: 15.0%
+2026-04-08 15:51:47,553 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:51:47,553 - __main__ - INFO -   • 주요: Communication
+2026-04-08 15:51:47,553 - __main__ - INFO -   • 부가: Personal Blog
+2026-04-08 15:51:47,553 - __main__ - INFO -   • 신뢰도: 78.0%
+2026-04-08 15:51:47,553 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:51:47,553 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:51:47,553 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:51:47,553 - __main__ - INFO -    analysis_reports/analysis_report_rurcblzhmdk22kttfkel2zduhyu3r6to7knyc7wiorzrx5gw4c3lftad_onion_20260408_155147.html
+2026-04-08 15:53:02,769 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:53:02,769 - __main__ - INFO - 
+============================================================
+2026-04-08 15:53:02,769 - __main__ - INFO - 🔍 도메인 분석 시작: xxtbwyb5z5bdvy2f6l2yquu5qilgkjeewno4qfknvb3lkg3nmoklitid.onion
+2026-04-08 15:53:02,769 - __main__ - INFO - ============================================================
+
+2026-04-08 15:53:02,769 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:53:13,510 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:53:13,511 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:53:13,529 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:53:13,530 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:53:13,562 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:53:13,562 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:53:13,562 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:53:13,562 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:53:13,690 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:53:13,690 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_xxtbwyb5z5bdvy2f6l2yquu5qilgkjeewno4qfknvb3lkg3nmoklitid_onion_20260408_155313.html
+
+2026-04-08 15:53:13,690 - __main__ - INFO - ============================================================
+2026-04-08 15:53:13,690 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:53:13,690 - __main__ - INFO - ============================================================
+2026-04-08 15:53:13,690 - __main__ - INFO - 
+도메인: xxtbwyb5z5bdvy2f6l2yquu5qilgkjeewno4qfknvb3lkg3nmoklitid.onion
+2026-04-08 15:53:13,690 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 15:53:13,690 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:53:13,690 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:53:13,690 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 15:53:13,690 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 15:53:13,690 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:53:13,690 - __main__ - INFO -   • Ahmia: ✅ (결과: 4건)
+2026-04-08 15:53:13,690 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:53:13,690 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:53:13,690 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:53:13,691 - __main__ - INFO -   • 주요: Documentation
+2026-04-08 15:53:13,691 - __main__ - INFO -   • 신뢰도: 4.7%
+2026-04-08 15:53:13,691 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:53:13,691 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:53:13,691 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:53:13,691 - __main__ - INFO -    analysis_reports/analysis_report_xxtbwyb5z5bdvy2f6l2yquu5qilgkjeewno4qfknvb3lkg3nmoklitid_onion_20260408_155313.html
+2026-04-08 15:56:10,797 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:56:10,799 - __main__ - INFO - 
+============================================================
+2026-04-08 15:56:10,799 - __main__ - INFO - 🔍 도메인 분석 시작: meynethaffeecapsvfphrcnfrx44w2nskgls2juwitibvqctk2plvhqd.onion
+2026-04-08 15:56:10,799 - __main__ - INFO - ============================================================
+
+2026-04-08 15:56:10,799 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:56:27,524 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:56:27,524 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:56:27,534 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:56:27,534 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:56:27,551 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:56:27,551 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:56:27,552 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:56:27,552 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:56:27,692 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:56:27,692 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_meynethaffeecapsvfphrcnfrx44w2nskgls2juwitibvqctk2plvhqd_onion_20260408_155627.html
+
+2026-04-08 15:56:27,692 - __main__ - INFO - ============================================================
+2026-04-08 15:56:27,692 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:56:27,692 - __main__ - INFO - ============================================================
+2026-04-08 15:56:27,692 - __main__ - INFO - 
+도메인: meynethaffeecapsvfphrcnfrx44w2nskgls2juwitibvqctk2plvhqd.onion
+2026-04-08 15:56:27,692 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:56:27,692 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:56:27,692 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:56:27,692 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 15:56:27,692 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 15:56:27,692 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:56:27,692 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-08 15:56:27,692 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:56:27,692 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:56:27,692 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:56:27,692 - __main__ - INFO -   • 주요: Personal Blog
+2026-04-08 15:56:27,693 - __main__ - INFO -   • 부가: Blog
+2026-04-08 15:56:27,693 - __main__ - INFO -   • 신뢰도: 18.7%
+2026-04-08 15:56:27,693 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:56:27,693 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:56:27,693 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:56:27,693 - __main__ - INFO -    analysis_reports/analysis_report_meynethaffeecapsvfphrcnfrx44w2nskgls2juwitibvqctk2plvhqd_onion_20260408_155627.html
+2026-04-08 15:59:11,640 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 15:59:11,641 - __main__ - INFO - 
+============================================================
+2026-04-08 15:59:11,641 - __main__ - INFO - 🔍 도메인 분석 시작: sabladem4rxv5p34qcpz6sxitmftvmzmlzi4cjmmh5a3phcvdi3k2wad.onion
+2026-04-08 15:59:11,641 - __main__ - INFO - ============================================================
+
+2026-04-08 15:59:11,641 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 15:59:15,282 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 15:59:15,283 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 15:59:15,293 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 15:59:15,293 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 15:59:15,311 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 15:59:15,311 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 15:59:15,311 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 15:59:15,311 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 15:59:15,449 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 15:59:15,449 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_sabladem4rxv5p34qcpz6sxitmftvmzmlzi4cjmmh5a3phcvdi3k2wad_onion_20260408_155915.html
+
+2026-04-08 15:59:15,449 - __main__ - INFO - ============================================================
+2026-04-08 15:59:15,449 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 15:59:15,449 - __main__ - INFO - ============================================================
+2026-04-08 15:59:15,449 - __main__ - INFO - 
+도메인: sabladem4rxv5p34qcpz6sxitmftvmzmlzi4cjmmh5a3phcvdi3k2wad.onion
+2026-04-08 15:59:15,449 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 15:59:15,449 - __main__ - INFO - 
+점수 분석:
+2026-04-08 15:59:15,449 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 15:59:15,449 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 15:59:15,449 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 15:59:15,449 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 15:59:15,450 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-08 15:59:15,450 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 15:59:15,450 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 15:59:15,450 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 15:59:15,450 - __main__ - INFO -   • 주요: Personal Blog
+2026-04-08 15:59:15,450 - __main__ - INFO -   • 부가: Blog
+2026-04-08 15:59:15,450 - __main__ - INFO -   • 신뢰도: 18.7%
+2026-04-08 15:59:15,450 - __main__ - INFO - 
+============================================================
+
+2026-04-08 15:59:15,450 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 15:59:15,450 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 15:59:15,450 - __main__ - INFO -    analysis_reports/analysis_report_sabladem4rxv5p34qcpz6sxitmftvmzmlzi4cjmmh5a3phcvdi3k2wad_onion_20260408_155915.html
+2026-04-08 16:01:45,579 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 16:01:45,579 - __main__ - INFO - 
+============================================================
+2026-04-08 16:01:45,580 - __main__ - INFO - 🔍 도메인 분석 시작: zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd.onion
+2026-04-08 16:01:45,580 - __main__ - INFO - ============================================================
+
+2026-04-08 16:01:45,580 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 16:01:56,872 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 16:01:56,873 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 16:01:56,882 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 16:01:56,882 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 16:01:56,893 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 16:01:56,893 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 16:01:56,893 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 16:01:56,893 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 16:01:57,038 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 16:01:57,038 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd_onion_20260408_160156.html
+
+2026-04-08 16:01:57,038 - __main__ - INFO - ============================================================
+2026-04-08 16:01:57,038 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 16:01:57,038 - __main__ - INFO - ============================================================
+2026-04-08 16:01:57,038 - __main__ - INFO - 
+도메인: zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd.onion
+2026-04-08 16:01:57,038 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 16:01:57,038 - __main__ - INFO - 
+점수 분석:
+2026-04-08 16:01:57,038 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 16:01:57,038 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 16:01:57,038 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 16:01:57,038 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 16:01:57,038 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-08 16:01:57,038 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 16:01:57,038 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 16:01:57,038 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 16:01:57,038 - __main__ - INFO -   • 주요: Documentation
+2026-04-08 16:01:57,038 - __main__ - INFO -   • 부가: Communication
+2026-04-08 16:01:57,038 - __main__ - INFO -   • 신뢰도: 90.7%
+2026-04-08 16:01:57,038 - __main__ - INFO - 
+============================================================
+
+2026-04-08 16:01:57,038 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 16:01:57,038 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 16:01:57,038 - __main__ - INFO -    analysis_reports/analysis_report_zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd_onion_20260408_160156.html
+2026-04-08 16:07:29,247 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 16:07:29,249 - __main__ - INFO - 
+============================================================
+2026-04-08 16:07:29,249 - __main__ - INFO - 🔍 도메인 분석 시작: zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd.onion
+2026-04-08 16:07:29,249 - __main__ - INFO - ============================================================
+
+2026-04-08 16:07:29,249 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 16:07:44,315 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 16:07:44,316 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 16:07:44,324 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 16:07:44,324 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 16:07:44,335 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 16:07:44,335 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 16:07:44,335 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 16:07:44,335 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 16:07:44,481 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 16:07:44,481 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd_onion_20260408_160744.html
+
+2026-04-08 16:07:44,481 - __main__ - INFO - ============================================================
+2026-04-08 16:07:44,481 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 16:07:44,481 - __main__ - INFO - ============================================================
+2026-04-08 16:07:44,481 - __main__ - INFO - 
+도메인: zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd.onion
+2026-04-08 16:07:44,481 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 16:07:44,481 - __main__ - INFO - 
+점수 분석:
+2026-04-08 16:07:44,481 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 16:07:44,481 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-08 16:07:44,481 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 16:07:44,481 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 16:07:44,481 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-08 16:07:44,481 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 16:07:44,481 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 16:07:44,481 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 16:07:44,481 - __main__ - INFO -   • 주요: Documentation
+2026-04-08 16:07:44,481 - __main__ - INFO -   • 부가: Communication
+2026-04-08 16:07:44,482 - __main__ - INFO -   • 신뢰도: 90.7%
+2026-04-08 16:07:44,482 - __main__ - INFO - 
+============================================================
+
+2026-04-08 16:07:44,482 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 16:07:44,482 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 16:07:44,482 - __main__ - INFO -    analysis_reports/analysis_report_zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd_onion_20260408_160744.html
+2026-04-08 16:09:04,136 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 16:09:04,137 - __main__ - INFO - 
+============================================================
+2026-04-08 16:09:04,137 - __main__ - INFO - 🔍 도메인 분석 시작: 7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd.onion
+2026-04-08 16:09:04,137 - __main__ - INFO - ============================================================
+
+2026-04-08 16:09:04,137 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 16:09:10,727 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 16:09:10,728 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 16:09:10,738 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 16:09:10,739 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 16:09:10,761 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 16:09:10,762 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 16:09:10,762 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 16:09:10,762 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 16:09:10,936 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 16:09:10,936 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd_onion_20260408_160910.html
+
+2026-04-08 16:09:10,936 - __main__ - INFO - ============================================================
+2026-04-08 16:09:10,936 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 16:09:10,936 - __main__ - INFO - ============================================================
+2026-04-08 16:09:10,936 - __main__ - INFO - 
+도메인: 7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd.onion
+2026-04-08 16:09:10,936 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 16:09:10,936 - __main__ - INFO - 
+점수 분석:
+2026-04-08 16:09:10,936 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 16:09:10,936 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 16:09:10,936 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 16:09:10,936 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 16:09:10,936 - __main__ - INFO -   • Ahmia: ✅ (결과: 2건)
+2026-04-08 16:09:10,936 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 16:09:10,936 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 16:09:10,936 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 16:09:10,936 - __main__ - INFO -   • 주요: Social Network
+2026-04-08 16:09:10,936 - __main__ - INFO -   • 부가: Communication
+2026-04-08 16:09:10,936 - __main__ - INFO -   • 신뢰도: 35.1%
+2026-04-08 16:09:10,936 - __main__ - INFO - 
+============================================================
+
+2026-04-08 16:09:10,936 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 16:09:10,936 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 16:09:10,936 - __main__ - INFO -    analysis_reports/analysis_report_7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd_onion_20260408_160910.html
+2026-04-08 16:11:30,149 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 16:11:30,150 - __main__ - INFO - 
+============================================================
+2026-04-08 16:11:30,150 - __main__ - INFO - 🔍 도메인 분석 시작: 7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd.onion
+2026-04-08 16:11:30,150 - __main__ - INFO - ============================================================
+
+2026-04-08 16:11:30,150 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 16:11:33,537 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 16:11:33,537 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 16:11:33,552 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 16:11:33,552 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 16:11:33,578 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 16:11:33,578 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 16:11:33,578 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 16:11:33,578 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 16:11:33,744 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 16:11:33,744 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd_onion_20260408_161133.html
+
+2026-04-08 16:11:33,744 - __main__ - INFO - ============================================================
+2026-04-08 16:11:33,744 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 16:11:33,744 - __main__ - INFO - ============================================================
+2026-04-08 16:11:33,744 - __main__ - INFO - 
+도메인: 7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd.onion
+2026-04-08 16:11:33,744 - __main__ - INFO - 신뢰도: 100/100 (매우 높음 ✅)
+2026-04-08 16:11:33,744 - __main__ - INFO - 
+점수 분석:
+2026-04-08 16:11:33,744 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 16:11:33,744 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 16:11:33,744 - __main__ - INFO -   • 콘텐츠:      30/30점
+2026-04-08 16:11:33,744 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 16:11:33,744 - __main__ - INFO -   • Ahmia: ✅ (결과: 2건)
+2026-04-08 16:11:33,744 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 16:11:33,744 - __main__ - INFO - 
+✅ 불법 콘텐츠 미탐지
+2026-04-08 16:11:33,744 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 16:11:33,744 - __main__ - INFO -   • 주요: Social Network
+2026-04-08 16:11:33,744 - __main__ - INFO -   • 부가: Communication
+2026-04-08 16:11:33,744 - __main__ - INFO -   • 신뢰도: 35.1%
+2026-04-08 16:11:33,744 - __main__ - INFO - 
+============================================================
+
+2026-04-08 16:11:33,744 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 16:11:33,744 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 16:11:33,744 - __main__ - INFO -    analysis_reports/analysis_report_7sk2kov2xwx6cbc32phynrifegg6pklmzs7luwcggtzrnlsolxxuyfyd_onion_20260408_161133.html
+2026-04-08 16:11:43,760 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 16:11:43,761 - __main__ - INFO - 
+============================================================
+2026-04-08 16:11:43,761 - __main__ - INFO - 🔍 도메인 분석 시작: suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion
+2026-04-08 16:11:43,761 - __main__ - INFO - ============================================================
+
+2026-04-08 16:11:43,761 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 16:11:51,516 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 16:11:51,516 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 16:11:51,536 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 16:11:51,537 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 16:11:51,575 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 16:11:51,575 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 16:11:51,575 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 16:11:51,575 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 16:11:51,736 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 16:11:51,736 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad_onion_20260408_161151.html
+
+2026-04-08 16:11:51,736 - __main__ - INFO - ============================================================
+2026-04-08 16:11:51,736 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 16:11:51,736 - __main__ - INFO - ============================================================
+2026-04-08 16:11:51,736 - __main__ - INFO - 
+도메인: suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion
+2026-04-08 16:11:51,736 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 16:11:51,736 - __main__ - INFO - 
+점수 분석:
+2026-04-08 16:11:51,736 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 16:11:51,736 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 16:11:51,736 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 16:11:51,736 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 16:11:51,736 - __main__ - INFO -   • Ahmia: ✅ (결과: 4건)
+2026-04-08 16:11:51,736 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 16:11:51,736 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 16:11:51,736 - __main__ - WARNING -   • 주요 유형: forum_indicators
+2026-04-08 16:11:51,736 - __main__ - WARNING -   • 신뢰도: 30.4%
+2026-04-08 16:11:51,736 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 16:11:51,736 - __main__ - INFO -   • 주요: Forum
+2026-04-08 16:11:51,736 - __main__ - INFO -   • 부가: Marketplace Forum Mixed
+2026-04-08 16:11:51,736 - __main__ - INFO -   • 신뢰도: 100.0%
+2026-04-08 16:11:51,736 - __main__ - INFO - 
+============================================================
+
+2026-04-08 16:11:51,736 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 16:11:51,736 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 16:11:51,736 - __main__ - INFO -    analysis_reports/analysis_report_suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad_onion_20260408_161151.html
+2026-04-08 16:12:39,347 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 16:12:39,347 - __main__ - INFO - 
+============================================================
+2026-04-08 16:12:39,347 - __main__ - INFO - 🔍 도메인 분석 시작: guzjgkpodzshso2nohspxijzk5jgoaxzqioa7vzy6qdmwpz3hq4mwfid.onion
+2026-04-08 16:12:39,348 - __main__ - INFO - ============================================================
+
+2026-04-08 16:12:39,348 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 16:12:48,663 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 16:12:48,663 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 16:12:48,676 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 16:12:48,676 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 16:12:48,699 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 16:12:48,699 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 16:12:48,699 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 16:12:48,699 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 16:12:48,879 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 16:12:48,879 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_guzjgkpodzshso2nohspxijzk5jgoaxzqioa7vzy6qdmwpz3hq4mwfid_onion_20260408_161248.html
+
+2026-04-08 16:12:48,879 - __main__ - INFO - ============================================================
+2026-04-08 16:12:48,879 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 16:12:48,879 - __main__ - INFO - ============================================================
+2026-04-08 16:12:48,879 - __main__ - INFO - 
+도메인: guzjgkpodzshso2nohspxijzk5jgoaxzqioa7vzy6qdmwpz3hq4mwfid.onion
+2026-04-08 16:12:48,879 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 16:12:48,879 - __main__ - INFO - 
+점수 분석:
+2026-04-08 16:12:48,879 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 16:12:48,879 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 16:12:48,879 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 16:12:48,879 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 16:12:48,879 - __main__ - INFO -   • Ahmia: ✅ (결과: 1건)
+2026-04-08 16:12:48,879 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 16:12:48,879 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 16:12:48,879 - __main__ - WARNING -   • 주요 유형: drugs_narcotics
+2026-04-08 16:12:48,879 - __main__ - WARNING -   • 신뢰도: 30.5%
+2026-04-08 16:12:48,879 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 16:12:48,879 - __main__ - INFO -   • 주요: Marketplace
+2026-04-08 16:12:48,879 - __main__ - INFO -   • 부가: Product Promotion
+2026-04-08 16:12:48,879 - __main__ - INFO -   • 신뢰도: 28.7%
+2026-04-08 16:12:48,879 - __main__ - INFO - 
+============================================================
+
+2026-04-08 16:12:48,879 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 16:12:48,880 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 16:12:48,880 - __main__ - INFO -    analysis_reports/analysis_report_guzjgkpodzshso2nohspxijzk5jgoaxzqioa7vzy6qdmwpz3hq4mwfid_onion_20260408_161248.html
+2026-04-08 16:13:57,619 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-08 16:13:57,619 - __main__ - INFO - 
+============================================================
+2026-04-08 16:13:57,619 - __main__ - INFO - 🔍 도메인 분석 시작: gd5x24pjoan2pddc2fs6jlmnqbawq562d2qyk6ym4peu5ihzy6gd4jad.onion
+2026-04-08 16:13:57,619 - __main__ - INFO - ============================================================
+
+2026-04-08 16:13:57,619 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-08 16:14:08,934 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-08 16:14:08,934 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-08 16:14:08,944 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-08 16:14:08,944 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-08 16:14:08,963 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-08 16:14:08,963 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-08 16:14:08,963 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-08 16:14:08,963 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-08 16:14:09,141 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-08 16:14:09,141 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_gd5x24pjoan2pddc2fs6jlmnqbawq562d2qyk6ym4peu5ihzy6gd4jad_onion_20260408_161408.html
+
+2026-04-08 16:14:09,141 - __main__ - INFO - ============================================================
+2026-04-08 16:14:09,141 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-08 16:14:09,141 - __main__ - INFO - ============================================================
+2026-04-08 16:14:09,141 - __main__ - INFO - 
+도메인: gd5x24pjoan2pddc2fs6jlmnqbawq562d2qyk6ym4peu5ihzy6gd4jad.onion
+2026-04-08 16:14:09,141 - __main__ - INFO - 신뢰도: 85/100 (높음 ✅)
+2026-04-08 16:14:09,141 - __main__ - INFO - 
+점수 분석:
+2026-04-08 16:14:09,141 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-08 16:14:09,141 - __main__ - INFO -   • 색인 신뢰도:  30/30점
+2026-04-08 16:14:09,141 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-08 16:14:09,141 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-08 16:14:09,141 - __main__ - INFO -   • Ahmia: ✅ (결과: 1건)
+2026-04-08 16:14:09,141 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-08 16:14:09,141 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-08 16:14:09,141 - __main__ - WARNING -   • 주요 유형: dark_market
+2026-04-08 16:14:09,141 - __main__ - WARNING -   • 신뢰도: 15.4%
+2026-04-08 16:14:09,141 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-08 16:14:09,141 - __main__ - INFO -   • 주요: Marketplace
+2026-04-08 16:14:09,141 - __main__ - INFO -   • 부가: Product Promotion
+2026-04-08 16:14:09,141 - __main__ - INFO -   • 신뢰도: 25.1%
+2026-04-08 16:14:09,142 - __main__ - INFO - 
+============================================================
+
+2026-04-08 16:14:09,142 - __main__ - INFO - ✅ 분석 완료
+2026-04-08 16:14:09,142 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-08 16:14:09,142 - __main__ - INFO -    analysis_reports/analysis_report_gd5x24pjoan2pddc2fs6jlmnqbawq562d2qyk6ym4peu5ihzy6gd4jad_onion_20260408_161408.html
+2026-04-10 12:09:31,699 - __main__ - INFO - 🚀 에이전트 초기화: 서버=http://192.168.64.7:5000
+2026-04-10 12:09:31,699 - __main__ - INFO - 
+============================================================
+2026-04-10 12:09:31,699 - __main__ - INFO - 🔍 도메인 분석 시작: bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion
+2026-04-10 12:09:31,699 - __main__ - INFO - ============================================================
+
+2026-04-10 12:09:31,700 - __main__ - INFO - [1/4] 🌐 서버에서 데이터 수집 중...
+2026-04-10 12:09:52,304 - __main__ - INFO -     ✅ 데이터 수집 완료
+2026-04-10 12:09:52,304 - __main__ - INFO - [2/4] 📄 콘텐츠 분석 중...
+2026-04-10 12:09:52,343 - __main__ - INFO -     ✅ 콘텐츠 분석 완료
+2026-04-10 12:09:52,343 - __main__ - INFO - [3/4] 🏷️ 카테고리 분류 중...
+2026-04-10 12:09:52,402 - __main__ - INFO -     ✅ 카테고리 분류 완료
+2026-04-10 12:09:52,402 - __main__ - INFO - [4/4] 📊 신뢰도 점수 계산 중...
+2026-04-10 12:09:52,403 - __main__ - INFO -     ✅ 신뢰도 계산 완료
+2026-04-10 12:09:52,403 - __main__ - INFO - [5/5] 📋 보고서 생성 중...
+2026-04-10 12:09:52,653 - __main__ - INFO -     ✅ 보고서 생성 완료
+2026-04-10 12:09:52,654 - __main__ - INFO -     📁 보고서 위치: analysis_reports/analysis_report_bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd_onion_20260410_120952.html
+
+2026-04-10 12:09:52,654 - __main__ - INFO - ============================================================
+2026-04-10 12:09:52,654 - __main__ - INFO - 📊 분석 결과 요약
+2026-04-10 12:09:52,654 - __main__ - INFO - ============================================================
+2026-04-10 12:09:52,654 - __main__ - INFO - 
+도메인: bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion
+2026-04-10 12:09:52,654 - __main__ - INFO - 신뢰도: 70/100 (높음 ✅)
+2026-04-10 12:09:52,654 - __main__ - INFO - 
+점수 분석:
+2026-04-10 12:09:52,654 - __main__ - INFO -   • 접근성:      40/40점
+2026-04-10 12:09:52,654 - __main__ - INFO -   • 색인 신뢰도:  15/30점
+2026-04-10 12:09:52,654 - __main__ - INFO -   • 콘텐츠:      15/30점
+2026-04-10 12:09:52,654 - __main__ - INFO - 
+📋 검색 색인 정보:
+2026-04-10 12:09:52,654 - __main__ - INFO -   • Ahmia: ❌ (결과: 0건)
+2026-04-10 12:09:52,654 - __main__ - INFO -   • DuckDuckGo: ✅
+2026-04-10 12:09:52,654 - __main__ - WARNING - 
+⚠️ 불법 콘텐츠 탐지:
+2026-04-10 12:09:52,654 - __main__ - WARNING -   • 주요 유형: fraud_scam
+2026-04-10 12:09:52,654 - __main__ - WARNING -   • 신뢰도: 30.1%
+2026-04-10 12:09:52,654 - __main__ - INFO - 
+사이트 카테고리:
+2026-04-10 12:09:52,654 - __main__ - INFO -   • 주요: News
+2026-04-10 12:09:52,654 - __main__ - INFO -   • 부가: Blog
+2026-04-10 12:09:52,654 - __main__ - INFO -   • 신뢰도: 84.8%
+2026-04-10 12:09:52,654 - __main__ - INFO - 
+============================================================
+
+2026-04-10 12:09:52,654 - __main__ - INFO - ✅ 분석 완료
+2026-04-10 12:09:52,654 - __main__ - INFO - 
+📄 보고서 생성 완료:
+2026-04-10 12:09:52,654 - __main__ - INFO -    analysis_reports/analysis_report_bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd_onion_20260410_120952.html
