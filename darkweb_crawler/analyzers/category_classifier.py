@@ -4,8 +4,10 @@
 
 import re
 import logging
+import importlib
 from typing import Dict, List
-from collections import Counter
+
+from utils.html_cleaner import HTMLCleaner
 
 logger = logging.getLogger(__name__)
 
@@ -13,12 +15,69 @@ logger = logging.getLogger(__name__)
 class CategoryClassifier:
     """HTML 콘텐츠를 분석하여 사이트 카테고리 분류"""
     
-    def __init__(self, categories_config: Dict = None):
+    def __init__(self, categories_config: Dict = None, use_bart: bool = True,
+                 bart_model_name: str = 'facebook/bart-large-mnli',
+                 rule_weight: float = 0.65, bart_weight: float = 0.35):
         """
         Args:
             categories_config: 카테고리별 특성 사전
+            use_bart: BART zero-shot 분류 사용 여부
+            bart_model_name: 사용할 BART/zero-shot 모델 이름
+            rule_weight: 규칙 기반 점수 가중치
+            bart_weight: BART 점수 가중치
         """
         self.categories_config = categories_config or self._default_categories()
+        self.use_bart = use_bart
+        self.bart_model_name = bart_model_name
+        self.rule_weight = rule_weight
+        self.bart_weight = bart_weight
+        self._bart_classifier = None
+        self._bart_loaded = False
+        self.bart_chunk_size = 400
+        self.bart_max_chunks = 12
+        self._validate_weights()
+
+    def _validate_weights(self):
+        total = self.rule_weight + self.bart_weight
+        if total <= 0:
+            self.rule_weight = 1.0
+            self.bart_weight = 0.0
+            return
+
+        self.rule_weight = self.rule_weight / total
+        self.bart_weight = self.bart_weight / total
+
+    def _load_bart_classifier(self):
+        """BART zero-shot 분류기 lazy loading"""
+        if self._bart_loaded:
+            return self._bart_classifier
+
+        self._bart_loaded = True
+        logger.info("🔄 BART 분류기 로드 시작...")
+
+        if not self.use_bart:
+            logger.info("BART 분류 비활성화")
+            return None
+
+        try:
+            transformers_module = importlib.import_module('transformers')
+            pipeline = transformers_module.pipeline
+
+            logger.info("🔄 BART 모델 로딩 중...")
+            
+            self._bart_classifier = pipeline(
+                'zero-shot-classification',
+                model=self.bart_model_name,
+                tokenizer=self.bart_model_name,
+                device=-1
+            )
+            logger.info(f"✅ BART 분류기 로드 완료")
+        except Exception as e:
+            self._bart_classifier = None
+            logger.error(f"❌ BART 분류기 로드 실패: {str(e)}")
+            logger.warning(f"   규칙 기반만 사용합니다")
+
+        return self._bart_classifier
     
     def _default_categories(self) -> Dict:
         """기본 카테고리 설정"""
@@ -28,46 +87,40 @@ class CategoryClassifier:
                     'marketplace', 'market', 'shop', 'store', 'vendor', 'seller', 'buyer',
                     'product', 'price', 'cost', 'payment', 'sale', 'buy', 'sell',
                     'item', 'inventory', 'listing', 'transaction', 'deal',
-                    'cart', 'checkout', 'order', 'delivery', '마켓', '상점', '판매'
+                    'cart', 'checkout', 'order', 'delivery', 'shipment',
+                    'bid', 'auction', 'escrow', 'merchant', 'supplier', 'wholesale',
+                    'fulfillment', 'dropship', 'ecommerce', 'commerce', 'trade',
+                    'review', 'rating', 'feedback', 'reputation',
+                    '마켓', '상점', '판매', '구매', '거래', '판매자', '가격'
                 ],
                 'structural_indicators': [
-                    'product.*page', 'cart', 'checkout', 'vendor profile',
-                    'search.*product', 'category.*product'
+                    'product.*page', 'product.*detail', 'cart', 'checkout', 'vendor.*profile',
+                    'seller.*profile', 'search.*product', 'category.*product',
+                    'add.*cart', 'quantity', 'buy.*now', 'add.*to.*cart',
+                    'shipping.*info', 'shipping.*address', 'payment.*method',
+                    'product.*review', 'rating', 'feedback', 'review.*section'
                 ]
             },
-            'forum': {
-                'keywords': [
-                    'forum', 'discussion', 'board', 'thread', 'post', 'member', 'user',
-                    'comment', 'reply', 'topic', 'section', 'sticky', 'pinned',
-                    'moderator', 'admin', 'reputation', 'vote', 'upvote', 'downvote',
-                    'quote', 'message', 'conversation', '포럼', '토론', '댓글'
-                ],
-                'structural_indicators': [
-                    'thread', 'forum.*section', 'post.*reply', 'user.*profile',
-                    'reputation.*system', 'member.*list'
-                ]
-            },
-            'social_network': {
+            'social_communication': {
                 'keywords': [
                     'social', 'network', 'profile', 'friend', 'follower', 'follow',
                     'feed', 'timeline', 'post', 'share', 'like', 'comment', 'user',
-                    'account', 'message', 'chat', 'messenger', 'direct', 'dm',
-                    'community', '소셜', '프로필', '팔로우'
-                ],
-                'structural_indicators': [
-                    'profile.*page', 'user.*feed', 'timeline', 'friend.*request',
-                    'direct.*message', 'messenger'
-                ]
-            },
-            'communication': {
-                'keywords': [
+                    'account', 'community', 'group', 'page', 'wall',
+                    'notification', 'unfollow', 'retweet', 'favorite', 'unfriend',
+                    'photo', 'video', 'story', 'status', 'mood', 'emoji',
                     'communication', 'contact', 'email', 'message', 'chat', 'messenger',
                     'direct', 'dm', 'mail', 'send', 'receive', 'letter', 'envelope',
-                    'talk', 'speak', 'conversation', '통신', '메시지', '채팅'
+                    'talk', 'speak', 'conversation', 'inbox', 'thread',
+                    '소셜', '프로필', '팔로우', '팔로워', '게시물',
+                    '통신', '메시지', '채팅', '대화', '친구'
                 ],
                 'structural_indicators': [
+                    'profile.*page', 'profile.*picture', 'profile.*info',
+                    'user.*feed', 'timeline', 'friend.*request', 'friend.*list',
                     'message.*inbox', 'send.*message', 'contact.*form',
-                    'direct.*message', 'chat.*interface'
+                    'direct.*message', 'chat.*interface', 'chat.*room', 'messenger',
+                    'notification.*bell', 'notification.*center', 'notification.*icon',
+                    'post.*form', 'compose.*message', 'reply.*button'
                 ]
             },
             'blog': {
@@ -75,11 +128,16 @@ class CategoryClassifier:
                     'blog', 'post', 'article', 'author', 'publish', 'date', 'time',
                     'category', 'tag', 'comment', 'archive', 'recent post',
                     'about', 'contact', 'subscribe', 'rss', 'feed',
-                    '블로그', '포스팅', '글', '기사'
+                    'permalink', 'sidebar', 'widget', 'pagination', 'excerpt',
+                    'teaser', 'entry', 'blogger', 'blogger profile',
+                    'posted.*by', 'published', 'updated', 'comments.*on',
+                    '블로그', '포스팅', '글', '기사', '작가', '댓글'
                 ],
                 'structural_indicators': [
-                    'blog.*post', 'article.*content', 'post.*date', 'sidebar.*recent',
-                    'archive'
+                    'blog.*post', 'article.*content', 'post.*date', 'post.*header',
+                    'sidebar.*recent', 'archive', 'category.*list',
+                    'post.*footer', 'comment.*section', 'comment.*form',
+                    'tags', 'related.*post', 'previous.*next'
                 ]
             },
             'news': {
@@ -87,23 +145,17 @@ class CategoryClassifier:
                     'news', 'article', 'breaking', 'headline', 'update', 'report',
                     'journalist', 'press', 'media', 'publication', 'story',
                     'date', 'time', 'published', 'category', 'section',
-                    '뉴스', '기사', '보도'
+                    'byline', 'dateline', 'correspondent', 'editor', 'columnist',
+                    'opinion', 'editorial', 'press.*release', 'wire.*service',
+                    'news.*feed', 'latest.*news', 'top.*stories',
+                    '뉴스', '기사', '보도', '기자', '뉴스레터'
                 ],
-                'structural_indicators': [
+               'structural_indicators': [
                     'news.*section', 'headline', 'article.*link', 'publish.*date',
-                    'breaking.*news'
-                ]
-            },
-            'personal_blog': {
-                'keywords': [
-                    'personal', 'blog', 'my', 'about me', 'bio', 'biography',
-                    'page', 'portfolio', 'project', 'work', 'experience', 'skill',
-                    'resume', 'cv', 'contact', 'social', 'follow',
-                    '개인', '블로그', '포트폴리오'
-                ],
-                'structural_indicators': [
-                    'about.*page', 'personal.*bio', 'portfolio.*showcase',
-                    'project.*list', 'contact.*info'
+                    'breaking.*news', 'latest.*news', 'top.*stories',
+                    'news.*item', 'story.*card', 'article.*header',
+                    'byline', 'journalist.*info', 'related.*stories',
+                    'news.*feed'
                 ]
             },
             'product_promotion': {
@@ -111,11 +163,18 @@ class CategoryClassifier:
                     'product', 'service', 'software', 'tool', 'application', 'app',
                     'feature', 'benefit', 'price', 'plan', 'buy', 'download',
                     'free', 'trial', 'license', 'subscription', 'version',
-                    '제품', '서비스', '구독'
+                    'spec', 'specification', 'compare', 'review', 'rating',
+                    'testimonial', 'case.*study', 'whitepaper', 'datasheet',
+                    'demo', 'screenshot', 'video.*demo', 'tour',
+                    'pricing.*model', 'tier', 'enterprise', 'startup',
+                    '제품', '서비스', '구독', '기능', '가격'
                 ],
                 'structural_indicators': [
-                    'product.*feature', 'pricing.*plan', 'download.*link',
-                    'feature.*list', 'benefits'
+                    'product.*feature', 'feature.*list', 'pricing.*plan',
+                    'pricing.*table', 'download.*link', 'get.*started',
+                    'download.*button', 'try.*free', 'free.*trial',
+                    'compare.*plan', 'spec.*sheet', 'datasheet',
+                    'testimonial', 'customer.*quote', 'case.*study'
                 ]
             },
             'documentation': {
@@ -123,22 +182,18 @@ class CategoryClassifier:
                     'documentation', 'guide', 'tutorial', 'manual', 'help', 'faq',
                     'instruction', 'api', 'reference', 'developer', 'code',
                     'example', 'version', 'changelog', 'readme', 'wiki',
-                    '문서', '가이드', 'API', '튜토리얼'
+                    'install', 'deployment', 'configuration', 'setup',
+                    'troubleshoot', 'debug', 'error', 'issue', 'problem',
+                    'release.*note', 'version.*history', 'api.*doc',
+                    'class', 'method', 'parameter', 'return.*value',
+                    '문서', '가이드', 'API', '튜토리얼', '설치'
                 ],
                 'structural_indicators': [
-                    'api.*reference', 'code.*example', 'getting.*started',
-                    'faq', 'help.*section', 'wiki'
-                ]
-            },
-            'marketplace_forum_mixed': {
-                # 마켓과 포럼 특성 동시 보유
-                'keywords': [
-                    'marketplace', 'forum', 'market', 'board', 'discussion',
-                    'vendor', 'thread', 'product', 'post', 'seller', 'comment',
-                    'community', 'message', 'reputation', '마켓', '포럼'
-                ],
-                'structural_indicators': [
-                    'marketplace.*discussion', 'vendor.*forum', 'product.*discussion'
+                    'api.*reference', 'api.*doc', 'code.*example', 'getting.*started',
+                    'faq', 'help.*section', 'wiki', 'documentation.*index',
+                    'install.*guide', 'deployment.*guide', 'troubleshoot.*guide',
+                    'function.*reference', 'class.*reference', 'method.*list',
+                    'code.*sample', 'tutorial.*section', 'quick.*start'
                 ]
             },
             'authentication_required': {
@@ -147,11 +202,18 @@ class CategoryClassifier:
                     'login', 'sign in', 'sign up', 'register', 'password', 'username',
                     'email', 'authentication', 'auth', 'member', 'account',
                     'authorize', 'credential', 'user', 'access', 'restricted',
-                    '로그인', '비밀번호', '회원가입', '사용자명', '인증'
+                    'signin', 'signup', 'logon', 'log on', 'log in',
+                    'authenticate', 'verify', 'confirm', 'private', 'members.*only',
+                    'admin.*login', 'admin.*access', 'session', 'token',
+                    'two.*factor', '2fa', 'otp', 'verify.*identity',
+                    '로그인', '비밀번호', '회원가입', '사용자명', '인증', '로그온'
                 ],
                 'structural_indicators': [
-                    'login.*form', 'password.*field', 'username.*field',
-                    'submit.*button', 'remember.*me', 'forgot.*password'
+                    'login.*form', 'login.*page', 'password.*field', 'username.*field',
+                    'email.*field', 'submit.*button', 'remember.*me', 'forgot.*password',
+                    'login.*box', 'credentials', 'authenticate', 'verify.*identity',
+                    'access.*denied', 'restricted.*access', 'members.*only',
+                    'password.*reset', 'password.*recovery', 'session.*expired'
                 ]
             }
         }
@@ -176,7 +238,7 @@ class CategoryClassifier:
                 'reasoning': str
             }
         """
-        text = self._clean_html(html)
+        text = HTMLCleaner.clean(html).lower()
         
         if not text:
             logger.warning("분석할 텍스트가 없음")
@@ -221,14 +283,19 @@ class CategoryClassifier:
         
         # 3단계: 일반 분류 (로그인 페이지 아닌 경우)
         category_scores = {}
+        rule_scores_dict = {}  # 규칙 기반 점수 저장 (재계산 방지)
+        bart_scores = self._calculate_bart_scores(text)
         
         # 각 카테고리별 스코어 계산
         for category, config in self.categories_config.items():
-            score = self._calculate_category_score(text, config)
-            category_scores[category] = score
+            rule_score = self._calculate_category_score(text, config)
+            rule_scores_dict[category] = rule_score  # 규칙 점수 저장
+            bart_score = bart_scores.get(category, 0.0)
+            score = (rule_score * self.rule_weight) + (bart_score * self.bart_weight)
+            category_scores[category] = min(score, 1.0)
             
             if verbose and score > 0:
-                logger.info(f"  [{category}] 점수: {score:.2f}")
+                logger.info(f"  [{category}] 규칙={rule_score:.2f}, BART={bart_score:.2f}, 종합={score:.2f}")
         
         # 상위 2개 카테고리 선택
         sorted_categories = sorted(
@@ -262,33 +329,121 @@ class CategoryClassifier:
             'secondary_category': secondary_category,
             'confidence': confidence,
             'category_scores': category_scores,
-            'reasoning': reasoning
+            'reasoning': reasoning,
+            'rule_scores': rule_scores_dict,  # 반복문에서 미리 계산한 값 사용 (성능 개선)
+            'bart_scores': bart_scores,
+            'bart_model_used': self._bart_classifier is not None
         }
         
         if verbose:
             logger.info(f"분류 결과: {primary_category} (신뢰도: {confidence:.2f})")
         
         return result
-    
-    def _clean_html(self, html: str) -> str:
-        """HTML 정제"""
-        if not html:
-            return ""
-        
-        text = html
-        
-        # 스크립트, 스타일 제거
-        text = re.sub(r'<script[^>]*>.*?</script>', ' ', text, flags=re.IGNORECASE | re.DOTALL)
-        text = re.sub(r'<style[^>]*>.*?</style>', ' ', text, flags=re.IGNORECASE | re.DOTALL)
-        
-        # HTML 태그 제거
-        text = re.sub(r'<[^>]+>', ' ', text)
-        
-        # 여러 공백 정리
-        text = re.sub(r'\s+', ' ', text)
-        text = text.strip()
-        
-        return text.lower()
+
+    def _calculate_bart_scores(self, text: str) -> Dict[str, float]:
+        """BART zero-shot으로 카테고리별 점수 계산"""
+        if not self.use_bart:
+            return {}
+
+        classifier = self._load_bart_classifier()
+        if not classifier:
+            return {}
+
+        text_chunks = self._split_text_for_bart(text)
+        if not text_chunks:
+            return {}
+
+        label_map = {
+            'marketplace': 'vendor shops, product listings, trade, commerce',
+            'social_communication': 'social media, messaging, chat, profiles, networking',
+            'blog': 'articles, blog posts, personal writing, essays',
+            'news': 'news reports, journalism, current events, headlines',
+            'product_promotion': 'brand marketing, advertising, product features, showcases',
+            'documentation': 'technical manuals, API guides, reference docs, wikis',
+            'authentication_required': 'login page, password gate, registration form, restricted access'
+        }
+
+        candidate_labels = [label_map[k] for k in self.categories_config.keys() if k in label_map]
+        reverse_label = {v: k for k, v in label_map.items()}
+        score_buckets = {category: [] for category in self.categories_config.keys()}
+
+        try:
+            for chunk in text_chunks:
+                result = classifier(
+                    chunk,
+                    candidate_labels,
+                    multi_label=True,
+                    hypothesis_template='This page is about {}.',
+                    max_length=512,  # BART 토큰 길이 제한
+                    truncation=True  # 초과 토큰 자동 절단
+                )
+
+                for label, score in zip(result.get('labels', []), result.get('scores', [])):
+                    category = reverse_label.get(label)
+                    if category:
+                        score_buckets[category].append(float(score))
+
+            bart_scores = {}
+            for category, values in score_buckets.items():
+                if not values:
+                    bart_scores[category] = 0.0
+                    continue
+
+                max_score = max(values)
+                mean_score = sum(values) / len(values)
+                bart_scores[category] = min((max_score * 0.7) + (mean_score * 0.3), 1.0)
+
+            return bart_scores
+
+        except Exception as e:
+            logger.warning(f"BART 분류 실패 - 규칙 기반만 사용: {str(e)}")
+            return {}
+
+    def _split_text_for_bart(self, text: str) -> List[str]:
+        """문장 경계 기반으로 BART 입력 청크 생성"""
+        if not text:
+            return []
+
+        sentences = re.split(r'(?<=[.!?。！？])\s+|\n+', text)
+        sentences = [s.strip() for s in sentences if s and s.strip()]
+
+        if not sentences:
+            trimmed = text[:self.bart_chunk_size].strip()
+            return [trimmed] if trimmed else []
+
+        chunks = []
+        current_chunk = []
+        current_len = 0
+
+        for sentence in sentences:
+            sentence_len = len(sentence)
+
+            if sentence_len > self.bart_chunk_size:
+                if current_chunk:
+                    chunks.append(' '.join(current_chunk))
+                    current_chunk = []
+                    current_len = 0
+
+                for i in range(0, sentence_len, self.bart_chunk_size):
+                    piece = sentence[i:i + self.bart_chunk_size].strip()
+                    if piece:
+                        chunks.append(piece)
+                continue
+
+            if current_len + sentence_len + 1 <= self.bart_chunk_size:
+                current_chunk.append(sentence)
+                current_len += sentence_len + 1
+            else:
+                if current_chunk:
+                    chunks.append(' '.join(current_chunk))
+                current_chunk = [sentence]
+                current_len = sentence_len
+
+        if current_chunk:
+            chunks.append(' '.join(current_chunk))
+
+        # 모든 청크 반환 (이전의 12개 제한 제거) → 더 정확한 분석
+        return chunks
     
     def _detect_login_page(self, text: str) -> float:
         """
@@ -333,7 +488,6 @@ class CategoryClassifier:
         title_match = re.search(r'<title[^>]*>(.*?)</title>', html, re.IGNORECASE | re.DOTALL)
         if title_match:
             title = title_match.group(1).lower()
-            logger.debug(f"   페이지 제목: {title}")
             
             # 마켓 관련 키워드
             if any(kw in title for kw in ['market', 'shop', 'store', 'vendor', '마켓']):
@@ -349,7 +503,6 @@ class CategoryClassifier:
         meta_match = re.search(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']', html, re.IGNORECASE | re.DOTALL)
         if meta_match:
             meta = meta_match.group(1).lower()
-            logger.debug(f"   메타 설명: {meta}")
             
             if any(kw in meta for kw in ['marketplace', 'trading', 'vendor', 'product', '마켓']):
                 return 'marketplace'
@@ -360,7 +513,7 @@ class CategoryClassifier:
         
         # 페이지 본문의 명시적 설명 텍스트에서 추론
         # (로그인 폼 근처에 있을 가능성 있음)
-        text = self._clean_html(html)
+        text = HTMLCleaner.clean(html).lower()
         
         # 페이지 초반 부분에서만 검색 (앞 2000글자)
         preview_text = text[:2000]

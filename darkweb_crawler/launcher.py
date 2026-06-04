@@ -6,6 +6,8 @@ CLI 모드 또는 웹 모드 선택 가능
 
 import sys
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 def show_menu():
     print("""
@@ -19,7 +21,7 @@ def show_menu():
 
 2️⃣  웹 모드 (브라우저)
     사용: python launcher.py 2
-    접속: http://localhost:5000
+    접속: http://localhost:8080
 
 3️⃣  도움말
 
@@ -30,23 +32,23 @@ def show_menu():
 def run_cli_mode():
     """CLI 모드 실행"""
     print("\n🔄 CLI 모드 시작...\n")
-    
+
     if len(sys.argv) > 2:
         domain = sys.argv[2]
         print(f"도메인 분석: {domain}\n")
-        os.system(f"python agent.py -d {domain}")
+        os.system(f"{sys.executable} agent.py -d {domain}")
     else:
         print("도메인을 지정해주세요")
-        print("사용: python launcher.py 1 example.onion\n")
+        print("사용: python3 launcher.py 1 example.onion\n")
 
 def run_web_mode():
     """웹 모드 실행"""
     print("\n🌐 웹 모드 시작...\n")
     print("웹 브라우저에서 다음 주소로 접속하세요:")
-    print("📍 http://localhost:5000\n")
+    print("📍 http://localhost:8080\n")
     print("Ctrl+C를 눌러 종료할 수 있습니다\n")
-    
-    os.system("python web/app.py")
+
+    os.system(f"{sys.executable} web/app.py")
 
 def show_help():
     """도움말 표시"""
@@ -65,18 +67,18 @@ def show_help():
    ──────────────────
    python launcher.py 2
    
-   - 로컬 웹 서버 실행 (http://localhost:5000)
+   - 로컬 웹 서버 실행 (http://localhost:8080)
    - 여러 도메인 순차적으로 분석 가능
    - 웹 UI에서 결과 확인
    - 보고서 다운로드 가능
 
 📋 분석 결과 정보
 ─────────────────
-- 신뢰도 점수 (0-100)
+- AI 사이트 분석 (목적·요약·위험도)
 - 접근성 상태
 - 색인 정보 (Ahmia, DuckDuckGo)
-- 사이트 카테고리 분류
-- 콘텐츠 분석
+- CoDA 범죄 카테고리 분류
+- 사이트 유형 분류
 - 추출된 상대 경로 목록
 
 🛑 종료 방법
@@ -111,7 +113,7 @@ def main():
                     else:
                         domain = input("분석할 도메인을 입력하세요: ").strip()
                         if domain:
-                            os.system(f"python agent.py -d {domain}")
+                            os.system(f"{sys.executable} agent.py -d {domain}")
                         else:
                             print("도메인을 입력해주세요\n")
                 

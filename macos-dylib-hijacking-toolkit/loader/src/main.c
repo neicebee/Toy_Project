@@ -5,14 +5,161 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <unistd.h>
 
 #define SCANNER_OUTPUT_PATH "payload/report.txt"
 #define MY_DYLIB_TEMPLATE_PATH "payload/template.c"
+#define PAYLOAD_SUCCESS_HTML "payload/success.html"
 #define PAYLOAD_COMMAND_DEFAULT "open -a Calculator"  // 기본값
-#define PAYLOAD_COMMAND_CHROME "open -a 'Google Chrome' 'https://i.namu.wiki/i/7-eaeisVmZ_joiDT9HAtTglopaqOmLAzjoZ8Q0wBc9Q6kWTtkmz2Hfqj_NoJppVor3WmCGq7Vrxg3u0HuPwrnF6Ji734kcPLtYlmD_jF23mdh7C1ZgjZVuj4GQohrVIjh5vWQwsHIRjlK-nrCVCd-g.webp'"
 
 // Forward declaration
 static int get_user_choice(const char *prompt, int min, int max);
+
+/**
+ * payload/success.html 파일 생성
+ * @return 성공 시 true
+ */
+static bool generate_success_html(void) {
+    FILE *fp = fopen(PAYLOAD_SUCCESS_HTML, "w");
+    if (!fp) {
+        fprintf(stderr, "[ERROR] success.html을 쓸 수 없음: %s\n", PAYLOAD_SUCCESS_HTML);
+        return false;
+    }
+    
+    const char *html_content = "<!DOCTYPE html>\n"
+        "<html lang=\"ko\">\n"
+        "<head>\n"
+        "    <meta charset=\"UTF-8\">\n"
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+        "    <title>Dylib 주입 성공</title>\n"
+        "    <style>\n"
+        "        * { margin: 0; padding: 0; box-sizing: border-box; }\n"
+        "        body {\n"
+        "            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n"
+        "            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n"
+        "            min-height: 100vh;\n"
+        "            display: flex;\n"
+        "            align-items: center;\n"
+        "            justify-content: center;\n"
+        "        }\n"
+        "        .container {\n"
+        "            background: white;\n"
+        "            border-radius: 20px;\n"
+        "            box-shadow: 0 20px 60px rgba(0,0,0,0.3);\n"
+        "            padding: 60px 40px;\n"
+        "            text-align: center;\n"
+        "            max-width: 600px;\n"
+        "            animation: slideUp 0.6s ease-out;\n"
+        "        }\n"
+        "        @keyframes slideUp {\n"
+        "            from { opacity: 0; transform: translateY(30px); }\n"
+        "            to { opacity: 1; transform: translateY(0); }\n"
+        "        }\n"
+        "        .checkmark {\n"
+        "            width: 80px;\n"
+        "            height: 80px;\n"
+        "            border-radius: 50%;\n"
+        "            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n"
+        "            margin: 0 auto 30px;\n"
+        "            display: flex;\n"
+        "            align-items: center;\n"
+        "            justify-content: center;\n"
+        "            animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);\n"
+        "        }\n"
+        "        @keyframes popIn {\n"
+        "            0% { transform: scale(0); }\n"
+        "            100% { transform: scale(1); }\n"
+        "        }\n"
+        "        .checkmark svg {\n"
+        "            width: 50px;\n"
+        "            height: 50px;\n"
+        "            stroke: white;\n"
+        "            stroke-width: 3;\n"
+        "            fill: none;\n"
+        "            stroke-linecap: round;\n"
+        "            animation: checkAnimation 0.8s ease-out 0.4s backwards;\n"
+        "        }\n"
+        "        @keyframes checkAnimation {\n"
+        "            0% {\n"
+        "                stroke-dasharray: 50;\n"
+        "                stroke-dashoffset: 50;\n"
+        "            }\n"
+        "            100% {\n"
+        "                stroke-dasharray: 50;\n"
+        "                stroke-dashoffset: 0;\n"
+        "            }\n"
+        "        }\n"
+        "        h1 {\n"
+        "            color: #333;\n"
+        "            font-size: 2.5em;\n"
+        "            margin-bottom: 15px;\n"
+        "            font-weight: 700;\n"
+        "        }\n"
+        "        .subtitle {\n"
+        "            color: #666;\n"
+        "            font-size: 1.1em;\n"
+        "            margin-bottom: 30px;\n"
+        "            line-height: 1.6;\n"
+        "        }\n"
+        "        .details {\n"
+        "            background: #f5f5f5;\n"
+        "            border-radius: 10px;\n"
+        "            padding: 20px;\n"
+        "            margin: 30px 0;\n"
+        "            text-align: left;\n"
+        "            font-size: 0.95em;\n"
+        "        }\n"
+        "        .details p {\n"
+        "            margin: 10px 0;\n"
+        "            color: #555;\n"
+        "        }\n"
+        "        .label {\n"
+        "            color: #667eea;\n"
+        "            font-weight: 600;\n"
+        "        }\n"
+        "        .status {\n"
+        "            color: #22c55e;\n"
+        "            font-weight: 600;\n"
+        "        }\n"
+        "        .warning {\n"
+        "            background: #fef3c7;\n"
+        "            border-left: 4px solid #f59e0b;\n"
+        "            padding: 15px;\n"
+        "            border-radius: 5px;\n"
+        "            margin-top: 20px;\n"
+        "            text-align: left;\n"
+        "            color: #92400e;\n"
+        "            font-size: 0.9em;\n"
+        "        }\n"
+        "    </style>\n"
+        "</head>\n"
+        "<body>\n"
+        "    <div class=\"container\">\n"
+        "        <div class=\"checkmark\">\n"
+        "            <svg viewBox=\"0 0 24 24\">\n"
+        "                <polyline points=\"20 6 9 17 4 12\"></polyline>\n"
+        "            </svg>\n"
+        "        </div>\n"
+        "        <h1>✓ Dylib 주입 성공</h1>\n"
+        "        <div class=\"subtitle\">\n"
+        "            <p>악의적인 dylib이 대상 프로세스에 성공적으로 주입되었습니다.</p>\n"
+        "        </div>\n"
+        "        <div class=\"details\">\n"
+        "            <p><span class=\"label\">✓ 상태:</span> <span class=\"status\">주입 완료</span></p>\n"
+        "            <p><span class=\"label\">📍 위치:</span> ./payload/</p>\n"
+        "            <p><span class=\"label\">🔧 다음 단계:</span> 대상 애플리케이션을 실행하면 주입된 dylib이 로드됩니다.</p>\n"
+        "        </div>\n"
+        "        <div class=\"warning\">\n"
+        "            <strong>⚠️ 주의:</strong> 이 기술은 교육 및 보안 연구 목적으로만 사용해야 합니다.\n"
+        "        </div>\n"
+        "    </div>\n"
+        "</body>\n"
+        "</html>\n";
+    
+    fputs(html_content, fp);
+    fclose(fp);
+    return true;
+}
 
 /**
  * 사용자 입력으로 Payload 명령 선택
@@ -20,18 +167,32 @@ static int get_user_choice(const char *prompt, int min, int max);
 static const char* get_payload_command(void) {
     printf("\n[*] Payload 명령 선택:\n");
     printf("  1) Calculator 열기 (기본값)\n");
-    printf("  2) Chrome에서 이미지 열기\n");
+    printf("  2) Chrome에서 성공 페이지 열기\n");
     printf("  3) 커스텀 명령 입력\n");
     
     int choice = get_user_choice("선택", 1, 3);
     
     static char custom_cmd[1024];
+    static char chrome_cmd[512];
     
     switch (choice) {
         case 1:
             return PAYLOAD_COMMAND_DEFAULT;
         case 2:
-            return PAYLOAD_COMMAND_CHROME;
+            // HTML 파일 생성
+            if (!generate_success_html()) {
+                fprintf(stderr, "[WARNING] success.html 생성 실패, 기본값 사용\n");
+                return PAYLOAD_COMMAND_DEFAULT;
+            }
+            // Chrome에서 열 명령 생성
+            char cwd[1024];
+            if (getcwd(cwd, sizeof(cwd)) == NULL) {
+                fprintf(stderr, "[WARNING] 현재 경로를 얻을 수 없음\n");
+                return PAYLOAD_COMMAND_DEFAULT;
+            }
+            snprintf(chrome_cmd, sizeof(chrome_cmd), 
+                     "open -a 'Google Chrome' 'file://%s/%s'", cwd, PAYLOAD_SUCCESS_HTML);
+            return chrome_cmd;
         case 3:
             printf("커스텀 명령 입력 (한 줄, 최대 1000자): ");
             fflush(stdout);

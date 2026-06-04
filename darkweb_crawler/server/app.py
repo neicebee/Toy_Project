@@ -41,6 +41,22 @@ from concealment_validator import ConcealmentValidator
 from duckduckgo_client import DuckDuckGoClient
 from utils.forum_classifier import ForumClassifier
 
+# CSAM 및 즉시 차단 키워드 (HTML 수집 후 즉시 검사)
+_CSAM_KEYWORDS = [
+    'child porn', 'cp ', ' cp,', 'childporn', 'child sex',
+    'lolita', 'loli ', 'lolicon', 'shota',
+    'pedo', 'pedophil', 'pedofil',
+    'minor sex', 'underage sex', 'underage porn',
+    'jailbait', 'preteen', 'pre-teen',
+    'kiddie', 'toddler sex',
+    '아동 포르노', '아동음란', '아동성착취', '미성년자 성',
+]
+
+def _is_csam(html: str) -> bool:
+    """HTML에서 CSAM 키워드 감지 시 True 반환"""
+    text = html.lower()
+    return any(kw in text for kw in _CSAM_KEYWORDS)
+
 # 로깅 설정
 logging.basicConfig(
     level=getattr(logging, LOG_LEVEL),
@@ -68,7 +84,11 @@ def init_validators():
     
     logger.info("검증기 초기화 중...")
     
-    accessibility_validator = SafeAccessibilityValidator()
+    accessibility_validator = SafeAccessibilityValidator(
+        tor_host=TOR_SOCKS5_HOST,
+        tor_port=TOR_SOCKS5_PORT,
+        timeout=REQUEST_TIMEOUT
+    )
     indexing_validator = IndexingValidator()
     concealment_validator = ConcealmentValidator()
     duckduckgo_client = DuckDuckGoClient()
@@ -561,31 +581,34 @@ def analyze_domain():
                 analysis_result['analysis_warning'] = "DuckDuckGo 검색 결과는 있으나 서버에서 직접 접근할 수 없어 전체 분석이 제한될 수 있습니다."
 
         
-        # 3. HTML 수집 (상태코드 0이면 건너뜀)
+        # 3. HTML 수집 (curl 결과 무관하게 항상 시도, CSAM 감지 시 즉시 차단)
         logger.info(f"   [3/3] HTML 수집 중...")
-        
+
         status_code = analysis_result['accessibility']['status_code']
         extracted_urls_from_target = []
-        
-        # ⛔ 상태코드 0이면 HTML 수집 스킵
+
         if status_code == 0:
-            logger.warning(f"   ⚠️ HTML 수집 건너뜀 (도메인 접근 불가: 상태코드 0)")
-            analysis_result['html_collected'] = False
-            analysis_result['analysis_warning'] = "도메인에 접근할 수 없어 HTML 분석을 수행하지 않았습니다."
-            extracted_urls_from_target = []
-        else:
-            html_content = get_html_content_via_tor(domain)
-            
-            # 수집된 HTML 처리
-            if html_content:
+            logger.info(f"   ℹ️ curl 접근 불가 (상태코드 0) - requests로 HTML 수집 재시도")
+
+        html_content = get_html_content_via_tor(domain)
+
+        if html_content:
+            # CSAM 즉시 차단
+            if _is_csam(html_content):
+                logger.error(f"   🚫 CSAM 콘텐츠 감지 - HTML 수집 차단: {domain}")
+                audit_log('CSAM_BLOCKED', f"CSAM 감지로 수집 차단: {domain}")
+                analysis_result['html_collected'] = False
+                analysis_result['analysis_warning'] = "CSAM 콘텐츠 감지로 분석이 차단되었습니다."
+            else:
                 analysis_result['html_content'] = html_content
                 analysis_result['html_collected'] = True
                 analysis_result['html_size'] = len(html_content)
                 logger.info(f"   ✅ HTML 수집 완료: {len(html_content)} bytes")
-                extracted_urls_from_target = []  # 배치 처리 제거로 URL 추출 안 함
-            else:
-                logger.warning(f"   ⚠️ HTML 수집 실패")
-                extracted_urls_from_target = []
+        else:
+            logger.warning(f"   ⚠️ HTML 수집 실패")
+            analysis_result['html_collected'] = False
+            if status_code == 0:
+                analysis_result['analysis_warning'] = "도메인에 접근할 수 없어 HTML 분석을 수행하지 않았습니다."
         
         # 최종 URL 목록
         analysis_result['indexing']['extracted_urls'] = extracted_urls_from_target

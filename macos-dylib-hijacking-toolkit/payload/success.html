@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylib 주입 성공</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 600px;
+            animation: slideUp 0.6s ease-out;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+        .checkmark svg {
+            width: 50px;
+            height: 50px;
+            stroke: white;
+            stroke-width: 3;
+            fill: none;
+            stroke-linecap: round;
+            animation: checkAnimation 0.8s ease-out 0.4s backwards;
+        }
+        @keyframes checkAnimation {
+            0% {
+                stroke-dasharray: 50;
+                stroke-dashoffset: 50;
+            }
+            100% {
+                stroke-dasharray: 50;
+                stroke-dashoffset: 0;
+            }
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .details {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        .details p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .label {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .status {
+            color: #22c55e;
+            font-weight: 600;
+        }
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: left;
+            color: #92400e;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkmark">
+            <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        <h1>✓ Dylib 주입 성공</h1>
+        <div class="subtitle">
+            <p>악의적인 dylib이 대상 프로세스에 성공적으로 주입되었습니다.</p>
+        </div>
+        <div class="details">
+            <p><span class="label">✓ 상태:</span> <span class="status">주입 완료</span></p>
+            <p><span class="label">📍 위치:</span> ./payload/</p>
+            <p><span class="label">🔧 다음 단계:</span> 대상 애플리케이션을 실행하면 주입된 dylib이 로드됩니다.</p>
+        </div>
+        <div class="warning">
+            <strong>⚠️ 주의:</strong> 이 기술은 교육 및 보안 연구 목적으로만 사용해야 합니다.
+        </div>
+    </div>
+</body>
+</html>

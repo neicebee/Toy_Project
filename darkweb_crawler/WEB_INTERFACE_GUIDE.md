@@ -8,14 +8,13 @@ Darkweb Crawler가 웹 기반 UI로 크게 개선되었습니다!
 
 ```bash
 # 1. 프로젝트 디렉토리로 이동
-cd /Users/f1r3_r41n/Desktop/Toy_Project/darkweb_crawler
+cd darkweb_crawler
 
 # 2. 웹 서버 시작
-python launcher.py 2
-# 또는 직접 실행: python web/app.py
+python3 launcher.py 2
 
 # 3. 브라우저 열기
-# http://localhost:5000
+# http://localhost:8080
 ```
 
 ### CLI 모드 (기존 방식)

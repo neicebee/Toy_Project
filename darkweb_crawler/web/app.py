@@ -10,6 +10,9 @@ from pathlib import Path
 import json
 import logging
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 # 부모 디렉토리 경로 추가
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -214,12 +217,12 @@ def server_error(error):
 
 if __name__ == '__main__':
     logger.info("🌐 Darkweb Crawler 웹 서버 시작")
-    logger.info("📍 http://localhost:5000 에서 접속 가능합니다")
-    
+    logger.info("📍 http://localhost:8080 에서 접속 가능합니다")
+
     # 개발 모드에서 실행
     app.run(
         host='127.0.0.1',
-        port=5000,
+        port=8080,
         debug=True,
         use_reloader=False  # Agent 초기화 중복 방지
     )
