@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="my_boop",
-    version="1.4.1",
+    version="1.4.0",
     description="test my boop",
     author="soso123",
     author_email="f1r3_r41n@hansung.ac.kr",
