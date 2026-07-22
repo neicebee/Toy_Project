@@ -28,18 +28,7 @@ static char *normalize_path(const char *path) {
 }
 
 /* ------------------------------------------------------------
- * 동적 배열(path vector) 헬퍼
- * ------------------------------------------------------------ */
-static void pathvec_push(char ***vec, size_t *count, size_t *cap, const char *path) {
-    if (*count >= *cap) {
-        *cap = (*cap == 0) ? 8 : *cap * 2;
-        *vec = realloc(*vec, *cap * sizeof(char *));
-    }
-    (*vec)[(*count)++] = strdup(path);
-}
-
-/* ------------------------------------------------------------
- * VulnerableTarget 생성/해제 (단일 정의)
+ * VulnerableTarget 생성/해제
  * ------------------------------------------------------------ */
 static VulnerableTarget *target_new(const char *binary_path) {
     VulnerableTarget *t = calloc(1, sizeof(VulnerableTarget));
@@ -92,6 +81,26 @@ static void parse_and_push_paths(const char *detail_str,
 }
 
 /* ------------------------------------------------------------
+ * 타겟 최종 확정 처리
+ * ------------------------------------------------------------ */
+static void finalize_target(VulnerableTarget *cur, const char *rpath_buf, const char *weak_buf, ParsedResults *res) {
+    if (!cur) return;
+
+    if (cur->vuln_type != VULN_NONE) {
+        if (rpath_buf && rpath_buf[0]) {
+            parse_and_push_paths(rpath_buf, &cur->rpath_vulns, &cur->rpath_count, &cur->rpath_cap);
+        }
+        if (weak_buf && weak_buf[0]) {
+            parse_and_push_paths(weak_buf, &cur->weak_dylib_vulns, &cur->weak_dylib_count, &cur->weak_dylib_cap);
+        }
+        results_ensure_cap(res);
+        res->targets[res->target_count++] = cur;
+    } else {
+        target_free(cur);
+    }
+}
+
+/* ------------------------------------------------------------
  * 메인 파서
  * ------------------------------------------------------------ */
 ParsedResults *parse_scanner_output(const char *output_file) {
@@ -107,99 +116,88 @@ ParsedResults *parse_scanner_output(const char *output_file) {
 
     char line[MAX_LINE_LENGTH];
     VulnerableTarget *cur = NULL;
-    char detail_buf[8192] = "";
-    bool in_detail = false;
-    VulnerabilityType pending_type = VULN_NONE;
+    
+    char rpath_buf[8192] = "";
+    char weak_buf[8192] = "";
+    int detail_line_count = 0;
 
     while (fgets(line, sizeof(line), fp)) {
         size_t len = strlen(line);
         if (len && line[len - 1] == '\n') line[len - 1] = '\0';
 
-        /* 1) 새 바이너리 시작 */
+        /* 0) 구분선(━, ═), 문제 타입 및 완료 푸터 무시 */
+        if (strstr(line, "━") || strstr(line, "═") || strstr(line, "문제 타입:") || strstr(line, "스캔 완료")) {
+            detail_line_count = 0; // 구분선이나 헤더를 만나면 상세 경로 수집 중단
+            continue;
+        }
+
+        /* 1) 새 바이너리 시작 지점 */
         if (strstr(line, "바이너리:") == line) {
-            if (cur && cur->vuln_type != VULN_NONE) {
-                results_ensure_cap(res);
-                res->targets[res->target_count++] = cur;
-            } else if (cur) {
-                target_free(cur);
+            if (cur) {
+                finalize_target(cur, rpath_buf, weak_buf, res);
             }
+            
             char *p = strchr(line, ':');
             if (p) {
                 p++; while (isspace((unsigned char)*p)) p++;
                 cur = target_new(p);
             }
-            in_detail = false;
-            memset(line, 0, sizeof(line)); /* detail_buf 대신 line 재사용 안 함 */
+            rpath_buf[0] = '\0';
+            weak_buf[0] = '\0';
+            detail_line_count = 0;
             continue;
         }
 
         if (!cur) continue;
 
-        /* 문제 타입 감지 */
-        if (strstr(line, "문제 타입:") && strstr(line, "취약점")) {
+        /* 2) 문제명 감지 */
+        if (strstr(line, "문제명:")) {
             if (strstr(line, "RPATH")) cur->vuln_type |= VULN_RPATH;
-            else if (strstr(line, "Weak Dylib")) cur->vuln_type |= VULN_WEAK_DYLIB;
-            in_detail = true;
+            if (strstr(line, "Weak Dylib")) cur->vuln_type |= VULN_WEAK_DYLIB;
             continue;
         }
 
-        if (in_detail) {
-            if (strstr(line, "상세:")) {
-                char *p = strchr(line, ':');
-                if (p) { p++; while (isspace((unsigned char)*p)) p++; continue; }
-            }
-
-            bool is_boundary = (strstr(line, "바이너리:") == line) ||
-                               (strstr(line, "━━") == line) ||
-                               (strstr(line, "══") == line);
-
-            if (is_boundary) {
-                if (pending_type == VULN_RPATH || pending_type == VULN_WEAK_DYLIB) {
-                    /* pending_type 기준으로 파싱 */
+        /* 3) 상세 경로 첫번째 라인 (상세:) */
+        if (strstr(line, "상세:")) {
+            detail_line_count = 1;
+            char *p = strchr(line, ':');
+            if (p) { 
+                p++; while (isspace((unsigned char)*p)) p++; 
+                if (*p) {
+                    if (cur->vuln_type == VULN_BOTH || (cur->vuln_type & VULN_RPATH)) {
+                        if (rpath_buf[0]) strncat(rpath_buf, ";", sizeof(rpath_buf) - strlen(rpath_buf) - 1);
+                        strncat(rpath_buf, p, sizeof(rpath_buf) - strlen(rpath_buf) - 1);
+                    } else if (cur->vuln_type & VULN_WEAK_DYLIB) {
+                        if (weak_buf[0]) strncat(weak_buf, ";", sizeof(weak_buf) - strlen(weak_buf) - 1);
+                        strncat(weak_buf, p, sizeof(weak_buf) - strlen(weak_buf) - 1);
+                    }
                 }
-                in_detail = false;
-                pending_type = VULN_NONE;
-                /* 이 줄을 다시 처리하도록 한 줄 버퍼링 */
-                long pos = ftell(fp);
-                fseek(fp, pos - (long)strlen(line) - 1, SEEK_SET);
-                continue;
             }
-
-            if (strstr(line, "상세:")) {
-                char *p = strchr(line, ':');
-                if (p) { p++; while (isspace((unsigned char)*p)) p++; strcpy(line, p); }
-                continue;
-            }
-
-            if (strstr(line, "문제명:")) {
-                if (strstr(line, "RPATH")) cur->vuln_type |= VULN_RPATH;
-                else if (strstr(line, "Weak Dylib")) cur->vuln_type |= VULN_WEAK_DYLIB;
-                continue;
-            }
+            continue;
         }
 
-        /* 상세 내용 누적 (detail_buf는 별도 버퍼로 관리) */
-        if (in_detail && strlen(line) > 2 && !isdigit((unsigned char)line[0])) {
-            static char detail_buf[8192];
-            if (detail_buf[0]) strncat(detail_buf, ";", sizeof(detail_buf) - strlen(detail_buf) - 1);
-            strncat(detail_buf, line, sizeof(detail_buf) - strlen(detail_buf) - 1);
+        /* 4) 상세 경로 두번째 이상 라인 (\n 구분) */
+        if (detail_line_count > 0) {
+            char *trimmed = trim(line);
+            if (trimmed[0] != '\0') {
+                detail_line_count++;
+                if (cur->vuln_type == VULN_BOTH) {
+                    if (weak_buf[0]) strncat(weak_buf, ";", sizeof(weak_buf) - strlen(weak_buf) - 1);
+                    strncat(weak_buf, trimmed, sizeof(weak_buf) - strlen(weak_buf) - 1);
+                } else if (cur->vuln_type & VULN_RPATH) {
+                    if (rpath_buf[0]) strncat(rpath_buf, ";", sizeof(rpath_buf) - strlen(rpath_buf) - 1);
+                    strncat(rpath_buf, trimmed, sizeof(rpath_buf) - strlen(rpath_buf) - 1);
+                } else if (cur->vuln_type & VULN_WEAK_DYLIB) {
+                    if (weak_buf[0]) strncat(weak_buf, ";", sizeof(weak_buf) - strlen(weak_buf) - 1);
+                    strncat(weak_buf, trimmed, sizeof(weak_buf) - strlen(weak_buf) - 1);
+                }
+            }
         }
     }
 
-    /* 파일 끝에서 마지막 타깃 확정 */
-    if (cur && cur->vuln_type != VULN_NONE) {
-        static char detail_buf[8192];
-        if (detail_buf[0]) {
-            if (cur->vuln_type & VULN_RPATH) {
-                parse_and_push_paths(detail_buf, &cur->rpath_vulns, &cur->rpath_count, &cur->rpath_cap);
-            } else if (cur->vuln_type & VULN_WEAK_DYLIB) {
-                parse_and_push_paths(detail_buf, &cur->weak_dylib_vulns, &cur->weak_dylib_count, &cur->weak_dylib_cap);
-            }
-        }
-        results_ensure_cap(res);
-        res->targets[res->target_count++] = cur;
-    } else if (cur) {
-        target_free(cur);
+    /* 5) EOF 도달 시 마지막 타겟 확정 */
+    if (cur) {
+        finalize_target(cur, rpath_buf, weak_buf, res);
     }
 
     fclose(fp);

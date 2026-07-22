@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <limits.h>
 #include <mach-o/dyld.h>
 
 /* ──────────────────────────────────────────────
@@ -21,7 +22,15 @@
  * ────────────────────────────────────────────── */
 static bool is_path_sip_protected(const char *path) {
     if (!path) return false;
-    char *norm = normalize_path(path);
+    
+    // ─── [수정 반영] 심볼릭 링크 해독(Resolution) ───
+    char resolved_path[PATH_MAX];
+    const char *target = path;
+    if (realpath(path, resolved_path) != NULL) {
+        target = resolved_path;
+    }
+
+    char *norm = normalize_path(target);
     if (!norm) return false;
 
     char *dir = strdup(norm);
@@ -55,7 +64,11 @@ static bool is_path_sip_protected(const char *path) {
  * ────────────────────────────────────────────── */
 static bool is_candidate_path(const char *path) {
     if (!path) return false;
-    if (file_exists(path)) return false;           // 이미 존재 → 후보 아님
+    
+    // ─── [수정 반영] 심볼릭 링크(깨진 링크 포함) 존재 여부 점검 ───
+    struct stat st;
+    if (lstat(path, &st) == 0) return false;           // 깨진 링크여도 존재하면 후보 아님
+    if (file_exists(path)) return false;               // 기존 존재 판별 로직(Fallback)
     if (_dyld_shared_cache_contains_path(path)) return false;  // dyld 캐시 내 → 후보 아님
 
     char *norm = normalize_path(path);
@@ -73,9 +86,13 @@ static bool is_candidate_path(const char *path) {
     // 상위 디렉터리 순회하며 쓰기 가능(존재) + 비SIP 찾기
     bool candidate = false;
     while (dir[0] != '\0') {
-        if (file_exists(dir)) {           // 존재하는 디렉터리 발견
-            if (!is_path_sip_protected(dir)) {
-                candidate = true;         // 쓰기 가능 + 비SIP → 후보
+        if (lstat(dir, &st) == 0 || file_exists(dir)) { // 존재하는 디렉터리 발견
+            // ─── [수정 반영] 상위 디렉터리도 심볼릭 링크일 수 있으므로 해독 후 판별 ───
+            char resolved_dir[PATH_MAX];
+            if (realpath(dir, resolved_dir) != NULL) {
+                if (!is_path_sip_protected(resolved_dir)) candidate = true;
+            } else {
+                if (!is_path_sip_protected(dir)) candidate = true;
             }
             break;                        // 더 이상 상위 안 봄
         }
@@ -116,7 +133,7 @@ static size_t collect_vuln_candidates(const char *binaryPath,
                                       bool verbose) {
     size_t foundCount = 0;
     char **foundPaths = NULL;
-    bool firstRpathMiss = false;   // 1번 RPATH에서 파일 미발견 여부
+    bool firstRpathMiss = false;
 
     for (size_t j = 0; j < parser->lcRpathsCount; j++) {
         const char *runPath = parser->lcRpaths[j];
@@ -138,7 +155,9 @@ static size_t collect_vuln_candidates(const char *binaryPath,
 
         bool isCandidate = false;
 
-        if (file_exists(resolvedPath)) {
+        // lstat 확인 추가 (심볼릭 링크 고려)
+        struct stat st;
+        if (lstat(resolvedPath, &st) == 0 || file_exists(resolvedPath)) {
             // ─── 실제 로드 위치 확정 ───
             if (verbose) printf("[vuln] dylib FOUND at rpath[%zu]: %s\n", j, resolvedPath);
 
@@ -174,17 +193,18 @@ static size_t collect_vuln_candidates(const char *binaryPath,
             } else {
                 VDBG("realloc FAILED for %s", resolvedPath);
                 free(resolvedPath);
+                // ─── [수정 반영] realloc 실패 시 할당된 메모리 누수 방지 로직 추가 ───
+                for (size_t x = 0; x < foundCount; x++) free(foundPaths[x]);
+                free(foundPaths);
+                foundPaths = NULL;
+                foundCount = 0;
+                break; 
             }
         } else {
-            VDBG("realloc FAILED for %s", resolvedPath);
             free(resolvedPath);
         }
-
-        // 실제 로드 위치 확정 시(파일 존재) 루프 종료
-        if (file_exists(resolvedPath)) {
-            // 위 if 블록에서 이미 break 처리됨 (isCandidate 여부와 무관)
-            // 여기 도달 안 함
-        }
+        
+        if (lstat(resolvedPath, &st) == 0 || file_exists(resolvedPath)) break;
     }
 
     *out_paths = foundPaths;
@@ -210,16 +230,28 @@ bool scan_for_vulnerable_rpath(const char *path, MachOParser *parser,
         size_t rpCount = collect_vuln_candidates(path, dylibPath, parser, &rpPaths, verbose);
 
         // 병합
+        bool allocFailed = false;
         for (size_t k = 0; k < rpCount; k++) {
+            if (allocFailed) {
+                free(rpPaths[k]);
+                continue;
+            }
             char **tmp = realloc(foundPaths, sizeof(char *) * (foundCount + 1));
             if (tmp) {
                 foundPaths = tmp;
                 foundPaths[foundCount++] = rpPaths[k];
             } else {
                 free(rpPaths[k]);
+                // ─── [수정 반영] 메모리 누수 방지 ───
+                for (size_t x = 0; x < foundCount; x++) free(foundPaths[x]);
+                free(foundPaths);
+                foundPaths = NULL;
+                foundCount = 0;
+                allocFailed = true;
             }
         }
         free(rpPaths);
+        if (allocFailed) break;
     }
 
     if (foundCount > 0 && out_details) {
@@ -253,16 +285,29 @@ bool scan_for_vulnerable_weak(const char *path, MachOParser *parser,
             char **rpPaths = NULL;
             size_t rpCount = collect_vuln_candidates(path, weakDylib, parser, &rpPaths, verbose);
 
+            bool allocFailed = false;
             for (size_t k = 0; k < rpCount; k++) {
+                if (allocFailed) {
+                    free(rpPaths[k]);
+                    continue;
+                }
                 char **tmp = realloc(foundPaths, sizeof(char *) * (foundCount + 1));
                 if (tmp) {
                     foundPaths = tmp;
                     foundPaths[foundCount++] = rpPaths[k];
                 } else {
                     free(rpPaths[k]);
+                    // ─── [수정 반영] 메모리 누수 방지 ───
+                    for (size_t x = 0; x < foundCount; x++) free(foundPaths[x]);
+                    free(foundPaths);
+                    foundPaths = NULL;
+                    foundCount = 0;
+                    allocFailed = true;
                 }
             }
             free(rpPaths);
+            if (allocFailed) break;
+
         } else {
             // 절대/상대 경로 weak dylib → 직접 후보 판별
             char *resolvedPath = strdup(weakDylib);
@@ -273,15 +318,18 @@ bool scan_for_vulnerable_weak(const char *path, MachOParser *parser,
                     foundPaths[foundCount++] = resolvedPath;
                 } else {
                     free(resolvedPath);
+                    // ─── [수정 반영] 메모리 누수 방지 ───
+                    for (size_t x = 0; x < foundCount; x++) free(foundPaths[x]);
+                    free(foundPaths);
+                    foundPaths = NULL;
+                    foundCount = 0;
+                    break;
                 }
             } else {
                 free(resolvedPath);
             }
         }
     }
-
-    // [FILTER 2] Weak import 의심도 검증 적용 (선택적)
-    // 발견된 후보 중 is_weak_import_suspicious가 true인 것만 남기려면 여기서 필터링 가능
 
     if (foundCount > 0 && out_details) {
         *out_details = build_details_string(foundPaths, foundCount);

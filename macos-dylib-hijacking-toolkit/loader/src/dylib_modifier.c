@@ -327,14 +327,20 @@ bool find_dependency_by_name(const char *dylib_path,
             }
             
             // 공백 정제
+            // char *trimmed = trim_whitespace(*out_found_path);
+            // if (trimmed != *out_found_path) {
+            //     char *new_ptr = strdup(trimmed);
+            //     free(*out_found_path);
+            //     *out_found_path = new_ptr;
+            // } else {
+            //     // trim_whitespace가 제자리에서 처리하므로 다시 할당
+            //     char *new_ptr = strdup(*out_found_path);
+            //     free(*out_found_path);
+            //     *out_found_path = new_ptr;
+            // }
             char *trimmed = trim_whitespace(*out_found_path);
             if (trimmed != *out_found_path) {
                 char *new_ptr = strdup(trimmed);
-                free(*out_found_path);
-                *out_found_path = new_ptr;
-            } else {
-                // trim_whitespace가 제자리에서 처리하므로 다시 할당
-                char *new_ptr = strdup(*out_found_path);
                 free(*out_found_path);
                 *out_found_path = new_ptr;
             }

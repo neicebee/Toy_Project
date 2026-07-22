@@ -51,6 +51,12 @@ static size_t collect_existing_candidates(const char *binaryPath,
                 foundPaths[foundCount++] = resolvedPath;  // ownership transfer
             } else {
                 free(resolvedPath);
+                // ─── [수정 반영] realloc 실패 시 메모리 누수 방지 ───
+                for (size_t x = 0; x < foundCount; x++) free(foundPaths[x]);
+                free(foundPaths);
+                foundPaths = NULL;
+                foundCount = 0;
+                break;
             }
         } else {
             free(resolvedPath);
@@ -149,38 +155,33 @@ bool scan_for_hijack_weak(const char *path, MachOParser *parser,
     if (out_details) *out_details = NULL;
     if (!parser || parser->lcLoadWeakDylibsCount == 0) return false;
 
+    // 부모 바이너리 서명 정보
+    SigningInfo binInfo = {0};
+    (void)get_signing_info_for_path(path, &binInfo);
+
     char **foundPaths = NULL;
     size_t foundCount = 0;
 
     for (size_t i = 0; i < parser->lcLoadWeakDylibsCount; i++) {
         const char *weakDylib = parser->lcLoadWeakDylibs[i];
 
+        char **rpPaths = NULL;
+        size_t rpCount = 0;
+
         if (strncmp(weakDylib, RPATH_PREFIX, strlen(RPATH_PREFIX)) == 0) {
             // @rpath 기반 weak dylib → RPATH 해석
             if (parser->lcRpathsCount > 0) {
-                char **rpPaths = NULL;
-                size_t rpCount = collect_existing_candidates(path, weakDylib, parser,
-                                                             &rpPaths, verbose);
-                // 병합
-                for (size_t k = 0; k < rpCount; k++) {
-                    char **tmp = realloc(foundPaths, sizeof(char *) * (foundCount + 1));
-                    if (tmp) {
-                        foundPaths = tmp;
-                        foundPaths[foundCount++] = rpPaths[k];
-                    } else {
-                        free(rpPaths[k]);
-                    }
-                }
-                free(rpPaths);
+                rpCount = collect_existing_candidates(path, weakDylib, parser,
+                                                     &rpPaths, verbose);
             }
         } else {
             // 절대/상대 경로 weak dylib → 직접 존재 확인
             char *resolvedPath = strdup(weakDylib);
             if (file_exists(resolvedPath)) {
-                char **tmp = realloc(foundPaths, sizeof(char *) * (foundCount + 1));
-                if (tmp) {
-                    foundPaths = tmp;
-                    foundPaths[foundCount++] = resolvedPath;
+                rpPaths = malloc(sizeof(char *));
+                if (rpPaths) {
+                    rpPaths[0] = resolvedPath;
+                    rpCount = 1;
                 } else {
                     free(resolvedPath);
                 }
@@ -188,29 +189,66 @@ bool scan_for_hijack_weak(const char *path, MachOParser *parser,
                 free(resolvedPath);
             }
         }
-    }
 
-    // Apple 서명 dylib 필터링 (RPATH 기반 후보에 한해)
-    // 간단히: 발견된 경로 중 Apple 서명이면 전체 후보에서 제외
-    // (필요하면 후보별로 세분화 가능)
-    bool hasAppleSigned = false;
-    for (size_t k = 0; k < foundCount; k++) {
-        SigningInfo info = {0};
-        if (get_signing_info_for_path(foundPaths[k], &info) && info.isApple) {
-            hasAppleSigned = true;
-            if (verbose) printf("[hijack-weak] Apple-signed candidate dismissed: %s\n", foundPaths[k]);
-            break;
+        if (rpCount == 0 || !rpPaths) continue;
+
+        // ─── [수정 반영] 복수 후보 존재 시 하이재킹 가능성 평가 ───
+        if (rpCount >= 2) {
+            // dyld가 실제로 최우선 로드하는 첫 번째 실존 후보(rpPaths[0])의 서명 상태 검증
+            SigningInfo dylibInfo = {0};
+            bool hasDylibInfo = get_signing_info_for_path(rpPaths[0], &dylibInfo);
+
+            // 1. 첫 번째 후보가 Apple 서명이면 정식 시스템 라이브러리로 판단하여 탐지에서 제외
+            if (hasDylibInfo && dylibInfo.isApple) {
+                if (verbose) printf("[hijack-weak] candidate dismissed: First loaded path is Apple-signed %s\n", rpPaths[0]);
+                for (size_t k = 0; k < rpCount; k++) free(rpPaths[k]);
+                free(rpPaths);
+                continue;
+            }
+
+            // 2. 부모 바이너리와 첫 번째 후보 dylib의 서명 상태가 동일하면 오탐 방지를 위해 제외
+            if (hasDylibInfo &&
+                binInfo.isApple == dylibInfo.isApple &&
+                binInfo.disabledLibValidation == dylibInfo.disabledLibValidation) {
+                if (verbose) printf("[hijack-weak] candidate dismissed: signing matches for %s\n", rpPaths[0]);
+                for (size_t k = 0; k < rpCount; k++) free(rpPaths[k]);
+                free(rpPaths);
+                continue;
+            }
+
+            // 하이재킹 위험 대상 → foundPaths 배열에 병합
+            bool allocFailed = false;
+            for (size_t k = 0; k < rpCount; k++) {
+                if (allocFailed) {
+                    free(rpPaths[k]);
+                    continue;
+                }
+                char **tmp = realloc(foundPaths, sizeof(char *) * (foundCount + 1));
+                if (tmp) {
+                    foundPaths = tmp;
+                    foundPaths[foundCount++] = rpPaths[k];
+                } else {
+                    free(rpPaths[k]);
+                    // 메모리 할당 실패 시 안전한 해제
+                    for (size_t x = 0; x < foundCount; x++) free(foundPaths[x]);
+                    free(foundPaths);
+                    foundPaths = NULL;
+                    foundCount = 0;
+                    allocFailed = true;
+                }
+            }
+            free(rpPaths);
+            if (allocFailed) break;
+        } else {
+            // 단일 후보인 경우는 하이재킹 조건 미충족 → 해제 후 계속
+            for (size_t k = 0; k < rpCount; k++) free(rpPaths[k]);
+            free(rpPaths);
         }
-    }
-    if (hasAppleSigned) {
-        for (size_t k = 0; k < foundCount; k++) free(foundPaths[k]);
-        free(foundPaths);
-        if (out_details) *out_details = NULL;
-        return false;
     }
 
     if (foundCount > 0 && out_details) {
         *out_details = build_details_string(foundPaths, foundCount);
+        if (verbose && *out_details) printf("[hijack-weak] report details: %s\n", *out_details);
     }
 
     for (size_t k = 0; k < foundCount; k++) free(foundPaths[k]);

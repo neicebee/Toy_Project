@@ -48,8 +48,14 @@ bool is_protected_directory(const char *path) {
         char protectedPath[4096];
         snprintf(protectedPath, sizeof(protectedPath), "%s/%s", home, PROTECTED_DIRECTORIES[i]);
         
-        if (strncmp(fullPath, protectedPath, strlen(protectedPath)) == 0) {
-            return true;
+        size_t protLen = strlen(protectedPath);
+        
+        // ─── [수정 반영] 접두사 오탐 방지를 위한 경계 검사 추가 ───
+        if (strncmp(fullPath, protectedPath, protLen) == 0) {
+            // 일치하는 길이 직후가 문자열의 끝('\0')이거나 디렉터리 구분자('/')인지 확인
+            if (fullPath[protLen] == '\0' || fullPath[protLen] == '/') {
+                return true;
+            }
         }
     }
     

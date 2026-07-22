@@ -87,6 +87,12 @@ MachOParser* parse_binary(const char *path) {
     uint8_t *buffer = (uint8_t *)fileMap;
     uint8_t *fileEnd = buffer + fileSize;  // ─── 경계 검사용 파일 끝 포인터
 
+    // 파일 크기가 최소 4바이트(Magic)를 포함하는지 우선 확인
+    if (buffer + sizeof(uint32_t) > fileEnd) {
+        munmap(fileMap, fileSize);
+        return NULL;
+    }
+
     uint32_t magic = *(uint32_t *)buffer;
     uint8_t *machoStart = NULL;
 
@@ -102,10 +108,24 @@ MachOParser* parse_binary(const char *path) {
         machoStart = buffer;
     }
 
+    // Mach-O 헤더의 매직 넘버를 읽기 위한 4바이트 최소 공간 경계 검사 추가
+    if (machoStart + sizeof(uint32_t) > fileEnd) {
+        munmap(fileMap, fileSize);
+        return NULL;
+    }
+
     // Mach-O 헤더 검사
     magic = *(uint32_t *)machoStart;
     int is64bit = (magic == MH_MAGIC_64 || magic == MH_CIGAM_64);
     size_t headerSize = is64bit ? sizeof(struct mach_header_64) : sizeof(struct mach_header);
+    
+    // ─── [수정 반영] Mach-O 헤더 전체 크기에 대한 경계 검사 추가 ───
+    if (machoStart + headerSize > fileEnd) {
+        munmap(fileMap, fileSize);
+        return NULL;
+    }
+    // ─────────────────────────────────────────────────────────────
+
     size_t ncmds = 0;
 
     if (magic == MH_MAGIC || magic == MH_MAGIC_64 || magic == MH_CIGAM || magic == MH_CIGAM_64) {

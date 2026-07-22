@@ -91,10 +91,41 @@ void scan_report_add_issue(ScanReport *r,
     // 이슈 타입 병합 (기존보다 심각한 쪽으로)
     if (issueType > target->issueType) target->issueType = issueType;
 
-    // issueName/details는 첫 번째 것만 남기거나, 필요하면 리스트로 확장 가능
-    // 여기선 첫 번째만 저장 (간단하게)
-    if (!target->issueName && issueName) target->issueName = strdup(issueName);
-    if (!target->details && details) target->details = strdup(details);
+    // ─── [수정 반영] issueName 병합 ───
+    if (issueName) {
+        if (!target->issueName) {
+            target->issueName = strdup(issueName);
+        } else {
+            // 중복된 이슈명이 아닐 경우에만 병합
+            if (strstr(target->issueName, issueName) == NULL) {
+                size_t newLen = strlen(target->issueName) + strlen(issueName) + 4; // " | " 포함
+                char *newStr = malloc(newLen);
+                if (newStr) {
+                    snprintf(newStr, newLen, "%s | %s", target->issueName, issueName);
+                    free(target->issueName);
+                    target->issueName = newStr;
+                }
+            }
+        }
+    }
+
+    // ─── [수정 반영] details 병합 ───
+    if (details) {
+        if (!target->details) {
+            target->details = strdup(details);
+        } else {
+            // 중복된 상세 내용이 아닐 경우에만 병합 (가독성을 위해 줄바꿈 사용)
+            if (strstr(target->details, details) == NULL) {
+                size_t newLen = strlen(target->details) + strlen(details) + 2; // "\n" 포함
+                char *newStr = malloc(newLen);
+                if (newStr) {
+                    snprintf(newStr, newLen, "%s\n%s", target->details, details);
+                    free(target->details);
+                    target->details = newStr;
+                }
+            }
+        }
+    }
 }
 
 /* ──────────────────────────────────────────────
@@ -143,7 +174,7 @@ void scan_report_print(const ScanReport *r, bool showProcessInfo) {
 
         printf("문제 타입: %s\n", issue_type_str(b->issueType));
         if (b->issueName) printf("문제명: %s\n", b->issueName);
-        if (b->details)   printf("상세: %s\n", b->details);
+        if (b->details)   printf("상세: %s\n", b->details); // 다중 출력을 위해 포맷 변경
         printf("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n");
     }
 

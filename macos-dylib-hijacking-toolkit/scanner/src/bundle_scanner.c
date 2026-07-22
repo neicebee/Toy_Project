@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <fcntl.h>
+#include <arpa/inet.h> // ntohl 사용을 위해 추가
 
 /* ──────────────────────────────────────────────
  * 내부 유틸리티: 중복 경로 관리 (PathSet)
@@ -50,28 +51,57 @@ static void pathset_add(PathSet *s, const char *path) {
 }
 
 /* ──────────────────────────────────────────────
- * Mach-O 빠른 판별 (magic bytes만 읽음)
+ * Mach-O 빠른 판별 (magic bytes 및 fat_header 검증)
  * ────────────────────────────────────────────── */
 static bool is_macho_executable(const char *path) {
+    if (!path) return false;
+
+    // ─── [수정 1] Java Class 파일(.class) 1차 빠른 필터링 ───
+    size_t len = strlen(path);
+    if (len >= 6 && strcmp(path + len - 6, ".class") == 0) {
+        return false;
+    }
+
     int fd = open(path, O_RDONLY);
     if (fd < 0) return false;
+
     uint32_t magic;
     ssize_t r = read(fd, &magic, sizeof(magic));
-    close(fd);
-    if (r != sizeof(magic)) return false;
+    if (r != sizeof(magic)) {
+        close(fd);
+        return false;
+    }
 
     // Mach-O (thin)
     if (magic == 0xFEEDFACE ||       // MH_MAGIC (32-bit)
         magic == 0xFEEDFACF ||       // MH_MAGIC_64 (64-bit)
         magic == 0xCEFAEDFE ||       // MH_CIGAM (32-bit swapped)
-        magic == 0xCFFAEDFE)         // MH_CIGAM_64 (64-bit swapped)
+        magic == 0xCFFAEDFE) {       // MH_CIGAM_64 (64-bit swapped)
+        close(fd);
         return true;
+    }
 
-    // Universal / Fat binary
-    if (magic == 0xCAFEBABE ||       // FAT_MAGIC
-        magic == 0xBEBAFECA)         // FAT_CIGAM
-        return true;
+    // Universal / Fat binary (0xCAFEBABE 또는 0xBEBAFECA)
+    if (magic == 0xCAFEBABE || magic == 0xBEBAFECA) {
+        // ─── [수정 2] Java Class 오탐 방지를 위한 nfat_arch 2차 검증 ───
+        // Mach-O Fat 헤더의 필드는 항상 Big-Endian 형식입니다.
+        uint32_t nfat_arch_be;
+        r = read(fd, &nfat_arch_be, sizeof(nfat_arch_be));
+        close(fd);
 
+        if (r != sizeof(nfat_arch_be)) return false;
+
+        uint32_t nfat_arch = ntohl(nfat_arch_be);
+
+        // 정상적인 Mach-O Fat Binary의 아키텍처 개수는 보통 1~10개 내외 (최대 20개로 정밀 제한)
+        // Java Class 파일의 경우 해당 오프셋에 Major/Minor 버전(예: 0x00000034 = 52)이 오므로 걸러집니다.
+        if (nfat_arch >= 1 && nfat_arch <= 20) {
+            return true;
+        }
+        return false;
+    }
+
+    close(fd);
     return false;
 }
 

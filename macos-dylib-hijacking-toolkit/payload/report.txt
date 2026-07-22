@@ -8,10 +8,10 @@
                     macOS Dylib Hijack Scan Report                    
 ════════════════════════════════════════════════════════════════════
 스캔 모드: /Applications/eval-apps
-스캔 시각: Tue Jul 21 16:41:53 2026
-총 바이너리 수: 9
+스캔 시각: Wed Jul 22 17:40:18 2026
+총 바이너리 수: 14
 ────────────────────────────────────────────────────────────────────
-이슈 발견 바이너리: 9
+이슈 발견 바이너리: 14
 ════════════════════════════════════════════════════════════════════
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -50,6 +50,13 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Keka.app/Contents/MacOS/Keka
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Keka.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 바이너리: /Applications/eval-apps/Rectangle.app/Contents/MacOS/Rectangle
 문제 타입: 취약점
 문제명: RPATH 취약 경로
@@ -57,10 +64,24 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Maccy.app/Contents/MacOS/Maccy
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Maccy.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 바이너리: /Applications/eval-apps/IINA.app/Contents/MacOS/IINA
 문제 타입: 취약점
 문제명: RPATH 취약 경로
 상세: /Applications/eval-apps/IINA.app/Contents/Frameworks/libsoxr.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libnettle.8.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libsamplerate.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libunibreak.6.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libshaderc_shared.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/librubberband.2.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libarchive.13.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libXdmcp.6.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libuchardet.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/liblcms2.2.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libvulkan.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libsharpyuv.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libdav1d.7.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libb2.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/liblzma.5.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libbluray.2.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libpostproc.58.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libbrotlienc.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libbrotlidec.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libsnappy.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libplacebo.338.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libwebpmux.3.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libass.9.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libunistring.5.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libhwy.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libavfilter.10.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libgnutls.30.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libhogweed.6.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle; /Applications/eval-apps/IINA.app/Contents/Frameworks/libxcb-shm.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libavutil.59.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libintl.8.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libspeex.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libpcre2-8.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libswscale.8.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libjxl_threads.0.10.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libzimg.2.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libjxl.0.10.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libidn2.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libmujs.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libfribidi.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libzmq.5.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libgmp.10.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libtasn1.6.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libxcb-xfixes.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libwebp.7.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libavformat.61.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libzstd.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libjpeg.8.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libmpv.2.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libjxl_cms.0.10.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libXau.6.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libswresample.5.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libavdevice.61.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libluajit-5.1.2.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libxcb-shape.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libvidstab.1.2.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libpng16.16.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libsodium.26.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libbrotlicommon.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libharfbuzz.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libxcb.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libfontconfig.1.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libglib-2.0.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libgraphite2.3.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libp11-kit.0.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libavcodec.61.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libfreetype.6.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/libX11.6.dylib; /Applications/eval-apps/IINA.app/Contents/Frameworks/liblz4.1.dylib
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Transmission.app/Contents/MacOS/Transmission
+문제 타입: 취약점
+문제명: Weak Dylib 취약 경로
+상세: /Applications/eval-apps/Transmission.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -75,6 +96,21 @@
 문제 타입: 취약점
 문제명: RPATH 취약 경로
 상세: /Applications/eval-apps/Ghostty.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/MonitorControl.app/Contents/MacOS/MonitorControl
+문제 타입: 취약점
+문제명: RPATH 취약 경로 | Weak Dylib 취약 경로
+상세: /Applications/eval-apps/MonitorControl.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
+/Applications/eval-apps/MonitorControl.app/Contents/Frameworks/libswift_Concurrency.dylib
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/AltTab.app/Contents/MacOS/AltTab
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/AltTab.app/Contents/Frameworks/CrashReporter.framework/Versions/A/CrashReporter; /Applications/eval-apps/AltTab.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ════════════════════════════════════════════════════════════════════

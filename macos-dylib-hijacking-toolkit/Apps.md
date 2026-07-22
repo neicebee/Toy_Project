@@ -1,29 +1,30 @@
-### 평가 대상 오픈소스 macOS 애플리케이션 25개
+# 정량 평가 대상 애플리케이션 (Evaluation Apps)
 
-| ID | 앱 이름              | GitHub Repo                                      | 카테고리           | 특징 요약 |
-|----|----------------------|--------------------------------------------------|--------------------|-----------|
-|  1 | Alacritty            | https://github.com/alacritty/alacritty          | 터미널/개발        | GPU 가속 터미널(Rust), 외부 라이브러리 다수, `@rpath` 활용 |
-|  2 | Ghostty              | https://github.com/ghostty-org/ghostty          | 터미널/개발        | Zig+Swift, 최신 macOS 터미널, 번들/프레임워크 구조 |
-|  3 | Lapce                | https://github.com/lapce/lapce                  | 코드 에디터        | Rust 기반 코드 에디터, 플러그인/동적 라이브러리 풍부 |
-|  4 | Zed                  | https://github.com/zed-industries/zed           | 코드 에디터        | Rust+GPU UI, 복잡한 번들 구조와 `@rpath` 패턴 |
-|  5 | Rectangle            | https://github.com/rxhanson/Rectangle           | 윈도우 관리        | Swift, 비교적 단순한 예시용 앱 번들 |
-|  6 | IINA                 | https://github.com/iina/iina                    | 미디어 플레이어    | Swift + mpv/FFmpeg, `Frameworks` 폴더 풍부 |
-|  7 | HandBrake            | https://github.com/HandBrake/HandBrake          | 비디오 인코더      | C/ObjC/Swift, 다수의 코덱/라이브러리 동적 링크 |
-|  8 | LosslessCut          | https://github.com/mifi/lossless-cut            | 미디어 툴          | Electron + FFmpeg, 네이티브 모듈 활용 |
-|  9 | Aseprite             | https://github.com/aseprite/aseprite            | 2D 그래픽          | C++/Skia, 플러그인 및 라이브러리 임베딩 |
-| 10 | Blender              | https://github.com/blender/blender              | 3D 그래픽          | 대규모 C++/Python, 복잡한 `@rpath` 체인 |
-| 11 | Signal Desktop       | https://github.com/signalapp/Signal-Desktop     | 메신저/보안        | Electron + 네이티브 암호 라이브러리 |
-| 12 | Element Desktop      | https://github.com/vector-im/element-desktop    | 메신저             | Electron + Matrix, 크립토 라이브러리 사용 |
-| 13 | Mullvad VPN          | https://github.com/mullvad/mullvadvpn-app       | VPN/보안           | Rust+Swift, 시스템/네트워크 익스텐션 포함 |
-| 14 | AdGuard for Mac      | https://github.com/AdguardTeam/AdGuardForMac    | 네트워크 필터링    | ObjC/Swift, 네트워크 필터링·익스텐션 구조 |
-| 15 | LuLu                 | https://github.com/objective-see/LuLu           | 방화벽/보안        | Objective-See, 커널/유저랜드 구성, XPC 서비스 |
-| 16 | BlockBlock           | https://github.com/objective-see/BlockBlock     | 지속성 모니터링    | 런치 데몬/헬퍼 툴 등 복합 번들 |
-| 17 | KnockKnock           | https://github.com/objective-see/KnockKnock     | 보안 검사          | 플러그인 구조, 다양한 바이너리 스캔 |
-| 18 | Keka                 | https://github.com/aonez/Keka                   | 압축/파일 관리     | 다중 압축 포맷 라이브러리(`libzip`, `lzma` 등) 동적 링크 |
-| 19 | Maccy                | https://github.com/p0deje/Maccy                 | 클립보드 매니저    | Swift, 비교적 단순하지만 프레임워크 임베딩 예시 |
-| 20 | MonitorControl       | https://github.com/MonitorControl/MonitorControl| 하드웨어 제어      | DDC/CI, IOKit 사용, 헬퍼 앱 구조 |
-| 21 | AltTab               | https://github.com/lwouis/alt-tab-macos         | 윈도우 스위처      | SwiftUI+AppKit, 접근성 권한 사용 |
-| 22 | Jellyfin Media Player| https://github.com/jellyfin/jellyfin-media-player| 미디어 플레이어   | Electron + mpv, 미디어/네트워크 의존성 다수 |
-| 23 | OBS Studio           | https://github.com/obsproject/obs-studio        | 방송/스트리밍      | C/C++/Qt, 플러그인 시스템, 동적 라이브러리 풍부 |
-| 24 | qBittorrent          | https://github.com/qbittorrent/qBittorrent      | 토렌트 클라이언트 | C++/Qt, 네트워크·암호 라이브러리 사용 |
-| 25 | Transmission         | https://github.com/transmission/transmission    | 토렌트 클라이언트 | C, libevent 등 외부 라이브러리 동적 링크 |
+제안하는 통합 점검 도구의 탐지 범위, 정확도, 그리고 재현 성공률을 검증하기 위해 오픈소스 및 상용 macOS 애플리케이션 16종을 선정하였습니다.
+선정된 앱들은 다양한 프레임워크(Swift, Objective-C, Rust 등)로 개발되었으며, 다중 RPATH 기반 취약점 점검을 위한 신뢰할 수 있는 데이터셋으로 기능합니다.
+
+## 📊 평가 대상 앱 목록
+
+| 번호 | 앱 이름 | 분류(Category) | 특징 및 선정 이유 (적합성 검증) |
+|:---:|:---|:---|:---|
+| 1 | **AdGuard** | 보안/네트워크 | 네트워크 확장 프로그램과 여러 동적 라이브러리를 공유하여 스캔 타겟으로 적합. |
+| 2 | **Alacritty** | 터미널 에뮬레이터 | 오픈소스 기반(Rust). 상대적으로 단순한 바이너리 구조에서의 도구 탐지 정확도 테스트용. |
+| 3 | **AltTab** | 유틸리티 | 시스템 접근 권한(Accessibility)을 요구하는 앱으로, 공격 시나리오(권한 상승) 적용에 매우 적합함. |
+| 4 | **Boop** | 개발자 도구 | 오픈소스. 경량화된 앱에서의 Weak Dylib 사용 여부 점검용. |
+| 5 | **Ghostty** | 터미널 에뮬레이터 | 최신 렌더링 엔진을 사용하는 앱으로 의존성 트리가 복잡할 것으로 예상됨. |
+| 6 | **HandBrake** | 미디어 인코더 | 다수의 코덱 라이브러리(libx264 등)를 `@rpath`로 동적 로딩하는 전형적인 케이스. |
+| 7 | **IINA** | 미디어 플레이어 | mpv 기반으로 다수의 외부 dylib을 포함하고 있어 RPATH 폴백(Fallback) 발생률을 평가하기 최적인 대상. |
+| 8 | **Keka** | 압축 유틸리티 | 다양한 압축 모듈을 프레임워크 및 플러그인 형태로 로드하여 다중 RPATH 탐지 테스트에 적합. |
+| 9 | **KnockKnock** | 보안 도구 | Objective-See의 오픈소스 보안 앱. '보안 앱이 지닌 라이브러리 취약성'이라는 흥미로운 연구 결과를 도출할 수 있음. |
+| 10 | **Lapce** | 코드 에디터 | Rust 기반의 오픈소스. 다양한 플러그인 생태계를 가져 런타임 Dylib 로딩 테스트 가능. |
+| 11 | **LuLu** | 방화벽 (보안) | 시스템 확장(System Extension)을 사용하는 강력한 보안 앱으로, 악용될 경우 파급력이 매우 큼. |
+| 12 | **Maccy** | 클립보드 매니저 | 사용자 입력을 직접 다루는 유틸리티로 민감 정보 탈취 시나리오(PoC) 적용에 용이. |
+| 13 | **MonitorControl** | 시스템 유틸리티 | 디스플레이 제어를 위한 외부 프레임워크 및 비공개 API 연동 가능성 점검. |
+| 14 | **Rectangle** | 화면 제어 유틸리티 | 널리 쓰이는 오픈소스 앱. 접근성 권한을 가지고 있어 취약점 악용 시 위험도 정량화에 좋음. |
+| 15 | **Transmission** | P2P 클라이언트 | 백그라운드 장기 실행 프로세스에서의 라이브러리 인젝션 및 동작 안정성 평가용. |
+
+## 📈 측정 지표 (Metrics)
+위 앱들을 대상으로 다음 지표를 추출하여 논문의 평가(Evaluation) 챕터에 반영합니다.
+1. **스캔 성능:** 앱당 평균 Mach-O 분석 소요 시간.
+2. **탐지 분포:** 제안된 분류 체계(Type A, Type B, Type C)별 탐지된 취약 경로 수.
+3. **재현 성공률 (True Positive):** 툴킷을 통해 Proxy Dylib을 주입한 후, 크래시 없이 Payload가 정상 실행된 비율.
