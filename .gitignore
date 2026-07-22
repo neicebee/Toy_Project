@@ -12,3 +12,4 @@ file_carving/target/
 file_carving/result/
 file_carving/carving_file/
 darkweb_crawler/__pycache__
+gatekeeper_bypass/

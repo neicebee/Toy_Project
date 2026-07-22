@@ -3,9 +3,11 @@
 #include "code_signing.h"
 #include "hijack_detector.h"
 #include "vuln_scanner.h"
+#include "scan_report.h"      // ← process_scanner.h 제거, scan_report.h 사용
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 // 프라이버시 보호 디렉토리 목록 (Mojave+ macOS)
 static const char* PROTECTED_DIRECTORIES[] = {
@@ -21,35 +23,31 @@ static const char* PROTECTED_DIRECTORIES[] = {
     "Library/Metadata/CoreSpotlight",
     "Library/PersonalizationPortrait",
     "Library/Suggestions",
-    NULL  // 종료 마커
+    NULL
 };
 
 // 보호된 디렉토리 여부 확인
 bool is_protected_directory(const char *path) {
     if (!path) return false;
     
-    // 사용자 홈 디렉토리에서 상대 경로로 변환
     const char *home = getenv("HOME");
     if (!home) return false;
     
     char fullPath[4096];
     
-    // 경로가 ~ 또는 $HOME으로 시작하는 경우 확장
     if (path[0] == '~') {
         snprintf(fullPath, sizeof(fullPath), "%s%s", home, path + 1);
     } else if (strncmp(path, home, strlen(home)) == 0) {
         strncpy(fullPath, path, sizeof(fullPath) - 1);
+        fullPath[sizeof(fullPath) - 1] = '\0';
     } else {
-        return false;  // 홈 디렉토리 밖의 경로는 보호 대상 아님
+        return false;
     }
     
-    // 검사
     for (int i = 0; PROTECTED_DIRECTORIES[i] != NULL; i++) {
-        // 홈 디렉토리 기준 경로 구성
         char protectedPath[4096];
         snprintf(protectedPath, sizeof(protectedPath), "%s/%s", home, PROTECTED_DIRECTORIES[i]);
         
-        // 경로가 보호 디렉토리에 포함되는지 확인
         if (strncmp(fullPath, protectedPath, strlen(protectedPath)) == 0) {
             return true;
         }
@@ -58,81 +56,113 @@ bool is_protected_directory(const char *path) {
     return false;
 }
 
-bool scan_binary(const char *path, ProcessReport *report) {
+/* ──────────────────────────────────────────────
+ * 공개 API: 단일 바이너리 스캔 (경로 기반 + 프로세스 정보)
+ * ────────────────────────────────────────────── */
+#define BDBG(fmt, ...) if (verbose) printf("[DEBUG-BIN] " fmt "\n", ##__VA_ARGS__)
+void scan_binary(const char *path,
+                 ScanReport *report,
+                 bool verbose,
+                 pid_t pid,
+                 const char *processPath,
+                 const char *processName) {
+    if (!path || !report) return;
+
     // [FILTER 1] 보호된 디렉토리 필터
     if (is_protected_directory(path)) {
-        return false;  // 프라이버시 프롬프트 방지하려 스캔 스킵
+        if (verbose) printf("[V] 보호된 디렉토리 건너뜀: %s\n", path);
+        return;
     }
+
+    if (verbose) printf("[V] 스캔 시작: %s\n", path);
+
     MachOParser *parser = parse_binary(path);
     if (!parser || !parser->isParsed) {
+        if (verbose) printf("[V] Mach-O 파싱 실패 또는 파서 없음: %s\n", path);
         if (parser) free_macho_parser(parser);
-        return false;
+        return;
     }
 
-    bool isApple = false;
-    bool hardenedRuntime = false;
-    bool libValidation = false;
-    bool disabledLibValidation = false;
-    if (!get_signing_info(path, &isApple, &hardenedRuntime, &libValidation, &disabledLibValidation)) {
-        // 서명 정보 없으면 스캔 계속 진행
+    // ─── 코드 서명/엔타이틀먼트 정보 획득 (경로 기반) ───
+    SigningInfo info = {0};
+    bool hasSigningInfo = get_signing_info_for_path(path, &info);
+
+    // Apple 플랫폼 바이너리 + 라이브러리 검증 정상 → 스킵
+    if (hasSigningInfo && info.isApple && !info.disabledLibValidation) {
+        if (verbose) printf("[V] Apple 서명 + Library Validation → 스킵: %s\n", path);
+        free_macho_parser(parser);
+        return;
+    }
+    // Hardened Runtime + Library Validation 정상 → 스킵
+    if (hasSigningInfo && info.hasHardenedRuntime && info.hasLibraryValidation && !info.disabledLibValidation) {
+        if (verbose) printf("[V] Hardened Runtime + Library Validation → 스킵: %s\n", path);
+        free_macho_parser(parser);
+        return;
+    }
+    // Library Validation만 enabled인 경우도 스킵
+    if (hasSigningInfo && info.hasLibraryValidation && !info.disabledLibValidation) {
+        if (verbose) printf("[V] Library Validation enabled → 스킵: %s\n", path);
+        free_macho_parser(parser);
+        return;
     }
 
-    // Apple 플랫폼 바이너리 및 라이브러리 검증이 정상적이면 스킵
-    if (!disabledLibValidation && isApple) { 
-        free_macho_parser(parser);
-        return false;
-    }
-    // 강화된 런타임을 사용하는 경우 스킵
-    if (!disabledLibValidation && hardenedRuntime) { 
-        free_macho_parser(parser);
-        return false;
-    }
-    // 라이브러리 검증 enabled 바이너리 스킵
-    if (!disabledLibValidation && libValidation) { 
-        free_macho_parser(parser);
-        return false;
-    }
-
-    // 하이재킹 체크 (세부 유형)
+    // ─── 하이재킹 체크 ───
     char *hijackRpathDetails = NULL;
-    char *hijackWeakDetails = NULL;
-    bool hijack_rpath = scan_for_hijack_rpath(path, parser, &hijackRpathDetails);
-    bool hijack_weak = scan_for_hijack_weak(path, parser, &hijackWeakDetails);
-    bool isHijacked = hijack_rpath || hijack_weak;
+    char *hijackWeakDetails  = NULL;
+    bool hijack_rpath = scan_for_hijack_rpath(path, parser, &hijackRpathDetails, verbose);
+    bool hijack_weak  = scan_for_hijack_weak(path, parser, &hijackWeakDetails, verbose);
+    bool isHijacked   = hijack_rpath || hijack_weak;
 
-    // 취약점 체크 (세부 유형)
+    // ─── 취약점 체크 ───
     char *vulnRpathDetails = NULL;
-    char *vulnWeakDetails = NULL;
-    bool isVulnerableRpath = scan_for_vulnerable_rpath(path, parser, &vulnRpathDetails);
-    bool isVulnerableWeak = scan_for_vulnerable_weak(path, parser, &vulnWeakDetails);
-    bool isVulnerable = isVulnerableRpath || isVulnerableWeak;
+    char *vulnWeakDetails  = NULL;
+    bool isVulnerableRpath = scan_for_vulnerable_rpath(path, parser, &vulnRpathDetails, verbose);
+    BDBG("isVulnerableRpath=%d, details=%s", isVulnerableRpath, vulnRpathDetails ? vulnRpathDetails : "NULL");
+    bool isVulnerableWeak  = scan_for_vulnerable_weak(path, parser, &vulnWeakDetails, verbose);
+    bool isVulnerable      = isVulnerableRpath || isVulnerableWeak;
+    BDBG("isVulnerable=%d (rpath=%d, weak=%d)", isVulnerable, isVulnerableRpath, isVulnerableWeak);
 
-    // ProcessReport에 결과 저장 (세부 유형 설명 포함)
-    if ((isHijacked || isVulnerable) && report) {
+    // ─── 리포트 기록 (ScanReport API 사용) ───
+    if (isHijacked || isVulnerable) {
         if (isHijacked) {
             if (hijack_rpath) {
-                process_report_add_issue(report, path, ISSUE_HIJACKED, "RPATH 다중 후보 하이재킹", hijackRpathDetails ? hijackRpathDetails : "rpath 하이재킹");
+                scan_report_add_issue(report, path,
+                    ISSUE_HIJACKED, "RPATH 다중 후보 하이재킹",
+                    hijackRpathDetails ? hijackRpathDetails : "rpath 하이재킹",
+                    pid, processPath, processName);
             }
             if (hijack_weak) {
-                process_report_add_issue(report, path, ISSUE_HIJACKED, "Weak Dylib 하이재킹", hijackWeakDetails ? hijackWeakDetails : "weak dylib 하이재킹");
+                scan_report_add_issue(report, path,
+                    ISSUE_HIJACKED, "Weak Dylib 하이재킹",
+                    hijackWeakDetails ? hijackWeakDetails : "weak dylib 하이재킹",
+                    pid, processPath, processName);
             }
         }
         if (isVulnerable) {
             if (isVulnerableRpath) {
-                process_report_add_issue(report, path, ISSUE_VULNERABLE, "RPATH 취약 경로", vulnRpathDetails ? vulnRpathDetails : "rpath 취약점");
+                BDBG("CALLING scan_report_add_issue for VULN_RPATH");
+                scan_report_add_issue(report, path,
+                    ISSUE_VULNERABLE, "RPATH 취약 경로",
+                    vulnRpathDetails ? vulnRpathDetails : "rpath 취약점",
+                    pid, processPath, processName);
             }
             if (isVulnerableWeak) {
-                process_report_add_issue(report, path, ISSUE_VULNERABLE, "Weak Dylib 취약 경로", vulnWeakDetails ? vulnWeakDetails : "weak dylib 취약점");
+                scan_report_add_issue(report, path,
+                    ISSUE_VULNERABLE, "Weak Dylib 취약 경로",
+                    vulnWeakDetails ? vulnWeakDetails : "weak dylib 취약점",
+                    pid, processPath, processName);
             }
         }
-
-    /* free detail strings if set */
-    if (hijackRpathDetails) free(hijackRpathDetails);
-    if (hijackWeakDetails) free(hijackWeakDetails);
-    if (vulnRpathDetails) free(vulnRpathDetails);
-    if (vulnWeakDetails) free(vulnWeakDetails);
     }
 
+    // ─── 상세 문자열 해제 ───
+    if (hijackRpathDetails) free(hijackRpathDetails);
+    if (hijackWeakDetails)  free(hijackWeakDetails);
+    if (vulnRpathDetails)   free(vulnRpathDetails);
+    if (vulnWeakDetails)    free(vulnWeakDetails);
+
     free_macho_parser(parser);
-    return isHijacked || isVulnerable;
+
+    if (verbose) printf("[V] 스캔 완료: %s (hijacked=%d, vulnerable=%d)\n",
+                        path, isHijacked, isVulnerable);
 }

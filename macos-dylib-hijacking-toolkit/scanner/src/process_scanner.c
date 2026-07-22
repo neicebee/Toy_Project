@@ -1,4 +1,5 @@
 #include "process_scanner.h"
+#include "scan_report.h"
 #include "binary_scanner.h"
 #include <libproc.h>
 #include <unistd.h>
@@ -10,178 +11,104 @@
 
 #define PROC_PATH_MAX  PROC_PIDPATHINFO_MAXSIZE
 
-// 단순 중복 검사용 노드 기반 연결 리스트
-typedef struct PathNode {
-    char *path;
-    struct PathNode *next;
-} PathNode;
+/* ──────────────────────────────────────────────
+ * 단순 동적 배열로 중복 경로 관리 (연결 리스트 대체)
+ * ────────────────────────────────────────────── */
+typedef struct {
+    char **items;
+    size_t count;
+    size_t capacity;
+} PathSet;
 
-// 연결 리스트 내 중복 검사 함수
-static bool contains_path(PathNode *head, const char *path) {
-    for (PathNode *cur=head; cur!=NULL; cur=cur->next) {
-        if (strcmp(cur->path, path)==0) { return true; }
+static PathSet *pathset_new(void) {
+    PathSet *s = calloc(1, sizeof(PathSet));
+    s->capacity = 64;
+    s->items = calloc(s->capacity, sizeof(char *));
+    return s;
+}
+
+static void pathset_free(PathSet *s) {
+    if (!s) return;
+    for (size_t i = 0; i < s->count; i++) free(s->items[i]);
+    free(s->items);
+    free(s);
+}
+
+static bool pathset_contains(PathSet *s, const char *path) {
+    for (size_t i = 0; i < s->count; i++) {
+        if (strcmp(s->items[i], path) == 0) return true;
     }
     return false;
 }
 
-// 연결 리스트에 새 경로 저장
-static bool add_path(PathNode **head, const char *path) {
-    if (contains_path(*head, path)) { return false; } // 이미 존재
-    PathNode *node = malloc(sizeof(PathNode));
-    if (!node) return false;
-
-    node->path = strdup(path);
-    if (!node->path) { free(node); return false; }
-    node->next = *head;
-    *head = node;
-    return true;
-}
-
-// 연결 리스트 메모리 해제
-static void free_paths(PathNode *head) {
-    while (head) {
-        PathNode *tmp = head;
-        head = head->next;
-        free(tmp->path);
-        free(tmp);
+static void pathset_add(PathSet *s, const char *path) {
+    if (s->count == s->capacity) {
+        s->capacity *= 2;
+        s->items = realloc(s->items, s->capacity * sizeof(char *));
     }
+    s->items[s->count++] = strdup(path);
 }
 
-ProcessReportArray* process_report_array_create(void) {
-    ProcessReportArray *array = malloc(sizeof(ProcessReportArray));
-    if (!array) return NULL;
-    
-    array->reports = malloc(sizeof(ProcessReport*) * 32);
-    array->reportCount = 0;
-    array->reportCapacity = 32;
-    
-    return array;
-}
+/* ──────────────────────────────────────────────
+ * 공개 API
+ * ────────────────────────────────────────────── */
+ScanReport *scan_all_processes(bool verbose) {
+    ScanReport *report = scan_report_new("processes", verbose);
+    if (!report) return NULL;
 
-void process_report_array_add(ProcessReportArray *array, ProcessReport *report) {
-    if (!array || !report) return;
-    
-    if (array->reportCount >= array->reportCapacity) {
-        array->reportCapacity *= 2;
-        array->reports = realloc(array->reports, sizeof(ProcessReport*) * array->reportCapacity);
-    }
-    
-    array->reports[array->reportCount++] = report;
-}
+    if (verbose) printf("[V] 프로세스 스캔 시작\n");
 
-void process_report_array_free(ProcessReportArray *array) {
-    if (!array) return;
-    
-    for (size_t i = 0; i < array->reportCount; i++) {
-        process_report_free(array->reports[i]);
-    }
-    free(array->reports);
-    free(array);
-}
-
-void process_report_array_print(ProcessReportArray *array, bool showOnlyIssues) {
-    if (!array) return;
-    
-    printf("\n\n");
-    printf("╔════════════════════════════════════════════════════════════════════╗\n");
-    printf("║                     스캔 결과 요약 리포트                            ║\n");
-    printf("╚════════════════════════════════════════════════════════════════════╝\n");
-    
-    size_t totalProcesses = array->reportCount;
-    size_t issueProcesses = 0;
-    size_t hijackingCount = 0;
-    size_t vulnerabilityCount = 0;
-    
-    // 통계 계산
-    for (size_t i = 0; i < array->reportCount; i++) {
-        ProcessReport *report = array->reports[i];
-        if (report->hasIssues) {
-            issueProcesses++;
-            for (size_t j = 0; j < report->issues.issueCount; j++) {
-                BinaryIssue *issue = &report->issues.issues[j];
-                if (issue->issueType == ISSUE_HIJACKED || issue->issueType == ISSUE_BOTH) {
-                    hijackingCount++;
-                }
-                if (issue->issueType == ISSUE_VULNERABLE || issue->issueType == ISSUE_BOTH) {
-                    vulnerabilityCount++;
-                }
-            }
-        }
-    }
-    
-    printf("\n[통계]\n");
-    printf("  총 스캔 프로세스: %zu\n", totalProcesses);
-    printf("  정상 프로세스: %zu\n", totalProcesses - issueProcesses);
-    printf("  이상 감지 프로세스: %zu\n", issueProcesses);
-    printf("    - 하이재킹: %zu\n", hijackingCount);
-    printf("    - 취약점: %zu\n", vulnerabilityCount);
-    
-    printf("\n[상세 결과]\n");
-    
-    // 결과 출력
-    for (size_t i = 0; i < array->reportCount; i++) {
-        ProcessReport *report = array->reports[i];
-        
-        if (showOnlyIssues && !report->hasIssues) {
-            continue;
-        }
-        
-        process_report_print(report);
-    }
-    
-    printf("\n");
-}
-
-ProcessReportArray* scan_all_processes(void) {
-    ProcessReportArray *reportArray = process_report_array_create();
-    if (!reportArray) return NULL;
-    
+    // PID 목록 얻기
     int bufSize = proc_listpids(PROC_ALL_PIDS, 0, NULL, 0);
-    if (bufSize<=0) {
-        fprintf(stderr, "Failed to get the size of PID buffer.\n");
-        return reportArray;
+    if (bufSize <= 0) {
+        if (verbose) fprintf(stderr, "[V] PID 버퍼 크기 획득 실패\n");
+        return report;
     }
 
     int numPids = bufSize / sizeof(pid_t);
     pid_t *pids = calloc(numPids, sizeof(pid_t));
     if (!pids) {
-        perror("calloc");
-        return reportArray;
+        if (verbose) perror("[V] calloc");
+        return report;
     }
 
     int ret = proc_listpids(PROC_ALL_PIDS, 0, pids, bufSize);
-    if (ret<=0) {
-        fprintf(stderr, "proc_listpids() failed.\n");
+    if (ret <= 0) {
+        if (verbose) fprintf(stderr, "[V] proc_listpids() 실패\n");
         free(pids);
-        return reportArray;
+        return report;
     }
 
-    // 실제 프로세스 수
-    int procCount = ret/sizeof(pid_t);
-    PathNode *scannedPaths = NULL;
+    int procCount = ret / sizeof(pid_t);
+    PathSet *scannedPaths = pathset_new();
 
-    for (int i=0;i<procCount;i++) {
-        if (pids[i]==0) continue;
+    for (int i = 0; i < procCount; i++) {
+        pid_t pid = pids[i];
+        if (pid == 0) continue;
 
         char pathBuffer[PROC_PATH_MAX] = {0};
-        int pathLen = proc_pidpath(pids[i], pathBuffer, sizeof(pathBuffer));
+        int pathLen = proc_pidpath(pid, pathBuffer, sizeof(pathBuffer));
+        if (pathLen <= 0 || pathBuffer[0] == '\0') continue;
 
-        if (pathLen<=0 || strlen(pathBuffer)==0) { continue; }
+        // 중복 경로 스킵
+        if (pathset_contains(scannedPaths, pathBuffer)) continue;
 
-        // 중복 확인 후 신규 경로면 스캔 처리
-        if (!contains_path(scannedPaths, pathBuffer)) {
-            if (add_path(&scannedPaths, pathBuffer)) {
-                ProcessReport *report = process_report_create(pids[i], pathBuffer);
-                if (report) {
-                    scan_binary(pathBuffer, report);
-                    process_report_array_add(reportArray, report);
-                }
-            }
-        }
+        // 새 경로 등록
+        pathset_add(scannedPaths, pathBuffer);
+
+        if (verbose) printf("[V] 스캔 대상 프로세스: PID=%d, 경로=%s\n", pid, pathBuffer);
+
+        // 프로세스 이름 추출
+        const char *procName = strrchr(pathBuffer, '/');
+        procName = procName ? procName + 1 : pathBuffer;
+
+        // 단일 바이너리 스캔 (프로세스 정보 함께 전달)
+        scan_binary(pathBuffer, report, verbose, pid, pathBuffer, procName);
     }
 
     free(pids);
-    free_paths(scannedPaths);
-    
-    return reportArray;
+    pathset_free(scannedPaths);
+
+    if (verbose) printf("[V] 프로세스 스캔 완료 (총 %zu 바이너리)\n", report->count);
+    return report;
 }

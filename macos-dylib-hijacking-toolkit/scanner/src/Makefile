@@ -9,11 +9,12 @@ TARGET = $(BUILD_DIR)/dylib_auditor
 # 소스 파일들
 SOURCES = main.c \
           binary_scanner.c \
+          bundle_scanner.c \
           macho_parser.c \
           code_signing.c \
           vuln_scanner.c \
           hijack_detector.c \
-          process_report.c \
+          scan_report.c \
           process_scanner.c \
           path_utils.c \
           options.c
