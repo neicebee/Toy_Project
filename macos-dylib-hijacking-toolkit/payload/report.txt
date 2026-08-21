@@ -8,45 +8,402 @@
                     macOS Dylib Hijack Scan Report                    
 ════════════════════════════════════════════════════════════════════
 스캔 모드: /Applications/eval-apps
-스캔 시각: Wed Jul 22 17:40:18 2026
-총 바이너리 수: 14
+스캔 시각: Wed Aug 19 13:57:05 2026
+총 바이너리 수: 72
 ────────────────────────────────────────────────────────────────────
-이슈 발견 바이너리: 14
+이슈 발견 바이너리: 72
 ════════════════════════════════════════════════════════════════════
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/HandBrake.app/Contents/MacOS/HandBrake
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/MacOS/4kvideodownloaderplus
 문제 타입: 취약점
 문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/HandBrake.app/Contents/Frameworks/HandBrakeKit.framework/Versions/A/HandBrakeKit; /Applications/eval-apps/HandBrake.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/liblalalai_proc.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libonnxruntime.1.21.0.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libportaudio.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libssl.1.1.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libcrypto.1.1.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libavformat.58.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libavcodec.58.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libpostproc.55.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libswresample.3.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libswscale.5.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/libavutil.56.dylib; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2.framework/Versions/A/QtQuickControls2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore5Compat.framework/Versions/A/QtCore5Compat; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtSvg.framework/Versions/A/QtSvg; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioningQuick.framework/Versions/A/QtPositioningQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickShapes.framework/Versions/A/QtQuickShapes; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtLocation.framework/Versions/A/QtLocation; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineQuick.framework/Versions/A/QtWebEngineQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtXml.framework/Versions/A/QtXml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPrintSupport.framework/Versions/A/QtPrintSupport; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWidgets.framework/Versions/A/QtWidgets; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineWidgets.framework/Versions/A/QtWebEngineWidgets; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannel.framework/Versions/A/QtWebChannel; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineCore.framework/Versions/A/QtWebEngineCore; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannelQuick.framework/Versions/A/QtWebChannelQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtConcurrent.framework/Versions/A/QtConcurrent; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebView.framework/Versions/A/QtWebView; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/HandBrake.app/Contents/XPCServices/HandBrakeXPCService2.xpc/Contents/MacOS/HandBrakeXPCService2
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtLabsPlatform.framework/Versions/A/QtLabsPlatform
 문제 타입: 취약점
 문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/HandBrake.app/Contents/Frameworks/HandBrakeKit.framework/Versions/A/HandBrakeKit
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWidgets.framework/Versions/A/QtWidgets; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickTemplates2.framework/Versions/A/QtQuickTemplates2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/HandBrake.app/Contents/XPCServices/HandBrakeXPCService3.xpc/Contents/MacOS/HandBrakeXPCService3
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2.framework/Versions/A/QtQuickControls2
 문제 타입: 취약점
 문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/HandBrake.app/Contents/Frameworks/HandBrakeKit.framework/Versions/A/HandBrakeKit
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickTemplates2.framework/Versions/A/QtQuickTemplates2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/HandBrake.app/Contents/XPCServices/HandBrakeXPCService4.xpc/Contents/MacOS/HandBrakeXPCService4
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2BasicStyleImpl.framework/Versions/A/QtQuickControls2BasicStyleImpl
 문제 타입: 취약점
 문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/HandBrake.app/Contents/Frameworks/HandBrakeKit.framework/Versions/A/HandBrakeKit
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2Impl.framework/Versions/A/QtQuickControls2Impl; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickTemplates2.framework/Versions/A/QtQuickTemplates2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/HandBrake.app/Contents/XPCServices/HandBrakeXPCService.xpc/Contents/MacOS/HandBrakeXPCService
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineCore.framework/Versions/A/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess
 문제 타입: 취약점
 문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/HandBrake.app/Contents/Frameworks/HandBrakeKit.framework/Versions/A/HandBrakeKit
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineCore.framework/Versions/A/QtWebEngineCore; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannel.framework/Versions/A/QtWebChannel; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineCore.framework/Versions/A/QtWebEngineCore
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannel.framework/Versions/A/QtWebChannel; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineQuick.framework/Versions/A/QtWebEngineQuick
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannelQuick.framework/Versions/A/QtWebChannelQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineCore.framework/Versions/A/QtWebEngineCore; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannel.framework/Versions/A/QtWebChannel; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2FusionStyleImpl.framework/Versions/A/QtQuickControls2FusionStyleImpl
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2Impl.framework/Versions/A/QtQuickControls2Impl; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickTemplates2.framework/Versions/A/QtQuickTemplates2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineWidgets.framework/Versions/A/QtWebEngineWidgets
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickWidgets.framework/Versions/A/QtQuickWidgets; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPrintSupport.framework/Versions/A/QtPrintSupport; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebEngineCore.framework/Versions/A/QtWebEngineCore; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannel.framework/Versions/A/QtWebChannel; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWidgets.framework/Versions/A/QtWidgets; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickWidgets.framework/Versions/A/QtQuickWidgets
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWidgets.framework/Versions/A/QtWidgets; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtShaderTools.framework/Versions/A/QtShaderTools
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickLayouts.framework/Versions/A/QtQuickLayouts
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2Basic.framework/Versions/A/QtQuickControls2Basic
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2BasicStyleImpl.framework/Versions/A/QtQuickControls2BasicStyleImpl; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2.framework/Versions/A/QtQuickControls2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickTemplates2.framework/Versions/A/QtQuickTemplates2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPrintSupport.framework/Versions/A/QtPrintSupport
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWidgets.framework/Versions/A/QtWidgets; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2Fusion.framework/Versions/A/QtQuickControls2Fusion
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2FusionStyleImpl.framework/Versions/A/QtQuickControls2FusionStyleImpl; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2.framework/Versions/A/QtQuickControls2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickTemplates2.framework/Versions/A/QtQuickTemplates2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickTemplates2.framework/Versions/A/QtQuickTemplates2
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioningQuick.framework/Versions/A/QtPositioningQuick
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtLocation.framework/Versions/A/QtLocation
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickShapes.framework/Versions/A/QtQuickShapes; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioningQuick.framework/Versions/A/QtPositioningQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtXml.framework/Versions/A/QtXml
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebView.framework/Versions/A/QtWebView
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickEffects.framework/Versions/A/QtQuickEffects
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannel.framework/Versions/A/QtWebChannel
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore5Compat.framework/Versions/A/QtCore5Compat
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2Impl.framework/Versions/A/QtQuickControls2Impl
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickTemplates2.framework/Versions/A/QtQuickTemplates2; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtLabsQmlModels.framework/Versions/A/QtLabsQmlModels
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickControls2MacOSStyleImpl.framework/Versions/A/QtQuickControls2MacOSStyleImpl
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWidgets.framework/Versions/A/QtWidgets
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtPositioning.framework/Versions/A/QtPositioning
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuickShapes.framework/Versions/A/QtQuickShapes
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtSvg.framework/Versions/A/QtSvg
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannelQuick.framework/Versions/A/QtWebChannelQuick
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtWebChannel.framework/Versions/A/QtWebChannel; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQmlModels.framework/Versions/A/QtQmlModels
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtConcurrent.framework/Versions/A/QtConcurrent
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/Frameworks/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/platforms/libqcocoa.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/platforms/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/platforms/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/libqtposition_positionpoll.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/../../lib/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/libqtposition_cl.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/../../lib/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/libqtposition_nmea.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/../../lib/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/../../lib/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/position/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/libqtwebview_webengine.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtWebEngineQuick.framework/Versions/A/QtWebEngineQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtWebEngineCore.framework/Versions/A/QtWebEngineCore; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtWebChannel.framework/Versions/A/QtWebChannel; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtPositioning.framework/Versions/A/QtPositioning; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtWebChannelQuick.framework/Versions/A/QtWebChannelQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtWebView.framework/Versions/A/QtWebView; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtWebViewQuick.framework/Versions/A/QtWebViewQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/libqtwebview_darwin.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQuick.framework/Versions/A/QtQuick; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQmlMeta.framework/Versions/A/QtQmlMeta; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQmlModels.framework/Versions/A/QtQmlModels; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtQml.framework/Versions/A/QtQml; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtOpenGL.framework/Versions/A/QtOpenGL; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtWebView.framework/Versions/A/QtWebView; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/webview/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/styles/libqmacstyle.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/styles/../../lib/QtWidgets.framework/Versions/A/QtWidgets; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/styles/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/styles/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/libqsecuretransportbackend.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/../../lib/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/libqopensslbackend.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/../../lib/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/libqcertonlybackend.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/../../lib/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/tls/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/libqgif.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/libqwebp.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/libqico.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/libqjpeg.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/libqsvg.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtSvg.framework/Versions/A/QtSvg; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtGui.framework/Versions/A/QtGui; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/imageformats/../../lib/QtCore.framework/Versions/A/QtCore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/networkinformation/libqscnetworkreachability.dylib
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/networkinformation/../../lib/QtNetwork.framework/Versions/A/QtNetwork; /Applications/eval-apps/4K Video Downloader+.app/Contents/PlugIns/networkinformation/../../lib/QtCore.framework/Versions/A/QtCore
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -57,20 +414,6 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/Rectangle.app/Contents/MacOS/Rectangle
-문제 타입: 취약점
-문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/Rectangle.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/Maccy.app/Contents/MacOS/Maccy
-문제 타입: 취약점
-문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/Maccy.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 바이너리: /Applications/eval-apps/IINA.app/Contents/MacOS/IINA
 문제 타입: 취약점
 문제명: RPATH 취약 경로
@@ -78,32 +421,94 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/Transmission.app/Contents/MacOS/Transmission
-문제 타입: 취약점
-문제명: Weak Dylib 취약 경로
-상세: /Applications/eval-apps/Transmission.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/Boop.app/Contents/MacOS/Boop
+바이너리: /Applications/eval-apps/Stats.app/Contents/MacOS/Stats
 문제 타입: 취약점
 문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/Boop.app/Contents/Frameworks/SavannaKit.framework/Versions/A/SavannaKit
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/Disk.framework/Versions/A/Disk; /Applications/eval-apps/Stats.app/Contents/Frameworks/Clock.framework/Versions/A/Clock; /Applications/eval-apps/Stats.app/Contents/Frameworks/Remote.framework/Versions/A/Remote; /Applications/eval-apps/Stats.app/Contents/Frameworks/Sensors.framework/Versions/A/Sensors; /Applications/eval-apps/Stats.app/Contents/Frameworks/Battery.framework/Versions/A/Battery; /Applications/eval-apps/Stats.app/Contents/Frameworks/Bluetooth.framework/Versions/A/Bluetooth; /Applications/eval-apps/Stats.app/Contents/Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/RAM.framework/Versions/A/RAM; /Applications/eval-apps/Stats.app/Contents/Frameworks/Net.framework/Versions/A/Net; /Applications/eval-apps/Stats.app/Contents/Frameworks/GPU.framework/Versions/A/GPU; /Applications/eval-apps/Stats.app/Contents/Frameworks/CPU.framework/Versions/A/CPU
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/Ghostty.app/Contents/MacOS/ghostty
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/Battery.framework/Versions/A/Battery
 문제 타입: 취약점
 문제명: RPATH 취약 경로
-상세: /Applications/eval-apps/Ghostty.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/Battery.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/Battery.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-바이너리: /Applications/eval-apps/MonitorControl.app/Contents/MacOS/MonitorControl
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/Net.framework/Versions/A/Net
 문제 타입: 취약점
-문제명: RPATH 취약 경로 | Weak Dylib 취약 경로
-상세: /Applications/eval-apps/MonitorControl.app/Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle
-/Applications/eval-apps/MonitorControl.app/Contents/Frameworks/libswift_Concurrency.dylib
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/Net.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/Net.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/Remote.framework/Versions/A/Remote
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/Remote.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/Remote.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/CPU.framework/Versions/A/CPU
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/CPU.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/CPU.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/Clock.framework/Versions/A/Clock
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/Clock.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/Clock.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/Sensors.framework/Versions/A/Sensors
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/Sensors.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/Sensors.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/GPU.framework/Versions/A/GPU
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/GPU.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/GPU.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/Bluetooth.framework/Versions/A/Bluetooth
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/Bluetooth.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/Bluetooth.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/Disk.framework/Versions/A/Disk
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/Disk.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/Disk.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/Frameworks/RAM.framework/Versions/A/RAM
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/Frameworks/RAM.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/Frameworks/RAM.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/MacOS/WidgetsExtension
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/MacOS/../Frameworks/GPU.framework/Versions/A/GPU; /Applications/eval-apps/Stats.app/Contents/Frameworks/GPU.framework/Versions/A/GPU; /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/Frameworks/Net.framework/Versions/A/Net; /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/MacOS/../Frameworks/Disk.framework/Versions/A/Disk; /Applications/eval-apps/Stats.app/Contents/Frameworks/Disk.framework/Versions/A/Disk; /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/MacOS/../Frameworks/CPU.framework/Versions/A/CPU; /Applications/eval-apps/Stats.app/Contents/Frameworks/CPU.framework/Versions/A/CPU; /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/MacOS/../Frameworks/RAM.framework/Versions/A/RAM; /Applications/eval-apps/Stats.app/Contents/Frameworks/RAM.framework/Versions/A/RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+바이너리: /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/Frameworks/Net.framework/Versions/A/Net
+문제 타입: 취약점
+문제명: RPATH 취약 경로
+상세: /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/Frameworks/Net.framework/Versions/A/../Frameworks/Kit.framework/Versions/A/Kit; /Applications/eval-apps/Stats.app/Contents/PlugIns/WidgetsExtension.appex/Contents/Frameworks/Net.framework/Versions/A/Frameworks/Kit.framework/Versions/A/Kit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

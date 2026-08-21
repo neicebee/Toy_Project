@@ -7,7 +7,7 @@ BUILD_DIR = ../../build
 TARGET = $(BUILD_DIR)/dylib_loader
 
 # 소스 파일들
-SOURCES = main.c result_parser.c rpath_injector.c weak_dylib_injector.c dylib_modifier.c
+SOURCES = main.c result_parser.c rpath_injector.c weak_dylib_injector.c dylib_modifier.c framework_analyzer.c multi_rpath_resolver.c dependency_chain.c framework_injector.c modular_injector.c framework_supply_chain.c
 OBJECTS = $(SOURCES:.c=.o)
 
 # 기본 규칙

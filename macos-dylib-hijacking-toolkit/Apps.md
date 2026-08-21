@@ -1,30 +1,134 @@
-# 정량 평가 대상 애플리케이션 (Evaluation Apps)
+# Phase 1 검증 대상 애플리케이션
 
-제안하는 통합 점검 도구의 탐지 범위, 정확도, 그리고 재현 성공률을 검증하기 위해 오픈소스 및 상용 macOS 애플리케이션 16종을 선정하였습니다.
-선정된 앱들은 다양한 프레임워크(Swift, Objective-C, Rust 등)로 개발되었으며, 다중 RPATH 기반 취약점 점검을 위한 신뢰할 수 있는 데이터셋으로 기능합니다.
+본 논문에서 검증한 **5개 대표 애플리케이션**입니다.
 
-## 📊 평가 대상 앱 목록
+---
 
-| 번호 | 앱 이름 | 분류(Category) | 특징 및 선정 이유 (적합성 검증) |
-|:---:|:---|:---|:---|
-| 1 | **AdGuard** | 보안/네트워크 | 네트워크 확장 프로그램과 여러 동적 라이브러리를 공유하여 스캔 타겟으로 적합. |
-| 2 | **Alacritty** | 터미널 에뮬레이터 | 오픈소스 기반(Rust). 상대적으로 단순한 바이너리 구조에서의 도구 탐지 정확도 테스트용. |
-| 3 | **AltTab** | 유틸리티 | 시스템 접근 권한(Accessibility)을 요구하는 앱으로, 공격 시나리오(권한 상승) 적용에 매우 적합함. |
-| 4 | **Boop** | 개발자 도구 | 오픈소스. 경량화된 앱에서의 Weak Dylib 사용 여부 점검용. |
-| 5 | **Ghostty** | 터미널 에뮬레이터 | 최신 렌더링 엔진을 사용하는 앱으로 의존성 트리가 복잡할 것으로 예상됨. |
-| 6 | **HandBrake** | 미디어 인코더 | 다수의 코덱 라이브러리(libx264 등)를 `@rpath`로 동적 로딩하는 전형적인 케이스. |
-| 7 | **IINA** | 미디어 플레이어 | mpv 기반으로 다수의 외부 dylib을 포함하고 있어 RPATH 폴백(Fallback) 발생률을 평가하기 최적인 대상. |
-| 8 | **Keka** | 압축 유틸리티 | 다양한 압축 모듈을 프레임워크 및 플러그인 형태로 로드하여 다중 RPATH 탐지 테스트에 적합. |
-| 9 | **KnockKnock** | 보안 도구 | Objective-See의 오픈소스 보안 앱. '보안 앱이 지닌 라이브러리 취약성'이라는 흥미로운 연구 결과를 도출할 수 있음. |
-| 10 | **Lapce** | 코드 에디터 | Rust 기반의 오픈소스. 다양한 플러그인 생태계를 가져 런타임 Dylib 로딩 테스트 가능. |
-| 11 | **LuLu** | 방화벽 (보안) | 시스템 확장(System Extension)을 사용하는 강력한 보안 앱으로, 악용될 경우 파급력이 매우 큼. |
-| 12 | **Maccy** | 클립보드 매니저 | 사용자 입력을 직접 다루는 유틸리티로 민감 정보 탈취 시나리오(PoC) 적용에 용이. |
-| 13 | **MonitorControl** | 시스템 유틸리티 | 디스플레이 제어를 위한 외부 프레임워크 및 비공개 API 연동 가능성 점검. |
-| 14 | **Rectangle** | 화면 제어 유틸리티 | 널리 쓰이는 오픈소스 앱. 접근성 권한을 가지고 있어 취약점 악용 시 위험도 정량화에 좋음. |
-| 15 | **Transmission** | P2P 클라이언트 | 백그라운드 장기 실행 프로세스에서의 라이브러리 인젝션 및 동작 안정성 평가용. |
+## 🎯 검증 앱 목록
 
-## 📈 측정 지표 (Metrics)
-위 앱들을 대상으로 다음 지표를 추출하여 논문의 평가(Evaluation) 챕터에 반영합니다.
-1. **스캔 성능:** 앱당 평균 Mach-O 분석 소요 시간.
-2. **탐지 분포:** 제안된 분류 체계(Type A, Type B, Type C)별 탐지된 취약 경로 수.
-3. **재현 성공률 (True Positive):** 툴킷을 통해 Proxy Dylib을 주입한 후, 크래시 없이 Payload가 정상 실행된 비율.
+### Type A: RPATH 기반 Dylib 주입
+
+| 앱 이름 | 버전 | 프레임워크 | 검증 결과 | 비고 |
+|--------|------|-----------|---------|------|
+| **4K Video Downloader+** | Latest | Swift + Objective-C | ✅ 성공 | RPATH dylib 단순 구조 |
+
+**특징**:
+- 외부 dylib을 RPATH로 동적 로드
+- 코드 서명 enforcement 약함
+- 마커 파일 생성으로 공격 검증
+
+---
+
+### Type B: Framework 공급망 공격
+
+| 앱 이름 | 공유 Framework | 코드 서명 | 검증 결과 | 비고 |
+|--------|---------------|---------|---------|------|
+| **IINA** | Sparkle.framework | Weak | ✅ 성공 | 60개 dylib + Sparkle |
+| **AltTab** | Sparkle.framework | Weak | ✅ 성공 | 윈도우 관리자 + Sparkle |
+
+**특징**:
+- Sparkle.framework 공유 의존성
+- 1개 Framework 교체로 다중 앱 침해 가능
+- Re-export dylib 기법 사용
+
+**Team ID 검증 문제**:
+```
+성공한 앱: IINA (코드 서명 enforcement 약함)
+성공한 앱: AltTab (코드 서명 enforcement 약함)
+실패한 앱: Keka (Team ID 엄격 검증) ❌
+실패한 앱: Rectangle (Team ID 엄격 검증) ❌
+실패한 앱: Maccy (Team ID 엄격 검증) ❌
+실패한 앱: Sloth (Team ID 엄격 검증) ❌
+실패한 앱: Ghostty (Team ID 엄격 검증) ❌
+실패한 앱: MonitorControl (Team ID 엄격 검증) ❌
+```
+
+---
+
+### Type C: Framework 의존성 체인 공격
+
+| 앱 이름 | 중심 Framework | 의존 Framework 수 | 검증 결과 | 비고 |
+|--------|---------------|-----------------|---------|------|
+| **Stats** | Kit.framework | 10개 | ✅ 성공 | 내부 모듈화 구조 |
+
+**Framework 의존성 구조**:
+```
+Kit.framework (중심)
+├─ Battery → Kit ✓
+├─ Net → Kit ✓
+├─ CPU → Kit ✓
+├─ GPU → Kit ✓
+├─ RAM → Kit ✓
+├─ Disk → Kit ✓
+├─ Clock → Kit ✓
+├─ Remote → Kit ✓
+├─ Sensors → Kit ✓
+└─ Bluetooth → Kit ✓
+
+다중 진입점:
+- Main: Stats.app
+- Widget: WidgetsExtension.appex
+```
+
+**특징**:
+- 모든 Framework가 중심 Framework에 의존
+- 1개 Framework 교체로 전체 앱 침해
+- 다중 진입점 모두 영향
+
+---
+
+### 검증 불가: Team ID 엄격 검증
+
+| 앱 이름 | Framework | 문제점 | 상태 |
+|--------|----------|--------|------|
+| **Keka** | Sparkle.framework | Team ID 불일치 | ❌ 실패 |
+| **Boop** | SavannaKit.framework | Team ID 불일치 | ❌ 실패 |
+
+**실패 원인**:
+```
+dyld 코드 서명 검증:
+  원본 dylib Team ID: Ivan Mathy (RLZ8XBTX7G)
+  우리 dylib Team ID: ad-hoc (없음) ✗
+  → dyld 로드 거부
+```
+
+**Phase 2 해결 필요**:
+- Team ID 코드 서명 우회 구현
+- SIP 비활성화 환경 대응
+- XPC Service Hijacking
+
+---
+
+## 📊 검증 결과 요약
+
+| Type | 성공 | 실패 | 성공률 | 주요 학습 |
+|------|------|------|--------|----------|
+| **A** | 1 | 0 | 100% | RPATH 주입은 항상 가능 |
+| **B** | 2 | 8 | 20% | 코드 서명이 주요 제약 |
+| **C** | 1 | 0 | 100% | 내부 Framework은 검증 용이 |
+| **합계** | **4** | **8** | **33%** | Phase 2에서 코드 서명 해결 필요 |
+
+---
+
+## 🔍 논문에 포함된 내용
+
+### 성공 사례 (상세 분석)
+1. **Type A - 4K Video Downloader+**: RPATH 기본 공격
+2. **Type B - IINA + Sparkle**: Framework 공급망 공격
+3. **Type C - Stats + Kit**: 의존성 체인 공격
+
+### 실패 사례 분석 (기술적 깊이)
+- **Keka vs IINA**: 코드 서명 강도 비교
+- **Team ID 검증** 메커니즘 분석
+- **dyld 보안** 모델 한계
+
+### 기여도
+- macOS dylib 로딩 보안의 현실적 문제 규명
+- 3가지 공격 타입 분류 및 검증 방법론
+- Phase 2 방향성 제시 (Team ID bypass)
+
+---
+
+**Phase 1 검증 완료**: 2026년 7월 30일  
+**테스트 환경**: macOS Tahoe 26.5.2  
+**다음 단계**: Phase 2 (코드 서명 우회 + Gatekeeper 우회) - 미구현
