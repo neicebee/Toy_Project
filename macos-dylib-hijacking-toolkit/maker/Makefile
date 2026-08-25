@@ -21,7 +21,6 @@ run: build
 
 clean:
 	rm -f $(TARGET) malicious_libsoxr.c malicious_libsoxr.dylib
-	rm -rf ./IINA.app/Contents/Frameworks/tmp
 	@echo "✓ Cleanup complete"
 
 help:
