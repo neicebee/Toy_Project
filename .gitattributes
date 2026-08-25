@@ -1,2 +1,3 @@
 file_carving/carving_file/dd_jpg_carving.001 filter=lfs diff=lfs merge=lfs -text
 file_carving/carving_file/dd_bmp_carving.001 filter=lfs diff=lfs merge=lfs -text
+*.dmg filter=lfs diff=lfs merge=lfs -text
